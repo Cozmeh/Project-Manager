@@ -3,7 +3,18 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
+        If UserId.Text <> "asd" Then
+            MessageBox.Show("Please Enter valid User Id")
+            Return
+        End If
 
+        If Password.Text <> "asd" Then
+            MessageBox.Show("Please Enter valid Password")
+            Return
+        End If
+
+        Form2.Show()
+        Me.Hide()
     End Sub
 End Class
