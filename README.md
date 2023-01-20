@@ -1,4 +1,5 @@
 # Title: Project-Manager
+![GitHub top language](https://img.shields.io/github/languages/top/Cozmeh/Project-Manager?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/Cozmeh/Project-Manager?style=for-the-badge) ![GitHub](https://img.shields.io/github/license/Cozmeh/Hover-SearchEffect?style=for-the-badge)
 
 ## Team
 Hem Sainath 21BCAC46\
