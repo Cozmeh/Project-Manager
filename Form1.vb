@@ -15,6 +15,14 @@
         End If
 
         Form2.Show()
+
+        If UserId.Text <> "" Then
+            UserId.Text = ""
+        End If
+        If Password.Text <> "" Then
+            Password.Text = ""
+        End If
+
         Me.Hide()
     End Sub
 End Class
