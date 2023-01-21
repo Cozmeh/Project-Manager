@@ -7,6 +7,7 @@
     Private Sub NewProject_Click(sender As Object, e As EventArgs) Handles NewProject.Click
         Form3.Show()
         Me.Hide()
+
     End Sub
 
 End Class
