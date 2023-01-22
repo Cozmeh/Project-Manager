@@ -24,8 +24,8 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.loginbtn = New System.Windows.Forms.Button()
         Me.empimg = New System.Windows.Forms.PictureBox()
-        Me.UserId = New System.Windows.Forms.TextBox()
-        Me.Password = New System.Windows.Forms.TextBox()
+        Me.UserIDBox = New System.Windows.Forms.TextBox()
+        Me.PassBox = New System.Windows.Forms.TextBox()
         CType(Me.empimg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,32 +49,32 @@ Partial Class Form1
         Me.empimg.TabIndex = 1
         Me.empimg.TabStop = False
         '
-        'UserId
+        'UserIDBox
         '
-        Me.UserId.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.UserId.Location = New System.Drawing.Point(138, 142)
-        Me.UserId.Name = "UserId"
-        Me.UserId.PlaceholderText = "User Id"
-        Me.UserId.Size = New System.Drawing.Size(282, 32)
-        Me.UserId.TabIndex = 2
+        Me.UserIDBox.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.UserIDBox.Location = New System.Drawing.Point(138, 142)
+        Me.UserIDBox.Name = "UserIDBox"
+        Me.UserIDBox.PlaceholderText = "User Id"
+        Me.UserIDBox.Size = New System.Drawing.Size(282, 32)
+        Me.UserIDBox.TabIndex = 2
         '
-        'Password
+        'PassBox
         '
-        Me.Password.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Password.Location = New System.Drawing.Point(138, 193)
-        Me.Password.Name = "Password"
-        Me.Password.PlaceholderText = "Password"
-        Me.Password.Size = New System.Drawing.Size(282, 32)
-        Me.Password.TabIndex = 3
-        Me.Password.UseSystemPasswordChar = True
+        Me.PassBox.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.PassBox.Location = New System.Drawing.Point(138, 193)
+        Me.PassBox.Name = "PassBox"
+        Me.PassBox.PlaceholderText = "Password"
+        Me.PassBox.Size = New System.Drawing.Size(282, 32)
+        Me.PassBox.TabIndex = 3
+        Me.PassBox.UseSystemPasswordChar = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(529, 331)
-        Me.Controls.Add(Me.Password)
-        Me.Controls.Add(Me.UserId)
+        Me.Controls.Add(Me.PassBox)
+        Me.Controls.Add(Me.UserIDBox)
         Me.Controls.Add(Me.empimg)
         Me.Controls.Add(Me.loginbtn)
         Me.Name = "Form1"
@@ -87,6 +87,6 @@ Partial Class Form1
 
     Friend WithEvents loginbtn As Button
     Friend WithEvents empimg As PictureBox
-    Friend WithEvents UserId As TextBox
-    Friend WithEvents Password As TextBox
+    Friend WithEvents UserIDBox As TextBox
+    Friend WithEvents PassBox As TextBox
 End Class
