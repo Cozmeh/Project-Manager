@@ -24,9 +24,11 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.LogoutManager = New System.Windows.Forms.Button()
         Me.NewProject = New System.Windows.Forms.Button()
-        Me.IdManager = New System.Windows.Forms.Label()
-        Me.NameManager = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PreviousProject = New System.Windows.Forms.Label()
+        Me.ManagerId = New System.Windows.Forms.Label()
+        Me.ManagerName = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'LogoutManager
@@ -49,25 +51,25 @@ Partial Class Form2
         Me.NewProject.Text = "New +"
         Me.NewProject.UseVisualStyleBackColor = True
         '
-        'IdManager
+        'Label1
         '
-        Me.IdManager.AutoSize = True
-        Me.IdManager.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.IdManager.Location = New System.Drawing.Point(89, 34)
-        Me.IdManager.Name = "IdManager"
-        Me.IdManager.Size = New System.Drawing.Size(32, 25)
-        Me.IdManager.TabIndex = 2
-        Me.IdManager.Text = "Id:"
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(89, 34)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(32, 25)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Id:"
         '
-        'NameManager
+        'Label2
         '
-        Me.NameManager.AutoSize = True
-        Me.NameManager.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.NameManager.Location = New System.Drawing.Point(55, 64)
-        Me.NameManager.Name = "NameManager"
-        Me.NameManager.Size = New System.Drawing.Size(66, 25)
-        Me.NameManager.TabIndex = 3
-        Me.NameManager.Text = "Name:"
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(55, 64)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(66, 25)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Name:"
         '
         'PreviousProject
         '
@@ -79,14 +81,36 @@ Partial Class Form2
         Me.PreviousProject.TabIndex = 4
         Me.PreviousProject.Text = "Previous Project:"
         '
+        'ManagerId
+        '
+        Me.ManagerId.AutoSize = True
+        Me.ManagerId.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ManagerId.Location = New System.Drawing.Point(120, 34)
+        Me.ManagerId.Name = "ManagerId"
+        Me.ManagerId.Size = New System.Drawing.Size(109, 25)
+        Me.ManagerId.TabIndex = 5
+        Me.ManagerId.Text = "Manager Id"
+        '
+        'ManagerName
+        '
+        Me.ManagerName.AutoSize = True
+        Me.ManagerName.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ManagerName.Location = New System.Drawing.Point(120, 64)
+        Me.ManagerName.Name = "ManagerName"
+        Me.ManagerName.Size = New System.Drawing.Size(143, 25)
+        Me.ManagerName.TabIndex = 6
+        Me.ManagerName.Text = "Manager Name"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ManagerName)
+        Me.Controls.Add(Me.ManagerId)
         Me.Controls.Add(Me.PreviousProject)
-        Me.Controls.Add(Me.NameManager)
-        Me.Controls.Add(Me.IdManager)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.NewProject)
         Me.Controls.Add(Me.LogoutManager)
         Me.Name = "Form2"
@@ -98,7 +122,9 @@ Partial Class Form2
 
     Friend WithEvents LogoutManager As Button
     Friend WithEvents NewProject As Button
-    Friend WithEvents IdManager As Label
-    Friend WithEvents NameManager As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
     Friend WithEvents PreviousProject As Label
+    Friend WithEvents ManagerId As Label
+    Friend WithEvents ManagerName As Label
 End Class
