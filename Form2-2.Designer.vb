@@ -102,7 +102,7 @@ Partial Class Form2_2
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LogoutEmp)
         Me.Name = "Form2_2"
-        Me.Text = "Form2_2"
+        Me.Text = "Employee Home Page"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

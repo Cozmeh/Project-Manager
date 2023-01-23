@@ -36,9 +36,9 @@ Partial Class Form2_3
         Me.AdminName.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.AdminName.Location = New System.Drawing.Point(126, 72)
         Me.AdminName.Name = "AdminName"
-        Me.AdminName.Size = New System.Drawing.Size(104, 25)
+        Me.AdminName.Size = New System.Drawing.Size(122, 25)
         Me.AdminName.TabIndex = 18
-        Me.AdminName.Text = "Emp Name"
+        Me.AdminName.Text = "Admin Name"
         '
         'AdminId
         '
@@ -46,9 +46,9 @@ Partial Class Form2_3
         Me.AdminId.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.AdminId.Location = New System.Drawing.Point(126, 42)
         Me.AdminId.Name = "AdminId"
-        Me.AdminId.Size = New System.Drawing.Size(70, 25)
+        Me.AdminId.Size = New System.Drawing.Size(88, 25)
         Me.AdminId.TabIndex = 17
-        Me.AdminId.Text = "Emp Id"
+        Me.AdminId.Text = "Admin Id"
         '
         'Employees
         '
@@ -56,9 +56,9 @@ Partial Class Form2_3
         Me.Employees.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Employees.Location = New System.Drawing.Point(18, 119)
         Me.Employees.Name = "Employees"
-        Me.Employees.Size = New System.Drawing.Size(102, 25)
+        Me.Employees.Size = New System.Drawing.Size(106, 25)
         Me.Employees.TabIndex = 16
-        Me.Employees.Text = "Employees"
+        Me.Employees.Text = "Employees:"
         '
         'Label2
         '
@@ -102,7 +102,7 @@ Partial Class Form2_3
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LogoutAdmin)
         Me.Name = "Form2_3"
-        Me.Text = "Form2_3"
+        Me.Text = "Admin Home Page"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

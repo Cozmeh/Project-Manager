@@ -42,7 +42,7 @@ Public Class Form1
 
         If designation = "M" Then
             'opens manager form if designation is manager(M)
-            Form2.Show()
+            Form2_1.Show()
         ElseIf designation = "A" Then
             'opens Admin form if designation is Admin(A)
             Form2_3.Show()
