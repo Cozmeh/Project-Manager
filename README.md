@@ -1,5 +1,5 @@
 #Software Engineering Project
-#Title: Project-Manager
+Title: Project-Manager
 
 ##Under Guidance of
 Prof. Balamuragan
@@ -22,4 +22,4 @@ Once assigned to a project the employee can check the deadline and the time left
 	- Manager Home Page(Previous Project)
 	- Employee Home Page(Current Project)
 	- Add New Project
-	- Plan Console
+	- PlanÂ Console
