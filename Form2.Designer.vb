@@ -44,7 +44,7 @@ Partial Class Form2
         'NewProject
         '
         Me.NewProject.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.NewProject.Location = New System.Drawing.Point(677, 405)
+        Me.NewProject.Location = New System.Drawing.Point(677, 393)
         Me.NewProject.Name = "NewProject"
         Me.NewProject.Size = New System.Drawing.Size(95, 33)
         Me.NewProject.TabIndex = 1
@@ -77,9 +77,9 @@ Partial Class Form2
         Me.PreviousProject.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.PreviousProject.Location = New System.Drawing.Point(12, 111)
         Me.PreviousProject.Name = "PreviousProject"
-        Me.PreviousProject.Size = New System.Drawing.Size(152, 25)
+        Me.PreviousProject.Size = New System.Drawing.Size(75, 25)
         Me.PreviousProject.TabIndex = 4
-        Me.PreviousProject.Text = "Previous Project:"
+        Me.PreviousProject.Text = "Project:"
         '
         'ManagerId
         '
@@ -114,7 +114,7 @@ Partial Class Form2
         Me.Controls.Add(Me.NewProject)
         Me.Controls.Add(Me.LogoutManager)
         Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.Text = "Manager Home Page"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

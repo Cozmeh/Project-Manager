@@ -11,13 +11,6 @@ Public Class Form1
         '    MessageBox.Show("Please Check User Id and Password")
         '    Return
         'End If
-        'Form2.Show()
-        'If UserId.Text <> "" Then
-        '    UserId.Text = ""
-        'End If
-        'If Password.Text <> "" Then
-        '    Password.Text = ""
-        'End If
 
         'establishing sql database connection
         Dim sql As New SqlConnection With {
@@ -34,18 +27,41 @@ Public Class Form1
             .SelectCommand = command
         }
 
+        'creates a table with the required data
         Dim data As New DataSet()
         sqlAdapter.Fill(data)
 
+        'If there is no row present i.e. wrong userId and password
         If data.Tables(0).Rows.Count <= 0 Then
             MsgBox("Check User Id or Password")
             Return
         End If
 
-        MsgBox("Welcome " & UserIDBox.Text)
-        Form2.Show()
+        'Rows(0)(3) collects the first row at column 4
+        Dim designation As String = data.Tables(0).Rows(0)(3).ToString()
+
+        If designation = "M" Then
+            'opens manager form if designation is manager(M)
+            Form2.Show()
+        ElseIf designation = "A" Then
+            'opens Admin form if designation is Admin(A)
+            Form2_3.Show()
+        Else
+            'opens employee form if designation is employee
+            Form2_2.Show()
+        End If
+
+        'Message box shows the name of the user
+        MsgBox("Welcome " & data.Tables(0).Columns.IndexOf("Name"))
         Me.Hide()
 
+        'Empties both the text box in the form  on load
+        If UserIDBox.Text <> "" Then
+            UserIDBox.Text = ""
+        End If
+        If PassBox.Text <> "" Then
+            PassBox.Text = ""
+        End If
     End Sub
 
 End Class
