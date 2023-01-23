@@ -20,18 +20,14 @@ Public Class Form1
         'End If
 
         'establishing sql database connection
-        Dim sql As SqlConnection = New SqlClient.SqlConnection()
-        sql.ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\COZMIC\DOCUMENTS\LOCALTESTDB.MDF"
+        Dim sql As New SqlConnection With {
+            .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\COZMIC\DOCUMENTS\LOCALTESTDB.MDF"
+        }
         sql.Open()
-
 
         'creating a sql command statement 
         Dim command As SqlCommand = sql.CreateCommand()
-        command.CommandText =
-        "SELECT * 
-        from LoginData 
-        Where LoginID='" + UserIDBox.Text + "' and Password = '" + PassBox.Text + "'"
-
+        command.CommandText = "SELECT * from LoginData Where LoginID='" + UserIDBox.Text + "' and Password = '" + PassBox.Text + "'"
 
         'sqladapter to handle the sql commands 
         Dim sqlAdapter As New SqlDataAdapter With {
@@ -41,15 +37,15 @@ Public Class Form1
         Dim data As New DataSet()
         sqlAdapter.Fill(data)
 
-        If data.Tables(0).Rows.Count > 0 Then
-            MsgBox("Login Successful")
-            Form2.Show()
-            Me.Hide()
-        Else
-            MsgBox("Login failed")
+        If data.Tables(0).Rows.Count <= 0 Then
+            MsgBox("Check User Id or Password")
+            Return
         End If
 
-    End Sub
+        MsgBox("Welcome " & UserIDBox.Text)
+        Form2.Show()
+        Me.Hide()
 
+    End Sub
 
 End Class
