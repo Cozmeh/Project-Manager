@@ -1,23 +1,25 @@
-#Software Engineering Project
-Title: Project-Manager
+# Software Engineering Project
+# Title: Project-Manager
 
-##Under Guidance of
+![GitHub top language](https://img.shields.io/badge/Language-VB.NET-brightgreen?style=for-the-badge) ![GitHub contributors](https://img.shields.io/badge/Contributor-Cozmeh%20&%20Mr0weird0guy-red?style=for-the-badge) ![GitHub](https://img.shields.io/github/license/Cozmeh/Hover-SearchEffect?style=for-the-badge)
+
+## Under Guidance of
 Prof. Balamuragan
 
-#Team
-Hem Sainath 21BCAC46
+# Team
+Hem Sainath 21BCAC46\
 Rohan Agarwal 21BCAC55
 
-#Aim
+# Aim
 A desktop application which help layout the time division and help organize the Life Cycle of the Projects.
 
-#Description
-A VB.NET based project management software which makes a schedules layout of any project that is to be planned to develop.
-It uses information like the time duration and number of people involved in the process of the project development.
-It will only allow the Project Manager/Head, the edit access to the scheduling and the ability to assign employees to any project.
-Once assigned to a project the employee can check the deadline and the time left to complete the task on the software.
+# Description
+A VB.NET based project management software which makes a schedules layout of any project that is planed to be developed.\
+It uses informations like the time duration and number of people involved in the process of any project development.\
+It will only allow the edit access to the schedule and the ability to assign employees only to the Project Manager/Head.\
+Once assigned the employees can check their deadline and update weather they have completed their task (on time or delayed) in the software.
 
-#Modules
+# Modules
 	- Login Page
 	- Manager Home Page(Previous Project)
 	- Employee Home Page(Current Project)
