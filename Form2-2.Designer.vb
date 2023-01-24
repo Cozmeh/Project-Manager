@@ -83,7 +83,7 @@ Partial Class Form2_2
         'LogoutEmp
         '
         Me.LogoutEmp.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LogoutEmp.Location = New System.Drawing.Point(688, 56)
+        Me.LogoutEmp.Location = New System.Drawing.Point(693, 12)
         Me.LogoutEmp.Name = "LogoutEmp"
         Me.LogoutEmp.Size = New System.Drawing.Size(95, 33)
         Me.LogoutEmp.TabIndex = 7

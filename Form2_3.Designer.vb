@@ -74,7 +74,7 @@ Partial Class Form2_3
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(95, 42)
+        Me.Label1.Location = New System.Drawing.Point(88, 42)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(32, 25)
         Me.Label1.TabIndex = 14
@@ -83,7 +83,7 @@ Partial Class Form2_3
         'LogoutAdmin
         '
         Me.LogoutAdmin.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LogoutAdmin.Location = New System.Drawing.Point(683, 59)
+        Me.LogoutAdmin.Location = New System.Drawing.Point(693, 12)
         Me.LogoutAdmin.Name = "LogoutAdmin"
         Me.LogoutAdmin.Size = New System.Drawing.Size(95, 33)
         Me.LogoutAdmin.TabIndex = 13

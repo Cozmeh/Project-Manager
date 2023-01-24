@@ -29,14 +29,16 @@ Partial Class Form2_1
         Me.PreviousProject = New System.Windows.Forms.Label()
         Me.ManagerId = New System.Windows.Forms.Label()
         Me.ManagerName = New System.Windows.Forms.Label()
+        Me.UsergprBox = New System.Windows.Forms.GroupBox()
+        Me.UsergprBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'LogoutManager
         '
         Me.LogoutManager.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LogoutManager.Location = New System.Drawing.Point(677, 51)
+        Me.LogoutManager.Location = New System.Drawing.Point(703, 12)
         Me.LogoutManager.Name = "LogoutManager"
-        Me.LogoutManager.Size = New System.Drawing.Size(95, 33)
+        Me.LogoutManager.Size = New System.Drawing.Size(85, 33)
         Me.LogoutManager.TabIndex = 0
         Me.LogoutManager.Text = "Logout"
         Me.LogoutManager.UseVisualStyleBackColor = True
@@ -44,9 +46,9 @@ Partial Class Form2_1
         'NewProject
         '
         Me.NewProject.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.NewProject.Location = New System.Drawing.Point(677, 393)
+        Me.NewProject.Location = New System.Drawing.Point(704, 378)
         Me.NewProject.Name = "NewProject"
-        Me.NewProject.Size = New System.Drawing.Size(95, 33)
+        Me.NewProject.Size = New System.Drawing.Size(84, 60)
         Me.NewProject.TabIndex = 1
         Me.NewProject.Text = "New +"
         Me.NewProject.UseVisualStyleBackColor = True
@@ -55,37 +57,37 @@ Partial Class Form2_1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(89, 34)
+        Me.Label1.Location = New System.Drawing.Point(7, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(32, 25)
+        Me.Label1.Size = New System.Drawing.Size(77, 25)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Id:"
+        Me.Label1.Text = "UserID :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(55, 64)
+        Me.Label2.Location = New System.Drawing.Point(7, 59)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 25)
+        Me.Label2.Size = New System.Drawing.Size(71, 25)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Name:"
+        Me.Label2.Text = "Name :"
         '
         'PreviousProject
         '
         Me.PreviousProject.AutoSize = True
-        Me.PreviousProject.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.PreviousProject.Location = New System.Drawing.Point(12, 111)
+        Me.PreviousProject.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.PreviousProject.Location = New System.Drawing.Point(12, 146)
         Me.PreviousProject.Name = "PreviousProject"
         Me.PreviousProject.Size = New System.Drawing.Size(75, 25)
         Me.PreviousProject.TabIndex = 4
-        Me.PreviousProject.Text = "Project:"
+        Me.PreviousProject.Text = "Project"
         '
         'ManagerId
         '
         Me.ManagerId.AutoSize = True
         Me.ManagerId.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ManagerId.Location = New System.Drawing.Point(120, 34)
+        Me.ManagerId.Location = New System.Drawing.Point(80, 19)
         Me.ManagerId.Name = "ManagerId"
         Me.ManagerId.Size = New System.Drawing.Size(109, 25)
         Me.ManagerId.TabIndex = 5
@@ -95,26 +97,38 @@ Partial Class Form2_1
         '
         Me.ManagerName.AutoSize = True
         Me.ManagerName.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ManagerName.Location = New System.Drawing.Point(120, 64)
+        Me.ManagerName.Location = New System.Drawing.Point(71, 59)
         Me.ManagerName.Name = "ManagerName"
         Me.ManagerName.Size = New System.Drawing.Size(143, 25)
         Me.ManagerName.TabIndex = 6
         Me.ManagerName.Text = "Manager Name"
+        '
+        'UsergprBox
+        '
+        Me.UsergprBox.Controls.Add(Me.ManagerName)
+        Me.UsergprBox.Controls.Add(Me.Label1)
+        Me.UsergprBox.Controls.Add(Me.ManagerId)
+        Me.UsergprBox.Controls.Add(Me.Label2)
+        Me.UsergprBox.Location = New System.Drawing.Point(12, 12)
+        Me.UsergprBox.Name = "UsergprBox"
+        Me.UsergprBox.Size = New System.Drawing.Size(220, 100)
+        Me.UsergprBox.TabIndex = 7
+        Me.UsergprBox.TabStop = False
+        Me.UsergprBox.Text = "User"
         '
         'Form2_1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.ManagerName)
-        Me.Controls.Add(Me.ManagerId)
+        Me.Controls.Add(Me.UsergprBox)
         Me.Controls.Add(Me.PreviousProject)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.NewProject)
         Me.Controls.Add(Me.LogoutManager)
         Me.Name = "Form2_1"
         Me.Text = "Manager Home Page"
+        Me.UsergprBox.ResumeLayout(False)
+        Me.UsergprBox.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -127,4 +141,5 @@ Partial Class Form2_1
     Friend WithEvents PreviousProject As Label
     Friend WithEvents ManagerId As Label
     Friend WithEvents ManagerName As Label
+    Friend WithEvents UsergprBox As GroupBox
 End Class

@@ -2,36 +2,37 @@
 Imports System.Data.SqlClient
 Public Class Form1
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
-        'Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\rohan\OneDrive\Desktop\Work\VB\login-vb.xlsx; Extended Properties=Excel 8.0;")
-        'Dim cmd As New OleDbCommand("Select UId,Pass from [sheet1$] where UId='" & UserId.Text & "' and Pass='" & Password.Text & "'", conn)
-        'conn.Open()
-        'Dim sdr As OleDbDataReader = cmd.ExecuteReader()
-        'If sdr.Read() <> True Then
-        '    MessageBox.Show("Please Check User Id and Password")
-        '    Return
-        'End If
+    '----------GLOBAL VARIABLES----------------------
 
-        'establishing sql database connection
-        'Dim sql As New SqlConnection With {
-        '    .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\COZMIC\DOCUMENTS\LOCALTESTDB.MDF"
-        '}
-        Dim sql As New SqlConnection With {
-        .ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
-        }
+    'establishing sql database connection
+    Public sql As New SqlConnection With {
+            .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=D:\Coding\Langs\Visual Studio\ProjectManager\Resources\employeeDB.mdf"
+    }
+    'Public Dim sql As New SqlConnection With {
+    '.ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
+    '}
+
+    'creating a sql command statement 
+    Public command As SqlCommand = sql.CreateCommand()
+
+    'sqladapter to handle the sql commands 
+    Public sqlAdapter As New SqlDataAdapter With {
+            .SelectCommand = command
+    }
+
+    'creates a table with the required data
+    Public data As New DataSet()
+
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
+
+        'opening a connection to the database
         sql.Open()
 
         'creating a sql command statement 
-        Dim command As SqlCommand = sql.CreateCommand()
         command.CommandText = "SELECT * from Employees Where Id='" + UserIDBox.Text + "' and password = '" + PassBox.Text + "'"
 
-        'sqladapter to handle the sql commands 
-        Dim sqlAdapter As New SqlDataAdapter With {
-            .SelectCommand = command
-        }
-
-        'creates a table with the required data
-        Dim data As New DataSet()
+        'filling the dataset with data
         sqlAdapter.Fill(data)
 
         'If there is no row present i.e. wrong userId and password
@@ -65,6 +66,9 @@ Public Class Form1
         If PassBox.Text <> "" Then
             PassBox.Text = ""
         End If
+
+
+
     End Sub
 
 End Class
