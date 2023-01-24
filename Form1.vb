@@ -1,6 +1,13 @@
 ﻿'Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Public Class Form1
+    'establishing sql database connection
+    'Public Dim sql As New SqlConnection With {
+    '    .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\COZMIC\DOCUMENTS\LOCALTESTDB.MDF"
+    '}
+    Public sql As New SqlConnection With {
+        .ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
+        }
 
     '----------GLOBAL VARIABLES----------------------
 

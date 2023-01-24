@@ -19,6 +19,7 @@
         Dim Name As String = Form1.data.Tables(0).Rows(0)(1).ToString()
         ManagerName.Text = Name
 
+
     End Sub
 
 
