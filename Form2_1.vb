@@ -1,7 +1,7 @@
 ﻿'Imports Microsoft.VisualBasic.ApplicationServices
 'Imports System.Data.OleDb
 
-Public Class Form2
+Public Class Form2_1
     Private Sub LogoutManager_Click(sender As Object, e As EventArgs) Handles LogoutManager.Click
         Form1.Show()
         Me.Close()

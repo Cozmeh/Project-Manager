@@ -13,14 +13,17 @@ Public Class Form1
         'End If
 
         'establishing sql database connection
+        'Dim sql As New SqlConnection With {
+        '    .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\COZMIC\DOCUMENTS\LOCALTESTDB.MDF"
+        '}
         Dim sql As New SqlConnection With {
-            .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\COZMIC\DOCUMENTS\LOCALTESTDB.MDF"
+        .ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
         }
         sql.Open()
 
         'creating a sql command statement 
         Dim command As SqlCommand = sql.CreateCommand()
-        command.CommandText = "SELECT * from LoginData Where LoginID='" + UserIDBox.Text + "' and Password = '" + PassBox.Text + "'"
+        command.CommandText = "SELECT * from Employees Where Id='" + UserIDBox.Text + "' and password = '" + PassBox.Text + "'"
 
         'sqladapter to handle the sql commands 
         Dim sqlAdapter As New SqlDataAdapter With {
@@ -37,8 +40,8 @@ Public Class Form1
             Return
         End If
 
-        'Rows(0)(3) collects the first row at column 4
-        Dim designation As String = data.Tables(0).Rows(0)(3).ToString()
+        'Rows(0)(2) collects the first row at column 3
+        Dim designation As String = data.Tables(0).Rows(0)(2).ToString()
 
         If designation = "M" Then
             'opens manager form if designation is manager(M)
@@ -46,13 +49,13 @@ Public Class Form1
         ElseIf designation = "A" Then
             'opens Admin form if designation is Admin(A)
             Form2_3.Show()
-        Else
+        ElseIf designation = "E" Then
             'opens employee form if designation is employee
             Form2_2.Show()
         End If
 
         'Message box shows the name of the user
-        MsgBox("Welcome " & data.Tables(0).Columns.IndexOf("Name"))
+        'MsgBox("Welcome " & data.Tables(0).Columns.IndexOf("Name"))
         Me.Hide()
 
         'Empties both the text box in the form  on load
