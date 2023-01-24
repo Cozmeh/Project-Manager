@@ -4,6 +4,7 @@
 Public Class Form2_1
     Private Sub LogoutManager_Click(sender As Object, e As EventArgs) Handles LogoutManager.Click
         Form1.Show()
+        Form1.sql.Close()
         Me.Close()
     End Sub
 
@@ -21,6 +22,7 @@ Public Class Form2_1
 
 
         ManagerId.Text = Form1.UserIDBox.Text
+
 
     End Sub
 

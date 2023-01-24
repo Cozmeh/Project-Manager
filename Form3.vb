@@ -6,7 +6,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Cancel.Click
         'open manager home page
-        Form2_2.Show()
+        Form2_1.Show()
         Me.Close()
     End Sub
 

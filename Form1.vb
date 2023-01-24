@@ -1,6 +1,21 @@
 ﻿'Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Public Class Form1
+    'establishing sql database connection
+    'Public Dim sql As New SqlConnection With {
+    '    .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\COZMIC\DOCUMENTS\LOCALTESTDB.MDF"
+    '}
+    Public sql As New SqlConnection With {
+        .ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
+        }
+
+    Public command As SqlCommand = sql.CreateCommand()
+
+    'sqladapter to handle the sql commands 
+    Public sqlAdapter As New SqlDataAdapter With {
+            .SelectCommand = command
+        }
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
         'Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\rohan\OneDrive\Desktop\Work\VB\login-vb.xlsx; Extended Properties=Excel 8.0;")
@@ -11,24 +26,15 @@ Public Class Form1
         '    MessageBox.Show("Please Check User Id and Password")
         '    Return
         'End If
-
-        'establishing sql database connection
         'Dim sql As New SqlConnection With {
-        '    .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=C:\USERS\COZMIC\DOCUMENTS\LOCALTESTDB.MDF"
+        '.ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
         '}
-        Dim sql As New SqlConnection With {
-        .ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
-        }
+
+
         sql.Open()
 
         'creating a sql command statement 
-        Dim command As SqlCommand = sql.CreateCommand()
         command.CommandText = "SELECT * from Employees Where Id='" + UserIDBox.Text + "' and password = '" + PassBox.Text + "'"
-
-        'sqladapter to handle the sql commands 
-        Dim sqlAdapter As New SqlDataAdapter With {
-            .SelectCommand = command
-        }
 
         'creates a table with the required data
         Dim data As New DataSet()
