@@ -25,16 +25,19 @@ Partial Class Form2_3
         Me.AdminName = New System.Windows.Forms.Label()
         Me.AdminId = New System.Windows.Forms.Label()
         Me.Employees = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.LogoutAdmin = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.AdmingprBox = New System.Windows.Forms.GroupBox()
+        Me.NewEmployee = New System.Windows.Forms.Button()
+        Me.AdmingprBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'AdminName
         '
         Me.AdminName.AutoSize = True
         Me.AdminName.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.AdminName.Location = New System.Drawing.Point(126, 72)
+        Me.AdminName.Location = New System.Drawing.Point(84, 59)
         Me.AdminName.Name = "AdminName"
         Me.AdminName.Size = New System.Drawing.Size(122, 25)
         Me.AdminName.TabIndex = 18
@@ -44,7 +47,7 @@ Partial Class Form2_3
         '
         Me.AdminId.AutoSize = True
         Me.AdminId.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.AdminId.Location = New System.Drawing.Point(126, 42)
+        Me.AdminId.Location = New System.Drawing.Point(84, 18)
         Me.AdminId.Name = "AdminId"
         Me.AdminId.Size = New System.Drawing.Size(88, 25)
         Me.AdminId.TabIndex = 17
@@ -53,56 +56,80 @@ Partial Class Form2_3
         'Employees
         '
         Me.Employees.AutoSize = True
-        Me.Employees.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Employees.Location = New System.Drawing.Point(18, 119)
+        Me.Employees.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Employees.Location = New System.Drawing.Point(12, 150)
         Me.Employees.Name = "Employees"
-        Me.Employees.Size = New System.Drawing.Size(106, 25)
+        Me.Employees.Size = New System.Drawing.Size(111, 25)
         Me.Employees.TabIndex = 16
-        Me.Employees.Text = "Employees:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(61, 72)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 25)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Name:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(95, 42)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(32, 25)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Id:"
+        Me.Employees.Text = "Employees "
         '
         'LogoutAdmin
         '
         Me.LogoutAdmin.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LogoutAdmin.Location = New System.Drawing.Point(683, 59)
+        Me.LogoutAdmin.Location = New System.Drawing.Point(703, 12)
         Me.LogoutAdmin.Name = "LogoutAdmin"
-        Me.LogoutAdmin.Size = New System.Drawing.Size(95, 33)
+        Me.LogoutAdmin.Size = New System.Drawing.Size(85, 33)
         Me.LogoutAdmin.TabIndex = 13
         Me.LogoutAdmin.Text = "Logout"
         Me.LogoutAdmin.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(7, 59)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(76, 25)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Name  :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(7, 19)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(77, 25)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "UserID :"
+        '
+        'AdmingprBox
+        '
+        Me.AdmingprBox.Controls.Add(Me.Label3)
+        Me.AdmingprBox.Controls.Add(Me.Label4)
+        Me.AdmingprBox.Controls.Add(Me.AdminName)
+        Me.AdmingprBox.Controls.Add(Me.AdminId)
+        Me.AdmingprBox.Location = New System.Drawing.Point(12, 12)
+        Me.AdmingprBox.Name = "AdmingprBox"
+        Me.AdmingprBox.Size = New System.Drawing.Size(220, 100)
+        Me.AdmingprBox.TabIndex = 22
+        Me.AdmingprBox.TabStop = False
+        Me.AdmingprBox.Text = "Admin"
+        '
+        'NewEmployee
+        '
+        Me.NewEmployee.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.NewEmployee.Location = New System.Drawing.Point(704, 378)
+        Me.NewEmployee.Name = "NewEmployee"
+        Me.NewEmployee.Size = New System.Drawing.Size(84, 60)
+        Me.NewEmployee.TabIndex = 20
+        Me.NewEmployee.Tag = ""
+        Me.NewEmployee.Text = "New +"
+        Me.NewEmployee.UseVisualStyleBackColor = True
         '
         'Form2_3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.AdminName)
-        Me.Controls.Add(Me.AdminId)
+        Me.Controls.Add(Me.AdmingprBox)
+        Me.Controls.Add(Me.NewEmployee)
         Me.Controls.Add(Me.Employees)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LogoutAdmin)
         Me.Name = "Form2_3"
         Me.Text = "Admin Home Page"
+        Me.AdmingprBox.ResumeLayout(False)
+        Me.AdmingprBox.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -111,7 +138,9 @@ Partial Class Form2_3
     Friend WithEvents AdminName As Label
     Friend WithEvents AdminId As Label
     Friend WithEvents Employees As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents LogoutAdmin As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents AdmingprBox As GroupBox
+    Friend WithEvents NewEmployee As Button
 End Class

@@ -1,5 +1,4 @@
-﻿'Imports Microsoft.VisualBasic.ApplicationServices
-'Imports System.Data.OleDb
+﻿Imports System.Data.SqlClient
 
 Public Class Form2_1
     Private Sub LogoutManager_Click(sender As Object, e As EventArgs) Handles LogoutManager.Click
@@ -14,15 +13,22 @@ Public Class Form2_1
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\rohan\OneDrive\Desktop\Work\VB\login-vb.xlsx; Extended Properties=Excel 8.0;")
-        'Dim cmd As New OleDbCommand("Select Name from [sheet1$] where UId='" & Form1.UserIDBox.Text & "'", conn)
-        'conn.Open()
-        'Dim sdr As OleDbDataReader = cmd.ExecuteReader(Name)
-        'ManagerName.Text = sdr.Item(Name)
-
-
         ManagerId.Text = Form1.UserIDBox.Text
 
+        'creating a sql command statement 
+        Dim form2command As SqlCommand = Form1.sql.CreateCommand()
+        form2command.CommandText = "SELECT empName FROM Employees WHERE Id ='" + ManagerId.Text + "'"
+
+        'sqladapter to handle the sql commands 
+        Dim form2sqlAdapter As New SqlDataAdapter With {
+            .SelectCommand = form2command
+        }
+        'creates a table with the required data
+        Dim form2data As New DataSet()
+        form2sqlAdapter.Fill(form2data)
+
+        Dim Name As String = form2data.Tables(0).Rows(0)(0).ToString()
+        ManagerName.Text = Name
 
     End Sub
 
