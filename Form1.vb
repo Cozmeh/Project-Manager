@@ -18,17 +18,6 @@ Public Class Form1
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
-        'Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\rohan\OneDrive\Desktop\Work\VB\login-vb.xlsx; Extended Properties=Excel 8.0;")
-        'Dim cmd As New OleDbCommand("Select UId,Pass from [sheet1$] where UId='" & UserId.Text & "' and Pass='" & Password.Text & "'", conn)
-        'conn.Open()
-        'Dim sdr As OleDbDataReader = cmd.ExecuteReader()
-        'If sdr.Read() <> True Then
-        '    MessageBox.Show("Please Check User Id and Password")
-        '    Return
-        'End If
-        'Dim sql As New SqlConnection With {
-        '.ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
-        '}
 
 
         sql.Open()
