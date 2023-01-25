@@ -69,9 +69,9 @@ Partial Class Form2_1
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.Location = New System.Drawing.Point(7, 59)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(71, 25)
+        Me.Label2.Size = New System.Drawing.Size(76, 25)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Name :"
+        Me.Label2.Text = "Name  :"
         '
         'PreviousProject
         '
@@ -97,7 +97,7 @@ Partial Class Form2_1
         '
         Me.ManagerName.AutoSize = True
         Me.ManagerName.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ManagerName.Location = New System.Drawing.Point(71, 59)
+        Me.ManagerName.Location = New System.Drawing.Point(80, 59)
         Me.ManagerName.Name = "ManagerName"
         Me.ManagerName.Size = New System.Drawing.Size(143, 25)
         Me.ManagerName.TabIndex = 6
@@ -111,10 +111,10 @@ Partial Class Form2_1
         Me.UsergprBox.Controls.Add(Me.Label2)
         Me.UsergprBox.Location = New System.Drawing.Point(12, 12)
         Me.UsergprBox.Name = "UsergprBox"
-        Me.UsergprBox.Size = New System.Drawing.Size(220, 100)
+        Me.UsergprBox.Size = New System.Drawing.Size(234, 100)
         Me.UsergprBox.TabIndex = 7
         Me.UsergprBox.TabStop = False
-        Me.UsergprBox.Text = "User"
+        Me.UsergprBox.Text = "Manager"
         '
         'Form2_1
         '

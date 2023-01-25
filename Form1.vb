@@ -1,5 +1,4 @@
-﻿'Imports System.Data.OleDb
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 Public Class Form1
 
 
@@ -13,16 +12,7 @@ Public Class Form1
     '.ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
     '}
 
-    'creating a sql command statement 
-    Public command As SqlCommand = sql.CreateCommand()
 
-    'sqladapter to handle the sql commands 
-    Public sqlAdapter As New SqlDataAdapter With {
-            .SelectCommand = command
-    }
-
-    'creates a table with the required data
-    Public data As New DataSet()
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
@@ -31,7 +21,18 @@ Public Class Form1
         sql.Open()
 
         'creating a sql command statement 
+        Dim command As SqlCommand = sql.CreateCommand()
+        'creating a sql command statement 
         command.CommandText = "SELECT * from Employees Where Id='" + UserIDBox.Text + "' and password = '" + PassBox.Text + "'"
+
+
+        'sqladapter to handle the sql commands 
+        Dim sqlAdapter As New SqlDataAdapter With {
+            .SelectCommand = command
+        }
+
+        'creates a table with the required data
+        Dim data As New DataSet()
 
         'filling the dataset with data
         sqlAdapter.Fill(data)
@@ -48,13 +49,17 @@ Public Class Form1
         If designation = "M" Then
             'opens manager form if designation is manager(M)
             Form2_1.Show()
+            'MsgBox("manager")
         ElseIf designation = "A" Then
             'opens Admin form if designation is Admin(A)
             Form2_3.Show()
+            'MsgBox("admin")
         ElseIf designation = "E" Then
             'opens employee form if designation is employee
             Form2_2.Show()
+            'MsgBox("employee")
         End If
+
 
         'Message box shows the name of the user
         'MsgBox("Welcome " & data.Tables(0).Columns.IndexOf("Name"))
@@ -70,6 +75,8 @@ Public Class Form1
 
 
 
+
     End Sub
+
 
 End Class
