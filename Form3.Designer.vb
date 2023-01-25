@@ -24,7 +24,7 @@ Partial Class Form3
     Private Sub InitializeComponent()
         Me.ProjectName = New System.Windows.Forms.TextBox()
         Me.DeadlineDuration = New System.Windows.Forms.DateTimePicker()
-        Me.ProjectTittle = New System.Windows.Forms.Label()
+        Me.Lable1 = New System.Windows.Forms.Label()
         Me.ProjectGrpBox = New System.Windows.Forms.GroupBox()
         Me.PeopleCount = New System.Windows.Forms.NumericUpDown()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -55,15 +55,15 @@ Partial Class Form3
         Me.DeadlineDuration.TabIndex = 2
         Me.DeadlineDuration.Value = New Date(2023, 1, 23, 0, 0, 0, 0)
         '
-        'ProjectTittle
+        'Lable1
         '
-        Me.ProjectTittle.AutoSize = True
-        Me.ProjectTittle.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ProjectTittle.Location = New System.Drawing.Point(68, 33)
-        Me.ProjectTittle.Name = "ProjectTittle"
-        Me.ProjectTittle.Size = New System.Drawing.Size(88, 17)
-        Me.ProjectTittle.TabIndex = 3
-        Me.ProjectTittle.Text = "Project Tittle"
+        Me.Lable1.AutoSize = True
+        Me.Lable1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Lable1.Location = New System.Drawing.Point(68, 33)
+        Me.Lable1.Name = "Lable1"
+        Me.Lable1.Size = New System.Drawing.Size(83, 17)
+        Me.Lable1.TabIndex = 3
+        Me.Lable1.Text = "Project Title"
         '
         'ProjectGrpBox
         '
@@ -132,11 +132,12 @@ Partial Class Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(375, 415)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.Create)
         Me.Controls.Add(Me.ProjectGrpBox)
-        Me.Controls.Add(Me.ProjectTittle)
+        Me.Controls.Add(Me.Lable1)
         Me.Controls.Add(Me.ProjectName)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Form3"
@@ -150,7 +151,7 @@ Partial Class Form3
     End Sub
     Friend WithEvents ProjectName As TextBox
     Friend WithEvents DeadlineDuration As DateTimePicker
-    Friend WithEvents ProjectTittle As Label
+    Friend WithEvents Lable1 As Label
     Friend WithEvents ProjectGrpBox As GroupBox
     Friend WithEvents PeopleCount As NumericUpDown
     Friend WithEvents Label2 As Label

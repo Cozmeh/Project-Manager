@@ -55,9 +55,9 @@ Partial Class Form2_2
         'LogoutEmp
         '
         Me.LogoutEmp.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LogoutEmp.Location = New System.Drawing.Point(703, 12)
+        Me.LogoutEmp.Location = New System.Drawing.Point(705, 44)
         Me.LogoutEmp.Name = "LogoutEmp"
-        Me.LogoutEmp.Size = New System.Drawing.Size(85, 33)
+        Me.LogoutEmp.Size = New System.Drawing.Size(83, 44)
         Me.LogoutEmp.TabIndex = 7
         Me.LogoutEmp.Text = "Logout"
         Me.LogoutEmp.UseVisualStyleBackColor = True
@@ -98,12 +98,12 @@ Partial Class Form2_2
         'GroupBox1
         '
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 144)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 119)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(776, 294)
+        Me.GroupBox1.Size = New System.Drawing.Size(776, 319)
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Project"
+        Me.GroupBox1.Text = "Project(s):"
         '
         'Form2_2
         '

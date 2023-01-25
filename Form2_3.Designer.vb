@@ -24,12 +24,12 @@ Partial Class Form2_3
     Private Sub InitializeComponent()
         Me.AdminName = New System.Windows.Forms.Label()
         Me.AdminId = New System.Windows.Forms.Label()
-        Me.Employees = New System.Windows.Forms.Label()
         Me.LogoutAdmin = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.AdmingprBox = New System.Windows.Forms.GroupBox()
         Me.NewEmployee = New System.Windows.Forms.Button()
+        Me.EmpBox = New System.Windows.Forms.GroupBox()
         Me.AdmingprBox.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,22 +53,12 @@ Partial Class Form2_3
         Me.AdminId.TabIndex = 17
         Me.AdminId.Text = "Admin Id"
         '
-        'Employees
-        '
-        Me.Employees.AutoSize = True
-        Me.Employees.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Employees.Location = New System.Drawing.Point(12, 150)
-        Me.Employees.Name = "Employees"
-        Me.Employees.Size = New System.Drawing.Size(111, 25)
-        Me.Employees.TabIndex = 16
-        Me.Employees.Text = "Employees "
-        '
         'LogoutAdmin
         '
         Me.LogoutAdmin.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LogoutAdmin.Location = New System.Drawing.Point(703, 12)
+        Me.LogoutAdmin.Location = New System.Drawing.Point(704, 43)
         Me.LogoutAdmin.Name = "LogoutAdmin"
-        Me.LogoutAdmin.Size = New System.Drawing.Size(85, 33)
+        Me.LogoutAdmin.Size = New System.Drawing.Size(85, 44)
         Me.LogoutAdmin.TabIndex = 13
         Me.LogoutAdmin.Text = "Logout"
         Me.LogoutAdmin.UseVisualStyleBackColor = True
@@ -109,38 +99,47 @@ Partial Class Form2_3
         'NewEmployee
         '
         Me.NewEmployee.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.NewEmployee.Location = New System.Drawing.Point(704, 378)
+        Me.NewEmployee.Location = New System.Drawing.Point(704, 402)
         Me.NewEmployee.Name = "NewEmployee"
-        Me.NewEmployee.Size = New System.Drawing.Size(84, 60)
+        Me.NewEmployee.Size = New System.Drawing.Size(84, 40)
         Me.NewEmployee.TabIndex = 20
         Me.NewEmployee.Tag = ""
         Me.NewEmployee.Text = "New +"
         Me.NewEmployee.UseVisualStyleBackColor = True
+        '
+        'EmpBox
+        '
+        Me.EmpBox.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.EmpBox.Location = New System.Drawing.Point(12, 118)
+        Me.EmpBox.Name = "EmpBox"
+        Me.EmpBox.Size = New System.Drawing.Size(776, 278)
+        Me.EmpBox.TabIndex = 23
+        Me.EmpBox.TabStop = False
+        Me.EmpBox.Text = "Employees:"
         '
         'Form2_3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.EmpBox)
         Me.Controls.Add(Me.AdmingprBox)
         Me.Controls.Add(Me.NewEmployee)
-        Me.Controls.Add(Me.Employees)
         Me.Controls.Add(Me.LogoutAdmin)
         Me.Name = "Form2_3"
         Me.Text = "Admin Home Page"
         Me.AdmingprBox.ResumeLayout(False)
         Me.AdmingprBox.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents AdminName As Label
     Friend WithEvents AdminId As Label
-    Friend WithEvents Employees As Label
     Friend WithEvents LogoutAdmin As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents AdmingprBox As GroupBox
     Friend WithEvents NewEmployee As Button
+    Friend WithEvents EmpBox As GroupBox
 End Class

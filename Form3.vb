@@ -1,12 +1,8 @@
 ﻿Public Class Form3
-    'Private Sub BackToManHome_Click(sender As Object, e As EventArgs)
-    '    Form2_1.Show()
-    '    Me.Close()
-    'End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Cancel.Click
-        'open manager home page
-        Form2_1.Show()
+        'Enable manager home page
+        Form2_1.Enabled = True
         Me.Close()
     End Sub
 
@@ -30,7 +26,11 @@
     End Sub
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'this should add one month to minimum date threshold comment if not working and contact rohan
+
+        'diable manager HomePage
+        Form2_1.Enabled = False
+
+        'this should add one month to minimum date threshold
         DeadlineDuration.MinDate = DateTime.Now.AddMonths(1)
     End Sub
 End Class

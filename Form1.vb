@@ -5,40 +5,14 @@ Public Class Form1
     '----------GLOBAL VARIABLES----------------------
 
     'establishing sql database connection
-    Public sql As New SqlConnection With {
-            .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=D:\Coding\Langs\Visual Studio\ProjectManager\Resources\employeeDB.mdf"
-    }
-    'Public Dim sql As New SqlConnection With {
-    '.ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
+    'Public sql As New SqlConnection With {
+    '        .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=D:\Coding\Langs\Visual Studio\ProjectManager\Resources\employeeDB.mdf"
     '}
-
-
-
+    Public sql As New SqlConnection With {
+    .ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
+    }
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
-        'Dim conn As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\rohan\OneDrive\Desktop\Work\VB\login-vb.xlsx; Extended Properties=Excel 8.0;")
-        'Dim cmd As New OleDbCommand("Select UId,Pass from [sheet1$] where UId='" & UserId.Text & "' and Pass='" & Password.Text & "'", conn)
-        'conn.Open()
-        'Dim sdr As OleDbDataReader = cmd.ExecuteReader()
-        'If sdr.Read() <> True Then
-        '    MessageBox.Show("Please Check User Id and Password")
-        '    Return
-        'End If
-        'Dim sql As New SqlConnection With {
-        '.ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
-        '}
-
-        'Dim cmd As New OleDbCommand("Select UId,Pass from [sheet1$] where UId='" & UserId.Text & "' and Pass='" & Password.Text & "'", conn)
-        'conn.Open()
-        'Dim sdr As OleDbDataReader = cmd.ExecuteReader()
-        'If sdr.Read() <> True Then
-        '    MessageBox.Show("Please Check User Id and Password")
-        '    Return
-        'End If
-        'Dim sql As New SqlConnection With {
-        '.ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
-        '}
-
 
         'opening a connection to the database
         sql.Open()
@@ -72,20 +46,15 @@ Public Class Form1
         If designation = "M" Then
             'opens manager form if designation is manager(M)
             Form2_1.Show()
-            'MsgBox("manager")
         ElseIf designation = "A" Then
             'opens Admin form if designation is Admin(A)
             Form2_3.Show()
-            'MsgBox("admin")
         ElseIf designation = "E" Then
             'opens employee form if designation is employee
             Form2_2.Show()
-            'MsgBox("employee")
         End If
 
-
-        'Message box shows the name of the user
-        'MsgBox("Welcome " & data.Tables(0).Columns.IndexOf("Name"))
+        'hide the current form1
         Me.Hide()
 
         'Empties both the text box in the form  on load
@@ -95,11 +64,9 @@ Public Class Form1
         If PassBox.Text <> "" Then
             PassBox.Text = ""
         End If
-
-
-
-
     End Sub
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class

@@ -26,13 +26,13 @@ Partial Class Form4
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.ProjectId = New System.Windows.Forms.Label()
+        Me.ProjectName = New System.Windows.Forms.Label()
+        Me.Count = New System.Windows.Forms.Label()
         Me.Apply = New System.Windows.Forms.Button()
         Me.Delete = New System.Windows.Forms.Button()
         Me.Cancel = New System.Windows.Forms.Button()
-        Me.DateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Deadline = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label1
@@ -75,35 +75,35 @@ Partial Class Form4
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Deadline:"
         '
-        'Label5
+        'ProjectId
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(115, 27)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(92, 25)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Project Id"
+        Me.ProjectId.AutoSize = True
+        Me.ProjectId.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ProjectId.Location = New System.Drawing.Point(115, 27)
+        Me.ProjectId.Name = "ProjectId"
+        Me.ProjectId.Size = New System.Drawing.Size(92, 25)
+        Me.ProjectId.TabIndex = 4
+        Me.ProjectId.Text = "Project Id"
         '
-        'Label6
+        'ProjectName
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(115, 58)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(126, 25)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Project Name"
+        Me.ProjectName.AutoSize = True
+        Me.ProjectName.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ProjectName.Location = New System.Drawing.Point(115, 58)
+        Me.ProjectName.Name = "ProjectName"
+        Me.ProjectName.Size = New System.Drawing.Size(126, 25)
+        Me.ProjectName.TabIndex = 5
+        Me.ProjectName.Text = "Project Name"
         '
-        'Label7
+        'Count
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(115, 89)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(22, 25)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "2"
+        Me.Count.AutoSize = True
+        Me.Count.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Count.Location = New System.Drawing.Point(115, 89)
+        Me.Count.Name = "Count"
+        Me.Count.Size = New System.Drawing.Size(22, 25)
+        Me.Count.TabIndex = 6
+        Me.Count.Text = "2"
         '
         'Apply
         '
@@ -135,27 +135,29 @@ Partial Class Form4
         Me.Cancel.Text = "Cancel"
         Me.Cancel.UseVisualStyleBackColor = True
         '
-        'DateTimePicker
+        'Deadline
         '
-        Me.DateTimePicker.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DateTimePicker.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DateTimePicker.Location = New System.Drawing.Point(115, 117)
-        Me.DateTimePicker.Name = "DateTimePicker"
-        Me.DateTimePicker.Size = New System.Drawing.Size(200, 32)
-        Me.DateTimePicker.TabIndex = 10
+        Me.Deadline.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Deadline.Enabled = False
+        Me.Deadline.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Deadline.Location = New System.Drawing.Point(115, 117)
+        Me.Deadline.Name = "Deadline"
+        Me.Deadline.Size = New System.Drawing.Size(200, 32)
+        Me.Deadline.TabIndex = 10
         '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.DateTimePicker)
+        Me.Controls.Add(Me.Deadline)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.Delete)
         Me.Controls.Add(Me.Apply)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Count)
+        Me.Controls.Add(Me.ProjectName)
+        Me.Controls.Add(Me.ProjectId)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -171,11 +173,11 @@ Partial Class Form4
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents ProjectId As Label
+    Friend WithEvents ProjectName As Label
+    Friend WithEvents Count As Label
     Friend WithEvents Apply As Button
     Friend WithEvents Delete As Button
     Friend WithEvents Cancel As Button
-    Friend WithEvents DateTimePicker As DateTimePicker
+    Friend WithEvents Deadline As DateTimePicker
 End Class

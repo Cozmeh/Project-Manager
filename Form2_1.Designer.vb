@@ -26,19 +26,19 @@ Partial Class Form2_1
         Me.NewProject = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PreviousProject = New System.Windows.Forms.Label()
         Me.ManagerId = New System.Windows.Forms.Label()
         Me.ManagerName = New System.Windows.Forms.Label()
         Me.UsergprBox = New System.Windows.Forms.GroupBox()
+        Me.ProjectBox = New System.Windows.Forms.GroupBox()
         Me.UsergprBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'LogoutManager
         '
         Me.LogoutManager.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LogoutManager.Location = New System.Drawing.Point(703, 12)
+        Me.LogoutManager.Location = New System.Drawing.Point(704, 43)
         Me.LogoutManager.Name = "LogoutManager"
-        Me.LogoutManager.Size = New System.Drawing.Size(85, 33)
+        Me.LogoutManager.Size = New System.Drawing.Size(85, 44)
         Me.LogoutManager.TabIndex = 0
         Me.LogoutManager.Text = "Logout"
         Me.LogoutManager.UseVisualStyleBackColor = True
@@ -46,9 +46,9 @@ Partial Class Form2_1
         'NewProject
         '
         Me.NewProject.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.NewProject.Location = New System.Drawing.Point(704, 378)
+        Me.NewProject.Location = New System.Drawing.Point(704, 402)
         Me.NewProject.Name = "NewProject"
-        Me.NewProject.Size = New System.Drawing.Size(84, 60)
+        Me.NewProject.Size = New System.Drawing.Size(84, 40)
         Me.NewProject.TabIndex = 1
         Me.NewProject.Text = "New +"
         Me.NewProject.UseVisualStyleBackColor = True
@@ -72,16 +72,6 @@ Partial Class Form2_1
         Me.Label2.Size = New System.Drawing.Size(76, 25)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Name  :"
-        '
-        'PreviousProject
-        '
-        Me.PreviousProject.AutoSize = True
-        Me.PreviousProject.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.PreviousProject.Location = New System.Drawing.Point(12, 146)
-        Me.PreviousProject.Name = "PreviousProject"
-        Me.PreviousProject.Size = New System.Drawing.Size(75, 25)
-        Me.PreviousProject.TabIndex = 4
-        Me.PreviousProject.Text = "Project"
         '
         'ManagerId
         '
@@ -116,13 +106,23 @@ Partial Class Form2_1
         Me.UsergprBox.TabStop = False
         Me.UsergprBox.Text = "Manager"
         '
+        'ProjectBox
+        '
+        Me.ProjectBox.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ProjectBox.Location = New System.Drawing.Point(12, 118)
+        Me.ProjectBox.Name = "ProjectBox"
+        Me.ProjectBox.Size = New System.Drawing.Size(776, 278)
+        Me.ProjectBox.TabIndex = 15
+        Me.ProjectBox.TabStop = False
+        Me.ProjectBox.Text = "Projects:"
+        '
         'Form2_1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ProjectBox)
         Me.Controls.Add(Me.UsergprBox)
-        Me.Controls.Add(Me.PreviousProject)
         Me.Controls.Add(Me.NewProject)
         Me.Controls.Add(Me.LogoutManager)
         Me.Name = "Form2_1"
@@ -130,7 +130,6 @@ Partial Class Form2_1
         Me.UsergprBox.ResumeLayout(False)
         Me.UsergprBox.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -138,8 +137,8 @@ Partial Class Form2_1
     Friend WithEvents NewProject As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents PreviousProject As Label
     Friend WithEvents ManagerId As Label
     Friend WithEvents ManagerName As Label
     Friend WithEvents UsergprBox As GroupBox
+    Friend WithEvents ProjectBox As GroupBox
 End Class
