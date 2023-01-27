@@ -33,10 +33,12 @@ Public Class ManagerHomePage
     End Sub
 
     Private Sub ManagerHomePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Dim responce As String = MsgBox("Do you want to Logout", vbYesNo, "Are You Sure?")
+        Dim responce As String = MsgBox("Do you want to Logout?", vbYesNo, "Are You Sure?")
         If responce = vbYes Then
             LoginForm.sql.Close()
             LoginForm.Show()
+        ElseIf responce = vbNo Then
+            e.Cancel = True
         End If
     End Sub
 End Class
