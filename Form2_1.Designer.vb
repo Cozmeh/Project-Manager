@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form2_1
+Partial Class ManagerHomePage
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -116,7 +116,7 @@ Partial Class Form2_1
         Me.ProjectBox.TabStop = False
         Me.ProjectBox.Text = "Projects:"
         '
-        'Form2_1
+        'ManagerHomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -125,7 +125,7 @@ Partial Class Form2_1
         Me.Controls.Add(Me.UsergprBox)
         Me.Controls.Add(Me.NewProject)
         Me.Controls.Add(Me.LogoutManager)
-        Me.Name = "Form2_1"
+        Me.Name = "ManagerHomePage"
         Me.Text = "Manager Home Page"
         Me.UsergprBox.ResumeLayout(False)
         Me.UsergprBox.PerformLayout()

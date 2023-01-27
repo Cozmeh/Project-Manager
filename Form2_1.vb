@@ -2,21 +2,21 @@
 
 'Manager Home Page
 
-Public Class Form2_1
+Public Class ManagerHomePage
     Private Sub LogoutManager_Click(sender As Object, e As EventArgs) Handles LogoutManager.Click
-        Form1.sql.Close()
-        Form1.Show()
+        LoginForm.sql.Close()
+        LoginForm.Show()
         Me.Close()
     End Sub
 
     Private Sub NewProject_Click(sender As Object, e As EventArgs) Handles NewProject.Click
-        Form3.Show()
+        NewProjectWizard.Show()
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'creating a sql command statement 
-        Dim form2command As SqlCommand = Form1.sql.CreateCommand()
-        form2command.CommandText = "SELECT * FROM Employees WHERE Id ='" + Form1.UserIDBox.Text + "'"
+        Dim form2command As SqlCommand = LoginForm.sql.CreateCommand()
+        form2command.CommandText = "SELECT * FROM Employees WHERE Id ='" + LoginForm.UserIDBox.Text + "'"
 
         'sqladapter to handle the sql commands 
         Dim form2sqlAdapter As New SqlDataAdapter With {
@@ -32,11 +32,11 @@ Public Class Form2_1
         ManagerId.Text = form2data.Tables(0).Rows(0)(0).ToString()
     End Sub
 
-    Private Sub Form2_1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub ManagerHomePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Dim responce As String = MsgBox("Do you want to Logout", vbYesNo, "Are You Sure?")
         If responce = vbYes Then
-            Form1.sql.Close()
-            Form1.Show()
+            LoginForm.sql.Close()
+            LoginForm.Show()
         End If
     End Sub
 End Class

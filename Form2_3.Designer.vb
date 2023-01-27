@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form2_3
+Partial Class AdminHomePage
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -105,7 +105,7 @@ Partial Class Form2_3
         Me.EmpBox.TabStop = False
         Me.EmpBox.Text = "Employees:"
         '
-        'Form2_3
+        'AdminHomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -113,7 +113,7 @@ Partial Class Form2_3
         Me.Controls.Add(Me.EmpBox)
         Me.Controls.Add(Me.AdmingprBox)
         Me.Controls.Add(Me.LogoutAdmin)
-        Me.Name = "Form2_3"
+        Me.Name = "AdminHomePage"
         Me.Text = "Admin Home Page"
         Me.AdmingprBox.ResumeLayout(False)
         Me.AdmingprBox.PerformLayout()

@@ -1,8 +1,8 @@
-﻿Public Class Form3
+﻿Public Class NewProjectWizard
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Cancel.Click
         'Enable manager home page
-        Form2_1.Enabled = True
+        ManagerHomePage.Enabled = True
         Me.Close()
     End Sub
 
@@ -21,20 +21,20 @@
             Return
         End If
         'opens the calender for further updation
-        Form4.Show()
+        EditProjectWizard.Show()
         Me.Close()
     End Sub
 
-    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub NewProjectWizard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'diable manager HomePage
-        Form2_1.Enabled = False
+        ManagerHomePage.Enabled = False
 
         'this should add one month to minimum date threshold
         DeadlineDuration.MinDate = DateTime.Now.AddMonths(1)
     End Sub
 
-    Private Sub Form3_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Form2_1.Enabled = True
+    Private Sub NewProjectWizard_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ManagerHomePage.Enabled = True
     End Sub
 End Class

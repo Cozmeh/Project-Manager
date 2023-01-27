@@ -2,17 +2,17 @@
 
 'Admin Home Page
 
-Public Class Form2_3
+Public Class AdminHomePage
     Private Sub LogoutAdmin_Click(sender As Object, e As EventArgs) Handles LogoutAdmin.Click
-        Form1.sql.Close()
-        Form1.Show()
+        LoginForm.sql.Close()
+        LoginForm.Show()
         Me.Close()
     End Sub
 
-    Private Sub Form2_3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub AdminHomePage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'creating a sql command statement 
-        Dim command As SqlCommand = Form1.sql.CreateCommand()
-        command.CommandText = "SELECT * FROM Employees WHERE Id ='" + Form1.UserIDBox.Text + "'"
+        Dim command As SqlCommand = LoginForm.sql.CreateCommand()
+        command.CommandText = "SELECT * FROM Employees WHERE Id ='" + LoginForm.UserIDBox.Text + "'"
 
         'sqladapter to handle the sql commands 
         Dim sqlAdapter As New SqlDataAdapter With {
@@ -27,11 +27,11 @@ Public Class Form2_3
         AdminId.Text = form2data.Tables(0).Rows(0)(0).ToString()
     End Sub
 
-    Private Sub Form2_3_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub AdminHomePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Dim responce As String = MsgBox("Do you want to Logout", vbYesNo, "Are You Sure?")
         If responce = vbYes Then
-            Form1.sql.Close()
-            Form1.Show()
+            LoginForm.sql.Close()
+            LoginForm.Show()
         End If
     End Sub
 End Class

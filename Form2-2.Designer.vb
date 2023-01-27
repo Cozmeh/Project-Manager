@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form2_2
+Partial Class EmployeeHomePage
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -105,7 +105,7 @@ Partial Class Form2_2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Project(s):"
         '
-        'Form2_2
+        'EmployeeHomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -113,7 +113,7 @@ Partial Class Form2_2
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.EmpGrpBox)
         Me.Controls.Add(Me.LogoutEmp)
-        Me.Name = "Form2_2"
+        Me.Name = "EmployeeHomePage"
         Me.Text = "Employee Home Page"
         Me.EmpGrpBox.ResumeLayout(False)
         Me.EmpGrpBox.PerformLayout()

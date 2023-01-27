@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Public Class Form1
+Public Class LoginForm
 
     '----------GLOBAL VARIABLES----------------------
 
@@ -45,16 +45,16 @@ Public Class Form1
 
         If designation = "M" Then
             'opens manager form if designation is manager(M)
-            Form2_1.Show()
+            ManagerHomePage.Show()
         ElseIf designation = "A" Then
             'opens Admin form if designation is Admin(A)
-            Form2_3.Show()
+            AdminHomePage.Show()
         ElseIf designation = "E" Then
             'opens employee form if designation is employee
-            Form2_2.Show()
+            EmployeeHomePage.Show()
         End If
 
-        'hide the current form1
+        'hide the current LoginForm
         'Me.Hide()
 
         'Empties both the text box in the form  on load
@@ -65,6 +65,5 @@ Public Class Form1
             PassBox.Text = ""
         End If
     End Sub
-
 
 End Class

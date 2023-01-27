@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form3
+Partial Class NewProjectWizard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -128,7 +128,7 @@ Partial Class Form3
         Me.Cancel.Text = "Cancel"
         Me.Cancel.UseVisualStyleBackColor = True
         '
-        'Form3
+        'NewProjectWizard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -140,7 +140,7 @@ Partial Class Form3
         Me.Controls.Add(Me.Lable1)
         Me.Controls.Add(Me.ProjectName)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Name = "Form3"
+        Me.Name = "NewProjectWizard"
         Me.Text = "New-Project wizard"
         Me.ProjectGrpBox.ResumeLayout(False)
         Me.ProjectGrpBox.PerformLayout()

@@ -1,20 +1,20 @@
-﻿Public Class Form4
+﻿Public Class EditProjectWizard
 
-    Private Sub Form4_closeing(sender As Object, e As EventArgs) Handles MyBase.Closing
-        Form2_1.Enabled = True
+    Private Sub EditProjectWizard_closeing(sender As Object, e As EventArgs) Handles MyBase.Closing
+        ManagerHomePage.Enabled = True
     End Sub
 
-    Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub EditProjectWizard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Filling all the fields
         Dim pId As New Random()
         ProjectId.Text = pId.Next(100000, 999999)
-        ProjectName.Text = Form3.ProjectName.Text
-        Deadline.Value = Form3.DeadlineDuration.Value
-        Count.Text = Form3.PeopleCount.Value
+        ProjectName.Text = NewProjectWizard.ProjectName.Text
+        Deadline.Value = NewProjectWizard.DeadlineDuration.Value
+        Count.Text = NewProjectWizard.PeopleCount.Value
     End Sub
 
     'Private Sub Cancel_Click(sender As Object, e As EventArgs)
-    '    Form2_1.Enabled = True
+    '    ManagerHomePage.Enabled = True
     '    Me.Close()
     'End Sub
 
@@ -27,7 +27,7 @@
     'End Sub
 
     Private Sub Ok_Click(sender As Object, e As EventArgs) Handles Ok.Click
-        Form2_1.Enabled = True
+        ManagerHomePage.Enabled = True
         Me.Close()
     End Sub
 

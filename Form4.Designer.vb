@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form4
+Partial Class EditProjectWizard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -165,7 +165,7 @@ Partial Class Form4
         Me.Edit.Text = "Edit"
         Me.Edit.UseVisualStyleBackColor = True
         '
-        'Form4
+        'EditProjectWizard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -174,8 +174,8 @@ Partial Class Form4
         Me.Controls.Add(Me.Ok)
         Me.Controls.Add(Me.Layout)
         Me.Controls.Add(Me.ProjectDetails)
-        Me.Name = "Form4"
-        Me.Text = "Form4"
+        Me.Name = "EditProjectWizard"
+        Me.Text = "EditProjectWizard"
         Me.ProjectDetails.ResumeLayout(False)
         Me.ProjectDetails.PerformLayout()
         Me.ResumeLayout(False)
