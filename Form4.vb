@@ -13,16 +13,26 @@
         Count.Text = Form3.PeopleCount.Value
     End Sub
 
-    Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
+    'Private Sub Cancel_Click(sender As Object, e As EventArgs)
+    '    Form2_1.Enabled = True
+    '    Me.Close()
+    'End Sub
+
+    'Private Sub Delete_Click(sender As Object, e As EventArgs)
+    '    Dim responce As String = MsgBox("Do you want to delete " & ProjectName.Text, vbYesNo, "Are You Sure?")
+    '    If responce = vbYes Then
+    '        'delete the row from database
+    '        Me.Close()
+    '    End If
+    'End Sub
+
+    Private Sub Ok_Click(sender As Object, e As EventArgs) Handles Ok.Click
         Form2_1.Enabled = True
         Me.Close()
     End Sub
 
-    Private Sub Delete_Click(sender As Object, e As EventArgs) Handles Delete.Click
-        Dim responce As String = MsgBox("Do you want to delete " & ProjectName.Text, vbYesNo, "Are You Sure?")
-        If responce = vbYes Then
-            'delete the row from database
-            Me.Close()
-        End If
+    Private Sub Edit_Click(sender As Object, e As EventArgs) Handles Edit.Click
+        EditProjectDetails.Show()
+        Me.Enabled = False
     End Sub
 End Class

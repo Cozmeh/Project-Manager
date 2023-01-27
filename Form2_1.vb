@@ -2,9 +2,6 @@
 
 'Manager Home Page
 
-
-
-
 Public Class Form2_1
     Private Sub LogoutManager_Click(sender As Object, e As EventArgs) Handles LogoutManager.Click
         Form1.sql.Close()
@@ -14,7 +11,6 @@ Public Class Form2_1
 
     Private Sub NewProject_Click(sender As Object, e As EventArgs) Handles NewProject.Click
         Form3.Show()
-        'Me.Hide()
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load

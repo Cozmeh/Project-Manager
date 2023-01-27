@@ -32,7 +32,7 @@ Partial Class Form1
         'loginbtn
         '
         Me.loginbtn.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.loginbtn.Location = New System.Drawing.Point(185, 257)
+        Me.loginbtn.Location = New System.Drawing.Point(179, 257)
         Me.loginbtn.Name = "loginbtn"
         Me.loginbtn.Size = New System.Drawing.Size(162, 44)
         Me.loginbtn.TabIndex = 0
@@ -42,7 +42,7 @@ Partial Class Form1
         'empimg
         '
         Me.empimg.Image = Global.ProjectManager.My.Resources.Resources.login
-        Me.empimg.Location = New System.Drawing.Point(216, 22)
+        Me.empimg.Location = New System.Drawing.Point(204, 22)
         Me.empimg.Name = "empimg"
         Me.empimg.Size = New System.Drawing.Size(100, 100)
         Me.empimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -52,7 +52,7 @@ Partial Class Form1
         'UserIDBox
         '
         Me.UserIDBox.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.UserIDBox.Location = New System.Drawing.Point(138, 142)
+        Me.UserIDBox.Location = New System.Drawing.Point(126, 142)
         Me.UserIDBox.Name = "UserIDBox"
         Me.UserIDBox.PlaceholderText = "User Id"
         Me.UserIDBox.Size = New System.Drawing.Size(282, 32)
@@ -61,7 +61,7 @@ Partial Class Form1
         'PassBox
         '
         Me.PassBox.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.PassBox.Location = New System.Drawing.Point(138, 193)
+        Me.PassBox.Location = New System.Drawing.Point(126, 193)
         Me.PassBox.Name = "PassBox"
         Me.PassBox.PlaceholderText = "Password"
         Me.PassBox.Size = New System.Drawing.Size(282, 32)
@@ -72,7 +72,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(529, 331)
+        Me.ClientSize = New System.Drawing.Size(529, 312)
         Me.Controls.Add(Me.PassBox)
         Me.Controls.Add(Me.UserIDBox)
         Me.Controls.Add(Me.empimg)

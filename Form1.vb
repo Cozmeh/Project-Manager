@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class Form1
 
-
     '----------GLOBAL VARIABLES----------------------
 
     'establishing sql database connection
@@ -22,7 +21,6 @@ Public Class Form1
         'creating a sql command statement 
         command.CommandText = "SELECT * from Employees Where Id='" + UserIDBox.Text + "' and password = '" + PassBox.Text + "'"
 
-
         'sqladapter to handle the sql commands 
         Dim sqlAdapter As New SqlDataAdapter With {
             .SelectCommand = command
@@ -30,6 +28,7 @@ Public Class Form1
 
         'creates a table with the required data
         Dim data As New DataSet()
+
 
         'filling the dataset with data
         sqlAdapter.Fill(data)
@@ -56,7 +55,7 @@ Public Class Form1
         End If
 
         'hide the current form1
-        Me.Hide()
+        'Me.Hide()
 
         'Empties both the text box in the form  on load
         If UserIDBox.Text <> "" Then
@@ -66,5 +65,6 @@ Public Class Form1
             PassBox.Text = ""
         End If
     End Sub
+
 
 End Class

@@ -28,7 +28,6 @@ Partial Class Form2_3
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.AdmingprBox = New System.Windows.Forms.GroupBox()
-        Me.NewEmployee = New System.Windows.Forms.Button()
         Me.EmpBox = New System.Windows.Forms.GroupBox()
         Me.AdmingprBox.SuspendLayout()
         Me.SuspendLayout()
@@ -96,17 +95,6 @@ Partial Class Form2_3
         Me.AdmingprBox.TabStop = False
         Me.AdmingprBox.Text = "Admin"
         '
-        'NewEmployee
-        '
-        Me.NewEmployee.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.NewEmployee.Location = New System.Drawing.Point(704, 402)
-        Me.NewEmployee.Name = "NewEmployee"
-        Me.NewEmployee.Size = New System.Drawing.Size(84, 40)
-        Me.NewEmployee.TabIndex = 20
-        Me.NewEmployee.Tag = ""
-        Me.NewEmployee.Text = "New +"
-        Me.NewEmployee.UseVisualStyleBackColor = True
-        '
         'EmpBox
         '
         Me.EmpBox.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -121,10 +109,9 @@ Partial Class Form2_3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 408)
         Me.Controls.Add(Me.EmpBox)
         Me.Controls.Add(Me.AdmingprBox)
-        Me.Controls.Add(Me.NewEmployee)
         Me.Controls.Add(Me.LogoutAdmin)
         Me.Name = "Form2_3"
         Me.Text = "Admin Home Page"
@@ -140,6 +127,5 @@ Partial Class Form2_3
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents AdmingprBox As GroupBox
-    Friend WithEvents NewEmployee As Button
     Friend WithEvents EmpBox As GroupBox
 End Class

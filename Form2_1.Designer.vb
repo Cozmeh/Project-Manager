@@ -59,9 +59,9 @@ Partial Class Form2_1
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(7, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 25)
+        Me.Label1.Size = New System.Drawing.Size(75, 25)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "UserID :"
+        Me.Label1.Text = "User Id:"
         '
         'Label2
         '
