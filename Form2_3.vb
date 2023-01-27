@@ -26,4 +26,12 @@ Public Class Form2_3
         AdminName.Text = form2data.Tables(0).Rows(0)(1).ToString()
         AdminId.Text = form2data.Tables(0).Rows(0)(0).ToString()
     End Sub
+
+    Private Sub Form2_3_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Dim responce As String = MsgBox("Do you want to Logout", vbYesNo, "Are You Sure?")
+        If responce = vbYes Then
+            Form1.sql.Close()
+            Form1.Show()
+        End If
+    End Sub
 End Class

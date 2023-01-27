@@ -37,6 +37,7 @@ Public Class Form1
         'If there is no row present i.e. wrong userId and password
         If data.Tables(0).Rows.Count <= 0 Then
             MsgBox("Check User Id or Password")
+            sql.Close()
             Return
         End If
 
@@ -66,7 +67,4 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

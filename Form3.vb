@@ -33,4 +33,8 @@
         'this should add one month to minimum date threshold
         DeadlineDuration.MinDate = DateTime.Now.AddMonths(1)
     End Sub
+
+    Private Sub Form3_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Form2_1.Enabled = True
+    End Sub
 End Class

@@ -23,7 +23,6 @@
         If responce = vbYes Then
             'delete the row from database
             Me.Close()
-
         End If
     End Sub
 End Class
