@@ -22,9 +22,9 @@ Partial Class AdminHomePage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.AdminName = New System.Windows.Forms.Label()
         Me.AdminId = New System.Windows.Forms.Label()
         Me.LogoutAdmin = New System.Windows.Forms.Button()
@@ -41,12 +41,22 @@ Partial Class AdminHomePage
         Me.Add_EmpName = New System.Windows.Forms.TextBox()
         Me.Add_ID = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.GetBtn = New System.Windows.Forms.Button()
+        Me.UpdateRow = New System.Windows.Forms.Button()
+        Me.Upd_Password = New System.Windows.Forms.TextBox()
+        Me.Upd_Designation = New System.Windows.Forms.ComboBox()
+        Me.Upd_Name = New System.Windows.Forms.TextBox()
+        Me.Upd_ID = New System.Windows.Forms.TextBox()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.DeleteRow = New System.Windows.Forms.Button()
+        Me.Del_ID = New System.Windows.Forms.TextBox()
         Me.AdmingprBox.SuspendLayout()
         Me.EmpBox.SuspendLayout()
         CType(Me.AdminDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'AdminName
@@ -126,37 +136,44 @@ Partial Class AdminHomePage
         '
         'AdminDataGrid
         '
+        Me.AdminDataGrid.AllowUserToAddRows = False
+        Me.AdminDataGrid.AllowUserToDeleteRows = False
         Me.AdminDataGrid.AllowUserToResizeColumns = False
         Me.AdminDataGrid.AllowUserToResizeRows = False
+        Me.AdminDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.AdminDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AdminDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AdminDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.AdminDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.AdminDataGrid.DefaultCellStyle = DataGridViewCellStyle5
+        Me.AdminDataGrid.Cursor = System.Windows.Forms.Cursors.Hand
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.AdminDataGrid.DefaultCellStyle = DataGridViewCellStyle2
         Me.AdminDataGrid.Location = New System.Drawing.Point(11, 164)
         Me.AdminDataGrid.Name = "AdminDataGrid"
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AdminDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.AdminDataGrid.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.AdminDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.AdminDataGrid.RowHeadersWidth = 20
         Me.AdminDataGrid.RowTemplate.Height = 25
+        Me.AdminDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.AdminDataGrid.Size = New System.Drawing.Size(755, 184)
         Me.AdminDataGrid.TabIndex = 0
         '
@@ -189,12 +206,15 @@ Partial Class AdminHomePage
         '
         'AddRow
         '
-        Me.AddRow.Location = New System.Drawing.Point(636, 35)
+        Me.AddRow.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.AddRow.FlatAppearance.BorderSize = 0
+        Me.AddRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddRow.Location = New System.Drawing.Point(630, 35)
         Me.AddRow.Name = "AddRow"
-        Me.AddRow.Size = New System.Drawing.Size(75, 25)
+        Me.AddRow.Size = New System.Drawing.Size(100, 25)
         Me.AddRow.TabIndex = 26
         Me.AddRow.Text = "Add Row"
-        Me.AddRow.UseVisualStyleBackColor = True
+        Me.AddRow.UseVisualStyleBackColor = False
         '
         'Add_Password
         '
@@ -207,7 +227,7 @@ Partial Class AdminHomePage
         'Add_Designtion
         '
         Me.Add_Designtion.FormattingEnabled = True
-        Me.Add_Designtion.Items.AddRange(New Object() {"E ", "M "})
+        Me.Add_Designtion.Items.AddRange(New Object() {"E", "M"})
         Me.Add_Designtion.Location = New System.Drawing.Point(283, 35)
         Me.Add_Designtion.Name = "Add_Designtion"
         Me.Add_Designtion.Size = New System.Drawing.Size(100, 25)
@@ -231,23 +251,108 @@ Partial Class AdminHomePage
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.GetBtn)
+        Me.TabPage2.Controls.Add(Me.UpdateRow)
+        Me.TabPage2.Controls.Add(Me.Upd_Password)
+        Me.TabPage2.Controls.Add(Me.Upd_Designation)
+        Me.TabPage2.Controls.Add(Me.Upd_Name)
+        Me.TabPage2.Controls.Add(Me.Upd_ID)
         Me.TabPage2.Location = New System.Drawing.Point(4, 26)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(755, 95)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Delete"
+        Me.TabPage2.Text = "Edit"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'GetBtn
+        '
+        Me.GetBtn.BackColor = System.Drawing.Color.Silver
+        Me.GetBtn.FlatAppearance.BorderSize = 0
+        Me.GetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GetBtn.Location = New System.Drawing.Point(132, 34)
+        Me.GetBtn.Name = "GetBtn"
+        Me.GetBtn.Size = New System.Drawing.Size(63, 26)
+        Me.GetBtn.TabIndex = 38
+        Me.GetBtn.Text = "Get"
+        Me.GetBtn.UseVisualStyleBackColor = False
+        '
+        'UpdateRow
+        '
+        Me.UpdateRow.BackColor = System.Drawing.Color.Goldenrod
+        Me.UpdateRow.FlatAppearance.BorderSize = 0
+        Me.UpdateRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.UpdateRow.Location = New System.Drawing.Point(630, 35)
+        Me.UpdateRow.Name = "UpdateRow"
+        Me.UpdateRow.Size = New System.Drawing.Size(100, 25)
+        Me.UpdateRow.TabIndex = 37
+        Me.UpdateRow.Text = "Update Row"
+        Me.UpdateRow.UseVisualStyleBackColor = False
+        '
+        'Upd_Password
+        '
+        Me.Upd_Password.Location = New System.Drawing.Point(497, 35)
+        Me.Upd_Password.Name = "Upd_Password"
+        Me.Upd_Password.PlaceholderText = "Password"
+        Me.Upd_Password.Size = New System.Drawing.Size(100, 25)
+        Me.Upd_Password.TabIndex = 36
+        '
+        'Upd_Designation
+        '
+        Me.Upd_Designation.FormattingEnabled = True
+        Me.Upd_Designation.Items.AddRange(New Object() {"E", "M"})
+        Me.Upd_Designation.Location = New System.Drawing.Point(368, 35)
+        Me.Upd_Designation.Name = "Upd_Designation"
+        Me.Upd_Designation.Size = New System.Drawing.Size(100, 25)
+        Me.Upd_Designation.TabIndex = 35
+        '
+        'Upd_Name
+        '
+        Me.Upd_Name.Location = New System.Drawing.Point(237, 35)
+        Me.Upd_Name.Name = "Upd_Name"
+        Me.Upd_Name.PlaceholderText = "Name"
+        Me.Upd_Name.Size = New System.Drawing.Size(100, 25)
+        Me.Upd_Name.TabIndex = 34
+        '
+        'Upd_ID
+        '
+        Me.Upd_ID.Location = New System.Drawing.Point(26, 35)
+        Me.Upd_ID.Name = "Upd_ID"
+        Me.Upd_ID.PlaceholderText = "UserID"
+        Me.Upd_ID.Size = New System.Drawing.Size(100, 25)
+        Me.Upd_ID.TabIndex = 33
         '
         'TabPage3
         '
+        Me.TabPage3.Controls.Add(Me.DeleteRow)
+        Me.TabPage3.Controls.Add(Me.Del_ID)
         Me.TabPage3.Location = New System.Drawing.Point(4, 26)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(755, 95)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Update"
+        Me.TabPage3.Text = "Delete"
         Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'DeleteRow
+        '
+        Me.DeleteRow.BackColor = System.Drawing.Color.Tomato
+        Me.DeleteRow.FlatAppearance.BorderSize = 0
+        Me.DeleteRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteRow.Location = New System.Drawing.Point(630, 35)
+        Me.DeleteRow.Name = "DeleteRow"
+        Me.DeleteRow.Size = New System.Drawing.Size(100, 25)
+        Me.DeleteRow.TabIndex = 34
+        Me.DeleteRow.Text = "Delete Row"
+        Me.DeleteRow.UseVisualStyleBackColor = False
+        '
+        'Del_ID
+        '
+        Me.Del_ID.Location = New System.Drawing.Point(26, 35)
+        Me.Del_ID.Name = "Del_ID"
+        Me.Del_ID.PlaceholderText = "UserID"
+        Me.Del_ID.Size = New System.Drawing.Size(227, 25)
+        Me.Del_ID.TabIndex = 33
         '
         'AdminHomePage
         '
@@ -266,6 +371,10 @@ Partial Class AdminHomePage
         Me.TabControl.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
+        Me.TabPage3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -287,4 +396,12 @@ Partial Class AdminHomePage
     Friend WithEvents Add_Designtion As ComboBox
     Friend WithEvents Add_Password As TextBox
     Friend WithEvents AddRow As Button
+    Friend WithEvents GetBtn As Button
+    Friend WithEvents UpdateRow As Button
+    Friend WithEvents Upd_Password As TextBox
+    Friend WithEvents Upd_Designation As ComboBox
+    Friend WithEvents Upd_Name As TextBox
+    Friend WithEvents Upd_ID As TextBox
+    Friend WithEvents DeleteRow As Button
+    Friend WithEvents Del_ID As TextBox
 End Class
