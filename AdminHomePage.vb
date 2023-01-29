@@ -70,7 +70,7 @@ Public Class AdminHomePage
                     'sqladapter to handle the sql commands 
                     Dim sqlAdapter As New SqlDataAdapter With {
                     .SelectCommand = command
-                }
+                    }
                     'creates a table with the required data
                     Dim data As New DataSet()
                     sqlAdapter.Fill(data)
@@ -218,12 +218,8 @@ Public Class AdminHomePage
         End If
     End Sub
 
-    Sub itemclicked()
-
-    End Sub
-
     Private Sub AdminDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles AdminDataGrid.CellContentClick
-        'itemclicked()
+        'take the text from the cell and display in idtextbox of update and delete
         With AdminDataGrid
             Dim i As Integer = .CurrentCell.RowIndex
             Upd_ID.Text = .Rows(i).Cells(0).Value.ToString

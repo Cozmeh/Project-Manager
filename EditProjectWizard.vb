@@ -6,8 +6,6 @@
 
     Private Sub EditProjectWizard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Filling all the fields
-        Dim pId As New Random()
-        ProjectId.Text = pId.Next(100000, 999999)
         ProjectName.Text = NewProjectWizard.ProjectName.Text
         Deadline.Value = NewProjectWizard.DeadlineDuration.Value
         Count.Text = NewProjectWizard.PeopleCount.Value

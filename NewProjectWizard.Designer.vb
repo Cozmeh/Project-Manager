@@ -47,7 +47,9 @@ Partial Class NewProjectWizard
         'DeadlineDuration
         '
         Me.DeadlineDuration.CalendarFont = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.DeadlineDuration.CustomFormat = "dd-MM-yyyy"
         Me.DeadlineDuration.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.DeadlineDuration.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DeadlineDuration.Location = New System.Drawing.Point(25, 60)
         Me.DeadlineDuration.MinDate = New Date(2023, 1, 23, 0, 0, 0, 0)
         Me.DeadlineDuration.Name = "DeadlineDuration"

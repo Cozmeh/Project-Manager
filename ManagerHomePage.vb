@@ -5,7 +5,6 @@
 Public Class ManagerHomePage
     Private Sub LogoutManager_Click(sender As Object, e As EventArgs) Handles LogoutManager.Click
         LoginForm.sql.Close()
-        LoginForm.Show()
         Me.Close()
     End Sub
 
