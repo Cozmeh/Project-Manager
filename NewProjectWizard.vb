@@ -52,7 +52,7 @@ Public Class NewProjectWizard
 
     Private Sub NewProjectWizard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        DeadlineDuration.MinDate = Date.Now
+        DeadlineDuration.MinDate = Date.Now.AddDays(30)
 
         'diable manager HomePage
         ManagerHomePage.Enabled = False
