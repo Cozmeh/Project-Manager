@@ -18,8 +18,14 @@ Public Class NewProjectWizard
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Create.Click
 
+        'this should add one month to minimum date threshold
+        If DeadlineDuration.Value < DateTime.Now.AddDays(30) Then
+            MessageBox.Show("The entered date should be at least 1 Month away")
+            Return
+        End If
+
         'adds data to the table
-        Dim AddCommand As String = "INSERT INTO Projects (PId,Title,Deadline,People,ManagerId) VALUES ('" & id.ToString & "','" + ProjectName.Text + "','" + DeadlineDuration.Text + "','" + PeopleCount.Value + "','" + ManagerHomePage.ManagerId.Text + "')"
+        Dim AddCommand As String = "INSERT INTO Projects (PId,Title,Deadline,People,ManagerId) VALUES ('" + id.ToString + "','" + ProjectName.Text + "','" + DeadlineDuration.Text + "','" + PeopleCount.Value.ToString + "','" + ManagerHomePage.ManagerId.Text + "')"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
@@ -46,11 +52,10 @@ Public Class NewProjectWizard
 
     Private Sub NewProjectWizard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        DeadlineDuration.MinDate = DateTime.Now
+
         'diable manager HomePage
         ManagerHomePage.Enabled = False
-
-        'this should add one month to minimum date threshold
-        DeadlineDuration.MinDate = DateTime.Now.AddMonths(1)
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
@@ -66,10 +71,10 @@ Public Class NewProjectWizard
 
         'creating random project id
         Dim pId As New Random()
-        id = pId.Next(100000, 999999)
-        For Each row In data.Tables(0).Rows()
+        id = pId.Next(100000, 999999).ToString
+        For Each row In data.Tables(0).Rows().ToString
             If id = row Then
-                id = pId.Next(100000, 999999)
+                id = pId.Next(100000, 999999).ToString
             End If
         Next
         ProjectGrpBox.Text = "Project Id: " & id.ToString
