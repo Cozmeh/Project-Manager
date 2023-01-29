@@ -19,7 +19,7 @@ Public Class NewProjectWizard
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Create.Click
 
         'this should add one month to minimum date threshold
-        If DeadlineDuration.Value < DateTime.Now.AddDays(30) Then
+        If DeadlineDuration.Value <= Date.Now.AddMonths(1) Then
             MessageBox.Show("The entered date should be at least 1 Month away")
             Return
         End If
@@ -52,7 +52,7 @@ Public Class NewProjectWizard
 
     Private Sub NewProjectWizard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        DeadlineDuration.MinDate = DateTime.Now
+        DeadlineDuration.MinDate = Date.Now
 
         'diable manager HomePage
         ManagerHomePage.Enabled = False
