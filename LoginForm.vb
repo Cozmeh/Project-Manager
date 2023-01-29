@@ -4,12 +4,12 @@ Public Class LoginForm
     '----------GLOBAL VARIABLES----------------------
 
     'establishing sql database connection
-    Public sql As New SqlConnection With {
-            .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=D:\Coding\Langs\Visual Studio\ProjectManager\Resources\employeeDB.mdf"
-    }
     'Public sql As New SqlConnection With {
-    '.ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
+    '        .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=D:\Coding\Langs\Visual Studio\ProjectManager\Resources\employeeDB.mdf"
     '}
+    Public sql As New SqlConnection With {
+    .ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
+    }
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
 
@@ -19,7 +19,7 @@ Public Class LoginForm
         'creating a sql command statement 
         Dim command As SqlCommand = sql.CreateCommand()
         'creating a sql command statement 
-        command.CommandText = "SELECT * from Employees Where Id='" + UserIDBox.Text + "' and password = '" + PassBox.Text + "'"
+        command.CommandText = "SELECT * from Employees Where Id= '" + UserIDBox.Text + "' and password = '" + PassBox.Text + "'"
 
         'sqladapter to handle the sql commands 
         Dim sqlAdapter As New SqlDataAdapter With {
@@ -55,7 +55,7 @@ Public Class LoginForm
         End If
 
         'hide the current LoginForm
-        'Me.Hide()
+        Me.Hide()
 
         'Empties both the text box in the form  on load
         If UserIDBox.Text <> "" Then
