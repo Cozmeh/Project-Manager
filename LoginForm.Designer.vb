@@ -22,6 +22,7 @@ Partial Class LoginForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.loginbtn = New System.Windows.Forms.Button()
         Me.empimg = New System.Windows.Forms.PictureBox()
         Me.UserIDBox = New System.Windows.Forms.TextBox()
@@ -85,6 +86,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.empimg)
         Me.Controls.Add(Me.loginbtn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "LoginForm"

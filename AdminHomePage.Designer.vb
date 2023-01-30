@@ -25,6 +25,7 @@ Partial Class AdminHomePage
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminHomePage))
         Me.AdminName = New System.Windows.Forms.Label()
         Me.AdminId = New System.Windows.Forms.Label()
         Me.LogoutAdmin = New System.Windows.Forms.Button()
@@ -363,6 +364,7 @@ Partial Class AdminHomePage
         Me.Controls.Add(Me.AdmingprBox)
         Me.Controls.Add(Me.LogoutAdmin)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "AdminHomePage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

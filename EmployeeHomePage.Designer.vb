@@ -22,6 +22,7 @@ Partial Class EmployeeHomePage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EmployeeHomePage))
         Me.EmpName = New System.Windows.Forms.Label()
         Me.EmpId = New System.Windows.Forms.Label()
         Me.LogoutEmp = New System.Windows.Forms.Button()
@@ -114,6 +115,7 @@ Partial Class EmployeeHomePage
         Me.Controls.Add(Me.EmpGrpBox)
         Me.Controls.Add(Me.LogoutEmp)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "EmployeeHomePage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

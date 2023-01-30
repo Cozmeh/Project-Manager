@@ -22,6 +22,7 @@ Partial Class EditProjectWizard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EditProjectWizard))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -175,6 +176,7 @@ Partial Class EditProjectWizard
         Me.Controls.Add(Me.Layout)
         Me.Controls.Add(Me.ProjectDetails)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "EditProjectWizard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
