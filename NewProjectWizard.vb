@@ -43,6 +43,8 @@ Public Class NewProjectWizard
         enable = 1
         EditProjectWizard.Show()
         ManagerHomePage.ManagerDataGrid.Refresh()
+
+        ManagerHomePage.DataLoader()
         Me.Close()
     End Sub
 
@@ -84,4 +86,6 @@ Public Class NewProjectWizard
             ManagerHomePage.Enabled = True
         End If
     End Sub
+
+
 End Class

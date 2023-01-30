@@ -31,26 +31,32 @@ Partial Class LoginForm
         '
         'loginbtn
         '
-        Me.loginbtn.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.loginbtn.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.loginbtn.FlatAppearance.BorderSize = 0
+        Me.loginbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.loginbtn.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.loginbtn.ForeColor = System.Drawing.Color.Black
         Me.loginbtn.Location = New System.Drawing.Point(179, 257)
         Me.loginbtn.Name = "loginbtn"
         Me.loginbtn.Size = New System.Drawing.Size(162, 44)
         Me.loginbtn.TabIndex = 0
-        Me.loginbtn.Text = "Login"
-        Me.loginbtn.UseVisualStyleBackColor = True
+        Me.loginbtn.Text = "LOGIN"
+        Me.loginbtn.UseVisualStyleBackColor = False
         '
         'empimg
         '
-        Me.empimg.Image = Global.ProjectManager.My.Resources.Resources.login
-        Me.empimg.Location = New System.Drawing.Point(204, 22)
+        Me.empimg.Image = Global.ProjectManager.My.Resources.Resources.users
+        Me.empimg.Location = New System.Drawing.Point(179, 3)
         Me.empimg.Name = "empimg"
-        Me.empimg.Size = New System.Drawing.Size(100, 100)
+        Me.empimg.Size = New System.Drawing.Size(162, 124)
         Me.empimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.empimg.TabIndex = 1
         Me.empimg.TabStop = False
         '
         'UserIDBox
         '
+        Me.UserIDBox.AutoCompleteCustomSource.AddRange(New String() {"admin"})
+        Me.UserIDBox.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.UserIDBox.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.UserIDBox.Location = New System.Drawing.Point(126, 142)
         Me.UserIDBox.Name = "UserIDBox"
@@ -60,6 +66,7 @@ Partial Class LoginForm
         '
         'PassBox
         '
+        Me.PassBox.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.PassBox.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.PassBox.Location = New System.Drawing.Point(126, 193)
         Me.PassBox.Name = "PassBox"
@@ -72,12 +79,16 @@ Partial Class LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(529, 312)
+        Me.ClientSize = New System.Drawing.Size(529, 314)
         Me.Controls.Add(Me.PassBox)
         Me.Controls.Add(Me.UserIDBox)
         Me.Controls.Add(Me.empimg)
         Me.Controls.Add(Me.loginbtn)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "LoginForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Project Manager"
         CType(Me.empimg, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

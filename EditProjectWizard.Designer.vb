@@ -174,7 +174,10 @@ Partial Class EditProjectWizard
         Me.Controls.Add(Me.Ok)
         Me.Controls.Add(Me.Layout)
         Me.Controls.Add(Me.ProjectDetails)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "EditProjectWizard"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EditProjectWizard"
         Me.ProjectDetails.ResumeLayout(False)
         Me.ProjectDetails.PerformLayout()

@@ -37,6 +37,7 @@ Partial Class NewProjectWizard
         '
         'ProjectName
         '
+        Me.ProjectName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ProjectName.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.ProjectName.Location = New System.Drawing.Point(68, 53)
         Me.ProjectName.Name = "ProjectName"
@@ -47,9 +48,9 @@ Partial Class NewProjectWizard
         'DeadlineDuration
         '
         Me.DeadlineDuration.CalendarFont = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.DeadlineDuration.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DeadlineDuration.CustomFormat = "MM-dd-yyyy"
         Me.DeadlineDuration.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DeadlineDuration.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DeadlineDuration.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.DeadlineDuration.Location = New System.Drawing.Point(25, 60)
         Me.DeadlineDuration.MinDate = New Date(2023, 1, 23, 0, 0, 0, 0)
@@ -61,10 +62,10 @@ Partial Class NewProjectWizard
         'Lable1
         '
         Me.Lable1.AutoSize = True
-        Me.Lable1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Lable1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Lable1.Location = New System.Drawing.Point(68, 33)
         Me.Lable1.Name = "Lable1"
-        Me.Lable1.Size = New System.Drawing.Size(83, 17)
+        Me.Lable1.Size = New System.Drawing.Size(79, 17)
         Me.Lable1.TabIndex = 3
         Me.Lable1.Text = "Project Title"
         '
@@ -83,6 +84,7 @@ Partial Class NewProjectWizard
         '
         'PeopleCount
         '
+        Me.PeopleCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PeopleCount.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.PeopleCount.Location = New System.Drawing.Point(25, 136)
         Me.PeopleCount.Minimum = New Decimal(New Integer() {2, 0, 0, 0})
@@ -94,20 +96,20 @@ Partial Class NewProjectWizard
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(25, 111)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(25, 116)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 17)
+        Me.Label2.Size = New System.Drawing.Size(87, 17)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "No of People"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(25, 38)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 17)
+        Me.Label1.Size = New System.Drawing.Size(106, 17)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Project Deadline"
         '
@@ -136,14 +138,18 @@ Partial Class NewProjectWizard
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(375, 415)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.Create)
         Me.Controls.Add(Me.ProjectGrpBox)
         Me.Controls.Add(Me.Lable1)
         Me.Controls.Add(Me.ProjectName)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "NewProjectWizard"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "New-Project wizard"
         Me.ProjectGrpBox.ResumeLayout(False)
         Me.ProjectGrpBox.PerformLayout()

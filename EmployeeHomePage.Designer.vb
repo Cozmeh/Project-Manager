@@ -113,7 +113,10 @@ Partial Class EmployeeHomePage
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.EmpGrpBox)
         Me.Controls.Add(Me.LogoutEmp)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "EmployeeHomePage"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Employee Home Page"
         Me.EmpGrpBox.ResumeLayout(False)
         Me.EmpGrpBox.PerformLayout()

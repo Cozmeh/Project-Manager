@@ -362,7 +362,10 @@ Partial Class AdminHomePage
         Me.Controls.Add(Me.EmpBox)
         Me.Controls.Add(Me.AdmingprBox)
         Me.Controls.Add(Me.LogoutAdmin)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "AdminHomePage"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin Home Page"
         Me.AdmingprBox.ResumeLayout(False)
         Me.AdmingprBox.PerformLayout()

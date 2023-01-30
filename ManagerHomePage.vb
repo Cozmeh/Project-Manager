@@ -37,7 +37,7 @@ Public Class ManagerHomePage
         DataLoader()
     End Sub
 
-    Private Sub DataLoader()
+    Public Sub DataLoader()
 
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()

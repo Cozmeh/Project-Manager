@@ -73,30 +73,30 @@ Partial Class EditProjectDetails
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(25, 111)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(25, 116)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 17)
+        Me.Label2.Size = New System.Drawing.Size(87, 17)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "No of People"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(25, 38)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(110, 17)
+        Me.Label1.Size = New System.Drawing.Size(106, 17)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Project Deadline"
         '
         'Lable1
         '
         Me.Lable1.AutoSize = True
-        Me.Lable1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Lable1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Lable1.Location = New System.Drawing.Point(68, 33)
         Me.Lable1.Name = "Lable1"
-        Me.Lable1.Size = New System.Drawing.Size(83, 17)
+        Me.Lable1.Size = New System.Drawing.Size(79, 17)
         Me.Lable1.TabIndex = 14
         Me.Lable1.Text = "Project Title"
         '
@@ -150,7 +150,11 @@ Partial Class EditProjectDetails
         Me.Controls.Add(Me.ProjectGrpBox)
         Me.Controls.Add(Me.Lable1)
         Me.Controls.Add(Me.ProjectName)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "EditProjectDetails"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EditProjectDetails"
         Me.ProjectGrpBox.ResumeLayout(False)
         Me.ProjectGrpBox.PerformLayout()

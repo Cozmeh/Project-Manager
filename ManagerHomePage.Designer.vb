@@ -175,7 +175,10 @@ Partial Class ManagerHomePage
         Me.Controls.Add(Me.UsergprBox)
         Me.Controls.Add(Me.NewProject)
         Me.Controls.Add(Me.LogoutManager)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
         Me.Name = "ManagerHomePage"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Manager Home Page"
         Me.UsergprBox.ResumeLayout(False)
         Me.UsergprBox.PerformLayout()
