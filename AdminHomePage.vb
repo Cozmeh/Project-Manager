@@ -221,9 +221,8 @@ Public Class AdminHomePage
     Private Sub AdminDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles AdminDataGrid.CellContentClick
         'take the text from the cell and display in idtextbox of update and delete
         With AdminDataGrid
-            Dim i As Integer = .CurrentCell.RowIndex
-            Upd_ID.Text = .Rows(i).Cells(0).Value.ToString
-            Del_ID.Text = .Rows(i).Cells(0).Value.ToString
+            Upd_ID.Text = .Rows(.CurrentCell.RowIndex).Cells(0).Value.ToString
+            Del_ID.Text = .Rows(.CurrentCell.RowIndex).Cells(0).Value.ToString
         End With
     End Sub
 End Class

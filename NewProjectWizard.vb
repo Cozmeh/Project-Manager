@@ -4,23 +4,23 @@ Imports System.Data.SqlClient
 Public Class NewProjectWizard
 
     Dim id As String
+    Dim enable As Integer = 0
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Cancel.Click
+        ManagerHomePage.Show()
         Me.Close()
     End Sub
 
-    'Private Sub DeadlineDuration_ValueChanged(sender As Object, e As EventArgs) Handles DeadlineDuration.ValueChanged
-    '    'store project name in grpbox legend
-    '    If ProjectName.Text <> Nothing Then
-    '        ProjectGrpBox.Text = ProjectName.Text
-    '    End If
-    'End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Create.Click
 
-        'this should add one month to minimum date threshold
-        If DeadlineDuration.Value <= Date.Now.AddMonths(1) Then
-            MessageBox.Show("The entered date should be at least 1 Month away")
+        'If DeadlineDuration.Value <= Date.Now.AddMonths(1) Then
+        '    MessageBox.Show("The entered date should be at least 1 Month away")
+        '    Return
+        'End If
+
+        'check if the project details has been updated
+        If ProjectName.Text = Nothing Then
+            MsgBox("Please enter the project name")
             Return
         End If
 
@@ -39,20 +39,17 @@ Public Class NewProjectWizard
         Dim data As New DataSet()
         sqlAdapter.Fill(data)
 
-        'check if the project details has been updated
-        If ProjectName.Text = Nothing Then
-            MsgBox("Please enter the project name")
-            Return
-        End If
-
         'opens the calender for further updation
+        enable = 1
         EditProjectWizard.Show()
+        ManagerHomePage.ManagerDataGrid.Refresh()
         Me.Close()
     End Sub
 
     Private Sub NewProjectWizard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        DeadlineDuration.MinDate = Date.Now.AddDays(30)
+        'this should add one month to minimum date threshold
+        DeadlineDuration.MinDate = Date.Now.AddMonths(1)
 
         'diable manager HomePage
         ManagerHomePage.Enabled = False
@@ -82,7 +79,9 @@ Public Class NewProjectWizard
 
     Private Sub NewProjectWizard_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         'Enable manager home page
-        ManagerHomePage.Enabled = True
+        ManagerHomePage.Update()
+        If enable = 0 Then
+            ManagerHomePage.Enabled = True
+        End If
     End Sub
-
 End Class
