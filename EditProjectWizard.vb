@@ -4,6 +4,7 @@ Public Class EditProjectWizard
 
     Private Sub EditProjectWizard_closeing(sender As Object, e As EventArgs) Handles MyBase.Closing
         ManagerHomePage.Enabled = True
+        ManagerHomePage.Visible = True
     End Sub
 
     Private Sub EditProjectWizard_Load(sender As Object, e As EventArgs) Handles MyBase.Load

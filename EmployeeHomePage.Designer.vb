@@ -22,6 +22,9 @@ Partial Class EmployeeHomePage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(EmployeeHomePage))
         Me.EmpName = New System.Windows.Forms.Label()
         Me.EmpId = New System.Windows.Forms.Label()
@@ -30,7 +33,10 @@ Partial Class EmployeeHomePage
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ManagerDataGrid = New System.Windows.Forms.DataGridView()
         Me.EmpGrpBox.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.ManagerDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'EmpName
@@ -98,6 +104,7 @@ Partial Class EmployeeHomePage
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ManagerDataGrid)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 119)
         Me.GroupBox1.Name = "GroupBox1"
@@ -105,6 +112,49 @@ Partial Class EmployeeHomePage
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Project(s):"
+        '
+        'ManagerDataGrid
+        '
+        Me.ManagerDataGrid.AllowUserToAddRows = False
+        Me.ManagerDataGrid.AllowUserToDeleteRows = False
+        Me.ManagerDataGrid.AllowUserToResizeColumns = False
+        Me.ManagerDataGrid.AllowUserToResizeRows = False
+        Me.ManagerDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.ManagerDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ManagerDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.ManagerDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ManagerDataGrid.Cursor = System.Windows.Forms.Cursors.Hand
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ManagerDataGrid.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ManagerDataGrid.Location = New System.Drawing.Point(6, 40)
+        Me.ManagerDataGrid.Name = "ManagerDataGrid"
+        Me.ManagerDataGrid.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ManagerDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.ManagerDataGrid.RowHeadersWidth = 20
+        Me.ManagerDataGrid.RowTemplate.Height = 25
+        Me.ManagerDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.ManagerDataGrid.Size = New System.Drawing.Size(764, 239)
+        Me.ManagerDataGrid.TabIndex = 2
         '
         'EmployeeHomePage
         '
@@ -122,6 +172,8 @@ Partial Class EmployeeHomePage
         Me.Text = "Employee Home Page"
         Me.EmpGrpBox.ResumeLayout(False)
         Me.EmpGrpBox.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.ManagerDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -133,4 +185,5 @@ Partial Class EmployeeHomePage
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents ManagerDataGrid As DataGridView
 End Class

@@ -3,8 +3,8 @@ Imports System.Data.SqlClient
 
 Public Class NewProjectWizard
 
-    Dim id As String
-    Dim enable As Integer = 0
+    Public id As String
+    Public enable As Integer = 0
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Cancel.Click
         ManagerHomePage.Show()
@@ -12,11 +12,6 @@ Public Class NewProjectWizard
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Create.Click
-
-        'If DeadlineDuration.Value <= Date.Now.AddMonths(1) Then
-        '    MessageBox.Show("The entered date should be at least 1 Month away")
-        '    Return
-        'End If
 
         'check if the project details has been updated
         If ProjectName.Text = Nothing Then
@@ -43,8 +38,8 @@ Public Class NewProjectWizard
         enable = 1
         EditProjectWizard.Show()
         ManagerHomePage.ManagerDataGrid.Refresh()
-
         ManagerHomePage.DataLoader()
+        ManagerHomePage.Visible = False
         Me.Close()
     End Sub
 

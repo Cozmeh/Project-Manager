@@ -80,7 +80,7 @@ Partial Class NewProjectWizard
         Me.ProjectGrpBox.Size = New System.Drawing.Size(244, 187)
         Me.ProjectGrpBox.TabIndex = 4
         Me.ProjectGrpBox.TabStop = False
-        Me.ProjectGrpBox.Text = "Project"
+        Me.ProjectGrpBox.Text = "Project Id:"
         '
         'PeopleCount
         '

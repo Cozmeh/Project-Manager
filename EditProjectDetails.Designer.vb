@@ -22,7 +22,7 @@ Partial Class EditProjectDetails
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ProjectGrpBox = New System.Windows.Forms.GroupBox()
+        Me.ProjectId = New System.Windows.Forms.GroupBox()
         Me.PeopleCount = New System.Windows.Forms.NumericUpDown()
         Me.DeadlineDuration = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -32,22 +32,22 @@ Partial Class EditProjectDetails
         Me.Apply = New System.Windows.Forms.Button()
         Me.Delete = New System.Windows.Forms.Button()
         Me.Cancel = New System.Windows.Forms.Button()
-        Me.ProjectGrpBox.SuspendLayout()
+        Me.ProjectId.SuspendLayout()
         CType(Me.PeopleCount, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ProjectGrpBox
+        'ProjectId
         '
-        Me.ProjectGrpBox.Controls.Add(Me.PeopleCount)
-        Me.ProjectGrpBox.Controls.Add(Me.DeadlineDuration)
-        Me.ProjectGrpBox.Controls.Add(Me.Label2)
-        Me.ProjectGrpBox.Controls.Add(Me.Label1)
-        Me.ProjectGrpBox.Location = New System.Drawing.Point(68, 119)
-        Me.ProjectGrpBox.Name = "ProjectGrpBox"
-        Me.ProjectGrpBox.Size = New System.Drawing.Size(244, 187)
-        Me.ProjectGrpBox.TabIndex = 15
-        Me.ProjectGrpBox.TabStop = False
-        Me.ProjectGrpBox.Text = "Project"
+        Me.ProjectId.Controls.Add(Me.PeopleCount)
+        Me.ProjectId.Controls.Add(Me.DeadlineDuration)
+        Me.ProjectId.Controls.Add(Me.Label2)
+        Me.ProjectId.Controls.Add(Me.Label1)
+        Me.ProjectId.Location = New System.Drawing.Point(68, 119)
+        Me.ProjectId.Name = "ProjectId"
+        Me.ProjectId.Size = New System.Drawing.Size(244, 187)
+        Me.ProjectId.TabIndex = 15
+        Me.ProjectId.TabStop = False
+        Me.ProjectId.Text = "Project Id:"
         '
         'PeopleCount
         '
@@ -112,7 +112,7 @@ Partial Class EditProjectDetails
         'Apply
         '
         Me.Apply.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Apply.Location = New System.Drawing.Point(51, 346)
+        Me.Apply.Location = New System.Drawing.Point(50, 346)
         Me.Apply.Name = "Apply"
         Me.Apply.Size = New System.Drawing.Size(88, 36)
         Me.Apply.TabIndex = 16
@@ -122,7 +122,7 @@ Partial Class EditProjectDetails
         'Delete
         '
         Me.Delete.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Delete.Location = New System.Drawing.Point(242, 346)
+        Me.Delete.Location = New System.Drawing.Point(148, 346)
         Me.Delete.Name = "Delete"
         Me.Delete.Size = New System.Drawing.Size(88, 36)
         Me.Delete.TabIndex = 17
@@ -132,7 +132,7 @@ Partial Class EditProjectDetails
         'Cancel
         '
         Me.Cancel.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Cancel.Location = New System.Drawing.Point(148, 346)
+        Me.Cancel.Location = New System.Drawing.Point(242, 346)
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(88, 36)
         Me.Cancel.TabIndex = 18
@@ -147,7 +147,7 @@ Partial Class EditProjectDetails
         Me.Controls.Add(Me.Apply)
         Me.Controls.Add(Me.Delete)
         Me.Controls.Add(Me.Cancel)
-        Me.Controls.Add(Me.ProjectGrpBox)
+        Me.Controls.Add(Me.ProjectId)
         Me.Controls.Add(Me.Lable1)
         Me.Controls.Add(Me.ProjectName)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -156,14 +156,14 @@ Partial Class EditProjectDetails
         Me.Name = "EditProjectDetails"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "EditProjectDetails"
-        Me.ProjectGrpBox.ResumeLayout(False)
-        Me.ProjectGrpBox.PerformLayout()
+        Me.ProjectId.ResumeLayout(False)
+        Me.ProjectId.PerformLayout()
         CType(Me.PeopleCount, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ProjectGrpBox As GroupBox
+    Friend WithEvents ProjectId As GroupBox
     Friend WithEvents PeopleCount As NumericUpDown
     Friend WithEvents DeadlineDuration As DateTimePicker
     Friend WithEvents Label2 As Label
