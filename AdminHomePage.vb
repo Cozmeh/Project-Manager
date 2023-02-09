@@ -1,13 +1,9 @@
 ﻿Imports System.Data.Common
 Imports System.Data.SqlClient
 
-'Admin Home Page
-
 Public Class AdminHomePage
     'logout user
     Private Sub LogoutAdmin_Click(sender As Object, e As EventArgs) Handles LogoutAdmin.Click
-        LoginForm.sql.Close()
-        'LoginForm.Show()
         Me.Close()
     End Sub
 
@@ -42,7 +38,7 @@ Public Class AdminHomePage
         If responce = vbYes Then
             LoginForm.sql.Close()
             LoginForm.Show()
-        ElseIf responce = vbNo Then
+        Else
             e.Cancel = True
         End If
     End Sub
@@ -54,12 +50,11 @@ Public Class AdminHomePage
         Else
 
             'if designation is employee(E) or manager(M)
-            If Add_Designtion.Text = "E" Or Add_Designtion.Text = "M" Then
+            If Add_Designtion.Text = "E" Or "M" Then
 
                 'conformation
-                Dim responce As String = MsgBox("Add '" & Add_ID.Text & "' to the database", vbYesNo, "Add User?")
+                Dim responce As String = MsgBox("Add '" & Add_ID.Text & "' to the Company", vbYesNo, "Add Employee?")
                 If responce = vbYes Then
-
                     'adds data to the table
                     Dim AddCommand As String = "INSERT INTO EMPLOYEES (Id,empName,Designation,password) VALUES ('" + Add_ID.Text + "','" + Add_EmpName.Text + "','" + Add_Designtion.Text + "','" + Add_Password.Text + "')"
 
@@ -71,6 +66,7 @@ Public Class AdminHomePage
                     Dim sqlAdapter As New SqlDataAdapter With {
                     .SelectCommand = command
                     }
+
                     'creates a table with the required data
                     Dim data As New DataSet()
                     sqlAdapter.Fill(data)
@@ -94,7 +90,6 @@ Public Class AdminHomePage
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
         Consolecommand.CommandText = "SELECT * FROM Employees WHERE Id <> '" & AdminId.Text & "'"
-        'Consolecommand.CommandText = "SELECT * FROM Employees WHERE designation <> 'A'"
 
         'sqladapter to handle the sql commands 
         Dim ConsolesqlAdapter As New SqlDataAdapter With {
@@ -113,7 +108,7 @@ Public Class AdminHomePage
             MsgBox("Please mention the UserID ")
         Else
             'conformation
-            Dim responce As String = MsgBox("Delete '" & Del_ID.Text & "' from the database", vbYesNo, "Delete User?")
+            Dim responce As String = MsgBox("Remove access to the Project Management System for '" & Del_ID.Text & "'", vbYesNo, "Remove User?")
             If responce = vbYes Then
                 Dim DelCommand As String = "DELETE FROM Employees WHERE Id ='" + Del_ID.Text + "'"
 

@@ -1,5 +1,4 @@
-﻿Imports Microsoft.Office.Interop.Excel
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 
 Public Class NewProjectWizard
 
@@ -7,6 +6,7 @@ Public Class NewProjectWizard
     Public enable As Integer = 0
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Cancel.Click
+        ManagerHomePage.Enabled = True
         ManagerHomePage.Show()
         Me.Close()
     End Sub
@@ -16,6 +16,12 @@ Public Class NewProjectWizard
         'check if the project details has been updated
         If ProjectName.Text = Nothing Then
             MsgBox("Please enter the project name")
+            Return
+        End If
+
+        Dim create As String = MsgBox("Project Name: '" + ProjectName.Text + "' with Deadline: '" + DeadlineDuration.Text + "' and number of members: " + PeopleCount.Value.ToString + " will be created", vbYesNo, "Are you sure you want to create new Project?")
+
+        If create = vbNo Then
             Return
         End If
 
@@ -45,11 +51,8 @@ Public Class NewProjectWizard
 
     Private Sub NewProjectWizard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'this should add one month to minimum date threshold
+        'this adds one month to minimum date thresh hold
         DeadlineDuration.MinDate = Date.Now.AddMonths(1)
-
-        'diable manager HomePage
-        ManagerHomePage.Enabled = False
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
@@ -75,12 +78,12 @@ Public Class NewProjectWizard
     End Sub
 
     Private Sub NewProjectWizard_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        'Enable manager home page
+        'reload manager home page data grid view
         ManagerHomePage.Update()
+        'Enable manager home page
         If enable = 0 Then
             ManagerHomePage.Enabled = True
+            ManagerHomePage.Show()
         End If
     End Sub
-
-
 End Class

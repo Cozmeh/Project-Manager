@@ -1,18 +1,17 @@
 ﻿Imports System.Data.SqlClient
 
-'Manager Home Page
-
 Public Class ManagerHomePage
 
     Public pid As String = "new"
+    Public title, deadline, people As String
 
     Private Sub LogoutManager_Click(sender As Object, e As EventArgs) Handles LogoutManager.Click
-        LoginForm.sql.Close()
         Me.Close()
     End Sub
 
     Private Sub NewProject_Click(sender As Object, e As EventArgs) Handles NewProject.Click
         NewProjectWizard.Show()
+        Me.Enabled = False
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -42,7 +41,6 @@ Public Class ManagerHomePage
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
         Consolecommand.CommandText = "SELECT PId, Title, Deadline,People FROM Projects WHERE ManagerId = '" & ManagerId.Text & "'"
-        'Consolecommand.CommandText = "SELECT * FROM Employees WHERE designation <> 'A'"
 
         'sqladapter to handle the sql commands 
         Dim ConsolesqlAdapter As New SqlDataAdapter With {
@@ -59,16 +57,19 @@ Public Class ManagerHomePage
     Private Sub ManagerHomePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Dim responce As String = MsgBox("Do you want to Logout?", vbYesNo, "Are You Sure?")
         If responce = vbYes Then
+            'disconnects sql connection
             LoginForm.sql.Close()
             LoginForm.Show()
-        ElseIf responce = vbNo Then
+        Else
             e.Cancel = True
         End If
     End Sub
 
     Private Sub ManagerDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ManagerDataGrid.CellContentClick
-        'take the text from the cell and display in idtextbox of update and delete
         pid = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(0).Value.ToString
+        Title = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(1).Value.ToString
+        deadline = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(2).Value.ToString
+        people = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(3).Value.ToString
         EditProjectWizard.Show()
         Me.Enabled = False
     End Sub

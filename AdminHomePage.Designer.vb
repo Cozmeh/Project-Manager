@@ -214,7 +214,7 @@ Partial Class AdminHomePage
         Me.AddRow.Name = "AddRow"
         Me.AddRow.Size = New System.Drawing.Size(100, 25)
         Me.AddRow.TabIndex = 26
-        Me.AddRow.Text = "Add Row"
+        Me.AddRow.Text = "Add User"
         Me.AddRow.UseVisualStyleBackColor = False
         '
         'Add_Password
@@ -263,7 +263,7 @@ Partial Class AdminHomePage
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(755, 95)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Edit"
+        Me.TabPage2.Text = "Update"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GetBtn
@@ -287,7 +287,7 @@ Partial Class AdminHomePage
         Me.UpdateRow.Name = "UpdateRow"
         Me.UpdateRow.Size = New System.Drawing.Size(100, 25)
         Me.UpdateRow.TabIndex = 37
-        Me.UpdateRow.Text = "Update Row"
+        Me.UpdateRow.Text = "Update User"
         Me.UpdateRow.UseVisualStyleBackColor = False
         '
         'Upd_Password
@@ -332,7 +332,7 @@ Partial Class AdminHomePage
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(755, 95)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Delete"
+        Me.TabPage3.Text = "Remove"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'DeleteRow
@@ -344,7 +344,7 @@ Partial Class AdminHomePage
         Me.DeleteRow.Name = "DeleteRow"
         Me.DeleteRow.Size = New System.Drawing.Size(100, 25)
         Me.DeleteRow.TabIndex = 34
-        Me.DeleteRow.Text = "Delete Row"
+        Me.DeleteRow.Text = "Remove"
         Me.DeleteRow.UseVisualStyleBackColor = False
         '
         'Del_ID

@@ -1,10 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
-'Employee Home Page
-
 Public Class EmployeeHomePage
     Private Sub LogoutEmp_Click(sender As Object, e As EventArgs) Handles LogoutEmp.Click
-        LoginForm.sql.Close()
         Me.Close()
     End Sub
 
@@ -25,6 +22,11 @@ Public Class EmployeeHomePage
         'fill the data in the required places
         EmpName.Text = form2data.Tables(0).Rows(0)(1).ToString()
         EmpId.Text = form2data.Tables(0).Rows(0)(0).ToString()
+
+        'dataloader()
+        'compound query for collecting information about the project from the db matching the empId
+        'form2command.CommandText = "SELECT Pid, Title, ManagerId FROM Projects" ' WHERE Id ='" + LoginForm.UserIDBox.Text + "'"
+
     End Sub
 
     Private Sub EmployeeHomePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -32,7 +34,7 @@ Public Class EmployeeHomePage
         If responce = vbYes Then
             LoginForm.sql.Close()
             LoginForm.Show()
-        ElseIf responce = vbNo Then
+        Else
             e.Cancel = True
         End If
     End Sub
