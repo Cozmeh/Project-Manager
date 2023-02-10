@@ -50,7 +50,7 @@ Public Class AdminHomePage
         Else
 
             'if designation is employee(E) or manager(M)
-            If Add_Designtion.Text = "E" Or "M" Then
+            If Add_Designtion.Text = "E" Or Add_Designtion.Text = "M" Then
 
                 'conformation
                 Dim responce As String = MsgBox("Add '" & Add_ID.Text & "' to the Company", vbYesNo, "Add Employee?")
@@ -146,7 +146,7 @@ Public Class AdminHomePage
             If Upd_Designation.Text = "E" Or Upd_Designation.Text = "M" Then
 
                 'conformation
-                Dim responce As String = MsgBox("Update User?", vbYesNo, "Update " & Upd_ID.Text & " in the database")
+                Dim responce As String = MsgBox("Update Employee?", vbYesNo, "Update " & Upd_ID.Text & " in the database")
                 If responce = vbYes Then
 
                     Dim UpdateCommand As String = "UPDATE Employees SET empName ='" + Upd_Name.Text + "',Designation ='" + Upd_Designation.Text + "',password='" + Upd_Password.Text + "' Where Id ='" + Upd_ID.Text + "'"

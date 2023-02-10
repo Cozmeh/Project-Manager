@@ -12,6 +12,8 @@ Public Class EditProjectDetails
 
         If responce = vbYes Then
             LoginForm.sql.Close()
+            EditProjectWizard.Enabled = True
+            EditProjectWizard.Show()
             'this will change accordingly if delete is clicked
         Else
             e.Cancel = True
@@ -21,11 +23,9 @@ Public Class EditProjectDetails
     Private Sub Apply_Click(sender As Object, e As EventArgs) Handles Apply.Click
 
         'reconfirms
-        Dim responce As String = MsgBox("Do you want to save changes done in " & ProjectName.Text, vbYesNo, "Are You Sure?")
+        Dim responce As String = MsgBox("Do you want to save changes done in Project Id: " & EditProjectWizard.ProjectId.Text + "?", vbYesNo, "Are You Sure?")
+        'update to database then close form
         If responce = vbYes Then
-
-            'update to database then close form
-
             'creating a sql command statement 
             Dim form2command As SqlCommand = LoginForm.sql.CreateCommand()
             form2command.CommandText = "Update Projects SET Title = '" + ProjectName.Text + "', Deadline = '" + DeadlineDuration.Text + "', People ='" + PeopleCount.Text + "' Where PId ='" + EditProjectWizard.ProjectId.Text + "'"
@@ -40,8 +40,6 @@ Public Class EditProjectDetails
             form2sqlAdapter.Fill(form2data)
 
             EditProjectWizard.Refresh()
-            EditProjectWizard.Enabled = True
-            EditProjectWizard.Show()
             Me.Close()
         End If
     End Sub
