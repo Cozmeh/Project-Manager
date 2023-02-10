@@ -40,7 +40,7 @@ Public Class ManagerHomePage
 
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
-        Consolecommand.CommandText = "SELECT PId, Title, Deadline,People FROM Projects WHERE ManagerId = '" & ManagerId.Text & "'"
+        Consolecommand.CommandText = "SELECT PId, Title, Startdate, Deadline,People FROM Projects WHERE ManagerId = '" & ManagerId.Text & "'"
 
         'sqladapter to handle the sql commands 
         Dim ConsolesqlAdapter As New SqlDataAdapter With {

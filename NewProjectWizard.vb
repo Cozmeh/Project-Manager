@@ -26,7 +26,7 @@ Public Class NewProjectWizard
         End If
 
         'adds data to the table
-        Dim AddCommand As String = "INSERT INTO Projects (PId,Title,Deadline,People,ManagerId) VALUES ('" + id.ToString + "','" + ProjectName.Text + "','" + DeadlineDuration.Text + "','" + PeopleCount.Value.ToString + "','" + ManagerHomePage.ManagerId.Text + "')"
+        Dim AddCommand As String = "INSERT INTO Projects (PId,Title,StartDate,Deadline,People,ManagerId) VALUES ('" + id.ToString + "','" + Today.ToString + "','" + ProjectName.Text + "','" + DeadlineDuration.Text + "','" + PeopleCount.Value.ToString + "','" + ManagerHomePage.ManagerId.Text + "')"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
