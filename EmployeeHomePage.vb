@@ -24,8 +24,6 @@ Public Class EmployeeHomePage
         EmpId.Text = form2data.Tables(0).Rows(0)(0).ToString()
 
         'dataloader()
-        'compound query for collecting information about the project from the db matching the empId
-        'form2command.CommandText = "SELECT Pid, Title, ManagerId FROM Projects" ' WHERE Id ='" + LoginForm.UserIDBox.Text + "'"
 
     End Sub
 
@@ -37,5 +35,26 @@ Public Class EmployeeHomePage
         Else
             e.Cancel = True
         End If
+    End Sub
+
+    Private Sub DataLoader()
+
+        'compound query for collecting information about the project from the db matching the empId 
+        'multivalued columns in Employees
+
+        'creating a sql command statement 
+        Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
+        Consolecommand.CommandText = "SELECT Projects.PId, Projects.Title, Projects.ManagerId FROM Projects WHERE PId IN(SELECT PId FROM Employees WHERE PId = '" + LoginForm.UserIDBox.Text + "')"
+
+        'sqladapter to handle the sql commands 
+        Dim ConsolesqlAdapter As New SqlDataAdapter With {
+            .SelectCommand = Consolecommand
+        }
+
+        'creates a table with the required data
+        Dim Consoledata As New DataSet()
+        ConsolesqlAdapter.Fill(Consoledata)
+
+        EmpDataGrid.DataSource = Consoledata.Tables(0)
     End Sub
 End Class
