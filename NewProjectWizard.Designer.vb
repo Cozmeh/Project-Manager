@@ -49,7 +49,7 @@ Partial Class NewProjectWizard
         ' 
         DeadlineDuration.CalendarFont = New Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point)
         DeadlineDuration.Cursor = Cursors.Hand
-        DeadlineDuration.CustomFormat = "dd-mm-yyyy"
+        DeadlineDuration.CustomFormat = "dd-MM-yyyy"
         DeadlineDuration.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
         DeadlineDuration.ImeMode = ImeMode.NoControl
         DeadlineDuration.Location = New Point(25, 60)

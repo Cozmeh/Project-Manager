@@ -57,4 +57,5 @@ Public Class EmployeeHomePage
 
         EmpDataGrid.DataSource = Consoledata.Tables(0)
     End Sub
+
 End Class

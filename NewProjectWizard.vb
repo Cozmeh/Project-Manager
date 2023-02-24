@@ -5,35 +5,6 @@ Public Class NewProjectWizard
     Public id As String
     Public enable As Integer = 0
 
-
-    Private Sub NewProjectWizard_Load(sender As Object, e As EventArgs)
-
-        'this adds one month to minimum date thresh hold
-        DeadlineDuration.MinDate = Date.Now.AddMonths(1)
-
-        'creating a sql command statement 
-        Dim command As SqlCommand = LoginForm.sql.CreateCommand()
-        command.CommandText = "SELECT PId FROM Projects"
-
-        'sqladapter to handle the sql commands 
-        Dim sqlAdapter As New SqlDataAdapter With {
-            .SelectCommand = command
-        }
-        'creates a table with the required data
-        Dim data As New DataSet()
-        sqlAdapter.Fill(data)
-
-        'creating random project id
-        Dim pId As New Random()
-        id = pId.Next(100000, 999999).ToString
-        For Each row In data.Tables(0).Rows().ToString
-            If id = row Then
-                id = pId.Next(100000, 999999).ToString
-            End If
-        Next
-        ProjectGrpBox.Text = "Project Id: " & id.ToString
-    End Sub
-
     Private Sub NewProjectWizard_FormClosing(sender As Object, e As FormClosingEventArgs)
         'reload manager home page data grid view
         ManagerHomePage.Update()
@@ -58,8 +29,10 @@ Public Class NewProjectWizard
             Return
         End If
 
+        'check the value type of today
+
         'adds data to the table
-        Dim AddCommand As String = "INSERT INTO Projects (PId,Title,StartDate,Deadline,People,ManagerId) VALUES ('" + id.ToString + "','" + ProjectName.Text + "','" + Today.ToString + "','" + DeadlineDuration.Text + "','" + PeopleCount.Value.ToString + "','" + ManagerHomePage.ManagerId.Text + "')"
+        Dim AddCommand As String = "INSERT INTO Projects (PId, Title, Startdate, Deadline, People, ManagerId) VALUES ('" + id.ToString + "','" + ProjectName.Text + "','" + Today.ToString("d") + "','" + DeadlineDuration.Value.ToString + "','" + PeopleCount.Value.ToString + "','" + ManagerHomePage.ManagerId.Text + "')"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
@@ -86,5 +59,33 @@ Public Class NewProjectWizard
         ManagerHomePage.Enabled = True
         ManagerHomePage.Show()
         Me.Close()
+    End Sub
+
+    Private Sub NewProjectWizard_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'this adds one month to minimum date thresh hold
+        DeadlineDuration.MinDate = Date.Now.AddMonths(1)
+
+        'creating a sql command statement 
+        Dim command As SqlCommand = LoginForm.sql.CreateCommand()
+        command.CommandText = "SELECT PId FROM Projects"
+
+        'sqladapter to handle the sql commands 
+        Dim sqlAdapter As New SqlDataAdapter With {
+            .SelectCommand = command
+        }
+        'creates a table with the required data
+        Dim data As New DataSet()
+        sqlAdapter.Fill(data)
+
+        'creating random project id
+        Dim pId As New Random()
+        id = pId.Next(100000, 999999).ToString
+        For Each row In data.Tables(0).Rows().ToString
+            If id = row Then
+                id = pId.Next(100000, 999999).ToString
+            End If
+        Next
+        ProjectGrpBox.Text = "Project Id: " & id.ToString
     End Sub
 End Class
