@@ -32,7 +32,7 @@ Public Class NewProjectWizard
         'check the value type of today
 
         'adds data to the table
-        Dim AddCommand As String = "INSERT INTO Projects (PId, Title, Startdate, Deadline, People, ManagerId) VALUES ('" + id.ToString + "','" + ProjectName.Text + "','" + Today.ToString("d") + "','" + DeadlineDuration.Value.ToString + "','" + PeopleCount.Value.ToString + "','" + ManagerHomePage.ManagerId.Text + "')"
+        Dim AddCommand As String = "INSERT INTO Projects (PId, Title, Startdate, Deadline, People, ManagerId) VALUES ('" + id.ToString + "', '" + ProjectName.Text + "', '" + Today.ToString("yyyy-MM-dd") + "', '" + DeadlineDuration.Value.ToString("yyyy-MM-dd") + "', '" + PeopleCount.Value.ToString + "', '" + ManagerHomePage.ManagerId.Text + "')"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
@@ -87,5 +87,8 @@ Public Class NewProjectWizard
             End If
         Next
         ProjectGrpBox.Text = "Project Id: " & id.ToString
+
+        MsgBox(DeadlineDuration.Value.ToString("yyyy-MM-dd"))
+
     End Sub
 End Class
