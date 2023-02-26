@@ -3,16 +3,10 @@
 Public Class NewProjectWizard
 
     Public id As String
-    Public enable As Integer = 0
 
     Private Sub NewProjectWizard_FormClosing(sender As Object, e As FormClosingEventArgs)
         'reload manager home page data grid view
         ManagerHomePage.Update()
-        'Enable manager home page
-        If enable = 0 Then
-            ManagerHomePage.Enabled = True
-            ManagerHomePage.Show()
-        End If
     End Sub
 
     Private Sub Create_Click(sender As Object, e As EventArgs) Handles Create.Click
@@ -29,8 +23,6 @@ Public Class NewProjectWizard
             Return
         End If
 
-        'check the value type of today
-
         'adds data to the table
         Dim AddCommand As String = "INSERT INTO Projects (PId, Title, Startdate, Deadline, People, ManagerId) VALUES ('" + id.ToString + "', '" + ProjectName.Text + "', '" + Today.ToString("yyyy-MM-dd") + "', '" + DeadlineDuration.Value.ToString("yyyy-MM-dd") + "', '" + PeopleCount.Value.ToString + "', '" + ManagerHomePage.ManagerId.Text + "')"
 
@@ -46,12 +38,10 @@ Public Class NewProjectWizard
         Dim data As New DataSet()
         sqlAdapter.Fill(data)
 
-        'opens the calender for further updation
-        enable = 1
-        EditProjectWizard.Show()
+        'opens the project layout for further updation
+        ProjectLayout.Show()
         ManagerHomePage.ManagerDataGrid.Refresh()
         ManagerHomePage.DataLoader()
-        ManagerHomePage.Visible = False
         Me.Close()
     End Sub
 
@@ -81,11 +71,11 @@ Public Class NewProjectWizard
         'creating random project id
         Dim pId As New Random()
         id = pId.Next(100000, 999999).ToString
-        For Each row In data.Tables(0).Rows().ToString
-            If id = row Then
+        For Each row In data.Tables(0).Rows()
+            If id = row.ToString Then
                 id = pId.Next(100000, 999999).ToString
             End If
         Next
-        ProjectGrpBox.Text = "Project Id: " & id.ToString
+        ProjectGrpBox.Text = "Project Id: " & id
     End Sub
 End Class

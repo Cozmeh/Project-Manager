@@ -12,8 +12,8 @@ Public Class EditProjectDetails
 
         If responce = vbYes Then
             LoginForm.sql.Close()
-            EditProjectWizard.Enabled = True
-            EditProjectWizard.Show()
+            ProjectLayout.Enabled = True
+            ProjectLayout.Show()
             'this will change accordingly if delete is clicked
         Else
             e.Cancel = True
@@ -23,12 +23,12 @@ Public Class EditProjectDetails
     Private Sub Apply_Click(sender As Object, e As EventArgs) Handles Apply.Click
 
         'reconfirms
-        Dim responce As String = MsgBox("Do you want to save changes done in Project Id: " & EditProjectWizard.ProjectId.Text + "?", vbYesNo, "Are You Sure?")
+        Dim responce As String = MsgBox("Do you want to save changes done in Project Id: " & ProjectLayout.ProjectId.Text + "?", vbYesNo, "Are You Sure?")
         'update to database then close form
         If responce = vbYes Then
             'creating a sql command statement 
             Dim form2command As SqlCommand = LoginForm.sql.CreateCommand()
-            form2command.CommandText = "Update Projects SET Title = '" + ProjectName.Text + "', Deadline = '" + DeadlineDuration.Text + "', People ='" + PeopleCount.Text + "' Where PId ='" + EditProjectWizard.ProjectId.Text + "'"
+            form2command.CommandText = "Update Projects SET Title = '" + ProjectName.Text + "', Deadline = '" + DeadlineDuration.Text + "', People ='" + PeopleCount.Text + "' Where PId ='" + ProjectLayout.ProjectId.Text + "'"
 
             'sqladapter to handle the sql commands
             Dim form2sqlAdapter As New SqlDataAdapter With {
@@ -39,7 +39,7 @@ Public Class EditProjectDetails
             Dim form2data As New DataSet()
             form2sqlAdapter.Fill(form2data)
 
-            EditProjectWizard.Refresh()
+            ProjectLayout.Refresh()
             Me.Close()
         End If
     End Sub
@@ -52,7 +52,7 @@ Public Class EditProjectDetails
             'delete from database then close form
             'creating a sql command statement 
             Dim form2command As SqlCommand = LoginForm.sql.CreateCommand()
-            form2command.CommandText = "Delete * FROM Projects WHERE PId ='" + EditProjectWizard.ProjectId.Text + "'"
+            form2command.CommandText = "Delete * FROM Projects WHERE PId ='" + ProjectLayout.ProjectId.Text + "'"
 
             'sqladapter to handle the sql commands 
             Dim form2sqlAdapter As New SqlDataAdapter With {
@@ -64,7 +64,7 @@ Public Class EditProjectDetails
             form2sqlAdapter.Fill(form2data)
 
             'closes rest of the forms between manager home page and the current page
-            EditProjectWizard.Close()
+            ProjectLayout.Close()
             Me.Close()
         End If
     End Sub
@@ -73,8 +73,8 @@ Public Class EditProjectDetails
         Dim responce As String = MsgBox("Do you want to Cancel changes?", vbYesNo, "Are You Sure?")
         If responce = vbYes Then
             'doesnt do any changes
-            EditProjectWizard.Enabled = True
-            EditProjectWizard.Show()
+            ProjectLayout.Enabled = True
+            ProjectLayout.Show()
             Me.Close()
         End If
     End Sub
@@ -86,11 +86,11 @@ Public Class EditProjectDetails
             Delete.Visible = False
         End If
 
-        ProjectId.Text = "Project Id: " + EditProjectWizard.ProjectId.Text
+        ProjectId.Text = "Project Id: " + ProjectLayout.ProjectId.Text
 
         'creating a sql command statement 
         Dim form2command As SqlCommand = LoginForm.sql.CreateCommand()
-        form2command.CommandText = "SELECT * FROM Projects WHERE PId ='" + EditProjectWizard.ProjectId.Text + "'"
+        form2command.CommandText = "SELECT * FROM Projects WHERE PId ='" + ProjectLayout.ProjectId.Text + "'"
 
         'sqladapter to handle the sql commands 
         Dim form2sqlAdapter As New SqlDataAdapter With {

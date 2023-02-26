@@ -3,7 +3,7 @@
 Public Class ManagerHomePage
 
     Public pid As String = "new"
-    Public title, deadline, people As String
+    Public title, startdate, deadline, people As String
 
     Private Sub LogoutManager_Click(sender As Object, e As EventArgs) Handles LogoutManager.Click
         Me.Close()
@@ -37,7 +37,6 @@ Public Class ManagerHomePage
     End Sub
 
     Public Sub DataLoader()
-
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
         Consolecommand.CommandText = "SELECT PId, Title, Startdate, Deadline,People FROM Projects WHERE ManagerId = '" & ManagerId.Text & "'"
@@ -67,10 +66,11 @@ Public Class ManagerHomePage
 
     Private Sub ManagerDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ManagerDataGrid.CellContentClick
         pid = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(0).Value.ToString
-        Title = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(1).Value.ToString
-        deadline = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(2).Value.ToString
-        people = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(3).Value.ToString
-        EditProjectWizard.Show()
+        title = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(1).Value.ToString
+        startdate = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(2).Value.ToString
+        deadline = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(3).Value.ToString
+        people = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(4).Value.ToString
+        ProjectLayout.Show()
         Me.Enabled = False
     End Sub
 End Class

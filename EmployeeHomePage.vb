@@ -1,5 +1,4 @@
-﻿Imports System.Data.Common
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 
 Public Class EmployeeHomePage
     Private Sub LogoutEmp_Click(sender As Object, e As EventArgs) Handles LogoutEmp.Click
@@ -38,10 +37,6 @@ Public Class EmployeeHomePage
     End Sub
 
     Private Sub DataLoader()
-
-        'compound query for collecting information about the project from the db matching the empId 
-        'multivalued columns in Employees
-
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
         Consolecommand.CommandText = "SELECT EmpID, Task, PID FROM Tasks WHERE EmpID = '" + LoginForm.UserIDBox.Text + "'"
