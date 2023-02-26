@@ -51,11 +51,6 @@ Public Class AdminHomePage
         End If
 
         'designation validation
-        If Add_Designtion.Text <> "A" Or Add_Designtion.Text <> "E" Or Add_Designtion.Text <> "M" Then
-            MsgBox("Invalid Designation!")
-            Return
-        End If
-
         'confirmation
         Dim responce As String = vbNo
         If Add_Designtion.Text = "A" Then
@@ -64,10 +59,21 @@ Public Class AdminHomePage
             responce = MsgBox("Add '" & Add_ID.Text & "' to the Company", vbYesNo, "Add Manager?")
         ElseIf Add_Designtion.Text = "E" Then
             responce = MsgBox("Add '" & Add_ID.Text & "' to the Company", vbYesNo, "Add Employee?")
+        Else
+            MsgBox("Invalid Designation!")
+            Return
         End If
+
         If responce = vbNo Then
             Return
         End If
+
+        For Each row In AdminDataGrid.Rows
+            If Add_ID.Text = row.Cells(0).Value.ToString Then
+                MsgBox("Employee with id '" + Add_ID.Text + "' already exist")
+                Return
+            End If
+        Next
 
         'adds data to the table
         Dim AddCommand As String = "INSERT INTO EMPLOYEES (Id,empName,Designation,password) VALUES ('" + Add_ID.Text + "','" + Add_EmpName.Text + "','" + Add_Designtion.Text + "','" + Add_Password.Text + "')"
@@ -124,47 +130,44 @@ Public Class AdminHomePage
             Return
         End If
 
-        Dim DelCommand As String = "DELETE FROM Employees WHERE Id ='" + Del_ID.Text + "'"
+        For Each row In AdminDataGrid.Rows
+            If Del_ID.Text = row.Cells(0).Value.ToString Then
+                'creating a sql command statement 
+                Dim DelCommand As SqlCommand = LoginForm.sql.CreateCommand()
+                DelCommand.CommandText = "DELETE FROM Employees WHERE Id ='" + Del_ID.Text + "'"
 
-        'creating a sql command statement 
-        Dim command As SqlCommand = LoginForm.sql.CreateCommand()
-        command.CommandText = "select * from Employees where Id ='" + Del_ID.Text + "'"
+                'sqladapter to handle the sql commands 
+                Dim sqlAdapter As New SqlDataAdapter With {
+                .SelectCommand = DelCommand
+                }
 
-        'sqladapter to handle the sql commands 
-        Dim sqlAdapter As New SqlDataAdapter With {
-            .SelectCommand = command
-        }
-
-        'creates a table with the required data
-        Dim data As New DataSet()
-        sqlAdapter.Fill(data)
-
-        If (data.Tables(0).Rows.Count) > 0 Then
-            command.CommandText = DelCommand
-            sqlAdapter.SelectCommand = command
-            sqlAdapter.Fill(data)
-            DataLoader()
-        Else
-            MsgBox("User not found!")
-        End If
-        'reseting textbox
-        Del_ID.Text = Nothing
+                'creates a table with the required data
+                Dim data As New DataSet()
+                sqlAdapter.Fill(data)
+                DataLoader()
+                'reseting textbox
+                Del_ID.Text = Nothing
+                Return
+            End If
+        Next
+        MsgBox("User not found!")
     End Sub
 
     Private Sub UpdateRow_Click_1(sender As Object, e As EventArgs) Handles UpdateRow.Click
-        If Upd_Name.Text = Nothing Or Upd_Designation.Text = Nothing Or Upd_Password.Text = Nothing Then
-            MsgBox("Please fill all the details!")
-            Return
-        End If
 
-        If Upd_Designation.Text <> "E" Or Upd_Designation.Text <> "M" Then
+        If Upd_Designation.Text = "E" Or Upd_Designation.Text = "M" Then
+            'conformation
+            Dim responce As String = MsgBox("Update Employee?", vbYesNo, "Update " & Upd_ID.Text & " in the database")
+            If responce = vbNo Then
+                Return
+            End If
+        Else
             MsgBox("Invalid Designation!")
             Return
         End If
 
-        'conformation
-        Dim responce As String = MsgBox("Update Employee?", vbYesNo, "Update " & Upd_ID.Text & " in the database")
-        If responce = vbNo Then
+        If Upd_ID.Text = Nothing Or Upd_Name.Text = Nothing Or Upd_Designation.Text = Nothing Or Upd_Password.Text = Nothing Then
+            MsgBox("Please fill all the details!")
             Return
         End If
 
@@ -202,30 +205,21 @@ Public Class AdminHomePage
             Return
         End If
 
-        'creating a sql command statement 
-        Dim command As SqlCommand = LoginForm.sql.CreateCommand()
-        command.CommandText = "select empName,Designation,password from Employees where Id ='" + Upd_ID.Text + "'"
+        For Each row In AdminDataGrid.Rows
+            If Upd_ID.Text = row.Cells(0).Value.ToString Then
+                Upd_Name.Text = row.Cells(1).Value.ToString
+                Upd_Designation.Text = row.Cells(2).Value.ToString
+                Upd_Password.Text = row.Cells(3).Value.ToString
 
-        'sqladapter to handle the sql commands 
-        Dim sqlAdapter As New SqlDataAdapter With {
-            .SelectCommand = command
-        }
-        'creates a table with the required data
-        Dim data As New DataSet()
-        sqlAdapter.Fill(data)
+                Upd_Name.Enabled = True
+                Upd_Designation.Enabled = True
+                Upd_Password.Enabled = True
+                UpdateRow.Enabled = True
+                Return
+            End If
+        Next
 
-        If (data.Tables(0).Rows.Count) > 0 Then
-            Upd_Name.Text = data.Tables(0).Rows(0)(0).ToString
-            Upd_Designation.Text = data.Tables(0).Rows(0)(1).ToString
-            Upd_Password.Text = data.Tables(0).Rows(0)(2).ToString
-
-            Upd_Name.Enabled = True
-            Upd_Designation.Enabled = True
-            Upd_Password.Enabled = True
-            UpdateRow.Enabled = True
-        Else
-            MsgBox("User not found!")
-        End If
+        MsgBox("User not found!")
     End Sub
 
     Private Sub AdminDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles AdminDataGrid.CellContentClick

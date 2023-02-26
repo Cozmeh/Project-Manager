@@ -22,9 +22,9 @@ Partial Class EmployeeHomePage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(EmployeeHomePage))
         EmpName = New Label()
         EmpId = New Label()
@@ -33,10 +33,11 @@ Partial Class EmployeeHomePage
         Label3 = New Label()
         Label4 = New Label()
         GroupBox1 = New GroupBox()
-        EmpDataGrid = New DataGridView()
+        TaskDataGrid = New DataGridView()
+        Label1 = New Label()
         EmpGrpBox.SuspendLayout()
         GroupBox1.SuspendLayout()
-        CType(EmpDataGrid, ComponentModel.ISupportInitialize).BeginInit()
+        CType(TaskDataGrid, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' EmpName
@@ -99,7 +100,8 @@ Partial Class EmployeeHomePage
         Label4.Text = "Name  :"' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(EmpDataGrid)
+        GroupBox1.Controls.Add(TaskDataGrid)
+        GroupBox1.Controls.Add(Label1)
         GroupBox1.Font = New Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point)
         GroupBox1.Location = New Point(12, 119)
         GroupBox1.Name = "GroupBox1"
@@ -107,49 +109,59 @@ Partial Class EmployeeHomePage
         GroupBox1.TabIndex = 14
         GroupBox1.TabStop = False
         GroupBox1.Text = "Project(s):"' 
-        ' EmpDataGrid
+        ' TaskDataGrid
         ' 
-        EmpDataGrid.AllowUserToAddRows = False
-        EmpDataGrid.AllowUserToDeleteRows = False
-        EmpDataGrid.AllowUserToResizeColumns = False
-        EmpDataGrid.AllowUserToResizeRows = False
-        EmpDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        EmpDataGrid.CellBorderStyle = DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        EmpDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        EmpDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        EmpDataGrid.Cursor = Cursors.Hand
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        EmpDataGrid.DefaultCellStyle = DataGridViewCellStyle2
-        EmpDataGrid.Location = New Point(6, 40)
-        EmpDataGrid.Name = "EmpDataGrid"
-        EmpDataGrid.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        EmpDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        EmpDataGrid.RowHeadersWidth = 20
-        EmpDataGrid.RowTemplate.Height = 25
-        EmpDataGrid.ScrollBars = ScrollBars.Vertical
-        EmpDataGrid.Size = New Size(764, 239)
-        EmpDataGrid.TabIndex = 2
+        TaskDataGrid.AllowUserToAddRows = False
+        TaskDataGrid.AllowUserToDeleteRows = False
+        TaskDataGrid.AllowUserToResizeColumns = False
+        TaskDataGrid.AllowUserToResizeRows = False
+        TaskDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        TaskDataGrid.CellBorderStyle = DataGridViewCellBorderStyle.None
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Control
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        TaskDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        TaskDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        TaskDataGrid.Cursor = Cursors.Hand
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = SystemColors.Window
+        DataGridViewCellStyle5.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle5.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
+        TaskDataGrid.DefaultCellStyle = DataGridViewCellStyle5
+        TaskDataGrid.Location = New Point(7, 45)
+        TaskDataGrid.Name = "TaskDataGrid"
+        TaskDataGrid.ReadOnly = True
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = SystemColors.Control
+        DataGridViewCellStyle6.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle6.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
+        TaskDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        TaskDataGrid.RowHeadersWidth = 20
+        TaskDataGrid.RowTemplate.Height = 25
+        TaskDataGrid.ScrollBars = ScrollBars.Vertical
+        TaskDataGrid.Size = New Size(764, 239)
+        TaskDataGrid.TabIndex = 2
+        TaskDataGrid.Visible = False
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.Location = New Point(45, 126)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(638, 37)
+        Label1.TabIndex = 15
+        Label1.Text = "All of your past and ongoing task will be shown here"' 
         ' EmployeeHomePage
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -167,7 +179,8 @@ Partial Class EmployeeHomePage
         EmpGrpBox.ResumeLayout(False)
         EmpGrpBox.PerformLayout()
         GroupBox1.ResumeLayout(False)
-        CType(EmpDataGrid, ComponentModel.ISupportInitialize).EndInit()
+        GroupBox1.PerformLayout()
+        CType(TaskDataGrid, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -178,5 +191,6 @@ Partial Class EmployeeHomePage
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents EmpDataGrid As DataGridView
+    Friend WithEvents TaskDataGrid As DataGridView
+    Friend WithEvents Label1 As Label
 End Class

@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Data.Common
+Imports System.Data.SqlClient
 
 Public Class EmployeeHomePage
     Private Sub LogoutEmp_Click(sender As Object, e As EventArgs) Handles LogoutEmp.Click
@@ -44,7 +45,7 @@ Public Class EmployeeHomePage
 
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
-        Consolecommand.CommandText = "SELECT Projects.PId, Projects.Title, Projects.ManagerId FROM Projects WHERE PId IN(SELECT PId FROM Employees WHERE PId = '" + LoginForm.UserIDBox.Text + "')"
+        Consolecommand.CommandText = "SELECT EmpID, Task, PID FROM Tasks WHERE EmpID = '" + LoginForm.UserIDBox.Text + "')"
 
         'sqladapter to handle the sql commands 
         Dim ConsolesqlAdapter As New SqlDataAdapter With {
@@ -55,7 +56,12 @@ Public Class EmployeeHomePage
         Dim Consoledata As New DataSet()
         ConsolesqlAdapter.Fill(Consoledata)
 
-        EmpDataGrid.DataSource = Consoledata.Tables(0)
+        'shows the table if the employee is assigned to any task
+        If (Consoledata.Tables(0).Rows.Count) > 0 Then
+            TaskDataGrid.Visible = True
+            TaskDataGrid.DataSource = Consoledata.Tables(0)
+        End If
+
     End Sub
 
 End Class
