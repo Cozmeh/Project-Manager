@@ -63,7 +63,7 @@ Partial Class ProjectLayout
         ProjectDetails.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         ProjectDetails.Location = New Point(12, 12)
         ProjectDetails.Name = "ProjectDetails"
-        ProjectDetails.Size = New Size(611, 116)
+        ProjectDetails.Size = New Size(589, 116)
         ProjectDetails.TabIndex = 13
         ProjectDetails.TabStop = False
         ProjectDetails.Text = "Project Details"' 
@@ -72,7 +72,7 @@ Partial Class ProjectLayout
         StartDate.CalendarFont = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
         StartDate.Enabled = False
         StartDate.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        StartDate.Location = New Point(393, 25)
+        StartDate.Location = New Point(369, 22)
         StartDate.Name = "StartDate"
         StartDate.Size = New Size(200, 32)
         StartDate.TabIndex = 12
@@ -81,7 +81,7 @@ Partial Class ProjectLayout
         ' 
         lable4.AutoSize = True
         lable4.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        lable4.Location = New Point(284, 28)
+        lable4.Location = New Point(260, 25)
         lable4.Name = "lable4"
         lable4.Size = New Size(103, 25)
         lable4.TabIndex = 11
@@ -109,7 +109,7 @@ Partial Class ProjectLayout
         Deadline.CalendarFont = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
         Deadline.Enabled = False
         Deadline.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Deadline.Location = New Point(393, 66)
+        Deadline.Location = New Point(369, 63)
         Deadline.Name = "Deadline"
         Deadline.Size = New Size(200, 32)
         Deadline.TabIndex = 10
@@ -136,7 +136,7 @@ Partial Class ProjectLayout
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(291, 69)
+        Label4.Location = New Point(267, 66)
         Label4.Name = "Label4"
         Label4.Size = New Size(96, 25)
         Label4.TabIndex = 3
