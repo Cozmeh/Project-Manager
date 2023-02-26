@@ -1,5 +1,4 @@
-﻿Imports System.Data.Common
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 
 Public Class AdminHomePage
     'logout user

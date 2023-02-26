@@ -24,8 +24,7 @@ Public Class EmployeeHomePage
         EmpName.Text = form2data.Tables(0).Rows(0)(1).ToString()
         EmpId.Text = form2data.Tables(0).Rows(0)(0).ToString()
 
-        'dataloader()
-
+        DataLoader()
     End Sub
 
     Private Sub EmployeeHomePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -45,7 +44,7 @@ Public Class EmployeeHomePage
 
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
-        Consolecommand.CommandText = "SELECT EmpID, Task, PID FROM Tasks WHERE EmpID = '" + LoginForm.UserIDBox.Text + "')"
+        Consolecommand.CommandText = "SELECT EmpID, Task, PID FROM Tasks WHERE EmpID = '" + LoginForm.UserIDBox.Text + "'"
 
         'sqladapter to handle the sql commands 
         Dim ConsolesqlAdapter As New SqlDataAdapter With {
@@ -61,7 +60,5 @@ Public Class EmployeeHomePage
             TaskDataGrid.Visible = True
             TaskDataGrid.DataSource = Consoledata.Tables(0)
         End If
-
     End Sub
-
 End Class
