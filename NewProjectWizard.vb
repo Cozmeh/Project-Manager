@@ -87,8 +87,5 @@ Public Class NewProjectWizard
             End If
         Next
         ProjectGrpBox.Text = "Project Id: " & id.ToString
-
-        MsgBox(DeadlineDuration.Value.ToString("yyyy-MM-dd"))
-
     End Sub
 End Class
