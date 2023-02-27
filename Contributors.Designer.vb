@@ -33,16 +33,17 @@ Partial Class Contributors
         ContributorDataGrid = New DataGridView()
         TabControl = New TabControl()
         TabPage1 = New TabPage()
+        Validate = New Button()
         Label3 = New Label()
         AddRow = New Button()
-        Add_Designtion = New ComboBox()
-        Add_ID = New TextBox()
+        Task = New ComboBox()
+        ContId = New TextBox()
         TabPage2 = New TabPage()
+        getId = New Button()
+        UCont = New TextBox()
         Label4 = New Label()
-        ComboBox1 = New ComboBox()
-        GetBtn = New Button()
+        UTask = New ComboBox()
         UpdateRow = New Button()
-        Upd_ID = New TextBox()
         TabPage3 = New TabPage()
         DeleteRow = New Button()
         Del_ID = New TextBox()
@@ -161,10 +162,11 @@ Partial Class Contributors
         ' 
         ' TabPage1
         ' 
+        TabPage1.Controls.Add(Validate)
         TabPage1.Controls.Add(Label3)
         TabPage1.Controls.Add(AddRow)
-        TabPage1.Controls.Add(Add_Designtion)
-        TabPage1.Controls.Add(Add_ID)
+        TabPage1.Controls.Add(Task)
+        TabPage1.Controls.Add(ContId)
         TabPage1.Location = New Point(4, 26)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
@@ -173,11 +175,24 @@ Partial Class Contributors
         TabPage1.Text = "Add"
         TabPage1.UseVisualStyleBackColor = True
         ' 
+        ' Validate
+        ' 
+        Validate.BackColor = Color.Silver
+        Validate.FlatAppearance.BorderSize = 0
+        Validate.FlatStyle = FlatStyle.Flat
+        Validate.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Validate.Location = New Point(189, 34)
+        Validate.Name = "Validate"
+        Validate.Size = New Size(100, 34)
+        Validate.TabIndex = 39
+        Validate.Text = "Validate"
+        Validate.UseVisualStyleBackColor = False
+        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.Location = New Point(231, 38)
+        Label3.Location = New Point(326, 39)
         Label3.Name = "Label3"
         Label3.Size = New Size(51, 25)
         Label3.TabIndex = 27
@@ -195,32 +210,32 @@ Partial Class Contributors
         AddRow.Text = "Add Contributor"
         AddRow.UseVisualStyleBackColor = False
         ' 
-        ' Add_Designtion
+        ' Task
         ' 
-        Add_Designtion.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Add_Designtion.FormattingEnabled = True
-        Add_Designtion.Items.AddRange(New Object() {"Requirement Analysis", "Design", "Development", "Testing"})
-        Add_Designtion.Location = New Point(288, 33)
-        Add_Designtion.Name = "Add_Designtion"
-        Add_Designtion.Size = New Size(157, 33)
-        Add_Designtion.TabIndex = 24
+        Task.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Task.FormattingEnabled = True
+        Task.Items.AddRange(New Object() {"UnAssigned", "Requirement Analysis", "Design", "Development", "Testing"})
+        Task.Location = New Point(383, 34)
+        Task.Name = "Task"
+        Task.Size = New Size(157, 33)
+        Task.TabIndex = 24
+        Task.Text = "UnAssigned"' 
+        ' ContId
         ' 
-        ' Add_ID
-        ' 
-        Add_ID.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Add_ID.Location = New Point(38, 34)
-        Add_ID.Name = "Add_ID"
-        Add_ID.PlaceholderText = "Contributor ID"
-        Add_ID.Size = New Size(131, 32)
-        Add_ID.TabIndex = 0
+        ContId.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        ContId.Location = New Point(38, 34)
+        ContId.Name = "ContId"
+        ContId.PlaceholderText = "Contributor ID"
+        ContId.Size = New Size(131, 32)
+        ContId.TabIndex = 0
         ' 
         ' TabPage2
         ' 
+        TabPage2.Controls.Add(getId)
+        TabPage2.Controls.Add(UCont)
         TabPage2.Controls.Add(Label4)
-        TabPage2.Controls.Add(ComboBox1)
-        TabPage2.Controls.Add(GetBtn)
+        TabPage2.Controls.Add(UTask)
         TabPage2.Controls.Add(UpdateRow)
-        TabPage2.Controls.Add(Upd_ID)
         TabPage2.Location = New Point(4, 26)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
@@ -229,56 +244,61 @@ Partial Class Contributors
         TabPage2.Text = "Update"
         TabPage2.UseVisualStyleBackColor = True
         ' 
+        ' getId
+        ' 
+        getId.BackColor = Color.Silver
+        getId.FlatAppearance.BorderSize = 0
+        getId.FlatStyle = FlatStyle.Flat
+        getId.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        getId.Location = New Point(171, 32)
+        getId.Name = "getId"
+        getId.Size = New Size(100, 34)
+        getId.TabIndex = 42
+        getId.Text = "Get"
+        getId.UseVisualStyleBackColor = False
+        ' 
+        ' UCont
+        ' 
+        UCont.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        UCont.Location = New Point(21, 32)
+        UCont.Name = "UCont"
+        UCont.PlaceholderText = "Contribution ID"
+        UCont.Size = New Size(144, 32)
+        UCont.TabIndex = 41
+        ' 
         ' Label4
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(293, 35)
+        Label4.Location = New Point(307, 35)
         Label4.Name = "Label4"
         Label4.Size = New Size(51, 25)
         Label4.TabIndex = 40
         Label4.Text = "Task:"' 
-        ' ComboBox1
+        ' UTask
         ' 
-        ComboBox1.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"Requirement Analysis", "Design", "Development", "Testing"})
-        ComboBox1.Location = New Point(364, 30)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(157, 33)
-        ComboBox1.TabIndex = 39
-        ' 
-        ' GetBtn
-        ' 
-        GetBtn.BackColor = Color.Silver
-        GetBtn.FlatAppearance.BorderSize = 0
-        GetBtn.FlatStyle = FlatStyle.Flat
-        GetBtn.Location = New Point(132, 34)
-        GetBtn.Name = "GetBtn"
-        GetBtn.Size = New Size(63, 26)
-        GetBtn.TabIndex = 38
-        GetBtn.Text = "Get"
-        GetBtn.UseVisualStyleBackColor = False
+        UTask.Enabled = False
+        UTask.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        UTask.FormattingEnabled = True
+        UTask.Items.AddRange(New Object() {"Requirement Analysis", "Design", "Development", "Testing"})
+        UTask.Location = New Point(364, 30)
+        UTask.Name = "UTask"
+        UTask.Size = New Size(157, 33)
+        UTask.TabIndex = 39
         ' 
         ' UpdateRow
         ' 
         UpdateRow.BackColor = Color.Goldenrod
+        UpdateRow.Enabled = False
         UpdateRow.FlatAppearance.BorderSize = 0
         UpdateRow.FlatStyle = FlatStyle.Flat
-        UpdateRow.Location = New Point(630, 35)
+        UpdateRow.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        UpdateRow.Location = New Point(590, 30)
         UpdateRow.Name = "UpdateRow"
-        UpdateRow.Size = New Size(100, 25)
+        UpdateRow.Size = New Size(140, 33)
         UpdateRow.TabIndex = 37
-        UpdateRow.Text = "Update User"
+        UpdateRow.Text = "Update Task"
         UpdateRow.UseVisualStyleBackColor = False
-        ' 
-        ' Upd_ID
-        ' 
-        Upd_ID.Location = New Point(26, 35)
-        Upd_ID.Name = "Upd_ID"
-        Upd_ID.PlaceholderText = "UserID"
-        Upd_ID.Size = New Size(100, 25)
-        Upd_ID.TabIndex = 33
         ' 
         ' TabPage3
         ' 
@@ -297,19 +317,21 @@ Partial Class Contributors
         DeleteRow.BackColor = Color.Tomato
         DeleteRow.FlatAppearance.BorderSize = 0
         DeleteRow.FlatStyle = FlatStyle.Flat
-        DeleteRow.Location = New Point(630, 35)
+        DeleteRow.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        DeleteRow.Location = New Point(616, 35)
         DeleteRow.Name = "DeleteRow"
-        DeleteRow.Size = New Size(100, 25)
+        DeleteRow.Size = New Size(114, 32)
         DeleteRow.TabIndex = 34
         DeleteRow.Text = "Remove"
         DeleteRow.UseVisualStyleBackColor = False
         ' 
         ' Del_ID
         ' 
+        Del_ID.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
         Del_ID.Location = New Point(26, 35)
         Del_ID.Name = "Del_ID"
-        Del_ID.PlaceholderText = "UserID"
-        Del_ID.Size = New Size(227, 25)
+        Del_ID.PlaceholderText = "Contributor ID"
+        Del_ID.Size = New Size(227, 32)
         Del_ID.TabIndex = 33
         ' 
         ' Edit
@@ -369,18 +391,19 @@ Partial Class Contributors
     Friend WithEvents TabControl As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents AddRow As Button
-    Friend WithEvents Add_Designtion As ComboBox
-    Friend WithEvents Add_ID As TextBox
+    Friend WithEvents Task As ComboBox
+    Friend WithEvents ContId As TextBox
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents GetBtn As Button
     Friend WithEvents UpdateRow As Button
-    Friend WithEvents Upd_ID As TextBox
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents DeleteRow As Button
     Friend WithEvents Del_ID As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents UTask As ComboBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Edit As Button
     Friend WithEvents Ok As Button
+    Friend WithEvents Validate As Button
+    Friend WithEvents getId As Button
+    Friend WithEvents UCont As TextBox
 End Class

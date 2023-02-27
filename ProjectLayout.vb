@@ -1,5 +1,5 @@
 ﻿Public Class ProjectLayout
-    Private Sub ProjectLayout_Load(sender As Object, e As EventArgs)
+    Private Sub ProjectLayout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'Filling all the fields when opened from clicking on Datagrid in ManagerHomePage
         If ManagerHomePage.pid <> "new" Then
@@ -36,6 +36,7 @@
         'Count.Text = Consoledata.Tables(0).Rows(0)(3)
     End Sub
 
+    'Project layout will be saved when Save button is clicked
     Private Sub Ok_Click(sender As Object, e As EventArgs) Handles Ok.Click
         Dim responce As String = MsgBox("Do you want to save changes?", vbYesNo, "Are you sure?")
         If responce = vbYes Then

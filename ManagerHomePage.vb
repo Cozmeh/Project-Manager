@@ -2,7 +2,7 @@
 
 Public Class ManagerHomePage
 
-    Public pid As String
+    Public pid As String = "new"
     Public title, startdate, deadline, people As String
 
     Private Sub LogoutManager_Click(sender As Object, e As EventArgs) Handles LogoutManager.Click
@@ -51,7 +51,11 @@ Public Class ManagerHomePage
         Dim Consoledata As New DataSet()
         ConsolesqlAdapter.Fill(Consoledata)
 
-        ManagerDataGrid.DataSource = Consoledata.Tables(0)
+        'shows the table if the employee is assigned to any task
+        If (Consoledata.Tables(0).Rows.Count) > 0 Then
+            ManagerDataGrid.Visible = True
+            ManagerDataGrid.DataSource = Consoledata.Tables(0)
+        End If
     End Sub
 
     Private Sub ManagerHomePage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -66,12 +70,14 @@ Public Class ManagerHomePage
     End Sub
 
     Private Sub ManagerDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ManagerDataGrid.CellContentClick
-        pid = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(0).Value.ToString
-        title = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(1).Value.ToString
-        startdate = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(2).Value.ToString
-        deadline = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(3).Value.ToString
-        people = ManagerDataGrid.Rows(ManagerDataGrid.CurrentCell.RowIndex).Cells(4).Value.ToString
-        ProjectLayout.Show()
+        With ManagerDataGrid
+            pid = .Rows(.CurrentCell.RowIndex).Cells(0).Value.ToString
+            title = .Rows(.CurrentCell.RowIndex).Cells(1).Value.ToString
+            startdate = .Rows(.CurrentCell.RowIndex).Cells(2).Value.ToString
+            deadline = .Rows(.CurrentCell.RowIndex).Cells(3).Value.ToString
+            people = .Rows(.CurrentCell.RowIndex).Cells(4).Value.ToString
+            ProjectLayout.Show()
+        End With
         Me.Enabled = False
     End Sub
 End Class
