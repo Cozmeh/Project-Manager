@@ -22,16 +22,14 @@ Partial Class Contributors
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Label1 = New Label()
         Label2 = New Label()
         projectName = New Label()
         Count = New Label()
         projectId = New GroupBox()
-        Save = New Button()
-        Cancel = New Button()
         ContributorDataGrid = New DataGridView()
         TabControl = New TabControl()
         TabPage1 = New TabPage()
@@ -40,6 +38,7 @@ Partial Class Contributors
         Add_Designtion = New ComboBox()
         Add_ID = New TextBox()
         TabPage2 = New TabPage()
+        Label4 = New Label()
         ComboBox1 = New ComboBox()
         GetBtn = New Button()
         UpdateRow = New Button()
@@ -47,7 +46,8 @@ Partial Class Contributors
         TabPage3 = New TabPage()
         DeleteRow = New Button()
         Del_ID = New TextBox()
-        Label4 = New Label()
+        Edit = New Button()
+        Ok = New Button()
         projectId.SuspendLayout()
         CType(ContributorDataGrid, ComponentModel.ISupportInitialize).BeginInit()
         TabControl.SuspendLayout()
@@ -104,26 +104,6 @@ Partial Class Contributors
         projectId.TabIndex = 5
         projectId.TabStop = False
         projectId.Text = "Project Id:"' 
-        ' Save
-        ' 
-        Save.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Save.Location = New Point(675, 30)
-        Save.Name = "Save"
-        Save.Size = New Size(88, 36)
-        Save.TabIndex = 16
-        Save.Text = "Save"
-        Save.UseVisualStyleBackColor = True
-        ' 
-        ' Cancel
-        ' 
-        Cancel.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Cancel.Location = New Point(675, 77)
-        Cancel.Name = "Cancel"
-        Cancel.Size = New Size(88, 36)
-        Cancel.TabIndex = 17
-        Cancel.Text = "Cancel"
-        Cancel.UseVisualStyleBackColor = True
-        ' 
         ' ContributorDataGrid
         ' 
         ContributorDataGrid.AllowUserToAddRows = False
@@ -132,39 +112,39 @@ Partial Class Contributors
         ContributorDataGrid.AllowUserToResizeRows = False
         ContributorDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         ContributorDataGrid.CellBorderStyle = DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = SystemColors.Control
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        ContributorDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        ContributorDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         ContributorDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         ContributorDataGrid.Cursor = Cursors.Hand
-        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = SystemColors.Window
-        DataGridViewCellStyle5.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle5.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
-        ContributorDataGrid.DefaultCellStyle = DataGridViewCellStyle5
-        ContributorDataGrid.Location = New Point(20, 296)
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        ContributorDataGrid.DefaultCellStyle = DataGridViewCellStyle2
+        ContributorDataGrid.Location = New Point(12, 268)
         ContributorDataGrid.Name = "ContributorDataGrid"
         ContributorDataGrid.ReadOnly = True
-        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = SystemColors.Control
-        DataGridViewCellStyle6.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle6.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
-        ContributorDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Control
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        ContributorDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         ContributorDataGrid.RowHeadersWidth = 20
         ContributorDataGrid.RowTemplate.Height = 25
         ContributorDataGrid.ScrollBars = ScrollBars.Vertical
-        ContributorDataGrid.Size = New Size(755, 184)
+        ContributorDataGrid.Size = New Size(772, 212)
         ContributorDataGrid.TabIndex = 18
         ' 
         ' TabControl
@@ -173,10 +153,10 @@ Partial Class Contributors
         TabControl.Controls.Add(TabPage2)
         TabControl.Controls.Add(TabPage3)
         TabControl.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        TabControl.Location = New Point(18, 165)
+        TabControl.Location = New Point(12, 137)
         TabControl.Name = "TabControl"
         TabControl.SelectedIndex = 0
-        TabControl.Size = New Size(763, 125)
+        TabControl.Size = New Size(776, 125)
         TabControl.TabIndex = 19
         ' 
         ' TabPage1
@@ -188,7 +168,7 @@ Partial Class Contributors
         TabPage1.Location = New Point(4, 26)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(755, 95)
+        TabPage1.Size = New Size(768, 95)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Add"
         TabPage1.UseVisualStyleBackColor = True
@@ -244,11 +224,20 @@ Partial Class Contributors
         TabPage2.Location = New Point(4, 26)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(755, 95)
+        TabPage2.Size = New Size(768, 95)
         TabPage2.TabIndex = 1
         TabPage2.Text = "Update"
         TabPage2.UseVisualStyleBackColor = True
         ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Label4.Location = New Point(293, 35)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(51, 25)
+        Label4.TabIndex = 40
+        Label4.Text = "Task:"' 
         ' ComboBox1
         ' 
         ComboBox1.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
@@ -298,7 +287,7 @@ Partial Class Contributors
         TabPage3.Location = New Point(4, 26)
         TabPage3.Name = "TabPage3"
         TabPage3.Padding = New Padding(3)
-        TabPage3.Size = New Size(755, 95)
+        TabPage3.Size = New Size(768, 95)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Remove"
         TabPage3.UseVisualStyleBackColor = True
@@ -323,24 +312,35 @@ Partial Class Contributors
         Del_ID.Size = New Size(227, 25)
         Del_ID.TabIndex = 33
         ' 
-        ' Label4
+        ' Edit
         ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(293, 35)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(51, 25)
-        Label4.TabIndex = 40
-        Label4.Text = "Task:"' 
+        Edit.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Edit.Location = New Point(685, 77)
+        Edit.Name = "Edit"
+        Edit.Size = New Size(88, 36)
+        Edit.TabIndex = 21
+        Edit.Text = "Edit"
+        Edit.UseVisualStyleBackColor = True
+        ' 
+        ' Ok
+        ' 
+        Ok.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Ok.Location = New Point(685, 35)
+        Ok.Name = "Ok"
+        Ok.Size = New Size(88, 36)
+        Ok.TabIndex = 20
+        Ok.Text = "Save"
+        Ok.UseVisualStyleBackColor = True
+        ' 
         ' Contributors
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 492)
+        Controls.Add(Edit)
+        Controls.Add(Ok)
         Controls.Add(ContributorDataGrid)
         Controls.Add(TabControl)
-        Controls.Add(Cancel)
-        Controls.Add(Save)
         Controls.Add(projectId)
         Name = "Contributors"
         Text = "Contributors"
@@ -362,8 +362,6 @@ Partial Class Contributors
     Friend WithEvents projectName As Label
     Friend WithEvents Count As Label
     Friend WithEvents projectId As GroupBox
-    Friend WithEvents Save As Button
-    Friend WithEvents Cancel As Button
     Friend WithEvents ContributorDataGrid As DataGridView
     Friend WithEvents TabControl As TabControl
     Friend WithEvents TabPage1 As TabPage
@@ -380,4 +378,6 @@ Partial Class Contributors
     Friend WithEvents Label3 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents Edit As Button
+    Friend WithEvents Ok As Button
 End Class

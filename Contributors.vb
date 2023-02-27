@@ -8,6 +8,7 @@ Public Class Contributors
 
     Private Sub Contributors_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         projectId.Text = "Project Id: " + ProjectLayout.ProjectId.Text
+        DataLoader()
     End Sub
 
     Public Sub DataLoader()
