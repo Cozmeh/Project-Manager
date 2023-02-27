@@ -342,7 +342,10 @@ Partial Class Contributors
         Controls.Add(ContributorDataGrid)
         Controls.Add(TabControl)
         Controls.Add(projectId)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
         Name = "Contributors"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Contributors"
         projectId.ResumeLayout(False)
         projectId.PerformLayout()

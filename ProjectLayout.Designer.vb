@@ -200,7 +200,10 @@ Partial Class ProjectLayout
         Controls.Add(Ok)
         Controls.Add(Layout)
         Controls.Add(ProjectDetails)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
         Name = "ProjectLayout"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "ProjectLayout"
         ProjectDetails.ResumeLayout(False)
         ProjectDetails.PerformLayout()

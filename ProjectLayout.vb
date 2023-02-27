@@ -1,5 +1,5 @@
 ﻿Public Class ProjectLayout
-    Private Sub ProjectLayout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ProjectLayout_Load(sender As Object, e As EventArgs)
 
         'Filling all the fields when opened from clicking on Datagrid in ManagerHomePage
         If ManagerHomePage.pid <> "new" Then
@@ -50,15 +50,15 @@
         Me.Hide()
     End Sub
 
-    Private Sub ProjectLayout_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub addEmp_Click(sender As Object, e As EventArgs) Handles addEmp.Click
+        Me.Enabled = False
+        Contributors.Show()
+    End Sub
+
+    Private Sub ProjectLayout_FormClosing_1(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         ManagerHomePage.Enabled = True
         ManagerHomePage.Show()
         ManagerHomePage.Refresh()
         ManagerHomePage.ManagerDataGrid.Refresh()
-    End Sub
-
-    Private Sub addEmp_Click(sender As Object, e As EventArgs) Handles addEmp.Click
-        Me.Enabled = False
-        Contributors.Show()
     End Sub
 End Class

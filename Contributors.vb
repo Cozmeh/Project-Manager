@@ -12,6 +12,7 @@ Public Class Contributors
     End Sub
 
     Public Sub DataLoader()
+        'change project id datatype
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
         Consolecommand.CommandText = "SELECT * FROM Contributors WHERE PID = '" & ProjectLayout.ProjectId.Text & "'"

@@ -4,9 +4,10 @@ Public Class NewProjectWizard
 
     Public id As String
 
-    Private Sub NewProjectWizard_FormClosing(sender As Object, e As FormClosingEventArgs)
+    Private Sub NewProjectWizard_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         'reload manager home page data grid view
         ManagerHomePage.Update()
+        ManagerHomePage.Enabled = True
     End Sub
 
     Private Sub Create_Click(sender As Object, e As EventArgs) Handles Create.Click
