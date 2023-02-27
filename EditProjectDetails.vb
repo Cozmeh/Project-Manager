@@ -14,10 +14,10 @@ Public Class EditProjectDetails
 
         If responce = vbYes Then
             LoginForm.sql.Close()
-            ManagerHomePage.Enabled = True
+            'ManagerHomePage.Enabled = True
             ManagerHomePage.ManagerDataGrid.Refresh()
-            'ProjectLayout.Enabled = True
-            'ProjectLayout.Show()
+            ProjectLayout.Enabled = True
+            ProjectLayout.Show()
             If deleted Then
                 'closes rest of the forms between manager home page and the current page
                 ProjectLayout.Close()
@@ -48,7 +48,8 @@ Public Class EditProjectDetails
             form2sqlAdapter.Fill(form2data)
 
             ProjectLayout.Refresh()
-        End If
+            Me.Close()
+            End If
     End Sub
 
     Private Sub Delete_Click(sender As Object, e As EventArgs) Handles Delete.Click
@@ -89,7 +90,7 @@ Public Class EditProjectDetails
 
         'delete will only be visible if new project is seen for the first time
         If ManagerHomePage.pid <> "new" Then
-            Delete.Visible = False
+            Delete.Enabled = False
         End If
 
         'fill the data in the required places

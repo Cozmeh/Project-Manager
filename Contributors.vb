@@ -2,7 +2,7 @@
 
 Public Class Contributors
     Private Sub Contributors_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        Dim responce As String = MsgBox("Do you want to update contibutors", vbYesNo, "Update Contributors")
+        Dim responce As String = MsgBox("Are you done with the changes", vbYesNo, "Done?")
         ProjectLayout.Enabled = True
         ProjectLayout.Show()
     End Sub
@@ -86,7 +86,7 @@ Public Class Contributors
             End If
         Next
 
-        'check if the maximum limit reached
+        'check if any task is assigned and the maximum limit reached
         If Integer.Parse(uniqueValues.Count) <> 0 And limit Then
             MsgBox("Maximum number of Contributors reached")
             Return
@@ -142,17 +142,17 @@ Public Class Contributors
 
         'empty the textboxes
         ContId.Text = Nothing
-        Task.Text = Nothing
+        Task.Text = "Un-Assigned"
     End Sub
 
     Private Sub GetId_Click(sender As Object, e As EventArgs) Handles getId.Click
-        If UCont.Text = Nothing Then
+        If UContId.Text = Nothing Then
             MsgBox("Please mention correct Task ID!")
             Return
         End If
 
         For Each row In ContributorDataGrid.Rows
-            If UCont.Text = row.Cells(0).Value.ToString Then
+            If UContId.Text = row.Cells(0).Value.ToString Then
                 UTask.Text = row.Cells(2).Value.ToString
 
                 UTask.Enabled = True
@@ -167,7 +167,7 @@ Public Class Contributors
 
         If UTask.Text = "Requirement Analysis" Or UTask.Text = "Design" Or UTask.Text = "Development" Or UTask.Text = "Testing" Then
             'conformation
-            Dim responce As String = MsgBox("Update Task?", vbYesNo, "Update " & Task.Text & " for the Employee " + UCont.Text)
+            Dim responce As String = MsgBox("Update Task?", vbYesNo, "Update " & Task.Text & " for the Employee " + UContId.Text)
             If responce = vbNo Then
                 Return
             End If
@@ -176,12 +176,12 @@ Public Class Contributors
             Return
         End If
 
-        If UCont.Text = Nothing Or UTask.Text = Nothing Then
+        If UContId.Text = Nothing Or UTask.Text = Nothing Then
             MsgBox("Please fill all the details!")
             Return
         End If
 
-        Dim UpdateCommand As String = "UPDATE Contributors SET Task ='" + UTask.Text + "' Where TaskId ='" + UCont.Text + "'"
+        Dim UpdateCommand As String = "UPDATE Contributors SET Task ='" + UTask.Text + "' Where TaskId ='" + UContId.Text + "'"
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
         command.CommandText = UpdateCommand
@@ -198,7 +198,7 @@ Public Class Contributors
         DataLoader()
 
         'reseting textbox
-        UCont.Text = Nothing
+        UContId.Text = Nothing
         UTask.Text = Nothing
 
         UTask.Enabled = False
@@ -241,5 +241,16 @@ Public Class Contributors
         MsgBox("Employee not found!")
     End Sub
 
+    Private Sub Ok_Click(sender As Object, e As EventArgs) Handles Ok.Click
+        Me.Close()
+    End Sub
 
+    Private Sub ContributorDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ContributorDataGrid.CellContentClick
+        'take the text from the cell and display in id textbox of update and delete
+        With ContributorDataGrid
+            ContId.Text = .Rows(.CurrentCell.RowIndex).Cells(1).Value.ToString
+            UContId.Text = .Rows(.CurrentCell.RowIndex).Cells(0).Value.ToString
+            Del_ID.Text = .Rows(.CurrentCell.RowIndex).Cells(1).Value.ToString
+        End With
+    End Sub
 End Class
