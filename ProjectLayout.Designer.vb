@@ -22,192 +22,203 @@ Partial Class ProjectLayout
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Layout = New GroupBox()
-        ProjectDetails = New GroupBox()
-        StartDate = New DateTimePicker()
-        lable4 = New Label()
-        Count = New Label()
-        Label1 = New Label()
-        Deadline = New DateTimePicker()
-        Label2 = New Label()
-        Label3 = New Label()
-        Label4 = New Label()
-        ProjectId = New Label()
-        ProjectName = New Label()
-        Edit = New Button()
-        Ok = New Button()
-        addEmp = New Button()
-        ProjectDetails.SuspendLayout()
-        SuspendLayout()
-        ' 
-        ' Layout
-        ' 
-        Layout.Font = New Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point)
-        Layout.Location = New Point(12, 146)
-        Layout.Name = "Layout"
-        Layout.Size = New Size(776, 346)
-        Layout.TabIndex = 14
-        Layout.TabStop = False
-        Layout.Text = "Plan Layout"' 
-        ' ProjectDetails
-        ' 
-        ProjectDetails.Controls.Add(StartDate)
-        ProjectDetails.Controls.Add(lable4)
-        ProjectDetails.Controls.Add(Count)
-        ProjectDetails.Controls.Add(Label1)
-        ProjectDetails.Controls.Add(Deadline)
-        ProjectDetails.Controls.Add(Label2)
-        ProjectDetails.Controls.Add(Label3)
-        ProjectDetails.Controls.Add(Label4)
-        ProjectDetails.Controls.Add(ProjectId)
-        ProjectDetails.Controls.Add(ProjectName)
-        ProjectDetails.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        ProjectDetails.Location = New Point(12, 12)
-        ProjectDetails.Name = "ProjectDetails"
-        ProjectDetails.Size = New Size(589, 116)
-        ProjectDetails.TabIndex = 13
-        ProjectDetails.TabStop = False
-        ProjectDetails.Text = "Project Details"' 
-        ' StartDate
-        ' 
-        StartDate.CalendarFont = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        StartDate.Enabled = False
-        StartDate.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        StartDate.Location = New Point(369, 22)
-        StartDate.Name = "StartDate"
-        StartDate.Size = New Size(200, 32)
-        StartDate.TabIndex = 12
-        ' 
-        ' lable4
-        ' 
-        lable4.AutoSize = True
-        lable4.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        lable4.Location = New Point(260, 25)
-        lable4.Name = "lable4"
-        lable4.Size = New Size(103, 25)
-        lable4.TabIndex = 11
-        lable4.Text = "Start Date :"' 
-        ' Count
-        ' 
-        Count.AutoSize = True
-        Count.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Count.Location = New Point(110, 82)
-        Count.Name = "Count"
-        Count.Size = New Size(22, 25)
-        Count.TabIndex = 6
-        Count.Text = "2"' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.Location = New Point(11, 19)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(96, 25)
-        Label1.TabIndex = 0
-        Label1.Text = "Project Id:"' 
-        ' Deadline
-        ' 
-        Deadline.CalendarFont = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Deadline.Enabled = False
-        Deadline.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Deadline.Location = New Point(369, 63)
-        Deadline.Name = "Deadline"
-        Deadline.Size = New Size(200, 32)
-        Deadline.TabIndex = 10
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(11, 51)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(96, 25)
-        Label2.TabIndex = 1
-        Label2.Text = "Name      :"' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.Location = New Point(8, 82)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(98, 25)
-        Label3.TabIndex = 2
-        Label3.Text = "People     :"' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(267, 66)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(96, 25)
-        Label4.TabIndex = 3
-        Label4.Text = "Deadline :"' 
-        ' ProjectId
-        ' 
-        ProjectId.AutoSize = True
-        ProjectId.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        ProjectId.Location = New Point(110, 20)
-        ProjectId.Name = "ProjectId"
-        ProjectId.Size = New Size(92, 25)
-        ProjectId.TabIndex = 4
-        ProjectId.Text = "Project Id"' 
-        ' ProjectName
-        ' 
-        ProjectName.AutoSize = True
-        ProjectName.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        ProjectName.Location = New Point(110, 51)
-        ProjectName.Name = "ProjectName"
-        ProjectName.Size = New Size(126, 25)
-        ProjectName.TabIndex = 5
-        ProjectName.Text = "Project Name"' 
-        ' Edit
-        ' 
-        Edit.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Edit.Location = New Point(700, 61)
-        Edit.Name = "Edit"
-        Edit.Size = New Size(88, 36)
-        Edit.TabIndex = 16
-        Edit.Text = "Edit"
-        Edit.UseVisualStyleBackColor = True
-        ' 
-        ' Ok
-        ' 
-        Ok.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Ok.Location = New Point(700, 19)
-        Ok.Name = "Ok"
-        Ok.Size = New Size(88, 36)
-        Ok.TabIndex = 15
-        Ok.Text = "Save"
-        Ok.UseVisualStyleBackColor = True
-        ' 
-        ' addEmp
-        ' 
-        addEmp.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        addEmp.Location = New Point(654, 103)
-        addEmp.Name = "addEmp"
-        addEmp.Size = New Size(134, 36)
-        addEmp.TabIndex = 17
-        addEmp.Text = "Contributors"
-        addEmp.UseVisualStyleBackColor = True
-        ' 
-        ' ProjectLayout
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(803, 504)
-        Controls.Add(addEmp)
-        Controls.Add(Edit)
-        Controls.Add(Ok)
-        Controls.Add(Layout)
-        Controls.Add(ProjectDetails)
-        FormBorderStyle = FormBorderStyle.FixedSingle
-        MaximizeBox = False
-        Name = "ProjectLayout"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "ProjectLayout"
-        ProjectDetails.ResumeLayout(False)
-        ProjectDetails.PerformLayout()
-        ResumeLayout(False)
+        Me.Layout = New System.Windows.Forms.GroupBox()
+        Me.ProjectDetails = New System.Windows.Forms.GroupBox()
+        Me.StartDate = New System.Windows.Forms.DateTimePicker()
+        Me.lable4 = New System.Windows.Forms.Label()
+        Me.Count = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Deadline = New System.Windows.Forms.DateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ProjectId = New System.Windows.Forms.Label()
+        Me.ProjectName = New System.Windows.Forms.Label()
+        Me.Edit = New System.Windows.Forms.Button()
+        Me.Ok = New System.Windows.Forms.Button()
+        Me.addEmp = New System.Windows.Forms.Button()
+        Me.ProjectDetails.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'Layout
+        '
+        Me.Layout.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Layout.Location = New System.Drawing.Point(12, 134)
+        Me.Layout.Name = "Layout"
+        Me.Layout.Size = New System.Drawing.Size(776, 304)
+        Me.Layout.TabIndex = 14
+        Me.Layout.TabStop = False
+        Me.Layout.Text = "Plan Layout"
+        '
+        'ProjectDetails
+        '
+        Me.ProjectDetails.Controls.Add(Me.StartDate)
+        Me.ProjectDetails.Controls.Add(Me.lable4)
+        Me.ProjectDetails.Controls.Add(Me.Count)
+        Me.ProjectDetails.Controls.Add(Me.Label1)
+        Me.ProjectDetails.Controls.Add(Me.Deadline)
+        Me.ProjectDetails.Controls.Add(Me.Label2)
+        Me.ProjectDetails.Controls.Add(Me.Label3)
+        Me.ProjectDetails.Controls.Add(Me.Label4)
+        Me.ProjectDetails.Controls.Add(Me.ProjectId)
+        Me.ProjectDetails.Controls.Add(Me.ProjectName)
+        Me.ProjectDetails.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ProjectDetails.Location = New System.Drawing.Point(12, 12)
+        Me.ProjectDetails.Name = "ProjectDetails"
+        Me.ProjectDetails.Size = New System.Drawing.Size(589, 116)
+        Me.ProjectDetails.TabIndex = 13
+        Me.ProjectDetails.TabStop = False
+        Me.ProjectDetails.Text = "Project Details"
+        '
+        'StartDate
+        '
+        Me.StartDate.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.StartDate.Enabled = False
+        Me.StartDate.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.StartDate.Location = New System.Drawing.Point(369, 22)
+        Me.StartDate.Name = "StartDate"
+        Me.StartDate.Size = New System.Drawing.Size(200, 32)
+        Me.StartDate.TabIndex = 12
+        '
+        'lable4
+        '
+        Me.lable4.AutoSize = True
+        Me.lable4.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lable4.Location = New System.Drawing.Point(260, 25)
+        Me.lable4.Name = "lable4"
+        Me.lable4.Size = New System.Drawing.Size(103, 25)
+        Me.lable4.TabIndex = 11
+        Me.lable4.Text = "Start Date :"
+        '
+        'Count
+        '
+        Me.Count.AutoSize = True
+        Me.Count.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Count.Location = New System.Drawing.Point(110, 82)
+        Me.Count.Name = "Count"
+        Me.Count.Size = New System.Drawing.Size(22, 25)
+        Me.Count.TabIndex = 6
+        Me.Count.Text = "2"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(11, 19)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(96, 25)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Project Id:"
+        '
+        'Deadline
+        '
+        Me.Deadline.CalendarFont = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Deadline.Enabled = False
+        Me.Deadline.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Deadline.Location = New System.Drawing.Point(369, 63)
+        Me.Deadline.Name = "Deadline"
+        Me.Deadline.Size = New System.Drawing.Size(200, 32)
+        Me.Deadline.TabIndex = 10
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(11, 51)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(96, 25)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Name      :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(8, 82)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(98, 25)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "People     :"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(267, 66)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(96, 25)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Deadline :"
+        '
+        'ProjectId
+        '
+        Me.ProjectId.AutoSize = True
+        Me.ProjectId.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ProjectId.Location = New System.Drawing.Point(110, 20)
+        Me.ProjectId.Name = "ProjectId"
+        Me.ProjectId.Size = New System.Drawing.Size(92, 25)
+        Me.ProjectId.TabIndex = 4
+        Me.ProjectId.Text = "Project Id"
+        '
+        'ProjectName
+        '
+        Me.ProjectName.AutoSize = True
+        Me.ProjectName.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ProjectName.Location = New System.Drawing.Point(110, 51)
+        Me.ProjectName.Name = "ProjectName"
+        Me.ProjectName.Size = New System.Drawing.Size(126, 25)
+        Me.ProjectName.TabIndex = 5
+        Me.ProjectName.Text = "Project Name"
+        '
+        'Edit
+        '
+        Me.Edit.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Edit.Location = New System.Drawing.Point(700, 52)
+        Me.Edit.Name = "Edit"
+        Me.Edit.Size = New System.Drawing.Size(88, 36)
+        Me.Edit.TabIndex = 16
+        Me.Edit.Text = "Edit"
+        Me.Edit.UseVisualStyleBackColor = True
+        '
+        'Ok
+        '
+        Me.Ok.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Ok.Location = New System.Drawing.Point(700, 12)
+        Me.Ok.Name = "Ok"
+        Me.Ok.Size = New System.Drawing.Size(88, 36)
+        Me.Ok.TabIndex = 15
+        Me.Ok.Text = "Save"
+        Me.Ok.UseVisualStyleBackColor = True
+        '
+        'addEmp
+        '
+        Me.addEmp.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.addEmp.Location = New System.Drawing.Point(654, 92)
+        Me.addEmp.Name = "addEmp"
+        Me.addEmp.Size = New System.Drawing.Size(134, 36)
+        Me.addEmp.TabIndex = 17
+        Me.addEmp.Text = "Contributors"
+        Me.addEmp.UseVisualStyleBackColor = True
+        '
+        'ProjectLayout
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.addEmp)
+        Me.Controls.Add(Me.Edit)
+        Me.Controls.Add(Me.Ok)
+        Me.Controls.Add(Me.Layout)
+        Me.Controls.Add(Me.ProjectDetails)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.Name = "ProjectLayout"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "ProjectLayout"
+        Me.ProjectDetails.ResumeLayout(False)
+        Me.ProjectDetails.PerformLayout()
+        Me.ResumeLayout(False)
+
     End Sub
 
     Friend WithEvents Layout As GroupBox

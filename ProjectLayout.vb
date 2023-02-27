@@ -1,6 +1,6 @@
 ﻿Public Class ProjectLayout
     Private Sub ProjectLayout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ManagerHomePage.Hide()
         'Filling all the fields when opened from clicking on Datagrid in ManagerHomePage
         If ManagerHomePage.pid <> "new" Then
             ProjectId.Text = ManagerHomePage.pid

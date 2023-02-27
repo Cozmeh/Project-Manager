@@ -4,9 +4,11 @@ Public Class Contributors
     Private Sub Contributors_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Dim responce As String = MsgBox("Do you want to update contibutors", vbYesNo, "Update Contributors")
         ProjectLayout.Enabled = True
+        ProjectLayout.Show()
     End Sub
 
     Private Sub Contributors_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ProjectLayout.Hide()
         projectId.Text = "Project Id: " + ProjectLayout.ProjectId.Text
         projectName.Text = ProjectLayout.ProjectName.Text
         Count.Text = ProjectLayout.Count.Text
@@ -238,4 +240,6 @@ Public Class Contributors
         Next
         MsgBox("Employee not found!")
     End Sub
+
+
 End Class
