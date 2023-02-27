@@ -100,7 +100,7 @@ Public Class Contributors
             End If
         Next
 
-
+        'check if an employee with same task in the project already exists
         For Each row In ContributorDataGrid.Rows
             If ContId.Text = row.Cells(1).Value.ToString And Task.Text = row.Cells(2).value.ToString Then
                 MsgBox("Employee with id '" + ContId.Text + " and " + Task.Text + "' already exist")
@@ -113,7 +113,7 @@ Public Class Contributors
         If Task.Text = Nothing Then
             responce = MsgBox("Add '" & ContId.Text & "' to the Project with unassigned task?", vbYesNo, "Add new member?")
         Else
-            responce = MsgBox("Add '" & ContId.Text & "' to the Project with task" + Task.Text, vbYesNo, "Add new member?")
+            responce = MsgBox("Add '" & ContId.Text & "' to the Project with task of " + Task.Text, vbYesNo, "Add new member?")
         End If
 
         If responce = vbNo Then
