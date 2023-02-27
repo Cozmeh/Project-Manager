@@ -2,7 +2,7 @@
 
 Public Class ManagerHomePage
 
-    Public pid As String = "new"
+    Public pid As String
     Public title, startdate, deadline, people As String
 
     Private Sub LogoutManager_Click(sender As Object, e As EventArgs) Handles LogoutManager.Click
@@ -10,6 +10,7 @@ Public Class ManagerHomePage
     End Sub
 
     Private Sub NewProject_Click(sender As Object, e As EventArgs) Handles NewProject.Click
+        pid = "new"
         NewProjectWizard.Show()
         Me.Enabled = False
     End Sub

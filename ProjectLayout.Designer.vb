@@ -36,6 +36,7 @@ Partial Class ProjectLayout
         ProjectName = New Label()
         Edit = New Button()
         Ok = New Button()
+        addEmp = New Button()
         ProjectDetails.SuspendLayout()
         SuspendLayout()
         ' 
@@ -162,7 +163,7 @@ Partial Class ProjectLayout
         ' Edit
         ' 
         Edit.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Edit.Location = New Point(700, 67)
+        Edit.Location = New Point(700, 61)
         Edit.Name = "Edit"
         Edit.Size = New Size(88, 36)
         Edit.TabIndex = 16
@@ -172,18 +173,29 @@ Partial Class ProjectLayout
         ' Ok
         ' 
         Ok.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Ok.Location = New Point(700, 25)
+        Ok.Location = New Point(700, 19)
         Ok.Name = "Ok"
         Ok.Size = New Size(88, 36)
         Ok.TabIndex = 15
-        Ok.Text = "Okay"
+        Ok.Text = "Save"
         Ok.UseVisualStyleBackColor = True
+        ' 
+        ' addEmp
+        ' 
+        addEmp.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        addEmp.Location = New Point(654, 103)
+        addEmp.Name = "addEmp"
+        addEmp.Size = New Size(134, 36)
+        addEmp.TabIndex = 17
+        addEmp.Text = "Contributors"
+        addEmp.UseVisualStyleBackColor = True
         ' 
         ' ProjectLayout
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(803, 504)
+        Controls.Add(addEmp)
         Controls.Add(Edit)
         Controls.Add(Ok)
         Controls.Add(Layout)
@@ -209,4 +221,5 @@ Partial Class ProjectLayout
     Friend WithEvents Ok As Button
     Friend WithEvents StartDate As DateTimePicker
     Friend WithEvents lable4 As Label
+    Friend WithEvents addEmp As Button
 End Class
