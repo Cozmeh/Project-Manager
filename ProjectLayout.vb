@@ -16,24 +16,6 @@
             Deadline.Value = NewProjectWizard.DeadlineDuration.Value
             Count.Text = NewProjectWizard.PeopleCount.Value
         End If
-
-        ''creating a sql command statement 
-        'Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
-        'Consolecommand.CommandText = "SELECT PId, Title, Deadline,People FROM Projects WHERE PId = '" & ManagerHomePage.pid & "'"
-
-        ''sqladapter to handle the sql commands 
-        'Dim ConsolesqlAdapter As New SqlDataAdapter With {
-        '    .SelectCommand = Consolecommand
-        '}
-
-        ''creates a table with the required data
-        'Dim Consoledata As New DataSet()
-        'ConsolesqlAdapter.Fill(Consoledata)
-
-        'ProjectId.Text = Consoledata.Tables(0).Rows(0)(0)
-        'ProjectName.Text = Consoledata.Tables(0).Rows(0)(1)
-        'Deadline.Value = Consoledata.Tables(0).Rows(0)(2)
-        'Count.Text = Consoledata.Tables(0).Rows(0)(3)
     End Sub
 
     'Project layout will be saved when Save button is clicked
