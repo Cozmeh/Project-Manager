@@ -1,6 +1,9 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class EmployeeHomePage
+
+    Public id, title, task, pid, status, complete As String
+
     Private Sub LogoutEmp_Click(sender As Object, e As EventArgs) Handles LogoutEmp.Click
         Me.Close()
     End Sub
@@ -36,10 +39,10 @@ Public Class EmployeeHomePage
         End If
     End Sub
 
-    Private Sub DataLoader()
+    Public Sub DataLoader()
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
-        Consolecommand.CommandText = "SELECT EmpID, Task, PID, Status FROM Contributors WHERE EmpID = '" + LoginForm.UserIDBox.Text + "'"
+        Consolecommand.CommandText = "SELECT Id, PId, Title, Task, ManagerId, Complete, Status FROM EmpTask WHERE EmpID = '" + LoginForm.UserIDBox.Text + "'"
 
         'sqladapter to handle the sql commands 
         Dim ConsolesqlAdapter As New SqlDataAdapter With {
@@ -55,5 +58,19 @@ Public Class EmployeeHomePage
             TaskDataGrid.Visible = True
             TaskDataGrid.DataSource = Consoledata.Tables(0)
         End If
+    End Sub
+
+    Private Sub TaskDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles TaskDataGrid.CellContentClick
+        'take the text from the cell and display in id textbox of update and delete
+        With TaskDataGrid
+            id = .Rows(.CurrentCell.RowIndex).Cells(0).Value.ToString
+            pid = .Rows(.CurrentCell.RowIndex).Cells(1).Value.ToString
+            title = .Rows(.CurrentCell.RowIndex).Cells(2).Value.ToString
+            task = .Rows(.CurrentCell.RowIndex).Cells(3).Value.ToString
+            complete = .Rows(.CurrentCell.RowIndex).Cells(5).Value.ToString
+            status = .Rows(.CurrentCell.RowIndex).Cells(6).Value.ToString.Trim
+        End With
+        TaskUpdate.Show()
+        Me.Enabled = False
     End Sub
 End Class
