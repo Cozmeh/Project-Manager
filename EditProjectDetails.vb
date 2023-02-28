@@ -3,7 +3,6 @@
 Public Class EditProjectDetails
 
     Dim res As String = vbNo
-
     Public deleted As Boolean = False
 
     Private Sub EditProjectDetails_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
