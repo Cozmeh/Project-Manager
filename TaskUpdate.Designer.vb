@@ -166,7 +166,11 @@ Partial Class TaskUpdate
         Controls.Add(Cancel)
         Controls.Add(Update)
         Controls.Add(Lable1)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "TaskUpdate"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "TaskUpdate"
         ResumeLayout(False)
         PerformLayout()

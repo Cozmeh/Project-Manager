@@ -19,7 +19,7 @@ Public Class LoginForm
         'creating a sql command statement 
         Dim command As SqlCommand = sql.CreateCommand()
         'creating a sql command statement 
-        command.CommandText = "SELECT * from Employees Where Id= '" + UserIDBox.Text + "' and password = '" + PassBox.Text + "'"
+        command.CommandText = "SELECT * from Employees Where Id= '" + UserIDBox.Text.ToString + "' and password = '" + PassBox.Text.ToString + "'"
 
         'sqladapter to handle the sql commands 
         Dim sqlAdapter As New SqlDataAdapter With {
@@ -65,6 +65,4 @@ Public Class LoginForm
             PassBox.Text = ""
         End If
     End Sub
-
-
 End Class

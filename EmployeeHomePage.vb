@@ -42,7 +42,7 @@ Public Class EmployeeHomePage
     Public Sub DataLoader()
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
-        Consolecommand.CommandText = "SELECT Id, PId, Title, Task, ManagerId, Complete, Status FROM EmpTask WHERE EmpID = '" + LoginForm.UserIDBox.Text + "'"
+        Consolecommand.CommandText = "SELECT Id, PId, Title, Task, ManagerId, Complete, Status FROM EmpTask WHERE EmpID = '" + EmpId.Text + "'"
 
         'sqladapter to handle the sql commands 
         Dim ConsolesqlAdapter As New SqlDataAdapter With {
