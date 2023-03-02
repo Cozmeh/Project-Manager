@@ -13,8 +13,8 @@
         If ManagerHomePage.pid <> "new" Then
             ProjectId.Text = ManagerHomePage.pid
             ProjectName.Text = ManagerHomePage.title
-            Start.Text = ManagerHomePage.startdate.ToString("dd-MM-yyyy")
-            dead.Text = ManagerHomePage.deadline.ToString("dd-MM-yyyy")
+            Start.Text = ManagerHomePage.startdate.ToString()
+            dead.Text = ManagerHomePage.deadline.ToString()
             Count.Text = ManagerHomePage.people
         Else
             'Filling all the fields when opened from NewProjectWizard
