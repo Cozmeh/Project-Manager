@@ -9,7 +9,7 @@ Public Class TaskUpdate
         Pid.Text = EmployeeHomePage.pid
         title.Text = EmployeeHomePage.title
         Taskname.Text = EmployeeHomePage.task
-        Comment.Text = EmployeeHomePage.comment
+        comments.Text = EmployeeHomePage.comment
         If EmployeeHomePage.status <> "Pending" Then
             Completed.Checked = True
         End If

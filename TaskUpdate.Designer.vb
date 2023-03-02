@@ -35,7 +35,7 @@ Partial Class TaskUpdate
         Update = New Button()
         Lable1 = New Label()
         GroupBox1 = New GroupBox()
-        Label1 = New Label()
+        comments = New Label()
         Comment = New Label()
         GroupBox1.SuspendLayout()
         SuspendLayout()
@@ -54,76 +54,76 @@ Partial Class TaskUpdate
         ' 
         taskId.AllowDrop = True
         taskId.AutoSize = True
-        taskId.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        taskId.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         taskId.Location = New Point(122, 31)
         taskId.Name = "taskId"
         taskId.Size = New Size(23, 19)
         taskId.TabIndex = 30
-        taskId.Text = "ID"' 
+        taskId.Text = "ID" ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Label5.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         Label5.Location = New Point(42, 31)
         Label5.Name = "Label5"
         Label5.Size = New Size(57, 19)
         Label5.TabIndex = 29
-        Label5.Text = "Task Id :"' 
+        Label5.Text = "Task Id :" ' 
         ' Taskname
         ' 
         Taskname.AutoSize = True
-        Taskname.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Taskname.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         Taskname.Location = New Point(122, 103)
         Taskname.Name = "Taskname"
         Taskname.Size = New Size(34, 19)
         Taskname.TabIndex = 28
-        Taskname.Text = "task"' 
+        Taskname.Text = "task" ' 
         ' title
         ' 
         title.AutoSize = True
-        title.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        title.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         title.Location = New Point(122, 79)
         title.Name = "title"
         title.Size = New Size(32, 19)
         title.TabIndex = 27
-        title.Text = "title"' 
+        title.Text = "title" ' 
         ' Pid
         ' 
         Pid.AllowDrop = True
         Pid.AutoSize = True
-        Pid.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Pid.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         Pid.Location = New Point(122, 55)
         Pid.Name = "Pid"
         Pid.Size = New Size(23, 19)
         Pid.TabIndex = 26
-        Pid.Text = "ID"' 
+        Pid.Text = "ID" ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         Label3.Location = New Point(45, 128)
         Label3.Name = "Label3"
         Label3.Size = New Size(54, 19)
         Label3.TabIndex = 25
-        Label3.Text = "Status :"' 
+        Label3.Text = "Status :" ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         Label2.Location = New Point(54, 103)
         Label2.Name = "Label2"
         Label2.Size = New Size(45, 19)
         Label2.TabIndex = 24
-        Label2.Text = "Task  :"' 
+        Label2.Text = "Task  :" ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Label4.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         Label4.Location = New Point(12, 79)
         Label4.Name = "Label4"
         Label4.Size = New Size(87, 19)
         Label4.TabIndex = 23
-        Label4.Text = "Project Title :"' 
+        Label4.Text = "Project Title :" ' 
         ' Cancel
         ' 
         Cancel.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
@@ -147,29 +147,31 @@ Partial Class TaskUpdate
         ' Lable1
         ' 
         Lable1.AutoSize = True
-        Lable1.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Lable1.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
         Lable1.Location = New Point(25, 55)
         Lable1.Name = "Lable1"
         Lable1.Size = New Size(74, 19)
         Lable1.TabIndex = 20
-        Lable1.Text = "Project Id :"' 
+        Lable1.Text = "Project Id :" ' 
         ' GroupBox1
         ' 
-        GroupBox1.Controls.Add(Label1)
+        GroupBox1.Controls.Add(comments)
         GroupBox1.Controls.Add(Comment)
-        GroupBox1.Location = New Point(206, 18)
+        GroupBox1.Location = New Point(205, 23)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(183, 141)
         GroupBox1.TabIndex = 32
         GroupBox1.TabStop = False
-        GroupBox1.Text = "Comment for task:"' 
-        ' Label1
+        GroupBox1.Text = "Comment for task:" ' 
+        ' comments
         ' 
-        Label1.Location = New Point(9, 24)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(164, 105)
-        Label1.TabIndex = 1
-        Label1.Text = "someting"' 
+        comments.Location = New Point(12, 24)
+        comments.Name = "comments"
+        comments.Size = New Size(164, 105)
+        comments.TabIndex = 1
+        comments.Text = "someting"
+        comments.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' Comment
         ' 
         Comment.AutoSize = True
@@ -180,7 +182,7 @@ Partial Class TaskUpdate
         ' 
         ' TaskUpdate
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(406, 236)
         Controls.Add(GroupBox1)
@@ -218,5 +220,5 @@ Partial Class TaskUpdate
     Friend WithEvents Lable1 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Comment As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents comments As Label
 End Class

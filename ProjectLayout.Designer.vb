@@ -62,7 +62,7 @@ Partial Class ProjectLayout
         Me.ProjectId = New System.Windows.Forms.Label()
         Me.ProjectName = New System.Windows.Forms.Label()
         Me.Edit = New System.Windows.Forms.Button()
-        Me.Ok = New System.Windows.Forms.Button()
+        Me.Save = New System.Windows.Forms.Button()
         Me.addEmp = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Layout.SuspendLayout()
@@ -504,13 +504,13 @@ Partial Class ProjectLayout
         '
         'Ok
         '
-        Me.Ok.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Ok.Location = New System.Drawing.Point(700, 12)
-        Me.Ok.Name = "Ok"
-        Me.Ok.Size = New System.Drawing.Size(88, 36)
-        Me.Ok.TabIndex = 15
-        Me.Ok.Text = "Save"
-        Me.Ok.UseVisualStyleBackColor = True
+        Me.Save.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Save.Location = New System.Drawing.Point(700, 12)
+        Me.Save.Name = "Ok"
+        Me.Save.Size = New System.Drawing.Size(88, 36)
+        Me.Save.TabIndex = 15
+        Me.Save.Text = "Save"
+        Me.Save.UseVisualStyleBackColor = True
         '
         'addEmp
         '
@@ -540,7 +540,7 @@ Partial Class ProjectLayout
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.addEmp)
         Me.Controls.Add(Me.Edit)
-        Me.Controls.Add(Me.Ok)
+        Me.Controls.Add(Me.Save)
         Me.Controls.Add(Me.Layout)
         Me.Controls.Add(Me.ProjectDetails)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle

@@ -92,6 +92,14 @@ Public Class Contributors
             Return
         End If
 
+        Dim strInput As String
+        strInput = AddComment.Text.Length
+        MsgBox("Number of words: " & strInput)
+
+        If strInput.Length > 49 Then
+            Return
+        End If
+
         'creating random task id
         Dim id As String
         Dim pId As New Random()
