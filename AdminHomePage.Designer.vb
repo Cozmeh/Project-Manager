@@ -83,7 +83,7 @@ Partial Class AdminHomePage
         'LogoutAdmin
         '
         Me.LogoutAdmin.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LogoutAdmin.Location = New System.Drawing.Point(704, 43)
+        Me.LogoutAdmin.Location = New System.Drawing.Point(703, 12)
         Me.LogoutAdmin.Name = "LogoutAdmin"
         Me.LogoutAdmin.Size = New System.Drawing.Size(85, 44)
         Me.LogoutAdmin.TabIndex = 13
@@ -118,7 +118,7 @@ Partial Class AdminHomePage
         Me.AdmingprBox.Controls.Add(Me.AdminId)
         Me.AdmingprBox.Location = New System.Drawing.Point(12, 12)
         Me.AdmingprBox.Name = "AdmingprBox"
-        Me.AdmingprBox.Size = New System.Drawing.Size(220, 100)
+        Me.AdmingprBox.Size = New System.Drawing.Size(220, 89)
         Me.AdmingprBox.TabIndex = 22
         Me.AdmingprBox.TabStop = False
         Me.AdmingprBox.Text = "Admin"
@@ -128,7 +128,7 @@ Partial Class AdminHomePage
         Me.EmpBox.Controls.Add(Me.AdminDataGrid)
         Me.EmpBox.Controls.Add(Me.TabControl)
         Me.EmpBox.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.EmpBox.Location = New System.Drawing.Point(12, 118)
+        Me.EmpBox.Location = New System.Drawing.Point(12, 107)
         Me.EmpBox.Name = "EmpBox"
         Me.EmpBox.Size = New System.Drawing.Size(776, 362)
         Me.EmpBox.TabIndex = 23
@@ -175,7 +175,7 @@ Partial Class AdminHomePage
         Me.AdminDataGrid.RowHeadersWidth = 20
         Me.AdminDataGrid.RowTemplate.Height = 25
         Me.AdminDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.AdminDataGrid.Size = New System.Drawing.Size(755, 184)
+        Me.AdminDataGrid.Size = New System.Drawing.Size(755, 167)
         Me.AdminDataGrid.TabIndex = 0
         '
         'TabControl
@@ -359,7 +359,7 @@ Partial Class AdminHomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 492)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.EmpBox)
         Me.Controls.Add(Me.AdmingprBox)
         Me.Controls.Add(Me.LogoutAdmin)

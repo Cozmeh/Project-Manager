@@ -1,5 +1,13 @@
 ﻿Public Class ProjectLayout
     Private Sub ProjectLayout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'initial positions of panels
+        LeftDesPanel.Size = ReqPanel.Size
+        LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
+        LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
+
+
+
         ManagerHomePage.Hide()
         'Filling all the fields when opened from clicking on Datagrid in ManagerHomePage
         If ManagerHomePage.pid <> "new" Then
@@ -43,5 +51,27 @@
         ManagerHomePage.Show()
         ManagerHomePage.Refresh()
         ManagerHomePage.ManagerDataGrid.Refresh()
+    End Sub
+
+    Private Sub ReqSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles ReqSplitter.SplitterMoved
+        LeftDesPanel.Size = ReqPanel.Size
+        LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
+        LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
+    End Sub
+
+    Private Sub RightDesSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RightDesSplitter.SplitterMoved
+        LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
+        LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
+    End Sub
+
+    Private Sub RDevSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RDevSplitter.SplitterMoved
+        LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        LeftDesPanel.Size = ReqPanel.Size
+        LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
+        LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
+
     End Sub
 End Class
