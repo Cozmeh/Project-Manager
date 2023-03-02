@@ -5,7 +5,7 @@
         LeftDesPanel.Size = ReqPanel.Size
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
-
+        DeployPanel.Size = RightTestPanel.Size
 
 
 
@@ -72,25 +72,14 @@
         DeployPanel.Size = RightTestPanel.Size
     End Sub
 
+    Private Sub RightTestSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RightTestSplitter.SplitterMoved
+        DeployPanel.Size = RightTestPanel.Size
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         LeftDesPanel.Size = ReqPanel.Size
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
-
-    End Sub
-
-    Private Sub EndLimit()
-        MsgBox("RightTestPanelWidth" + RightTestPanel.Size.Width.ToString)
-        MsgBox("DeployPanelWidth" + DeployPanel.Size.Width.ToString)
-
-        If RightTestPanel.Size.Width < DeployPanel.Size.Width Then
-            RightTestPanel.Size = DeployPanel.Size
-            MsgBox("DeployPanelSize IF" + DeployPanel.Size.ToString)
-            MsgBox("RightTestPanelSize If" + RightTestPanel.Size.ToString)
-        End If
-    End Sub
-
-    Private Sub RightTestSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RightTestSplitter.SplitterMoved
         DeployPanel.Size = RightTestPanel.Size
     End Sub
 End Class
