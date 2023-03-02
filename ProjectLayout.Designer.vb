@@ -142,7 +142,7 @@ Partial Class ProjectLayout
         '
         Me.dead.AutoSize = True
         Me.dead.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.dead.Location = New System.Drawing.Point(683, 30)
+        Me.dead.Location = New System.Drawing.Point(666, 30)
         Me.dead.Name = "dead"
         Me.dead.Size = New System.Drawing.Size(87, 25)
         Me.dead.TabIndex = 5
