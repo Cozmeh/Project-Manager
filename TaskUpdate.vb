@@ -4,18 +4,19 @@ Public Class TaskUpdate
 
     Public state As Boolean
 
-    Private Sub TaskUpdate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Task_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         taskId.Text = EmployeeHomePage.id
         Pid.Text = EmployeeHomePage.pid
         title.Text = EmployeeHomePage.title
-        task.Text = EmployeeHomePage.task
+        Taskname.Text = EmployeeHomePage.task
+        Comment.Text = EmployeeHomePage.comment
         If EmployeeHomePage.status <> "Pending" Then
             Completed.Checked = True
         End If
         state = Completed.CheckState
     End Sub
 
-    Private Sub TaskUpdate_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub Task_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         EmployeeHomePage.Enabled = True
         EmployeeHomePage.Show()
     End Sub

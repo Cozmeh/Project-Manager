@@ -123,7 +123,7 @@ Public Class Contributors
         End If
 
         'adds data to the table
-        Dim AddCommand As String = "INSERT INTO Contributors (Id,EmpID,Task,PID) VALUES ('" + id + "','" + ContId.Text + "','" + Task.Text + "','" + ProjectLayout.ProjectId.Text + "')"
+        Dim AddCommand As String = "INSERT INTO Contributors (Id,EmpID,Task,PID,Comment) VALUES ('" + id + "','" + ContId.Text + "','" + Task.Text + "','" + ProjectLayout.ProjectId.Text + "','" + AddComment.Text + "')"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
@@ -143,6 +143,7 @@ Public Class Contributors
         'empty the textboxes
         ContId.Text = Nothing
         Task.Text = "Un-Assigned"
+        AddComment.Text = Nothing
     End Sub
 
     Private Sub GetId_Click(sender As Object, e As EventArgs) Handles getId.Click
@@ -157,6 +158,7 @@ Public Class Contributors
 
                 UTask.Enabled = True
                 UpdateRow.Enabled = True
+                UpdateComment.Enabled = True
                 Return
             End If
         Next
@@ -181,7 +183,7 @@ Public Class Contributors
             Return
         End If
 
-        Dim UpdateCommand As String = "UPDATE Contributors SET Task ='" + UTask.Text + "' Where TaskId ='" + UContId.Text + "'"
+        Dim UpdateCommand As String = "UPDATE Contributors SET Task ='" + UTask.Text + "' , Comment ='" + UpdateComment.Text + "' Where TaskId ='" + UContId.Text + "'"
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
         command.CommandText = UpdateCommand
@@ -200,6 +202,7 @@ Public Class Contributors
         'reseting textbox
         UContId.Text = Nothing
         UTask.Text = Nothing
+        UpdateComment.Text = Nothing
 
         UTask.Enabled = False
         UpdateRow.Enabled = False

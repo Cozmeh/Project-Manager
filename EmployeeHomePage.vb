@@ -2,7 +2,7 @@
 
 Public Class EmployeeHomePage
 
-    Public id, title, task, pid, status, complete As String
+    Public id, title, task, pid, status, complete, comment As String
 
     Private Sub LogoutEmp_Click(sender As Object, e As EventArgs) Handles LogoutEmp.Click
         Me.Close()
@@ -42,7 +42,7 @@ Public Class EmployeeHomePage
     Public Sub DataLoader()
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
-        Consolecommand.CommandText = "SELECT Id, PId, Title, Task, ManagerId, Complete, Status FROM EmpTask WHERE EmpID = '" + EmpId.Text + "'"
+        Consolecommand.CommandText = "SELECT Id, PId, Title, Task, ManagerId, Complete, Status, Comment FROM EmpTask WHERE EmpID = '" + EmpId.Text + "'"
 
         'sqladapter to handle the sql commands 
         Dim ConsolesqlAdapter As New SqlDataAdapter With {
@@ -69,6 +69,7 @@ Public Class EmployeeHomePage
             task = .Rows(.CurrentCell.RowIndex).Cells(3).Value.ToString
             complete = .Rows(.CurrentCell.RowIndex).Cells(5).Value.ToString
             status = .Rows(.CurrentCell.RowIndex).Cells(6).Value.ToString.Trim
+            comment = .Rows(.CurrentCell.RowIndex).Cells(7).Value.ToString.Trim
         End With
         TaskUpdate.Show()
         Me.Enabled = False
