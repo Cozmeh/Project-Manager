@@ -99,7 +99,7 @@ Public Class EditProjectDetails
         'fill the data in the required places
         ProjectName.Text = ProjectLayout.ProjectName.Text
         ProjectId.Text = "Project Id:" + ProjectLayout.ProjectId.Text
-        DeadlineDuration.Value = ProjectLayout.Deadline.Value
+        DeadlineDuration.Value = ProjectLayout.dead.Text
         PeopleCount.Value = ProjectLayout.Count.Text
     End Sub
 End Class

@@ -13,15 +13,15 @@
         If ManagerHomePage.pid <> "new" Then
             ProjectId.Text = ManagerHomePage.pid
             ProjectName.Text = ManagerHomePage.title
-            StartDate.Value = ManagerHomePage.startdate
-            Deadline.Value = ManagerHomePage.deadline
+            Start.Text = ManagerHomePage.startdate.ToString("dd-MM-yyyy")
+            dead.Text = ManagerHomePage.deadline.ToString("dd-MM-yyyy")
             Count.Text = ManagerHomePage.people
         Else
             'Filling all the fields when opened from NewProjectWizard
             ProjectId.Text = NewProjectWizard.id
             ProjectName.Text = NewProjectWizard.ProjectName.Text
-            StartDate.Value = Today
-            Deadline.Value = NewProjectWizard.DeadlineDuration.Value
+            Start.Text = Today.ToString("dd-MM-yyyy")
+            dead.Text = NewProjectWizard.DeadlineDuration.Value.ToString("dd-MM-yyyy")
             Count.Text = NewProjectWizard.PeopleCount.Value
         End If
     End Sub
