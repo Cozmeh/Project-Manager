@@ -1,11 +1,16 @@
 ﻿Public Class ProjectLayout
     Private Sub ProjectLayout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'initial positions of panels
+        'initial positions of panels this block of code will go inside the else block... when the page open for the first time
         LeftDesPanel.Size = ReqPanel.Size
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
 
+        'this will be inside the if block when the project is opened again from the manager home page
+        'below code will change according to the date stored in layout database
+        'LeftDesPanel.Size = ReqPanel.Size
+        'LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
+        'LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
 
 
         ManagerHomePage.Hide()
@@ -27,7 +32,7 @@
     End Sub
 
     'Project layout will be saved when Save button is clicked
-    Private Sub Ok_Click(sender As Object, e As EventArgs) Handles Ok.Click
+    Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
         Dim responce As String = MsgBox("Do you want to save changes?", vbYesNo, "Are you sure?")
         If responce = vbYes Then
             'will store the project layout in the layout table
@@ -41,7 +46,7 @@
         Me.Hide()
     End Sub
 
-    Private Sub addEmp_Click(sender As Object, e As EventArgs) Handles addEmp.Click
+    Private Sub AddEmp_Click(sender As Object, e As EventArgs) Handles addEmp.Click
         Me.Enabled = False
         Contributors.Show()
     End Sub

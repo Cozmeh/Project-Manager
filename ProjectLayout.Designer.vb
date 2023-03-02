@@ -23,6 +23,7 @@ Partial Class ProjectLayout
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Layout = New GroupBox()
+        dead = New Label()
         Start = New Label()
         TestPanel = New Panel()
         RightTestPanel = New Panel()
@@ -57,10 +58,9 @@ Partial Class ProjectLayout
         ProjectId = New Label()
         ProjectName = New Label()
         Edit = New Button()
-        Ok = New Button()
+        Save = New Button()
         addEmp = New Button()
         Button1 = New Button()
-        dead = New Label()
         Layout.SuspendLayout()
         TestPanel.SuspendLayout()
         TestingPanel.SuspendLayout()
@@ -88,6 +88,15 @@ Partial Class ProjectLayout
         Layout.TabIndex = 14
         Layout.TabStop = False
         Layout.Text = "Plan Layout"' 
+        ' dead
+        ' 
+        dead.AutoSize = True
+        dead.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        dead.Location = New Point(676, 38)
+        dead.Name = "dead"
+        dead.Size = New Size(87, 25)
+        dead.TabIndex = 5
+        dead.Text = "Deadline"' 
         ' Start
         ' 
         Start.AutoSize = True
@@ -434,15 +443,15 @@ Partial Class ProjectLayout
         Edit.Text = "Edit"
         Edit.UseVisualStyleBackColor = True
         ' 
-        ' Ok
+        ' Save
         ' 
-        Ok.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Ok.Location = New Point(700, 12)
-        Ok.Name = "Ok"
-        Ok.Size = New Size(88, 36)
-        Ok.TabIndex = 15
-        Ok.Text = "Save"
-        Ok.UseVisualStyleBackColor = True
+        Save.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Save.Location = New Point(700, 12)
+        Save.Name = "Save"
+        Save.Size = New Size(88, 36)
+        Save.TabIndex = 15
+        Save.Text = "Save"
+        Save.UseVisualStyleBackColor = True
         ' 
         ' addEmp
         ' 
@@ -464,15 +473,6 @@ Partial Class ProjectLayout
         Button1.Text = "Reset Layout"
         Button1.UseVisualStyleBackColor = True
         ' 
-        ' dead
-        ' 
-        dead.AutoSize = True
-        dead.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        dead.Location = New Point(676, 38)
-        dead.Name = "dead"
-        dead.Size = New Size(87, 25)
-        dead.TabIndex = 5
-        dead.Text = "Deadline"' 
         ' ProjectLayout
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -481,7 +481,7 @@ Partial Class ProjectLayout
         Controls.Add(Button1)
         Controls.Add(addEmp)
         Controls.Add(Edit)
-        Controls.Add(Ok)
+        Controls.Add(Save)
         Controls.Add(Layout)
         Controls.Add(ProjectDetails)
         FormBorderStyle = FormBorderStyle.FixedSingle
@@ -516,7 +516,7 @@ Partial Class ProjectLayout
     Friend WithEvents ProjectId As Label
     Friend WithEvents ProjectName As Label
     Friend WithEvents Edit As Button
-    Friend WithEvents Ok As Button
+    Friend WithEvents Save As Button
     Friend WithEvents addEmp As Button
     Friend WithEvents TestPanel As Panel
     Friend WithEvents DevPanel As Panel
