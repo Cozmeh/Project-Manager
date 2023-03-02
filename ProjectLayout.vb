@@ -5,6 +5,7 @@
         LeftDesPanel.Size = ReqPanel.Size
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
+        DeployPanel.Size = RightTestPanel.Size
 
         'this will be inside the if block when the project is opened again from the manager home page
         'below code will change according to the date stored in layout database
@@ -62,21 +63,28 @@
         LeftDesPanel.Size = ReqPanel.Size
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
+        DeployPanel.Size = RightTestPanel.Size
     End Sub
 
     Private Sub RightDesSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RightDesSplitter.SplitterMoved
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
+        DeployPanel.Size = RightTestPanel.Size
     End Sub
 
     Private Sub RDevSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RDevSplitter.SplitterMoved
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
+        DeployPanel.Size = RightTestPanel.Size
+    End Sub
+
+    Private Sub RightTestSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RightTestSplitter.SplitterMoved
+        DeployPanel.Size = RightTestPanel.Size
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         LeftDesPanel.Size = ReqPanel.Size
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
-
+        DeployPanel.Size = RightTestPanel.Size
     End Sub
 End Class
