@@ -17,7 +17,6 @@ Public Class Contributors
     End Sub
 
     Public Sub DataLoader()
-        'change project id datatype
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
         Consolecommand.CommandText = "SELECT * FROM Contributors WHERE PID = '" & ProjectLayout.ProjectId.Text & "'"
@@ -89,14 +88,6 @@ Public Class Contributors
         'check if any task is assigned and the maximum limit reached
         If Integer.Parse(uniqueValues.Count) <> 0 And limit Then
             MsgBox("Maximum number of Contributors reached")
-            Return
-        End If
-
-        Dim strInput As String
-        strInput = AddComment.Text.Length
-        MsgBox("Number of words: " & strInput)
-
-        If strInput.Length > 49 Then
             Return
         End If
 
@@ -263,5 +254,29 @@ Public Class Contributors
             UContId.Text = .Rows(.CurrentCell.RowIndex).Cells(0).Value.ToString
             Del_ID.Text = .Rows(.CurrentCell.RowIndex).Cells(1).Value.ToString
         End With
+    End Sub
+
+    Private Sub AddComment_TextChanged(sender As Object, e As EventArgs) Handles AddComment.TextChanged
+        Dim len As String
+        len = AddComment.Text.Length
+
+        charactercount.Text = len + "/50"
+
+        If len > 50 Then
+            MsgBox("Number of Characters: " & len & vbCrLf & "Maximum number of Character: 50")
+            Return
+        End If
+    End Sub
+
+    Private Sub UpdateComment_TextChanged(sender As Object, e As EventArgs) Handles UpdateComment.TextChanged
+        Dim len As String
+        len = UpdateComment.Text.Length
+
+        charactercount.Text = len + "/50"
+
+        If len > 50 Then
+            MsgBox("Number of Characters: " & len & vbCrLf & "Maximum number of Character: 50")
+            Return
+        End If
     End Sub
 End Class

@@ -45,7 +45,11 @@ Public Class TaskUpdate
 
         'creating a sql command statement 
         Dim Consolecommand As SqlCommand = LoginForm.sql.CreateCommand()
-        Consolecommand.CommandText = "UPDATE Contributors SET Complete = '" + Today.ToString("yyyy-MM-dd") + "', Status ='Completed' WHERE EmpID = '" + EmployeeHomePage.EmpId.Text.ToString + "' AND Task = '" + EmployeeHomePage.task.ToString + "' AND PID = '" + EmployeeHomePage.pid.ToString + "'"
+        If Completed.Checked = True Then
+            Consolecommand.CommandText = "UPDATE Contributors SET Complete = '" + Today.ToString("yyyy-MM-dd") + "', Status ='Completed' WHERE Id= '" + taskId.Text + "'"
+        ElseIf Completed.Checked = False Then
+            Consolecommand.CommandText = "UPDATE Contributors SET Complete = NULL, Status ='Pending' WHERE Id= '" + taskId.Text + "'"
+        End If
 
         'sqladapter to handle the sql commands 
         Dim ConsolesqlAdapter As New SqlDataAdapter With {

@@ -1,5 +1,5 @@
 ﻿Public Class ProjectLayout
-    Private Sub ProjectLayout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ProjectLayout_Load(sender As Object, e As EventArgs)
 
         'initial positions of panels this block of code will go inside the else block... when the page open for the first time
         LeftDesPanel.Size = ReqPanel.Size
@@ -33,7 +33,7 @@
     End Sub
 
     'Project layout will be saved when Save button is clicked
-    Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
+    Private Sub Save_Click(sender As Object, e As EventArgs)
         Dim responce As String = MsgBox("Do you want to save changes?", vbYesNo, "Are you sure?")
         If responce = vbYes Then
             'will store the project layout in the layout table
@@ -41,50 +41,66 @@
         End If
     End Sub
 
-    Private Sub Edit_Click(sender As Object, e As EventArgs) Handles Edit.Click
+    Private Sub Edit_Click(sender As Object, e As EventArgs)
         EditProjectDetails.Show()
         Me.Enabled = False
         Me.Hide()
     End Sub
 
-    Private Sub AddEmp_Click(sender As Object, e As EventArgs) Handles addEmp.Click
+    Private Sub AddEmp_Click(sender As Object, e As EventArgs)
         Me.Enabled = False
         Contributors.Show()
     End Sub
 
-    Private Sub ProjectLayout_FormClosing_1(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub ProjectLayout_FormClosing_1(sender As Object, e As FormClosingEventArgs)
         ManagerHomePage.Enabled = True
         ManagerHomePage.Show()
         ManagerHomePage.Refresh()
         ManagerHomePage.ManagerDataGrid.Refresh()
     End Sub
 
-    Private Sub ReqSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles ReqSplitter.SplitterMoved
+    Private Sub ReqSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs)
         LeftDesPanel.Size = ReqPanel.Size
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
         DeployPanel.Size = RightTestPanel.Size
     End Sub
 
-    Private Sub RightDesSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RightDesSplitter.SplitterMoved
+    Private Sub RightDesSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs)
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
         DeployPanel.Size = RightTestPanel.Size
     End Sub
 
-    Private Sub RDevSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RDevSplitter.SplitterMoved
+    Private Sub RDevSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs)
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
         DeployPanel.Size = RightTestPanel.Size
     End Sub
 
-    Private Sub RightTestSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RightTestSplitter.SplitterMoved
+    Private Sub RightTestSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs)
         DeployPanel.Size = RightTestPanel.Size
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         LeftDesPanel.Size = ReqPanel.Size
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
         DeployPanel.Size = RightTestPanel.Size
+    End Sub
+
+    Private Sub RA_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub DesignBtn_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub DevBtn_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub TestBtn_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

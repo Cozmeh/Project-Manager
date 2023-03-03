@@ -22,551 +22,528 @@ Partial Class ProjectLayout
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Layout = New System.Windows.Forms.GroupBox()
-        Me.DeploymentPanel = New System.Windows.Forms.Panel()
-        Me.DeploySplitter = New System.Windows.Forms.Splitter()
-        Me.DeployPanel = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.dead = New System.Windows.Forms.Label()
-        Me.Start = New System.Windows.Forms.Label()
-        Me.TestPanel = New System.Windows.Forms.Panel()
-        Me.RightTestPanel = New System.Windows.Forms.Panel()
-        Me.RightTestSplitter = New System.Windows.Forms.Splitter()
-        Me.TestingPanel = New System.Windows.Forms.Panel()
-        Me.TestBtn = New System.Windows.Forms.Button()
-        Me.LeftTestSplitter = New System.Windows.Forms.Splitter()
-        Me.LeftTestPanel = New System.Windows.Forms.Panel()
-        Me.DevPanel = New System.Windows.Forms.Panel()
-        Me.RightDevPanel = New System.Windows.Forms.Panel()
-        Me.RDevSplitter = New System.Windows.Forms.Splitter()
-        Me.DevelopmentPanel = New System.Windows.Forms.Panel()
-        Me.DevBtn = New System.Windows.Forms.Button()
-        Me.LDevSplitter = New System.Windows.Forms.Splitter()
-        Me.LeftDevPanel = New System.Windows.Forms.Panel()
-        Me.DesignPanel = New System.Windows.Forms.Panel()
-        Me.RightDesPanel = New System.Windows.Forms.Panel()
-        Me.RightDesSplitter = New System.Windows.Forms.Splitter()
-        Me.DesPanel = New System.Windows.Forms.Panel()
-        Me.DesignBtn = New System.Windows.Forms.Button()
-        Me.LeftDesSplitter = New System.Windows.Forms.Splitter()
-        Me.LeftDesPanel = New System.Windows.Forms.Panel()
-        Me.RaPanel = New System.Windows.Forms.Panel()
-        Me.ReqSplitter = New System.Windows.Forms.Splitter()
-        Me.ReqPanel = New System.Windows.Forms.Panel()
-        Me.RA = New System.Windows.Forms.Button()
-        Me.ProjectDetails = New System.Windows.Forms.GroupBox()
-        Me.Count = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.ProjectId = New System.Windows.Forms.Label()
-        Me.ProjectName = New System.Windows.Forms.Label()
-        Me.Edit = New System.Windows.Forms.Button()
-        Me.Save = New System.Windows.Forms.Button()
-        Me.addEmp = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Layout.SuspendLayout()
-        Me.DeploymentPanel.SuspendLayout()
-        Me.DeployPanel.SuspendLayout()
-        Me.TestPanel.SuspendLayout()
-        Me.TestingPanel.SuspendLayout()
-        Me.DevPanel.SuspendLayout()
-        Me.DevelopmentPanel.SuspendLayout()
-        Me.DesignPanel.SuspendLayout()
-        Me.DesPanel.SuspendLayout()
-        Me.RaPanel.SuspendLayout()
-        Me.ReqPanel.SuspendLayout()
-        Me.ProjectDetails.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'Layout
-        '
-        Me.Layout.Controls.Add(Me.DeploymentPanel)
-        Me.Layout.Controls.Add(Me.dead)
-        Me.Layout.Controls.Add(Me.Start)
-        Me.Layout.Controls.Add(Me.TestPanel)
-        Me.Layout.Controls.Add(Me.DevPanel)
-        Me.Layout.Controls.Add(Me.DesignPanel)
-        Me.Layout.Controls.Add(Me.RaPanel)
-        Me.Layout.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Layout.Location = New System.Drawing.Point(12, 134)
-        Me.Layout.Name = "Layout"
-        Me.Layout.Size = New System.Drawing.Size(776, 352)
-        Me.Layout.TabIndex = 14
-        Me.Layout.TabStop = False
-        Me.Layout.Text = "Plan Layout"
-        '
-        'DeploymentPanel
-        '
-        Me.DeploymentPanel.Controls.Add(Me.DeploySplitter)
-        Me.DeploymentPanel.Controls.Add(Me.DeployPanel)
-        Me.DeploymentPanel.Location = New System.Drawing.Point(6, 289)
-        Me.DeploymentPanel.Name = "DeploymentPanel"
-        Me.DeploymentPanel.Size = New System.Drawing.Size(764, 50)
-        Me.DeploymentPanel.TabIndex = 6
-        '
-        'DeploySplitter
-        '
-        Me.DeploySplitter.BackColor = System.Drawing.Color.Black
-        Me.DeploySplitter.Dock = System.Windows.Forms.DockStyle.Right
-        Me.DeploySplitter.Location = New System.Drawing.Point(616, 0)
-        Me.DeploySplitter.Name = "DeploySplitter"
-        Me.DeploySplitter.Size = New System.Drawing.Size(3, 50)
-        Me.DeploySplitter.TabIndex = 1
-        Me.DeploySplitter.TabStop = False
-        '
-        'DeployPanel
-        '
-        Me.DeployPanel.Controls.Add(Me.Button2)
-        Me.DeployPanel.Dock = System.Windows.Forms.DockStyle.Right
-        Me.DeployPanel.Location = New System.Drawing.Point(619, 0)
-        Me.DeployPanel.Name = "DeployPanel"
-        Me.DeployPanel.Size = New System.Drawing.Size(145, 50)
-        Me.DeployPanel.TabIndex = 0
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Orchid
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.Location = New System.Drawing.Point(0, 0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(145, 50)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Deployment"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'dead
-        '
-        Me.dead.AutoSize = True
-        Me.dead.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.dead.Location = New System.Drawing.Point(666, 30)
-        Me.dead.Name = "dead"
-        Me.dead.Size = New System.Drawing.Size(87, 25)
-        Me.dead.TabIndex = 5
-        Me.dead.Text = "Deadline"
-        '
-        'Start
-        '
-        Me.Start.AutoSize = True
-        Me.Start.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Start.Location = New System.Drawing.Point(6, 30)
-        Me.Start.Name = "Start"
-        Me.Start.Size = New System.Drawing.Size(94, 25)
-        Me.Start.TabIndex = 4
-        Me.Start.Text = "Start Date"
-        '
-        'TestPanel
-        '
-        Me.TestPanel.Controls.Add(Me.RightTestPanel)
-        Me.TestPanel.Controls.Add(Me.RightTestSplitter)
-        Me.TestPanel.Controls.Add(Me.TestingPanel)
-        Me.TestPanel.Controls.Add(Me.LeftTestSplitter)
-        Me.TestPanel.Controls.Add(Me.LeftTestPanel)
-        Me.TestPanel.Location = New System.Drawing.Point(6, 233)
-        Me.TestPanel.Name = "TestPanel"
-        Me.TestPanel.Size = New System.Drawing.Size(764, 50)
-        Me.TestPanel.TabIndex = 3
-        '
-        'RightTestPanel
-        '
-        Me.RightTestPanel.BackColor = System.Drawing.SystemColors.Control
-        Me.RightTestPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RightTestPanel.Location = New System.Drawing.Point(401, 0)
-        Me.RightTestPanel.Name = "RightTestPanel"
-        Me.RightTestPanel.Size = New System.Drawing.Size(363, 50)
-        Me.RightTestPanel.TabIndex = 4
-        '
-        'RightTestSplitter
-        '
-        Me.RightTestSplitter.BackColor = System.Drawing.Color.Black
-        Me.RightTestSplitter.Location = New System.Drawing.Point(398, 0)
-        Me.RightTestSplitter.Name = "RightTestSplitter"
-        Me.RightTestSplitter.Size = New System.Drawing.Size(3, 50)
-        Me.RightTestSplitter.TabIndex = 3
-        Me.RightTestSplitter.TabStop = False
-        '
-        'TestingPanel
-        '
-        Me.TestingPanel.Controls.Add(Me.TestBtn)
-        Me.TestingPanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.TestingPanel.Location = New System.Drawing.Point(322, 0)
-        Me.TestingPanel.Name = "TestingPanel"
-        Me.TestingPanel.Size = New System.Drawing.Size(76, 50)
-        Me.TestingPanel.TabIndex = 2
-        '
-        'TestBtn
-        '
-        Me.TestBtn.BackColor = System.Drawing.Color.MediumPurple
-        Me.TestBtn.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TestBtn.FlatAppearance.BorderSize = 0
-        Me.TestBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.TestBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.TestBtn.Location = New System.Drawing.Point(0, 0)
-        Me.TestBtn.Name = "TestBtn"
-        Me.TestBtn.Size = New System.Drawing.Size(76, 50)
-        Me.TestBtn.TabIndex = 0
-        Me.TestBtn.Text = "Testing"
-        Me.TestBtn.UseVisualStyleBackColor = False
-        '
-        'LeftTestSplitter
-        '
-        Me.LeftTestSplitter.BackColor = System.Drawing.Color.Black
-        Me.LeftTestSplitter.Location = New System.Drawing.Point(319, 0)
-        Me.LeftTestSplitter.Name = "LeftTestSplitter"
-        Me.LeftTestSplitter.Size = New System.Drawing.Size(3, 50)
-        Me.LeftTestSplitter.TabIndex = 1
-        Me.LeftTestSplitter.TabStop = False
-        '
-        'LeftTestPanel
-        '
-        Me.LeftTestPanel.BackColor = System.Drawing.SystemColors.Control
-        Me.LeftTestPanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.LeftTestPanel.Location = New System.Drawing.Point(0, 0)
-        Me.LeftTestPanel.Name = "LeftTestPanel"
-        Me.LeftTestPanel.Size = New System.Drawing.Size(319, 50)
-        Me.LeftTestPanel.TabIndex = 0
-        '
-        'DevPanel
-        '
-        Me.DevPanel.Controls.Add(Me.RightDevPanel)
-        Me.DevPanel.Controls.Add(Me.RDevSplitter)
-        Me.DevPanel.Controls.Add(Me.DevelopmentPanel)
-        Me.DevPanel.Controls.Add(Me.LDevSplitter)
-        Me.DevPanel.Controls.Add(Me.LeftDevPanel)
-        Me.DevPanel.Location = New System.Drawing.Point(6, 177)
-        Me.DevPanel.Name = "DevPanel"
-        Me.DevPanel.Size = New System.Drawing.Size(764, 50)
-        Me.DevPanel.TabIndex = 2
-        '
-        'RightDevPanel
-        '
-        Me.RightDevPanel.BackColor = System.Drawing.SystemColors.Control
-        Me.RightDevPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RightDevPanel.Location = New System.Drawing.Point(322, 0)
-        Me.RightDevPanel.Name = "RightDevPanel"
-        Me.RightDevPanel.Size = New System.Drawing.Size(442, 50)
-        Me.RightDevPanel.TabIndex = 4
-        '
-        'RDevSplitter
-        '
-        Me.RDevSplitter.BackColor = System.Drawing.Color.Black
-        Me.RDevSplitter.Location = New System.Drawing.Point(319, 0)
-        Me.RDevSplitter.Name = "RDevSplitter"
-        Me.RDevSplitter.Size = New System.Drawing.Size(3, 50)
-        Me.RDevSplitter.TabIndex = 3
-        Me.RDevSplitter.TabStop = False
-        '
-        'DevelopmentPanel
-        '
-        Me.DevelopmentPanel.Controls.Add(Me.DevBtn)
-        Me.DevelopmentPanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.DevelopmentPanel.Location = New System.Drawing.Point(209, 0)
-        Me.DevelopmentPanel.Name = "DevelopmentPanel"
-        Me.DevelopmentPanel.Size = New System.Drawing.Size(110, 50)
-        Me.DevelopmentPanel.TabIndex = 2
-        '
-        'DevBtn
-        '
-        Me.DevBtn.AutoSize = True
-        Me.DevBtn.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.DevBtn.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DevBtn.FlatAppearance.BorderSize = 0
-        Me.DevBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DevBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.DevBtn.Location = New System.Drawing.Point(0, 0)
-        Me.DevBtn.Name = "DevBtn"
-        Me.DevBtn.Size = New System.Drawing.Size(110, 50)
-        Me.DevBtn.TabIndex = 0
-        Me.DevBtn.Text = "Development"
-        Me.DevBtn.UseVisualStyleBackColor = False
-        '
-        'LDevSplitter
-        '
-        Me.LDevSplitter.BackColor = System.Drawing.Color.Black
-        Me.LDevSplitter.Location = New System.Drawing.Point(206, 0)
-        Me.LDevSplitter.Name = "LDevSplitter"
-        Me.LDevSplitter.Size = New System.Drawing.Size(3, 50)
-        Me.LDevSplitter.TabIndex = 1
-        Me.LDevSplitter.TabStop = False
-        '
-        'LeftDevPanel
-        '
-        Me.LeftDevPanel.BackColor = System.Drawing.SystemColors.Control
-        Me.LeftDevPanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.LeftDevPanel.Location = New System.Drawing.Point(0, 0)
-        Me.LeftDevPanel.Name = "LeftDevPanel"
-        Me.LeftDevPanel.Size = New System.Drawing.Size(206, 50)
-        Me.LeftDevPanel.TabIndex = 0
-        '
-        'DesignPanel
-        '
-        Me.DesignPanel.Controls.Add(Me.RightDesPanel)
-        Me.DesignPanel.Controls.Add(Me.RightDesSplitter)
-        Me.DesignPanel.Controls.Add(Me.DesPanel)
-        Me.DesignPanel.Controls.Add(Me.LeftDesSplitter)
-        Me.DesignPanel.Controls.Add(Me.LeftDesPanel)
-        Me.DesignPanel.Location = New System.Drawing.Point(6, 122)
-        Me.DesignPanel.Name = "DesignPanel"
-        Me.DesignPanel.Size = New System.Drawing.Size(764, 50)
-        Me.DesignPanel.TabIndex = 1
-        '
-        'RightDesPanel
-        '
-        Me.RightDesPanel.BackColor = System.Drawing.SystemColors.Control
-        Me.RightDesPanel.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RightDesPanel.Location = New System.Drawing.Point(209, 0)
-        Me.RightDesPanel.Name = "RightDesPanel"
-        Me.RightDesPanel.Size = New System.Drawing.Size(555, 50)
-        Me.RightDesPanel.TabIndex = 7
-        '
-        'RightDesSplitter
-        '
-        Me.RightDesSplitter.BackColor = System.Drawing.Color.Black
-        Me.RightDesSplitter.Location = New System.Drawing.Point(206, 0)
-        Me.RightDesSplitter.Name = "RightDesSplitter"
-        Me.RightDesSplitter.Size = New System.Drawing.Size(3, 50)
-        Me.RightDesSplitter.TabIndex = 6
-        Me.RightDesSplitter.TabStop = False
-        '
-        'DesPanel
-        '
-        Me.DesPanel.Controls.Add(Me.DesignBtn)
-        Me.DesPanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.DesPanel.Location = New System.Drawing.Point(108, 0)
-        Me.DesPanel.Name = "DesPanel"
-        Me.DesPanel.Size = New System.Drawing.Size(98, 50)
-        Me.DesPanel.TabIndex = 5
-        '
-        'DesignBtn
-        '
-        Me.DesignBtn.AutoSize = True
-        Me.DesignBtn.BackColor = System.Drawing.Color.YellowGreen
-        Me.DesignBtn.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DesignBtn.FlatAppearance.BorderSize = 0
-        Me.DesignBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DesignBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.DesignBtn.Location = New System.Drawing.Point(0, 0)
-        Me.DesignBtn.Name = "DesignBtn"
-        Me.DesignBtn.Size = New System.Drawing.Size(98, 50)
-        Me.DesignBtn.TabIndex = 0
-        Me.DesignBtn.Text = "Design"
-        Me.DesignBtn.UseVisualStyleBackColor = False
-        '
-        'LeftDesSplitter
-        '
-        Me.LeftDesSplitter.BackColor = System.Drawing.Color.Black
-        Me.LeftDesSplitter.Location = New System.Drawing.Point(105, 0)
-        Me.LeftDesSplitter.Name = "LeftDesSplitter"
-        Me.LeftDesSplitter.Size = New System.Drawing.Size(3, 50)
-        Me.LeftDesSplitter.TabIndex = 4
-        Me.LeftDesSplitter.TabStop = False
-        '
-        'LeftDesPanel
-        '
-        Me.LeftDesPanel.BackColor = System.Drawing.SystemColors.Control
-        Me.LeftDesPanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.LeftDesPanel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LeftDesPanel.Location = New System.Drawing.Point(0, 0)
-        Me.LeftDesPanel.Name = "LeftDesPanel"
-        Me.LeftDesPanel.Size = New System.Drawing.Size(105, 50)
-        Me.LeftDesPanel.TabIndex = 0
-        '
-        'RaPanel
-        '
-        Me.RaPanel.Controls.Add(Me.ReqSplitter)
-        Me.RaPanel.Controls.Add(Me.ReqPanel)
-        Me.RaPanel.Location = New System.Drawing.Point(6, 66)
-        Me.RaPanel.Name = "RaPanel"
-        Me.RaPanel.Size = New System.Drawing.Size(764, 50)
-        Me.RaPanel.TabIndex = 0
-        '
-        'ReqSplitter
-        '
-        Me.ReqSplitter.BackColor = System.Drawing.Color.Black
-        Me.ReqSplitter.Location = New System.Drawing.Point(105, 0)
-        Me.ReqSplitter.Name = "ReqSplitter"
-        Me.ReqSplitter.Size = New System.Drawing.Size(3, 50)
-        Me.ReqSplitter.TabIndex = 1
-        Me.ReqSplitter.TabStop = False
-        '
-        'ReqPanel
-        '
-        Me.ReqPanel.Controls.Add(Me.RA)
-        Me.ReqPanel.Dock = System.Windows.Forms.DockStyle.Left
-        Me.ReqPanel.Location = New System.Drawing.Point(0, 0)
-        Me.ReqPanel.Name = "ReqPanel"
-        Me.ReqPanel.Size = New System.Drawing.Size(105, 50)
-        Me.ReqPanel.TabIndex = 0
-        '
-        'RA
-        '
-        Me.RA.AutoSize = True
-        Me.RA.BackColor = System.Drawing.Color.Tomato
-        Me.RA.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RA.FlatAppearance.BorderSize = 0
-        Me.RA.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RA.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.RA.Location = New System.Drawing.Point(0, 0)
-        Me.RA.Name = "RA"
-        Me.RA.Size = New System.Drawing.Size(105, 50)
-        Me.RA.TabIndex = 0
-        Me.RA.Text = "Requirment"
-        Me.RA.UseVisualStyleBackColor = False
-        '
-        'ProjectDetails
-        '
-        Me.ProjectDetails.Controls.Add(Me.Count)
-        Me.ProjectDetails.Controls.Add(Me.Label1)
-        Me.ProjectDetails.Controls.Add(Me.Label2)
-        Me.ProjectDetails.Controls.Add(Me.Label3)
-        Me.ProjectDetails.Controls.Add(Me.ProjectId)
-        Me.ProjectDetails.Controls.Add(Me.ProjectName)
-        Me.ProjectDetails.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ProjectDetails.Location = New System.Drawing.Point(12, 12)
-        Me.ProjectDetails.Name = "ProjectDetails"
-        Me.ProjectDetails.Size = New System.Drawing.Size(250, 116)
-        Me.ProjectDetails.TabIndex = 13
-        Me.ProjectDetails.TabStop = False
-        Me.ProjectDetails.Text = "Project Details"
-        '
-        'Count
-        '
-        Me.Count.AutoSize = True
-        Me.Count.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Count.Location = New System.Drawing.Point(110, 82)
-        Me.Count.Name = "Count"
-        Me.Count.Size = New System.Drawing.Size(22, 25)
-        Me.Count.TabIndex = 6
-        Me.Count.Text = "2"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(11, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 25)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Project Id:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(11, 51)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(96, 25)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Name      :"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(9, 82)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(98, 25)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "People     :"
-        '
-        'ProjectId
-        '
-        Me.ProjectId.AutoSize = True
-        Me.ProjectId.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ProjectId.Location = New System.Drawing.Point(110, 20)
-        Me.ProjectId.Name = "ProjectId"
-        Me.ProjectId.Size = New System.Drawing.Size(92, 25)
-        Me.ProjectId.TabIndex = 4
-        Me.ProjectId.Text = "Project Id"
-        '
-        'ProjectName
-        '
-        Me.ProjectName.AutoSize = True
-        Me.ProjectName.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ProjectName.Location = New System.Drawing.Point(110, 51)
-        Me.ProjectName.Name = "ProjectName"
-        Me.ProjectName.Size = New System.Drawing.Size(126, 25)
-        Me.ProjectName.TabIndex = 5
-        Me.ProjectName.Text = "Project Name"
-        '
-        'Edit
-        '
-        Me.Edit.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Edit.Location = New System.Drawing.Point(607, 12)
-        Me.Edit.Name = "Edit"
-        Me.Edit.Size = New System.Drawing.Size(88, 36)
-        Me.Edit.TabIndex = 16
-        Me.Edit.Text = "Edit"
-        Me.Edit.UseVisualStyleBackColor = True
-        '
-        'Ok
-        '
-        Me.Save.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Save.Location = New System.Drawing.Point(700, 12)
-        Me.Save.Name = "Ok"
-        Me.Save.Size = New System.Drawing.Size(88, 36)
-        Me.Save.TabIndex = 15
-        Me.Save.Text = "Save"
-        Me.Save.UseVisualStyleBackColor = True
-        '
-        'addEmp
-        '
-        Me.addEmp.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.addEmp.Location = New System.Drawing.Point(607, 52)
-        Me.addEmp.Name = "addEmp"
-        Me.addEmp.Size = New System.Drawing.Size(181, 36)
-        Me.addEmp.TabIndex = 17
-        Me.addEmp.Text = "Add Contributors"
-        Me.addEmp.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(607, 93)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(181, 35)
-        Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Reset Layout"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'ProjectLayout
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 491)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.addEmp)
-        Me.Controls.Add(Me.Edit)
-        Me.Controls.Add(Me.Save)
-        Me.Controls.Add(Me.Layout)
-        Me.Controls.Add(Me.ProjectDetails)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.MaximizeBox = False
-        Me.Name = "ProjectLayout"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ProjectLayout"
-        Me.Layout.ResumeLayout(False)
-        Me.Layout.PerformLayout()
-        Me.DeploymentPanel.ResumeLayout(False)
-        Me.DeployPanel.ResumeLayout(False)
-        Me.TestPanel.ResumeLayout(False)
-        Me.TestingPanel.ResumeLayout(False)
-        Me.DevPanel.ResumeLayout(False)
-        Me.DevelopmentPanel.ResumeLayout(False)
-        Me.DevelopmentPanel.PerformLayout()
-        Me.DesignPanel.ResumeLayout(False)
-        Me.DesPanel.ResumeLayout(False)
-        Me.DesPanel.PerformLayout()
-        Me.RaPanel.ResumeLayout(False)
-        Me.ReqPanel.ResumeLayout(False)
-        Me.ReqPanel.PerformLayout()
-        Me.ProjectDetails.ResumeLayout(False)
-        Me.ProjectDetails.PerformLayout()
-        Me.ResumeLayout(False)
-
+        Layout = New GroupBox()
+        DeploymentPanel = New Panel()
+        DeployPanel = New Panel()
+        Button2 = New Button()
+        dead = New Label()
+        Start = New Label()
+        TestPanel = New Panel()
+        RightTestPanel = New Panel()
+        RightTestSplitter = New Splitter()
+        TestingPanel = New Panel()
+        TestBtn = New Button()
+        LeftTestSplitter = New Splitter()
+        LeftTestPanel = New Panel()
+        DevPanel = New Panel()
+        RightDevPanel = New Panel()
+        RDevSplitter = New Splitter()
+        DevelopmentPanel = New Panel()
+        DevBtn = New Button()
+        LDevSplitter = New Splitter()
+        LeftDevPanel = New Panel()
+        DesignPanel = New Panel()
+        RightDesPanel = New Panel()
+        RightDesSplitter = New Splitter()
+        DesPanel = New Panel()
+        DesignBtn = New Button()
+        LeftDesSplitter = New Splitter()
+        LeftDesPanel = New Panel()
+        RaPanel = New Panel()
+        ReqSplitter = New Splitter()
+        ReqPanel = New Panel()
+        RA = New Button()
+        ProjectDetails = New GroupBox()
+        Count = New Label()
+        Label1 = New Label()
+        Label2 = New Label()
+        Label3 = New Label()
+        ProjectId = New Label()
+        ProjectName = New Label()
+        Edit = New Button()
+        Save = New Button()
+        addEmp = New Button()
+        Button1 = New Button()
+        Layout.SuspendLayout()
+        DeploymentPanel.SuspendLayout()
+        DeployPanel.SuspendLayout()
+        TestPanel.SuspendLayout()
+        TestingPanel.SuspendLayout()
+        DevPanel.SuspendLayout()
+        DevelopmentPanel.SuspendLayout()
+        DesignPanel.SuspendLayout()
+        DesPanel.SuspendLayout()
+        RaPanel.SuspendLayout()
+        ReqPanel.SuspendLayout()
+        ProjectDetails.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' Layout
+        ' 
+        Layout.Controls.Add(DeploymentPanel)
+        Layout.Controls.Add(dead)
+        Layout.Controls.Add(Start)
+        Layout.Controls.Add(TestPanel)
+        Layout.Controls.Add(DevPanel)
+        Layout.Controls.Add(DesignPanel)
+        Layout.Controls.Add(RaPanel)
+        Layout.Font = New Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point)
+        Layout.Location = New Point(12, 134)
+        Layout.Name = "Layout"
+        Layout.Size = New Size(776, 352)
+        Layout.TabIndex = 14
+        Layout.TabStop = False
+        Layout.Text = "Plan Layout"' 
+        ' DeploymentPanel
+        ' 
+        DeploymentPanel.Controls.Add(DeployPanel)
+        DeploymentPanel.Location = New Point(6, 289)
+        DeploymentPanel.Name = "DeploymentPanel"
+        DeploymentPanel.Size = New Size(764, 50)
+        DeploymentPanel.TabIndex = 6
+        ' 
+        ' DeployPanel
+        ' 
+        DeployPanel.Controls.Add(Button2)
+        DeployPanel.Dock = DockStyle.Right
+        DeployPanel.Location = New Point(619, 0)
+        DeployPanel.Name = "DeployPanel"
+        DeployPanel.Size = New Size(145, 50)
+        DeployPanel.TabIndex = 0
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = Color.Orchid
+        Button2.Dock = DockStyle.Fill
+        Button2.FlatAppearance.BorderSize = 0
+        Button2.FlatStyle = FlatStyle.Flat
+        Button2.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point)
+        Button2.Location = New Point(0, 0)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(145, 50)
+        Button2.TabIndex = 2
+        Button2.Text = "Deployment"
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' dead
+        ' 
+        dead.AutoSize = True
+        dead.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        dead.Location = New Point(625, 30)
+        dead.Name = "dead"
+        dead.Size = New Size(87, 25)
+        dead.TabIndex = 5
+        dead.Text = "Deadline"' 
+        ' Start
+        ' 
+        Start.AutoSize = True
+        Start.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Start.Location = New Point(6, 30)
+        Start.Name = "Start"
+        Start.Size = New Size(94, 25)
+        Start.TabIndex = 4
+        Start.Text = "Start Date"' 
+        ' TestPanel
+        ' 
+        TestPanel.Controls.Add(RightTestPanel)
+        TestPanel.Controls.Add(RightTestSplitter)
+        TestPanel.Controls.Add(TestingPanel)
+        TestPanel.Controls.Add(LeftTestSplitter)
+        TestPanel.Controls.Add(LeftTestPanel)
+        TestPanel.Location = New Point(6, 233)
+        TestPanel.Name = "TestPanel"
+        TestPanel.Size = New Size(764, 50)
+        TestPanel.TabIndex = 3
+        ' 
+        ' RightTestPanel
+        ' 
+        RightTestPanel.BackColor = SystemColors.Control
+        RightTestPanel.Dock = DockStyle.Fill
+        RightTestPanel.Location = New Point(528, 0)
+        RightTestPanel.Name = "RightTestPanel"
+        RightTestPanel.Size = New Size(236, 50)
+        RightTestPanel.TabIndex = 4
+        ' 
+        ' RightTestSplitter
+        ' 
+        RightTestSplitter.BackColor = Color.Black
+        RightTestSplitter.Location = New Point(525, 0)
+        RightTestSplitter.Name = "RightTestSplitter"
+        RightTestSplitter.Size = New Size(3, 50)
+        RightTestSplitter.TabIndex = 3
+        RightTestSplitter.TabStop = False
+        ' 
+        ' TestingPanel
+        ' 
+        TestingPanel.Controls.Add(TestBtn)
+        TestingPanel.Dock = DockStyle.Left
+        TestingPanel.Location = New Point(322, 0)
+        TestingPanel.Name = "TestingPanel"
+        TestingPanel.Size = New Size(203, 50)
+        TestingPanel.TabIndex = 2
+        ' 
+        ' TestBtn
+        ' 
+        TestBtn.BackColor = Color.MediumPurple
+        TestBtn.Dock = DockStyle.Fill
+        TestBtn.FlatAppearance.BorderSize = 0
+        TestBtn.FlatStyle = FlatStyle.Flat
+        TestBtn.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point)
+        TestBtn.Location = New Point(0, 0)
+        TestBtn.Name = "TestBtn"
+        TestBtn.Size = New Size(203, 50)
+        TestBtn.TabIndex = 0
+        TestBtn.Text = "Testing"
+        TestBtn.UseVisualStyleBackColor = False
+        ' 
+        ' LeftTestSplitter
+        ' 
+        LeftTestSplitter.BackColor = Color.Black
+        LeftTestSplitter.Location = New Point(319, 0)
+        LeftTestSplitter.Name = "LeftTestSplitter"
+        LeftTestSplitter.Size = New Size(3, 50)
+        LeftTestSplitter.TabIndex = 1
+        LeftTestSplitter.TabStop = False
+        ' 
+        ' LeftTestPanel
+        ' 
+        LeftTestPanel.BackColor = SystemColors.Control
+        LeftTestPanel.Dock = DockStyle.Left
+        LeftTestPanel.Location = New Point(0, 0)
+        LeftTestPanel.Name = "LeftTestPanel"
+        LeftTestPanel.Size = New Size(319, 50)
+        LeftTestPanel.TabIndex = 0
+        ' 
+        ' DevPanel
+        ' 
+        DevPanel.Controls.Add(RightDevPanel)
+        DevPanel.Controls.Add(RDevSplitter)
+        DevPanel.Controls.Add(DevelopmentPanel)
+        DevPanel.Controls.Add(LDevSplitter)
+        DevPanel.Controls.Add(LeftDevPanel)
+        DevPanel.Location = New Point(6, 177)
+        DevPanel.Name = "DevPanel"
+        DevPanel.Size = New Size(764, 50)
+        DevPanel.TabIndex = 2
+        ' 
+        ' RightDevPanel
+        ' 
+        RightDevPanel.BackColor = SystemColors.Control
+        RightDevPanel.Dock = DockStyle.Fill
+        RightDevPanel.Location = New Point(322, 0)
+        RightDevPanel.Name = "RightDevPanel"
+        RightDevPanel.Size = New Size(442, 50)
+        RightDevPanel.TabIndex = 4
+        ' 
+        ' RDevSplitter
+        ' 
+        RDevSplitter.BackColor = Color.Black
+        RDevSplitter.Location = New Point(319, 0)
+        RDevSplitter.Name = "RDevSplitter"
+        RDevSplitter.Size = New Size(3, 50)
+        RDevSplitter.TabIndex = 3
+        RDevSplitter.TabStop = False
+        ' 
+        ' DevelopmentPanel
+        ' 
+        DevelopmentPanel.Controls.Add(DevBtn)
+        DevelopmentPanel.Dock = DockStyle.Left
+        DevelopmentPanel.Location = New Point(209, 0)
+        DevelopmentPanel.Name = "DevelopmentPanel"
+        DevelopmentPanel.Size = New Size(110, 50)
+        DevelopmentPanel.TabIndex = 2
+        ' 
+        ' DevBtn
+        ' 
+        DevBtn.AutoSize = True
+        DevBtn.BackColor = Color.LightSeaGreen
+        DevBtn.Dock = DockStyle.Fill
+        DevBtn.FlatAppearance.BorderSize = 0
+        DevBtn.FlatStyle = FlatStyle.Flat
+        DevBtn.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point)
+        DevBtn.Location = New Point(0, 0)
+        DevBtn.Name = "DevBtn"
+        DevBtn.Size = New Size(110, 50)
+        DevBtn.TabIndex = 0
+        DevBtn.Text = "Development"
+        DevBtn.UseVisualStyleBackColor = False
+        ' 
+        ' LDevSplitter
+        ' 
+        LDevSplitter.BackColor = Color.Black
+        LDevSplitter.Location = New Point(206, 0)
+        LDevSplitter.Name = "LDevSplitter"
+        LDevSplitter.Size = New Size(3, 50)
+        LDevSplitter.TabIndex = 1
+        LDevSplitter.TabStop = False
+        ' 
+        ' LeftDevPanel
+        ' 
+        LeftDevPanel.BackColor = SystemColors.Control
+        LeftDevPanel.Dock = DockStyle.Left
+        LeftDevPanel.Location = New Point(0, 0)
+        LeftDevPanel.Name = "LeftDevPanel"
+        LeftDevPanel.Size = New Size(206, 50)
+        LeftDevPanel.TabIndex = 0
+        ' 
+        ' DesignPanel
+        ' 
+        DesignPanel.Controls.Add(RightDesPanel)
+        DesignPanel.Controls.Add(RightDesSplitter)
+        DesignPanel.Controls.Add(DesPanel)
+        DesignPanel.Controls.Add(LeftDesSplitter)
+        DesignPanel.Controls.Add(LeftDesPanel)
+        DesignPanel.Location = New Point(6, 122)
+        DesignPanel.Name = "DesignPanel"
+        DesignPanel.Size = New Size(764, 50)
+        DesignPanel.TabIndex = 1
+        ' 
+        ' RightDesPanel
+        ' 
+        RightDesPanel.BackColor = SystemColors.Control
+        RightDesPanel.Dock = DockStyle.Fill
+        RightDesPanel.Location = New Point(209, 0)
+        RightDesPanel.Name = "RightDesPanel"
+        RightDesPanel.Size = New Size(555, 50)
+        RightDesPanel.TabIndex = 7
+        ' 
+        ' RightDesSplitter
+        ' 
+        RightDesSplitter.BackColor = Color.Black
+        RightDesSplitter.Location = New Point(206, 0)
+        RightDesSplitter.Name = "RightDesSplitter"
+        RightDesSplitter.Size = New Size(3, 50)
+        RightDesSplitter.TabIndex = 6
+        RightDesSplitter.TabStop = False
+        ' 
+        ' DesPanel
+        ' 
+        DesPanel.Controls.Add(DesignBtn)
+        DesPanel.Dock = DockStyle.Left
+        DesPanel.Location = New Point(108, 0)
+        DesPanel.Name = "DesPanel"
+        DesPanel.Size = New Size(98, 50)
+        DesPanel.TabIndex = 5
+        ' 
+        ' DesignBtn
+        ' 
+        DesignBtn.AutoSize = True
+        DesignBtn.BackColor = Color.YellowGreen
+        DesignBtn.Dock = DockStyle.Fill
+        DesignBtn.FlatAppearance.BorderSize = 0
+        DesignBtn.FlatStyle = FlatStyle.Flat
+        DesignBtn.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point)
+        DesignBtn.Location = New Point(0, 0)
+        DesignBtn.Name = "DesignBtn"
+        DesignBtn.Size = New Size(98, 50)
+        DesignBtn.TabIndex = 0
+        DesignBtn.Text = "Design"
+        DesignBtn.UseVisualStyleBackColor = False
+        ' 
+        ' LeftDesSplitter
+        ' 
+        LeftDesSplitter.BackColor = Color.Black
+        LeftDesSplitter.Location = New Point(105, 0)
+        LeftDesSplitter.Name = "LeftDesSplitter"
+        LeftDesSplitter.Size = New Size(3, 50)
+        LeftDesSplitter.TabIndex = 4
+        LeftDesSplitter.TabStop = False
+        ' 
+        ' LeftDesPanel
+        ' 
+        LeftDesPanel.BackColor = SystemColors.Control
+        LeftDesPanel.Dock = DockStyle.Left
+        LeftDesPanel.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point)
+        LeftDesPanel.Location = New Point(0, 0)
+        LeftDesPanel.Name = "LeftDesPanel"
+        LeftDesPanel.Size = New Size(105, 50)
+        LeftDesPanel.TabIndex = 0
+        ' 
+        ' RaPanel
+        ' 
+        RaPanel.Controls.Add(ReqSplitter)
+        RaPanel.Controls.Add(ReqPanel)
+        RaPanel.Location = New Point(6, 66)
+        RaPanel.Name = "RaPanel"
+        RaPanel.Size = New Size(764, 50)
+        RaPanel.TabIndex = 0
+        ' 
+        ' ReqSplitter
+        ' 
+        ReqSplitter.BackColor = Color.Black
+        ReqSplitter.Location = New Point(105, 0)
+        ReqSplitter.Name = "ReqSplitter"
+        ReqSplitter.Size = New Size(3, 50)
+        ReqSplitter.TabIndex = 1
+        ReqSplitter.TabStop = False
+        ' 
+        ' ReqPanel
+        ' 
+        ReqPanel.Controls.Add(RA)
+        ReqPanel.Dock = DockStyle.Left
+        ReqPanel.Location = New Point(0, 0)
+        ReqPanel.Name = "ReqPanel"
+        ReqPanel.Size = New Size(105, 50)
+        ReqPanel.TabIndex = 0
+        ' 
+        ' RA
+        ' 
+        RA.AutoSize = True
+        RA.BackColor = Color.Tomato
+        RA.Dock = DockStyle.Fill
+        RA.FlatAppearance.BorderSize = 0
+        RA.FlatStyle = FlatStyle.Flat
+        RA.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point)
+        RA.Location = New Point(0, 0)
+        RA.Name = "RA"
+        RA.Size = New Size(105, 50)
+        RA.TabIndex = 0
+        RA.Text = "Requirment"
+        RA.UseVisualStyleBackColor = False
+        ' 
+        ' ProjectDetails
+        ' 
+        ProjectDetails.Controls.Add(Count)
+        ProjectDetails.Controls.Add(Label1)
+        ProjectDetails.Controls.Add(Label2)
+        ProjectDetails.Controls.Add(Label3)
+        ProjectDetails.Controls.Add(ProjectId)
+        ProjectDetails.Controls.Add(ProjectName)
+        ProjectDetails.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        ProjectDetails.Location = New Point(12, 12)
+        ProjectDetails.Name = "ProjectDetails"
+        ProjectDetails.Size = New Size(250, 116)
+        ProjectDetails.TabIndex = 13
+        ProjectDetails.TabStop = False
+        ProjectDetails.Text = "Project Details"' 
+        ' Count
+        ' 
+        Count.AutoSize = True
+        Count.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Count.Location = New Point(110, 82)
+        Count.Name = "Count"
+        Count.Size = New Size(22, 25)
+        Count.TabIndex = 6
+        Count.Text = "2"' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.Location = New Point(11, 19)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(96, 25)
+        Label1.TabIndex = 0
+        Label1.Text = "Project Id:"' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.Location = New Point(11, 51)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(96, 25)
+        Label2.TabIndex = 1
+        Label2.Text = "Name      :"' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.Location = New Point(9, 82)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(98, 25)
+        Label3.TabIndex = 2
+        Label3.Text = "People     :"' 
+        ' ProjectId
+        ' 
+        ProjectId.AutoSize = True
+        ProjectId.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        ProjectId.Location = New Point(110, 20)
+        ProjectId.Name = "ProjectId"
+        ProjectId.Size = New Size(92, 25)
+        ProjectId.TabIndex = 4
+        ProjectId.Text = "Project Id"' 
+        ' ProjectName
+        ' 
+        ProjectName.AutoSize = True
+        ProjectName.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        ProjectName.Location = New Point(110, 51)
+        ProjectName.Name = "ProjectName"
+        ProjectName.Size = New Size(126, 25)
+        ProjectName.TabIndex = 5
+        ProjectName.Text = "Project Name"' 
+        ' Edit
+        ' 
+        Edit.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Edit.Location = New Point(607, 12)
+        Edit.Name = "Edit"
+        Edit.Size = New Size(88, 36)
+        Edit.TabIndex = 16
+        Edit.Text = "Edit"
+        Edit.UseVisualStyleBackColor = True
+        ' 
+        ' Save
+        ' 
+        Save.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Save.Location = New Point(700, 12)
+        Save.Name = "Save"
+        Save.Size = New Size(88, 36)
+        Save.TabIndex = 15
+        Save.Text = "Save"
+        Save.UseVisualStyleBackColor = True
+        ' 
+        ' addEmp
+        ' 
+        addEmp.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        addEmp.Location = New Point(607, 52)
+        addEmp.Name = "addEmp"
+        addEmp.Size = New Size(181, 36)
+        addEmp.TabIndex = 17
+        addEmp.Text = "Add Contributors"
+        addEmp.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Button1.Location = New Point(607, 93)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(181, 35)
+        Button1.TabIndex = 18
+        Button1.Text = "Reset Layout"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' ProjectLayout
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(800, 491)
+        Controls.Add(Button1)
+        Controls.Add(addEmp)
+        Controls.Add(Edit)
+        Controls.Add(Save)
+        Controls.Add(Layout)
+        Controls.Add(ProjectDetails)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
+        Name = "ProjectLayout"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "ProjectLayout"
+        Layout.ResumeLayout(False)
+        Layout.PerformLayout()
+        DeploymentPanel.ResumeLayout(False)
+        DeployPanel.ResumeLayout(False)
+        TestPanel.ResumeLayout(False)
+        TestingPanel.ResumeLayout(False)
+        DevPanel.ResumeLayout(False)
+        DevelopmentPanel.ResumeLayout(False)
+        DevelopmentPanel.PerformLayout()
+        DesignPanel.ResumeLayout(False)
+        DesPanel.ResumeLayout(False)
+        DesPanel.PerformLayout()
+        RaPanel.ResumeLayout(False)
+        ReqPanel.ResumeLayout(False)
+        ReqPanel.PerformLayout()
+        ProjectDetails.ResumeLayout(False)
+        ProjectDetails.PerformLayout()
+        ResumeLayout(False)
     End Sub
 
     Friend WithEvents Layout As GroupBox
@@ -610,6 +587,5 @@ Partial Class ProjectLayout
     Friend WithEvents dead As Label
     Friend WithEvents DeploymentPanel As Panel
     Friend WithEvents DeployPanel As Panel
-    Friend WithEvents DeploySplitter As Splitter
     Friend WithEvents Button2 As Button
 End Class

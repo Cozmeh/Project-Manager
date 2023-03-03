@@ -33,6 +33,7 @@ Partial Class Contributors
         ContributorDataGrid = New DataGridView()
         TabControl = New TabControl()
         TabPage1 = New TabPage()
+        charactercount = New Label()
         Label5 = New Label()
         AddComment = New RichTextBox()
         Validate = New Button()
@@ -52,6 +53,7 @@ Partial Class Contributors
         DeleteRow = New Button()
         Del_ID = New TextBox()
         Ok = New Button()
+        Label7 = New Label()
         projectId.SuspendLayout()
         CType(ContributorDataGrid, ComponentModel.ISupportInitialize).BeginInit()
         TabControl.SuspendLayout()
@@ -165,6 +167,7 @@ Partial Class Contributors
         ' 
         ' TabPage1
         ' 
+        TabPage1.Controls.Add(charactercount)
         TabPage1.Controls.Add(Label5)
         TabPage1.Controls.Add(AddComment)
         TabPage1.Controls.Add(Validate)
@@ -180,18 +183,26 @@ Partial Class Contributors
         TabPage1.Text = "Add"
         TabPage1.UseVisualStyleBackColor = True
         ' 
+        ' charactercount
+        ' 
+        charactercount.AutoSize = True
+        charactercount.Location = New Point(570, 64)
+        charactercount.Name = "charactercount"
+        charactercount.Size = New Size(38, 19)
+        charactercount.TabIndex = 42
+        charactercount.Text = "0/50"' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Label5.Location = New Point(398, 7)
+        Label5.Location = New Point(398, 5)
         Label5.Name = "Label5"
         Label5.Size = New Size(103, 25)
         Label5.TabIndex = 41
         Label5.Text = "Comment :"' 
         ' AddComment
         ' 
-        AddComment.Location = New Point(398, 35)
+        AddComment.Location = New Point(398, 33)
         AddComment.Name = "AddComment"
         AddComment.Size = New Size(171, 54)
         AddComment.TabIndex = 40
@@ -252,6 +263,7 @@ Partial Class Contributors
         ' 
         ' TabPage2
         ' 
+        TabPage2.Controls.Add(Label7)
         TabPage2.Controls.Add(Label6)
         TabPage2.Controls.Add(UpdateComment)
         TabPage2.Controls.Add(getId)
@@ -384,6 +396,14 @@ Partial Class Contributors
         Ok.Text = "Done"
         Ok.UseVisualStyleBackColor = True
         ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Location = New Point(570, 66)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(38, 19)
+        Label7.TabIndex = 45
+        Label7.Text = "0/50"' 
         ' Contributors
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -438,4 +458,6 @@ Partial Class Contributors
     Friend WithEvents AddComment As RichTextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents UpdateComment As RichTextBox
+    Friend WithEvents charactercount As Label
+    Friend WithEvents Label7 As Label
 End Class
