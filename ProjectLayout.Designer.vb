@@ -106,9 +106,9 @@ Partial Class ProjectLayout
         ' 
         DeployPanel.Controls.Add(Button2)
         DeployPanel.Dock = DockStyle.Right
-        DeployPanel.Location = New Point(619, 0)
+        DeployPanel.Location = New Point(663, 0)
         DeployPanel.Name = "DeployPanel"
-        DeployPanel.Size = New Size(145, 50)
+        DeployPanel.Size = New Size(101, 50)
         DeployPanel.TabIndex = 0
         ' 
         ' Button2
@@ -120,7 +120,7 @@ Partial Class ProjectLayout
         Button2.Font = New Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point)
         Button2.Location = New Point(0, 0)
         Button2.Name = "Button2"
-        Button2.Size = New Size(145, 50)
+        Button2.Size = New Size(101, 50)
         Button2.TabIndex = 2
         Button2.Text = "Deployment"
         Button2.UseVisualStyleBackColor = False
@@ -129,7 +129,7 @@ Partial Class ProjectLayout
         ' 
         dead.AutoSize = True
         dead.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        dead.Location = New Point(625, 30)
+        dead.Location = New Point(669, 30)
         dead.Name = "dead"
         dead.Size = New Size(87, 25)
         dead.TabIndex = 5
