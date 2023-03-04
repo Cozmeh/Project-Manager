@@ -80,7 +80,7 @@ Public Class ProjectLayout
         DeployPanel.Size = RightTestPanel.Size
     End Sub
 
-    Private Sub RightDesSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RightDesSplitterSplitter.SplitterMoved
+    Private Sub RightDesSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RightDesSplitter.SplitterMoved
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
         DeployPanel.Size = RightTestPanel.Size
