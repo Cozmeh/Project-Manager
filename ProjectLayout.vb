@@ -106,7 +106,7 @@ Public Class ProjectLayout
         LeftDesPanel.Size = ReqPanel.Size
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         ' LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
-        TestingPanel.Size = RightDevPanel.Size - RightTestPanel.Size
+        TestingPanel.Size = RightDevPanel.Size '- RightTestPanel.Size
 
     End Sub
 

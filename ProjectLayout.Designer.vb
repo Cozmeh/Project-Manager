@@ -105,9 +105,9 @@ Partial Class ProjectLayout
         '
         Me.DeployPanel.Controls.Add(Me.Button2)
         Me.DeployPanel.Dock = System.Windows.Forms.DockStyle.Right
-        Me.DeployPanel.Location = New System.Drawing.Point(664, 0)
+        Me.DeployPanel.Location = New System.Drawing.Point(682, 0)
         Me.DeployPanel.Name = "DeployPanel"
-        Me.DeployPanel.Size = New System.Drawing.Size(100, 50)
+        Me.DeployPanel.Size = New System.Drawing.Size(82, 50)
         Me.DeployPanel.TabIndex = 0
         '
         'Button2
@@ -119,7 +119,7 @@ Partial Class ProjectLayout
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Button2.Location = New System.Drawing.Point(0, 0)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(100, 50)
+        Me.Button2.Size = New System.Drawing.Size(82, 50)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Deployment"
         Me.Button2.UseVisualStyleBackColor = False
@@ -158,7 +158,7 @@ Partial Class ProjectLayout
         '
         Me.LeftTestSplitter.BackColor = System.Drawing.Color.Black
         Me.LeftTestSplitter.Dock = System.Windows.Forms.DockStyle.Right
-        Me.LeftTestSplitter.Location = New System.Drawing.Point(457, 0)
+        Me.LeftTestSplitter.Location = New System.Drawing.Point(476, 0)
         Me.LeftTestSplitter.Name = "LeftTestSplitter"
         Me.LeftTestSplitter.Size = New System.Drawing.Size(3, 50)
         Me.LeftTestSplitter.TabIndex = 6
@@ -168,7 +168,7 @@ Partial Class ProjectLayout
         '
         Me.TestingPanel.Controls.Add(Me.TestBtn)
         Me.TestingPanel.Dock = System.Windows.Forms.DockStyle.Right
-        Me.TestingPanel.Location = New System.Drawing.Point(460, 0)
+        Me.TestingPanel.Location = New System.Drawing.Point(479, 0)
         Me.TestingPanel.Name = "TestingPanel"
         Me.TestingPanel.Size = New System.Drawing.Size(203, 50)
         Me.TestingPanel.TabIndex = 5
@@ -191,9 +191,9 @@ Partial Class ProjectLayout
         '
         Me.RightTestPanel.BackColor = System.Drawing.SystemColors.Control
         Me.RightTestPanel.Dock = System.Windows.Forms.DockStyle.Right
-        Me.RightTestPanel.Location = New System.Drawing.Point(663, 0)
+        Me.RightTestPanel.Location = New System.Drawing.Point(682, 0)
         Me.RightTestPanel.Name = "RightTestPanel"
-        Me.RightTestPanel.Size = New System.Drawing.Size(101, 50)
+        Me.RightTestPanel.Size = New System.Drawing.Size(82, 50)
         Me.RightTestPanel.TabIndex = 2
         '
         'DevPanel
@@ -205,7 +205,7 @@ Partial Class ProjectLayout
         Me.DevPanel.Controls.Add(Me.LeftDevPanel)
         Me.DevPanel.Location = New System.Drawing.Point(6, 177)
         Me.DevPanel.Name = "DevPanel"
-        Me.DevPanel.Size = New System.Drawing.Size(663, 50)
+        Me.DevPanel.Size = New System.Drawing.Size(682, 50)
         Me.DevPanel.TabIndex = 2
         '
         'RightDevPanel
@@ -214,7 +214,7 @@ Partial Class ProjectLayout
         Me.RightDevPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RightDevPanel.Location = New System.Drawing.Point(322, 0)
         Me.RightDevPanel.Name = "RightDevPanel"
-        Me.RightDevPanel.Size = New System.Drawing.Size(341, 50)
+        Me.RightDevPanel.Size = New System.Drawing.Size(360, 50)
         Me.RightDevPanel.TabIndex = 5
         '
         'RDevSplitter
@@ -277,7 +277,7 @@ Partial Class ProjectLayout
         Me.DesignPanel.Controls.Add(Me.LeftDesPanel)
         Me.DesignPanel.Location = New System.Drawing.Point(6, 122)
         Me.DesignPanel.Name = "DesignPanel"
-        Me.DesignPanel.Size = New System.Drawing.Size(663, 50)
+        Me.DesignPanel.Size = New System.Drawing.Size(682, 50)
         Me.DesignPanel.TabIndex = 1
         '
         'RightDesPanel
@@ -286,7 +286,7 @@ Partial Class ProjectLayout
         Me.RightDesPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RightDesPanel.Location = New System.Drawing.Point(209, 0)
         Me.RightDesPanel.Name = "RightDesPanel"
-        Me.RightDesPanel.Size = New System.Drawing.Size(454, 50)
+        Me.RightDesPanel.Size = New System.Drawing.Size(473, 50)
         Me.RightDesPanel.TabIndex = 7
         '
         'RightDesSplitter
@@ -347,7 +347,7 @@ Partial Class ProjectLayout
         Me.RaPanel.Controls.Add(Me.ReqPanel)
         Me.RaPanel.Location = New System.Drawing.Point(6, 66)
         Me.RaPanel.Name = "RaPanel"
-        Me.RaPanel.Size = New System.Drawing.Size(663, 50)
+        Me.RaPanel.Size = New System.Drawing.Size(682, 50)
         Me.RaPanel.TabIndex = 0
         '
         'ReqSplitter
