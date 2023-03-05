@@ -5,20 +5,19 @@ Public Class ProjectLayout
 
     Private Sub ProjectLayout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        'initial positions of panels this block of code will go inside the else block... when the page open for the first time
-        LeftDesPanel.Size = ReqPanel.Size
-        LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
-        TestingPanel.Size = RightDevPanel.Size '- RightTestPanel.Size
-        'LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
-
-
-
-
         'this will be inside the if block when the project is opened again from the manager home page
         'below code will change according to the date stored in layout database
-        'LeftDesPanel.Size = ReqPanel.Size
-        'LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
-        'LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
+
+        'starting stage sizes based on percentages 
+        ReqPanel.Size = New Size(0.15 * DeploymentPanel.Size.Width, 50)
+        DesPanel.Size = New Size(0.2 * DeploymentPanel.Size.Width, 50)
+        DevelopmentPanel.Size = New Size(0.3 * DeploymentPanel.Size.Width, 50)
+        TestingPanel.Size = New Size(0.25 * DeploymentPanel.Size.Width, 50)
+
+        'starting stage positions based on sizes 
+        LeftDesPanel.Size = ReqPanel.Size
+        LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
+        TestingPanel.Size = RightDevPanel.Size
 
         'store dates as the project loads and will be change when the SIZECHANGE function is called
         'startdate, reqana, Design, Development, Testing, Deadline
@@ -45,8 +44,7 @@ Public Class ProjectLayout
     Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
 
         'LayoutTable()
-
-        Dim responce As String = MsgBox("The changes are saved.\n Do you want to exit?", vbYesNo, "Are you sure?")
+        Dim responce As String = MsgBox("The changes are saved" + vbLf + "Do you want to exit?", vbYesNo, "Are you sure?")
         If responce = vbYes Then
             'will store the project layout in the layout table
             Me.Close()
@@ -64,6 +62,18 @@ Public Class ProjectLayout
         Contributors.Show()
     End Sub
 
+    Private Sub ResetBtn_Click(sender As Object, e As EventArgs) Handles ResetBtn.Click
+        'starting stage sizes based on percentages 
+        ReqPanel.Size = New Size(0.15 * DeploymentPanel.Size.Width, 50)
+        DesPanel.Size = New Size(0.2 * DeploymentPanel.Size.Width, 50)
+        DevelopmentPanel.Size = New Size(0.3 * DeploymentPanel.Size.Width, 50)
+        TestingPanel.Size = New Size(0.25 * DeploymentPanel.Size.Width, 50)
+        'starting stage positions based on sizes 
+        LeftDesPanel.Size = ReqPanel.Size
+        LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
+        TestingPanel.Size = RightDevPanel.Size
+    End Sub
+
     Private Sub ProjectLayout_FormClosing_1(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
 
         'saves the dates in the table
@@ -79,36 +89,18 @@ Public Class ProjectLayout
     Private Sub ReqSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles ReqSplitter.SplitterMoved
         LeftDesPanel.Size = ReqPanel.Size
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
-        'LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
-        TestingPanel.Size = RightDevPanel.Size '- RightTestPanel.Size
-        '
+        TestingPanel.Size = RightDevPanel.Size
     End Sub
 
     Private Sub RightDesSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RightDesSplitter.SplitterMoved
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
-        'LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
-        TestingPanel.Size = RightDevPanel.Size '- RightTestPanel.Size
-
+        TestingPanel.Size = RightDevPanel.Size
     End Sub
 
     Private Sub RDevSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles RDevSplitter.SplitterMoved
-        'LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
-        TestingPanel.Size = RightDevPanel.Size '- RightTestPanel.Size
-
+        TestingPanel.Size = RightDevPanel.Size
     End Sub
 
-    Private Sub RightTestSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs)
-
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        LeftDesPanel.Size = ReqPanel.Size
-        LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
-        ' LeftTestPanel.Size = LeftDevPanel.Size + DevelopmentPanel.Size
-        TestingPanel.Size = RightDevPanel.Size '- RightTestPanel.Size
-
-    End Sub
 
     Private Sub LayoutTable()
         'adds data to the layout table

@@ -164,7 +164,7 @@ Public Class Contributors
         MsgBox("Task ID not found!")
     End Sub
 
-    Private Sub UpdateRow_Click(sender As Object, e As EventArgs) Handles UpdateRow.Click
+    Private Sub UpdateRow_Click(sender As Object, e As EventArgs) 
 
         If UTask.Text = "Requirement Analysis" Or UTask.Text = "Design" Or UTask.Text = "Development" Or UTask.Text = "Testing" Then
             'conformation
@@ -279,4 +279,6 @@ Public Class Contributors
             Return
         End If
     End Sub
+
+
 End Class

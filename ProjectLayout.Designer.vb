@@ -61,7 +61,7 @@ Partial Class ProjectLayout
         Me.Edit = New System.Windows.Forms.Button()
         Me.Save = New System.Windows.Forms.Button()
         Me.addEmp = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ResetBtn = New System.Windows.Forms.Button()
         Me.Layout.SuspendLayout()
         Me.DeploymentPanel.SuspendLayout()
         Me.DeployPanel.SuspendLayout()
@@ -121,7 +121,7 @@ Partial Class ProjectLayout
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(82, 50)
         Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Deployment"
+        Me.Button2.Text = "Deploy-ment"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'dead
@@ -353,7 +353,7 @@ Partial Class ProjectLayout
         'ReqSplitter
         '
         Me.ReqSplitter.BackColor = System.Drawing.Color.Black
-        Me.ReqSplitter.Location = New System.Drawing.Point(105, 0)
+        Me.ReqSplitter.Location = New System.Drawing.Point(209, 0)
         Me.ReqSplitter.Name = "ReqSplitter"
         Me.ReqSplitter.Size = New System.Drawing.Size(3, 50)
         Me.ReqSplitter.TabIndex = 1
@@ -365,7 +365,7 @@ Partial Class ProjectLayout
         Me.ReqPanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.ReqPanel.Location = New System.Drawing.Point(0, 0)
         Me.ReqPanel.Name = "ReqPanel"
-        Me.ReqPanel.Size = New System.Drawing.Size(105, 50)
+        Me.ReqPanel.Size = New System.Drawing.Size(209, 50)
         Me.ReqPanel.TabIndex = 0
         '
         'RA
@@ -378,7 +378,7 @@ Partial Class ProjectLayout
         Me.RA.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.RA.Location = New System.Drawing.Point(0, 0)
         Me.RA.Name = "RA"
-        Me.RA.Size = New System.Drawing.Size(105, 50)
+        Me.RA.Size = New System.Drawing.Size(209, 50)
         Me.RA.TabIndex = 0
         Me.RA.Text = "Requirment"
         Me.RA.UseVisualStyleBackColor = False
@@ -489,22 +489,22 @@ Partial Class ProjectLayout
         Me.addEmp.Text = "Add Contributors"
         Me.addEmp.UseVisualStyleBackColor = True
         '
-        'Button1
+        'ResetBtn
         '
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(607, 93)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(181, 35)
-        Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Reset Layout"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ResetBtn.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ResetBtn.Location = New System.Drawing.Point(607, 93)
+        Me.ResetBtn.Name = "ResetBtn"
+        Me.ResetBtn.Size = New System.Drawing.Size(181, 35)
+        Me.ResetBtn.TabIndex = 18
+        Me.ResetBtn.Text = "Reset Layout"
+        Me.ResetBtn.UseVisualStyleBackColor = True
         '
         'ProjectLayout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 491)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ResetBtn)
         Me.Controls.Add(Me.addEmp)
         Me.Controls.Add(Me.Edit)
         Me.Controls.Add(Me.Save)
@@ -565,7 +565,7 @@ Partial Class ProjectLayout
     Friend WithEvents DevelopmentPanel As Panel
     Friend WithEvents DevBtn As Button
     Friend WithEvents LDevSplitter As Splitter
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ResetBtn As Button
     Friend WithEvents RightTestPanel As Panel
     Friend WithEvents Start As Label
     Friend WithEvents dead As Label
