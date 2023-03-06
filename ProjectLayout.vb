@@ -92,6 +92,8 @@ Public Class ProjectLayout
     'Project layout will be saved when Save button is clicked
     Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
 
+        MsgBox("giaj " + reqana.ToString("dd-MM-yyyy") + " sa;flkjd")
+
         LayoutTable()
         Dim responce As String = MsgBox("The changes are saved" + vbLf + "Do you want to exit?", vbYesNo, "Are you sure?")
         If responce = vbYes Then
@@ -175,7 +177,7 @@ Public Class ProjectLayout
 
     Private Sub LayoutTable()
         'adds data to the layout table
-        Dim UpdateCommand As String = "UPDATE Layout SET StartDate='" + startdate + "',Requirement='" + reqana + "',Design='" + Design + "',Development='" + Development + "',Testing='" + Testing + "',Deadline='" + Deadline + "' Where PId ='" + ProjectId.Text + "'"
+        Dim UpdateCommand As String = "UPDATE Layout SET Requirement='" + reqana.ToString("yyyy-MM-dd") + "',Design='" + Design.ToString("yyyy-MM-dd") + "',Development='" + Development.ToString("yyyy-MM-dd") + "',Testing='" + Testing.ToString("yyyy-MM-dd") + "' Where PId ='" + ProjectId.Text + "'"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
