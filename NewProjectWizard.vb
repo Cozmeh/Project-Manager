@@ -18,7 +18,7 @@ Public Class NewProjectWizard
             Return
         End If
 
-        Dim NoOfDays As String
+        Dim NoOfDays As Integer
         NoOfDays = DateDiff("d", Today, DeadlineDuration.Value)
 
 

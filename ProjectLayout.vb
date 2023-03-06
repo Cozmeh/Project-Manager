@@ -2,8 +2,11 @@
 
 Public Class ProjectLayout
     Private startdate, reqana, Design, Development, Testing, Deadline As Date
+    Private NoOfDays As Integer
+    Private ReqNo, DesNo, DevNo, TesNo, DepNo As Integer
 
     Private Sub ProjectLayout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
 
         'this will be inside the if block when the project is opened again from the manager home page
         'below code will change according to the date stored in layout database
@@ -22,6 +25,8 @@ Public Class ProjectLayout
         'store dates as the project loads and will be change when the SIZECHANGE function is called
         'startdate, reqana, Design, Development, Testing, Deadline
 
+
+
         ManagerHomePage.Hide()
         'Filling all the fields when opened from clicking on Datagrid in ManagerHomePage
         If ManagerHomePage.pid <> "new" Then
@@ -30,6 +35,7 @@ Public Class ProjectLayout
             Start.Text = ManagerHomePage.startdate.ToString().Substring(0, 10)
             dead.Text = ManagerHomePage.deadline.ToString().Substring(0, 10)
             Count.Text = ManagerHomePage.people
+            'reset width according to date
         Else
             'Filling all the fields when opened from NewProjectWizard
             ProjectId.Text = NewProjectWizard.id
@@ -37,13 +43,45 @@ Public Class ProjectLayout
             Start.Text = Today.ToString("dd-MM-yyyy")
             dead.Text = NewProjectWizard.DeadlineDuration.Value.ToString("dd-MM-yyyy")
             Count.Text = NewProjectWizard.PeopleCount.Value
+            'reset according to idea value ratio
         End If
+
+        '-------------------------------------------------------------------
+        'adds data to the layout table
+        Dim Com As String = "Select Days from Projects where PId ='" + ProjectId.Text + "'"
+
+        'creating a sql command statement 
+        Dim command As SqlCommand = LoginForm.sql.CreateCommand()
+        command.CommandText = Com
+
+        'sqladapter to handle the sql commands 
+        Dim sqlAdapter As New SqlDataAdapter With {
+             .SelectCommand = command
+        }
+
+        'creates a table with the required data
+        Dim data As New DataSet()
+        sqlAdapter.Fill(data)
+        NoOfDays = Convert.ToInt32(data.Tables(0).Rows(0)(0).ToString)
+        GetDays()
+        GetEndDates()
+        ProjectSpan.Text = "Project Span : " + NoOfDays.ToString + "Days"
+
+        '----------------------------------------------------------------------
+        'tooltips
+        ToolTip()
+        '----------------------------------------------
+
+        'qurry for adding row in layout with only pid and deadline
+
     End Sub
+
+
 
     'Project layout will be saved when Save button is clicked
     Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
 
-        'LayoutTable()
+        LayoutTable()
         Dim responce As String = MsgBox("The changes are saved" + vbLf + "Do you want to exit?", vbYesNo, "Are you sure?")
         If responce = vbYes Then
             'will store the project layout in the layout table
@@ -72,14 +110,39 @@ Public Class ProjectLayout
         LeftDesPanel.Size = ReqPanel.Size
         LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
         TestingPanel.Size = RightDevPanel.Size
+
+    End Sub
+
+    Private Sub ReqPanel_SizeChanged(sender As Object, e As EventArgs) Handles ReqPanel.SizeChanged
+        GetDays()
+        GetEndDates()
+        ToolTip()
+    End Sub
+
+    Private Sub DesPanel_SizeChanged(sender As Object, e As EventArgs) Handles DesPanel.SizeChanged
+        GetDays()
+        GetEndDates()
+        ToolTip()
+    End Sub
+
+    Private Sub DevelopmentPanel_SizeChanged(sender As Object, e As EventArgs) Handles DevelopmentPanel.SizeChanged
+        GetDays()
+        GetEndDates()
+        ToolTip()
+    End Sub
+
+
+
+    Private Sub TestingPanel_SizeChanged(sender As Object, e As EventArgs) Handles TestingPanel.SizeChanged
+        GetDays()
+        GetEndDates()
+        ToolTip()
     End Sub
 
     Private Sub ProjectLayout_FormClosing_1(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-
         'saves the dates in the table
-        'LayoutTable()
+        LayoutTable()
         MsgBox("The dates have been saved.")
-
         ManagerHomePage.Enabled = True
         ManagerHomePage.Show()
         ManagerHomePage.Refresh()
@@ -101,10 +164,9 @@ Public Class ProjectLayout
         TestingPanel.Size = RightDevPanel.Size
     End Sub
 
-
     Private Sub LayoutTable()
         'adds data to the layout table
-        Dim UpdateCommand As String = "UPDATE Layout SET StartDate ='" + startdate + "',Requirement Analysis ='" + reqana + "',Design='" + Design + "',Developmene='" + Development + "',Testing='" + Testing + "',Deadline='" + Deadline + "' Where PId ='" + ProjectId.Text + "'"
+        Dim UpdateCommand As String = "UPDATE Layout SET StartDate='" + startdate + "',Requirement='" + reqana + "',Design='" + Design + "',Development='" + Development + "',Testing='" + Testing + "',Deadline='" + Deadline + "' Where PId ='" + ProjectId.Text + "'"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
@@ -120,4 +182,26 @@ Public Class ProjectLayout
         sqlAdapter.Fill(data)
     End Sub
 
+    Private Sub GetDays()
+        ReqNo = Math.Round((ReqPanel.Size.Width / DeploymentPanel.Size.Width) * NoOfDays)
+        DesNo = Math.Round((DesPanel.Size.Width / DeploymentPanel.Size.Width) * NoOfDays)
+        DevNo = Math.Round((DevelopmentPanel.Size.Width / DeploymentPanel.Size.Width) * NoOfDays)
+        TesNo = Math.Round((TestingPanel.Size.Width / DeploymentPanel.Size.Width) * NoOfDays)
+        DepNo = Math.Round((DeployPanel.Size.Width / DeploymentPanel.Size.Width) * NoOfDays)
+    End Sub
+
+    Private Sub GetEndDates()
+        reqana = Convert.ToDateTime(ManagerHomePage.startdate.ToString().Substring(0, 10)).AddDays(ReqNo)
+        Design = reqana.AddDays(DesNo)
+        Development = Design.AddDays(DevNo)
+        Testing = Development.AddDays(TesNo)
+    End Sub
+
+    Private Sub ToolTip()
+        ReqTip.SetToolTip(Me.ReqBtn, reqana.ToString.Substring(0, 10) + " (" + ReqNo.ToString + " Days)")
+        DesTip.SetToolTip(Me.DesignBtn, Design.ToString.Substring(0, 10) + " (" + DesNo.ToString + " Days)")
+        DevTip.SetToolTip(Me.DevBtn, Development.ToString.Substring(0, 10) + " (" + DevNo.ToString + " Days)")
+        TestTip.SetToolTip(Me.TestBtn, Testing.ToString.Substring(0, 10) + " (" + TesNo.ToString + " Days)")
+        DepTip.SetToolTip(Me.DepBtn, dead.Text + " (" + DepNo.ToString + " Days)")
+    End Sub
 End Class

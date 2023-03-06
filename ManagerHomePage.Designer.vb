@@ -22,178 +22,186 @@ Partial Class ManagerHomePage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(ManagerHomePage))
-        LogoutManager = New Button()
-        NewProject = New Button()
-        Label1 = New Label()
-        Label2 = New Label()
-        ManagerId = New Label()
-        ManagerName = New Label()
-        UsergprBox = New GroupBox()
-        ProjectBox = New GroupBox()
-        ManagerDataGrid = New DataGridView()
-        Label4 = New Label()
-        UsergprBox.SuspendLayout()
-        ProjectBox.SuspendLayout()
-        CType(ManagerDataGrid, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' LogoutManager
-        ' 
-        LogoutManager.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        LogoutManager.Location = New Point(704, 43)
-        LogoutManager.Name = "LogoutManager"
-        LogoutManager.Size = New Size(85, 44)
-        LogoutManager.TabIndex = 0
-        LogoutManager.Text = "Logout"
-        LogoutManager.UseVisualStyleBackColor = True
-        ' 
-        ' NewProject
-        ' 
-        NewProject.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        NewProject.Location = New Point(704, 402)
-        NewProject.Name = "NewProject"
-        NewProject.Size = New Size(84, 40)
-        NewProject.TabIndex = 1
-        NewProject.Text = "New +"
-        NewProject.UseVisualStyleBackColor = True
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.Location = New Point(7, 19)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(75, 25)
-        Label1.TabIndex = 2
-        Label1.Text = "User Id:"' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(7, 59)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(76, 25)
-        Label2.TabIndex = 3
-        Label2.Text = "Name  :"' 
-        ' ManagerId
-        ' 
-        ManagerId.AutoSize = True
-        ManagerId.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        ManagerId.Location = New Point(80, 19)
-        ManagerId.Name = "ManagerId"
-        ManagerId.Size = New Size(109, 25)
-        ManagerId.TabIndex = 5
-        ManagerId.Text = "Manager Id"' 
-        ' ManagerName
-        ' 
-        ManagerName.AutoSize = True
-        ManagerName.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
-        ManagerName.Location = New Point(80, 59)
-        ManagerName.Name = "ManagerName"
-        ManagerName.Size = New Size(143, 25)
-        ManagerName.TabIndex = 6
-        ManagerName.Text = "Manager Name"' 
-        ' UsergprBox
-        ' 
-        UsergprBox.Controls.Add(ManagerName)
-        UsergprBox.Controls.Add(Label1)
-        UsergprBox.Controls.Add(ManagerId)
-        UsergprBox.Controls.Add(Label2)
-        UsergprBox.Location = New Point(12, 12)
-        UsergprBox.Name = "UsergprBox"
-        UsergprBox.Size = New Size(234, 100)
-        UsergprBox.TabIndex = 7
-        UsergprBox.TabStop = False
-        UsergprBox.Text = "Manager"' 
-        ' ProjectBox
-        ' 
-        ProjectBox.Controls.Add(ManagerDataGrid)
-        ProjectBox.Controls.Add(Label4)
-        ProjectBox.Font = New Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point)
-        ProjectBox.Location = New Point(12, 118)
-        ProjectBox.Name = "ProjectBox"
-        ProjectBox.Size = New Size(776, 278)
-        ProjectBox.TabIndex = 15
-        ProjectBox.TabStop = False
-        ProjectBox.Text = "Projects:"' 
-        ' ManagerDataGrid
-        ' 
-        ManagerDataGrid.AllowUserToAddRows = False
-        ManagerDataGrid.AllowUserToDeleteRows = False
-        ManagerDataGrid.AllowUserToResizeColumns = False
-        ManagerDataGrid.AllowUserToResizeRows = False
-        ManagerDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
-        ManagerDataGrid.CellBorderStyle = DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        ManagerDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        ManagerDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        ManagerDataGrid.Cursor = Cursors.Hand
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        ManagerDataGrid.DefaultCellStyle = DataGridViewCellStyle2
-        ManagerDataGrid.Location = New Point(7, 33)
-        ManagerDataGrid.Name = "ManagerDataGrid"
-        ManagerDataGrid.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        ManagerDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        ManagerDataGrid.RowHeadersWidth = 20
-        ManagerDataGrid.RowTemplate.Height = 25
-        ManagerDataGrid.ScrollBars = ScrollBars.Vertical
-        ManagerDataGrid.Size = New Size(764, 239)
-        ManagerDataGrid.TabIndex = 1
-        ManagerDataGrid.Visible = False
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(51, 108)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(685, 37)
-        Label4.TabIndex = 17
-        Label4.Text = "All of your past and ongoing projects will be shown here"' 
-        ' ManagerHomePage
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
-        Controls.Add(ProjectBox)
-        Controls.Add(UsergprBox)
-        Controls.Add(NewProject)
-        Controls.Add(LogoutManager)
-        FormBorderStyle = FormBorderStyle.FixedSingle
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        MaximizeBox = False
-        Name = "ManagerHomePage"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "Manager Home Page"
-        UsergprBox.ResumeLayout(False)
-        UsergprBox.PerformLayout()
-        ProjectBox.ResumeLayout(False)
-        ProjectBox.PerformLayout()
-        CType(ManagerDataGrid, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ManagerHomePage))
+        Me.LogoutManager = New System.Windows.Forms.Button()
+        Me.NewProject = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ManagerId = New System.Windows.Forms.Label()
+        Me.ManagerName = New System.Windows.Forms.Label()
+        Me.UsergprBox = New System.Windows.Forms.GroupBox()
+        Me.ProjectBox = New System.Windows.Forms.GroupBox()
+        Me.ManagerDataGrid = New System.Windows.Forms.DataGridView()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.UsergprBox.SuspendLayout()
+        Me.ProjectBox.SuspendLayout()
+        CType(Me.ManagerDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'LogoutManager
+        '
+        Me.LogoutManager.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LogoutManager.Location = New System.Drawing.Point(704, 12)
+        Me.LogoutManager.Name = "LogoutManager"
+        Me.LogoutManager.Size = New System.Drawing.Size(85, 44)
+        Me.LogoutManager.TabIndex = 0
+        Me.LogoutManager.Text = "Logout"
+        Me.LogoutManager.UseVisualStyleBackColor = True
+        '
+        'NewProject
+        '
+        Me.NewProject.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.NewProject.Location = New System.Drawing.Point(705, 72)
+        Me.NewProject.Name = "NewProject"
+        Me.NewProject.Size = New System.Drawing.Size(84, 40)
+        Me.NewProject.TabIndex = 1
+        Me.NewProject.Text = "New +"
+        Me.NewProject.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(7, 19)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 25)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "User Id:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(7, 59)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(76, 25)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Name  :"
+        '
+        'ManagerId
+        '
+        Me.ManagerId.AutoSize = True
+        Me.ManagerId.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ManagerId.Location = New System.Drawing.Point(80, 19)
+        Me.ManagerId.Name = "ManagerId"
+        Me.ManagerId.Size = New System.Drawing.Size(109, 25)
+        Me.ManagerId.TabIndex = 5
+        Me.ManagerId.Text = "Manager Id"
+        '
+        'ManagerName
+        '
+        Me.ManagerName.AutoSize = True
+        Me.ManagerName.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ManagerName.Location = New System.Drawing.Point(80, 59)
+        Me.ManagerName.Name = "ManagerName"
+        Me.ManagerName.Size = New System.Drawing.Size(143, 25)
+        Me.ManagerName.TabIndex = 6
+        Me.ManagerName.Text = "Manager Name"
+        '
+        'UsergprBox
+        '
+        Me.UsergprBox.Controls.Add(Me.ManagerName)
+        Me.UsergprBox.Controls.Add(Me.Label1)
+        Me.UsergprBox.Controls.Add(Me.ManagerId)
+        Me.UsergprBox.Controls.Add(Me.Label2)
+        Me.UsergprBox.Location = New System.Drawing.Point(12, 12)
+        Me.UsergprBox.Name = "UsergprBox"
+        Me.UsergprBox.Size = New System.Drawing.Size(234, 100)
+        Me.UsergprBox.TabIndex = 7
+        Me.UsergprBox.TabStop = False
+        Me.UsergprBox.Text = "Manager"
+        '
+        'ProjectBox
+        '
+        Me.ProjectBox.Controls.Add(Me.ManagerDataGrid)
+        Me.ProjectBox.Controls.Add(Me.Label4)
+        Me.ProjectBox.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ProjectBox.Location = New System.Drawing.Point(12, 118)
+        Me.ProjectBox.Name = "ProjectBox"
+        Me.ProjectBox.Size = New System.Drawing.Size(776, 320)
+        Me.ProjectBox.TabIndex = 15
+        Me.ProjectBox.TabStop = False
+        Me.ProjectBox.Text = "Projects:"
+        '
+        'ManagerDataGrid
+        '
+        Me.ManagerDataGrid.AllowUserToAddRows = False
+        Me.ManagerDataGrid.AllowUserToDeleteRows = False
+        Me.ManagerDataGrid.AllowUserToResizeColumns = False
+        Me.ManagerDataGrid.AllowUserToResizeRows = False
+        Me.ManagerDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.ManagerDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ManagerDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.ManagerDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ManagerDataGrid.Cursor = System.Windows.Forms.Cursors.Hand
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ManagerDataGrid.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ManagerDataGrid.Location = New System.Drawing.Point(7, 33)
+        Me.ManagerDataGrid.Name = "ManagerDataGrid"
+        Me.ManagerDataGrid.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.ManagerDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.ManagerDataGrid.RowHeadersWidth = 20
+        Me.ManagerDataGrid.RowTemplate.Height = 25
+        Me.ManagerDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.ManagerDataGrid.Size = New System.Drawing.Size(764, 281)
+        Me.ManagerDataGrid.TabIndex = 1
+        Me.ManagerDataGrid.Visible = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(51, 108)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(685, 37)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "All of your past and ongoing projects will be shown here"
+        '
+        'ManagerHomePage
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ProjectBox)
+        Me.Controls.Add(Me.UsergprBox)
+        Me.Controls.Add(Me.NewProject)
+        Me.Controls.Add(Me.LogoutManager)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.Name = "ManagerHomePage"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Manager Home Page"
+        Me.UsergprBox.ResumeLayout(False)
+        Me.UsergprBox.PerformLayout()
+        Me.ProjectBox.ResumeLayout(False)
+        Me.ProjectBox.PerformLayout()
+        CType(Me.ManagerDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
 
     Friend WithEvents LogoutManager As Button

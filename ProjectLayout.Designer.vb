@@ -22,10 +22,12 @@ Partial Class ProjectLayout
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Layout = New System.Windows.Forms.GroupBox()
+        Me.ProjectSpan = New System.Windows.Forms.Label()
         Me.DeploymentPanel = New System.Windows.Forms.Panel()
         Me.DeployPanel = New System.Windows.Forms.Panel()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DepBtn = New System.Windows.Forms.Button()
         Me.dead = New System.Windows.Forms.Label()
         Me.Start = New System.Windows.Forms.Label()
         Me.TestPanel = New System.Windows.Forms.Panel()
@@ -50,7 +52,7 @@ Partial Class ProjectLayout
         Me.RaPanel = New System.Windows.Forms.Panel()
         Me.ReqSplitter = New System.Windows.Forms.Splitter()
         Me.ReqPanel = New System.Windows.Forms.Panel()
-        Me.RA = New System.Windows.Forms.Button()
+        Me.ReqBtn = New System.Windows.Forms.Button()
         Me.ProjectDetails = New System.Windows.Forms.GroupBox()
         Me.Count = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -62,6 +64,11 @@ Partial Class ProjectLayout
         Me.Save = New System.Windows.Forms.Button()
         Me.addEmp = New System.Windows.Forms.Button()
         Me.ResetBtn = New System.Windows.Forms.Button()
+        Me.ReqTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.DesTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.DevTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.TestTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.DepTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.Layout.SuspendLayout()
         Me.DeploymentPanel.SuspendLayout()
         Me.DeployPanel.SuspendLayout()
@@ -78,6 +85,7 @@ Partial Class ProjectLayout
         '
         'Layout
         '
+        Me.Layout.Controls.Add(Me.ProjectSpan)
         Me.Layout.Controls.Add(Me.DeploymentPanel)
         Me.Layout.Controls.Add(Me.dead)
         Me.Layout.Controls.Add(Me.Start)
@@ -88,47 +96,57 @@ Partial Class ProjectLayout
         Me.Layout.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Layout.Location = New System.Drawing.Point(12, 134)
         Me.Layout.Name = "Layout"
-        Me.Layout.Size = New System.Drawing.Size(776, 352)
+        Me.Layout.Size = New System.Drawing.Size(776, 367)
         Me.Layout.TabIndex = 14
         Me.Layout.TabStop = False
         Me.Layout.Text = "Plan Layout"
         '
+        'ProjectSpan
+        '
+        Me.ProjectSpan.AutoSize = True
+        Me.ProjectSpan.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ProjectSpan.Location = New System.Drawing.Point(325, 50)
+        Me.ProjectSpan.Name = "ProjectSpan"
+        Me.ProjectSpan.Size = New System.Drawing.Size(85, 19)
+        Me.ProjectSpan.TabIndex = 7
+        Me.ProjectSpan.Text = "Project Span"
+        '
         'DeploymentPanel
         '
         Me.DeploymentPanel.Controls.Add(Me.DeployPanel)
-        Me.DeploymentPanel.Location = New System.Drawing.Point(6, 289)
+        Me.DeploymentPanel.Location = New System.Drawing.Point(6, 306)
         Me.DeploymentPanel.Name = "DeploymentPanel"
         Me.DeploymentPanel.Size = New System.Drawing.Size(764, 50)
         Me.DeploymentPanel.TabIndex = 6
         '
         'DeployPanel
         '
-        Me.DeployPanel.Controls.Add(Me.Button2)
+        Me.DeployPanel.Controls.Add(Me.DepBtn)
         Me.DeployPanel.Dock = System.Windows.Forms.DockStyle.Right
         Me.DeployPanel.Location = New System.Drawing.Point(682, 0)
         Me.DeployPanel.Name = "DeployPanel"
         Me.DeployPanel.Size = New System.Drawing.Size(82, 50)
         Me.DeployPanel.TabIndex = 0
         '
-        'Button2
+        'DepBtn
         '
-        Me.Button2.BackColor = System.Drawing.Color.Orchid
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.Location = New System.Drawing.Point(0, 0)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 50)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Deploy-ment"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.DepBtn.BackColor = System.Drawing.Color.Orchid
+        Me.DepBtn.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DepBtn.FlatAppearance.BorderSize = 0
+        Me.DepBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DepBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.DepBtn.Location = New System.Drawing.Point(0, 0)
+        Me.DepBtn.Name = "DepBtn"
+        Me.DepBtn.Size = New System.Drawing.Size(82, 50)
+        Me.DepBtn.TabIndex = 2
+        Me.DepBtn.Text = "Deploy-ment"
+        Me.DepBtn.UseVisualStyleBackColor = False
         '
         'dead
         '
         Me.dead.AutoSize = True
         Me.dead.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.dead.Location = New System.Drawing.Point(669, 30)
+        Me.dead.Location = New System.Drawing.Point(664, 44)
         Me.dead.Name = "dead"
         Me.dead.Size = New System.Drawing.Size(87, 25)
         Me.dead.TabIndex = 5
@@ -138,7 +156,7 @@ Partial Class ProjectLayout
         '
         Me.Start.AutoSize = True
         Me.Start.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Start.Location = New System.Drawing.Point(6, 30)
+        Me.Start.Location = New System.Drawing.Point(6, 44)
         Me.Start.Name = "Start"
         Me.Start.Size = New System.Drawing.Size(94, 25)
         Me.Start.TabIndex = 4
@@ -149,7 +167,7 @@ Partial Class ProjectLayout
         Me.TestPanel.Controls.Add(Me.LeftTestSplitter)
         Me.TestPanel.Controls.Add(Me.TestingPanel)
         Me.TestPanel.Controls.Add(Me.RightTestPanel)
-        Me.TestPanel.Location = New System.Drawing.Point(6, 233)
+        Me.TestPanel.Location = New System.Drawing.Point(6, 250)
         Me.TestPanel.Name = "TestPanel"
         Me.TestPanel.Size = New System.Drawing.Size(764, 50)
         Me.TestPanel.TabIndex = 3
@@ -203,7 +221,7 @@ Partial Class ProjectLayout
         Me.DevPanel.Controls.Add(Me.DevelopmentPanel)
         Me.DevPanel.Controls.Add(Me.LDevSplitter)
         Me.DevPanel.Controls.Add(Me.LeftDevPanel)
-        Me.DevPanel.Location = New System.Drawing.Point(6, 177)
+        Me.DevPanel.Location = New System.Drawing.Point(6, 194)
         Me.DevPanel.Name = "DevPanel"
         Me.DevPanel.Size = New System.Drawing.Size(682, 50)
         Me.DevPanel.TabIndex = 2
@@ -275,7 +293,7 @@ Partial Class ProjectLayout
         Me.DesignPanel.Controls.Add(Me.DesPanel)
         Me.DesignPanel.Controls.Add(Me.LeftDesSplitter)
         Me.DesignPanel.Controls.Add(Me.LeftDesPanel)
-        Me.DesignPanel.Location = New System.Drawing.Point(6, 122)
+        Me.DesignPanel.Location = New System.Drawing.Point(6, 138)
         Me.DesignPanel.Name = "DesignPanel"
         Me.DesignPanel.Size = New System.Drawing.Size(682, 50)
         Me.DesignPanel.TabIndex = 1
@@ -345,7 +363,7 @@ Partial Class ProjectLayout
         '
         Me.RaPanel.Controls.Add(Me.ReqSplitter)
         Me.RaPanel.Controls.Add(Me.ReqPanel)
-        Me.RaPanel.Location = New System.Drawing.Point(6, 66)
+        Me.RaPanel.Location = New System.Drawing.Point(6, 82)
         Me.RaPanel.Name = "RaPanel"
         Me.RaPanel.Size = New System.Drawing.Size(682, 50)
         Me.RaPanel.TabIndex = 0
@@ -361,27 +379,27 @@ Partial Class ProjectLayout
         '
         'ReqPanel
         '
-        Me.ReqPanel.Controls.Add(Me.RA)
+        Me.ReqPanel.Controls.Add(Me.ReqBtn)
         Me.ReqPanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.ReqPanel.Location = New System.Drawing.Point(0, 0)
         Me.ReqPanel.Name = "ReqPanel"
         Me.ReqPanel.Size = New System.Drawing.Size(209, 50)
         Me.ReqPanel.TabIndex = 0
         '
-        'RA
+        'ReqBtn
         '
-        Me.RA.AutoSize = True
-        Me.RA.BackColor = System.Drawing.Color.Tomato
-        Me.RA.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RA.FlatAppearance.BorderSize = 0
-        Me.RA.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RA.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.RA.Location = New System.Drawing.Point(0, 0)
-        Me.RA.Name = "RA"
-        Me.RA.Size = New System.Drawing.Size(209, 50)
-        Me.RA.TabIndex = 0
-        Me.RA.Text = "Requirment"
-        Me.RA.UseVisualStyleBackColor = False
+        Me.ReqBtn.AutoSize = True
+        Me.ReqBtn.BackColor = System.Drawing.Color.Tomato
+        Me.ReqBtn.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ReqBtn.FlatAppearance.BorderSize = 0
+        Me.ReqBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ReqBtn.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ReqBtn.Location = New System.Drawing.Point(0, 0)
+        Me.ReqBtn.Name = "ReqBtn"
+        Me.ReqBtn.Size = New System.Drawing.Size(209, 50)
+        Me.ReqBtn.TabIndex = 0
+        Me.ReqBtn.Text = "Requirment"
+        Me.ReqBtn.UseVisualStyleBackColor = False
         '
         'ProjectDetails
         '
@@ -499,11 +517,31 @@ Partial Class ProjectLayout
         Me.ResetBtn.Text = "Reset Layout"
         Me.ResetBtn.UseVisualStyleBackColor = True
         '
+        'ReqTip
+        '
+        Me.ReqTip.ToolTipTitle = "Stage Deadline"
+        '
+        'DesTip
+        '
+        Me.DesTip.ToolTipTitle = "Stage Deadline"
+        '
+        'DevTip
+        '
+        Me.DevTip.ToolTipTitle = "Stage Deadline"
+        '
+        'TestTip
+        '
+        Me.TestTip.ToolTipTitle = "Stage Deadline"
+        '
+        'DepTip
+        '
+        Me.DepTip.ToolTipTitle = "Stage Deadline"
+        '
         'ProjectLayout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 491)
+        Me.ClientSize = New System.Drawing.Size(800, 505)
         Me.Controls.Add(Me.ResetBtn)
         Me.Controls.Add(Me.addEmp)
         Me.Controls.Add(Me.Edit)
@@ -553,7 +591,7 @@ Partial Class ProjectLayout
     Friend WithEvents RaPanel As Panel
     Friend WithEvents ReqSplitter As Splitter
     Friend WithEvents ReqPanel As Panel
-    Friend WithEvents RA As Button
+    Friend WithEvents ReqBtn As Button
     Friend WithEvents LeftDesPanel As Panel
     Friend WithEvents LeftDesSplitter As Splitter
     Friend WithEvents DesPanel As Panel
@@ -571,9 +609,15 @@ Partial Class ProjectLayout
     Friend WithEvents dead As Label
     Friend WithEvents DeploymentPanel As Panel
     Friend WithEvents DeployPanel As Panel
-    Friend WithEvents Button2 As Button
+    Friend WithEvents DepBtn As Button
     Friend WithEvents LeftTestSplitter As Splitter
     Friend WithEvents TestingPanel As Panel
     Friend WithEvents TestBtn As Button
     Friend WithEvents RightDevPanel As Panel
+    Friend WithEvents ReqTip As ToolTip
+    Friend WithEvents DesTip As ToolTip
+    Friend WithEvents DevTip As ToolTip
+    Friend WithEvents TestTip As ToolTip
+    Friend WithEvents DepTip As ToolTip
+    Friend WithEvents ProjectSpan As Label
 End Class
