@@ -25,8 +25,6 @@ Public Class ProjectLayout
         'store dates as the project loads and will be change when the SIZECHANGE function is called
         'startdate, reqana, Design, Development, Testing, Deadline
 
-
-
         ManagerHomePage.Hide()
         'Filling all the fields when opened from clicking on Datagrid in ManagerHomePage
         If ManagerHomePage.pid <> "new" Then
@@ -44,6 +42,21 @@ Public Class ProjectLayout
             dead.Text = NewProjectWizard.DeadlineDuration.Value.ToString("dd-MM-yyyy")
             Count.Text = NewProjectWizard.PeopleCount.Value
             'reset according to idea value ratio
+            'adds data to the layout table
+            Dim que As String = "INSERT INTO Layout(PID, StartDate, Deadline) VALUES('" + NewProjectWizard.id + "','" + Today.ToString("dd-MM-yyyy") + "','" + NewProjectWizard.DeadlineDuration.Value.ToString("dd-MM-yyyy") + "')"
+
+            'creating a sql command statement 
+            Dim coma As SqlCommand = LoginForm.sql.CreateCommand()
+            coma.CommandText = que
+
+            'sqladapter to handle the sql commands 
+            Dim Adapter As New SqlDataAdapter With {
+             .SelectCommand = coma
+            }
+
+            'creates a table with the required data
+            Dim da As New DataSet()
+            Adapter.Fill(da)
         End If
 
         '-------------------------------------------------------------------
@@ -75,8 +88,6 @@ Public Class ProjectLayout
         'qurry for adding row in layout with only pid and deadline
 
     End Sub
-
-
 
     'Project layout will be saved when Save button is clicked
     Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
@@ -130,8 +141,6 @@ Public Class ProjectLayout
         GetEndDates()
         ToolTip()
     End Sub
-
-
 
     Private Sub TestingPanel_SizeChanged(sender As Object, e As EventArgs) Handles TestingPanel.SizeChanged
         GetDays()
@@ -191,7 +200,11 @@ Public Class ProjectLayout
     End Sub
 
     Private Sub GetEndDates()
-        reqana = Convert.ToDateTime(ManagerHomePage.startdate.ToString().Substring(0, 10)).AddDays(ReqNo)
+        If ManagerHomePage.pid <> "new" Then
+            reqana = Convert.ToDateTime(ManagerHomePage.startdate.ToString().Substring(0, 10)).AddDays(ReqNo)
+        Else
+            reqana = Today.AddDays(ReqNo)
+        End If
         Design = reqana.AddDays(DesNo)
         Development = Design.AddDays(DevNo)
         Testing = Development.AddDays(TesNo)

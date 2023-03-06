@@ -22,14 +22,14 @@ Public Class NewProjectWizard
         NoOfDays = DateDiff("d", Today, DeadlineDuration.Value)
 
 
-        Dim create As String = MsgBox("Project Name : " + ProjectName.Text + vbLf + vbLf + "Deadline : " + DeadlineDuration.Text + "' (" + NoOfDays + " Days from today)" + vbLf + vbLf + "Number of members : " + PeopleCount.Value.ToString + vbLf + vbLf + "Project with following details will be created", vbYesNo, "Are you sure ?")
+        Dim create As String = MsgBox("Project Name : " + ProjectName.Text + vbLf + vbLf + "Deadline : " + DeadlineDuration.Text + "' (" + NoOfDays.ToString + " Days from today)" + vbLf + vbLf + "Number of members : " + PeopleCount.Value.ToString + vbLf + vbLf + "Project with following details will be created", vbYesNo, "Are you sure ?")
 
         If create = vbNo Then
             Return
         End If
 
         'adds data to the table
-        Dim AddCommand As String = "INSERT INTO Projects (PId, Title, Startdate, Deadline, People, ManagerId , Days) VALUES ('" + id.ToString + "', '" + ProjectName.Text + "', '" + Today.ToString("yyyy-MM-dd") + "', '" + DeadlineDuration.Value.ToString("yyyy-MM-dd") + "', '" + PeopleCount.Value.ToString + "', '" + ManagerHomePage.ManagerId.Text + "', '" + NoOfDays + "')"
+        Dim AddCommand As String = "INSERT INTO Projects (PId, Title, Startdate, Deadline, People, ManagerId , Days) VALUES ('" + id.ToString + "', '" + ProjectName.Text + "', '" + Today.ToString("yyyy-MM-dd") + "', '" + DeadlineDuration.Value.ToString("yyyy-MM-dd") + "', '" + PeopleCount.Value.ToString + "', '" + ManagerHomePage.ManagerId.Text + "', '" + NoOfDays.ToString + "')"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
