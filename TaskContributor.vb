@@ -257,4 +257,12 @@ Public Class TaskContributor
             i -= 1
         End While
     End Sub
+
+    Private Sub ContributorDataGrid_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles ContributorDataGrid.CellContentClick
+        'take the text from the cell and display in id textbox of update and delete
+        With ContributorDataGrid
+            ContId.Text = .Rows(.CurrentCell.RowIndex).Cells(1).Value.ToString
+            UContId.Text = .Rows(.CurrentCell.RowIndex).Cells(0).Value.ToString
+        End With
+    End Sub
 End Class
