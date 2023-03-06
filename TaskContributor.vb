@@ -204,7 +204,7 @@ Public Class TaskContributor
             Return
         End If
 
-        Dim UpdateCommand As String = "UPDATE Contributors SET Comment ='" + UpdateComment.Text + "' Where Id ='" + UContId.Text + "'"
+        Dim UpdateCommand As String = "UPDATE Contributors SET Comment ='" + UpdateComment.Text + "', Task='" + Task.Text + "' Where Id ='" + UContId.Text + "'"
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
         command.CommandText = UpdateCommand
