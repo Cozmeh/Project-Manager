@@ -3,6 +3,9 @@
 Public Class Contributors
     Private Sub Contributors_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Dim responce As String = MsgBox("Are you done with the changes", vbYesNo, "Done?")
+        If responce = vbNo Then
+            Return
+        End If
         ProjectLayout.Enabled = True
         ProjectLayout.Show()
     End Sub
@@ -164,7 +167,7 @@ Public Class Contributors
         MsgBox("Task ID not found!")
     End Sub
 
-    Private Sub UpdateRow_Click(sender As Object, e As EventArgs) 
+    Private Sub UpdateRow_Click(sender As Object, e As EventArgs) Handles UpdateRow.Click
 
         If UTask.Text = "Requirement Analysis" Or UTask.Text = "Design" Or UTask.Text = "Development" Or UTask.Text = "Testing" Then
             'conformation
@@ -182,7 +185,7 @@ Public Class Contributors
             Return
         End If
 
-        Dim UpdateCommand As String = "UPDATE Contributors SET Task ='" + UTask.Text + "' , Comment ='" + UpdateComment.Text + "' Where TaskId ='" + UContId.Text + "'"
+        Dim UpdateCommand As String = "UPDATE Contributors SET Task ='" + UTask.Text + "' , Comment ='" + UpdateComment.Text + "' Where Id ='" + UContId.Text + "'"
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
         command.CommandText = UpdateCommand
@@ -279,6 +282,5 @@ Public Class Contributors
             Return
         End If
     End Sub
-
 
 End Class

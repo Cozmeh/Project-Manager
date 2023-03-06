@@ -1,9 +1,10 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class ProjectLayout
-    Private startdate, reqana, Design, Development, Testing, Deadline As Date
+    Private reqana, Design, Development, Testing As Date
     Private NoOfDays As Integer
     Private ReqNo, DesNo, DevNo, TesNo, DepNo As Integer
+    Public task As String
 
     Private Sub ProjectLayout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -218,5 +219,29 @@ Public Class ProjectLayout
         DevTip.SetToolTip(Me.DevBtn, Development.ToString.Substring(0, 10) + " (" + DevNo.ToString + " Days)")
         TestTip.SetToolTip(Me.TestBtn, Testing.ToString.Substring(0, 10) + " (" + TesNo.ToString + " Days)")
         DepTip.SetToolTip(Me.DepBtn, dead.Text + " (" + DepNo.ToString + " Days)")
+    End Sub
+
+    Private Sub ReqBtn_Click(sender As Object, e As EventArgs) Handles ReqBtn.Click
+        task = "Requirement Analysis"
+        TaskContributor.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub DesignBtn_Click(sender As Object, e As EventArgs) Handles DesignBtn.Click
+        task = "Design"
+        TaskContributor.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub DevBtn_Click(sender As Object, e As EventArgs) Handles DevBtn.Click
+        task = "Development"
+        TaskContributor.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub TestBtn_Click(sender As Object, e As EventArgs) Handles TestBtn.Click
+        task = "Testing"
+        TaskContributor.Show()
+        Me.Hide()
     End Sub
 End Class
