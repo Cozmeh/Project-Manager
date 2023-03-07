@@ -4,7 +4,7 @@ Public Class EmployeeHomePage
 
     Public id, title, task, pid, status, complete, comment As String
 
-    Private Sub LogoutEmp_Click(sender As Object, e As EventArgs) Handles LogoutEmp.Click
+    Private Sub LogoutEmp_Click_1(sender As Object, e As EventArgs) Handles LogoutEmp.Click
         Me.Close()
     End Sub
 

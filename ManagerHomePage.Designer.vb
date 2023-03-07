@@ -43,61 +43,73 @@ Partial Class ManagerHomePage
         '
         'LogoutManager
         '
+        Me.LogoutManager.BackColor = System.Drawing.Color.Silver
+        Me.LogoutManager.FlatAppearance.BorderSize = 0
+        Me.LogoutManager.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LogoutManager.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LogoutManager.Location = New System.Drawing.Point(704, 12)
+        Me.LogoutManager.Image = Global.ProjectManager.My.Resources.Resources.Log_out2
+        Me.LogoutManager.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LogoutManager.Location = New System.Drawing.Point(688, 12)
         Me.LogoutManager.Name = "LogoutManager"
-        Me.LogoutManager.Size = New System.Drawing.Size(85, 44)
+        Me.LogoutManager.Size = New System.Drawing.Size(100, 44)
         Me.LogoutManager.TabIndex = 0
         Me.LogoutManager.Text = "Logout"
-        Me.LogoutManager.UseVisualStyleBackColor = True
+        Me.LogoutManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LogoutManager.UseVisualStyleBackColor = False
         '
         'NewProject
         '
+        Me.NewProject.BackColor = System.Drawing.Color.Silver
+        Me.NewProject.FlatAppearance.BorderSize = 0
+        Me.NewProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.NewProject.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.NewProject.Location = New System.Drawing.Point(705, 72)
+        Me.NewProject.Image = Global.ProjectManager.My.Resources.Resources.new_user1
+        Me.NewProject.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.NewProject.Location = New System.Drawing.Point(688, 68)
         Me.NewProject.Name = "NewProject"
-        Me.NewProject.Size = New System.Drawing.Size(84, 40)
+        Me.NewProject.Size = New System.Drawing.Size(100, 44)
         Me.NewProject.TabIndex = 1
-        Me.NewProject.Text = "New +"
-        Me.NewProject.UseVisualStyleBackColor = True
+        Me.NewProject.Text = "New "
+        Me.NewProject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.NewProject.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(7, 19)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(7, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 25)
+        Me.Label1.Size = New System.Drawing.Size(66, 21)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "User Id:"
+        Me.Label1.Text = "User Id :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.Location = New System.Drawing.Point(7, 59)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(76, 25)
+        Me.Label2.Size = New System.Drawing.Size(67, 21)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Name  :"
+        Me.Label2.Text = "Name   :"
         '
         'ManagerId
         '
         Me.ManagerId.AutoSize = True
-        Me.ManagerId.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ManagerId.Location = New System.Drawing.Point(80, 19)
+        Me.ManagerId.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ManagerId.Location = New System.Drawing.Point(69, 19)
         Me.ManagerId.Name = "ManagerId"
-        Me.ManagerId.Size = New System.Drawing.Size(109, 25)
+        Me.ManagerId.Size = New System.Drawing.Size(111, 25)
         Me.ManagerId.TabIndex = 5
         Me.ManagerId.Text = "Manager Id"
         '
         'ManagerName
         '
         Me.ManagerName.AutoSize = True
-        Me.ManagerName.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ManagerName.Location = New System.Drawing.Point(80, 59)
+        Me.ManagerName.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ManagerName.Location = New System.Drawing.Point(69, 56)
         Me.ManagerName.Name = "ManagerName"
-        Me.ManagerName.Size = New System.Drawing.Size(143, 25)
+        Me.ManagerName.Size = New System.Drawing.Size(146, 25)
         Me.ManagerName.TabIndex = 6
         Me.ManagerName.Text = "Manager Name"
         '
@@ -107,6 +119,7 @@ Partial Class ManagerHomePage
         Me.UsergprBox.Controls.Add(Me.Label1)
         Me.UsergprBox.Controls.Add(Me.ManagerId)
         Me.UsergprBox.Controls.Add(Me.Label2)
+        Me.UsergprBox.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
         Me.UsergprBox.Location = New System.Drawing.Point(12, 12)
         Me.UsergprBox.Name = "UsergprBox"
         Me.UsergprBox.Size = New System.Drawing.Size(234, 100)
@@ -118,13 +131,13 @@ Partial Class ManagerHomePage
         '
         Me.ProjectBox.Controls.Add(Me.ManagerDataGrid)
         Me.ProjectBox.Controls.Add(Me.Label4)
-        Me.ProjectBox.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.ProjectBox.Font = New System.Drawing.Font("Segoe UI Semibold", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ProjectBox.Location = New System.Drawing.Point(12, 118)
         Me.ProjectBox.Name = "ProjectBox"
         Me.ProjectBox.Size = New System.Drawing.Size(776, 320)
         Me.ProjectBox.TabIndex = 15
         Me.ProjectBox.TabStop = False
-        Me.ProjectBox.Text = "Projects:"
+        Me.ProjectBox.Text = "Projects"
         '
         'ManagerDataGrid
         '

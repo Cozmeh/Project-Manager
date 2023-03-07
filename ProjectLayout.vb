@@ -93,8 +93,6 @@ Public Class ProjectLayout
     'Project layout will be saved when Save button is clicked
     Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
 
-        MsgBox("giaj " + reqana.ToString("dd-MM-yyyy") + " sa;flkjd")
-
         LayoutTable()
         Dim responce As String = MsgBox("The changes are saved" + vbLf + "Do you want to exit?", vbYesNo, "Are you sure?")
         If responce = vbYes Then

@@ -22,194 +22,211 @@ Partial Class TaskUpdate
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(TaskUpdate))
-        Completed = New CheckBox()
-        taskId = New Label()
-        Label5 = New Label()
-        Taskname = New Label()
-        title = New Label()
-        Pid = New Label()
-        Label3 = New Label()
-        Label2 = New Label()
-        Label4 = New Label()
-        Cancel = New Button()
-        Update = New Button()
-        Lable1 = New Label()
-        GroupBox1 = New GroupBox()
-        comments = New Label()
-        Comment = New Label()
-        GroupBox1.SuspendLayout()
-        SuspendLayout()
-        ' 
-        ' Completed
-        ' 
-        Completed.AutoSize = True
-        Completed.Location = New Point(105, 128)
-        Completed.Name = "Completed"
-        Completed.Size = New Size(85, 19)
-        Completed.TabIndex = 31
-        Completed.Text = "Completed"
-        Completed.UseVisualStyleBackColor = True
-        ' 
-        ' taskId
-        ' 
-        taskId.AllowDrop = True
-        taskId.AutoSize = True
-        taskId.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        taskId.Location = New Point(122, 31)
-        taskId.Name = "taskId"
-        taskId.Size = New Size(23, 19)
-        taskId.TabIndex = 30
-        taskId.Text = "ID"' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        Label5.Location = New Point(42, 31)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(57, 19)
-        Label5.TabIndex = 29
-        Label5.Text = "Task Id :"' 
-        ' Taskname
-        ' 
-        Taskname.AutoSize = True
-        Taskname.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        Taskname.Location = New Point(122, 103)
-        Taskname.Name = "Taskname"
-        Taskname.Size = New Size(34, 19)
-        Taskname.TabIndex = 28
-        Taskname.Text = "task"' 
-        ' title
-        ' 
-        title.AutoSize = True
-        title.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        title.Location = New Point(122, 79)
-        title.Name = "title"
-        title.Size = New Size(32, 19)
-        title.TabIndex = 27
-        title.Text = "title"' 
-        ' Pid
-        ' 
-        Pid.AllowDrop = True
-        Pid.AutoSize = True
-        Pid.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        Pid.Location = New Point(122, 55)
-        Pid.Name = "Pid"
-        Pid.Size = New Size(23, 19)
-        Pid.TabIndex = 26
-        Pid.Text = "ID"' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.Location = New Point(45, 128)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(54, 19)
-        Label3.TabIndex = 25
-        Label3.Text = "Status :"' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(54, 103)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(45, 19)
-        Label2.TabIndex = 24
-        Label2.Text = "Task  :"' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        Label4.Location = New Point(12, 79)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(87, 19)
-        Label4.TabIndex = 23
-        Label4.Text = "Project Title :"' 
-        ' Cancel
-        ' 
-        Cancel.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Cancel.Location = New Point(73, 177)
-        Cancel.Name = "Cancel"
-        Cancel.Size = New Size(101, 43)
-        Cancel.TabIndex = 21
-        Cancel.Text = "Cancel"
-        Cancel.UseVisualStyleBackColor = True
-        ' 
-        ' Update
-        ' 
-        Update.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Update.Location = New Point(217, 177)
-        Update.Name = "Update"
-        Update.Size = New Size(101, 43)
-        Update.TabIndex = 22
-        Update.Text = "Update"
-        Update.UseVisualStyleBackColor = True
-        ' 
-        ' Lable1
-        ' 
-        Lable1.AutoSize = True
-        Lable1.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        Lable1.Location = New Point(25, 55)
-        Lable1.Name = "Lable1"
-        Lable1.Size = New Size(74, 19)
-        Lable1.TabIndex = 20
-        Lable1.Text = "Project Id :"' 
-        ' GroupBox1
-        ' 
-        GroupBox1.Controls.Add(comments)
-        GroupBox1.Controls.Add(Comment)
-        GroupBox1.Location = New Point(232, 23)
-        GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(156, 141)
-        GroupBox1.TabIndex = 32
-        GroupBox1.TabStop = False
-        GroupBox1.Text = "Comment for task:"' 
-        ' comments
-        ' 
-        comments.Location = New Point(10, 24)
-        comments.Name = "comments"
-        comments.Size = New Size(136, 105)
-        comments.TabIndex = 1
-        comments.Text = "someting"
-        comments.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' Comment
-        ' 
-        Comment.AutoSize = True
-        Comment.Location = New Point(12, 24)
-        Comment.Name = "Comment"
-        Comment.Size = New Size(0, 15)
-        Comment.TabIndex = 0
-        ' 
-        ' TaskUpdate
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(406, 236)
-        Controls.Add(GroupBox1)
-        Controls.Add(Completed)
-        Controls.Add(taskId)
-        Controls.Add(Label5)
-        Controls.Add(Taskname)
-        Controls.Add(title)
-        Controls.Add(Pid)
-        Controls.Add(Label3)
-        Controls.Add(Label2)
-        Controls.Add(Label4)
-        Controls.Add(Cancel)
-        Controls.Add(Update)
-        Controls.Add(Lable1)
-        FormBorderStyle = FormBorderStyle.FixedDialog
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        MaximizeBox = False
-        MinimizeBox = False
-        Name = "TaskUpdate"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "Task"
-        GroupBox1.ResumeLayout(False)
-        GroupBox1.PerformLayout()
-        ResumeLayout(False)
-        PerformLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TaskUpdate))
+        Me.Completed = New System.Windows.Forms.CheckBox()
+        Me.taskId = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Taskname = New System.Windows.Forms.Label()
+        Me.title = New System.Windows.Forms.Label()
+        Me.Pid = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Cancel = New System.Windows.Forms.Button()
+        Me.Update = New System.Windows.Forms.Button()
+        Me.Lable1 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.comments = New System.Windows.Forms.Label()
+        Me.Comment = New System.Windows.Forms.Label()
+        Me.GroupBox1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'Completed
+        '
+        Me.Completed.AutoSize = True
+        Me.Completed.Location = New System.Drawing.Point(105, 128)
+        Me.Completed.Name = "Completed"
+        Me.Completed.Size = New System.Drawing.Size(85, 19)
+        Me.Completed.TabIndex = 31
+        Me.Completed.Text = "Completed"
+        Me.Completed.UseVisualStyleBackColor = True
+        '
+        'taskId
+        '
+        Me.taskId.AllowDrop = True
+        Me.taskId.AutoSize = True
+        Me.taskId.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.taskId.Location = New System.Drawing.Point(122, 31)
+        Me.taskId.Name = "taskId"
+        Me.taskId.Size = New System.Drawing.Size(23, 19)
+        Me.taskId.TabIndex = 30
+        Me.taskId.Text = "ID"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Location = New System.Drawing.Point(42, 31)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(57, 19)
+        Me.Label5.TabIndex = 29
+        Me.Label5.Text = "Task Id :"
+        '
+        'Taskname
+        '
+        Me.Taskname.AutoSize = True
+        Me.Taskname.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Taskname.Location = New System.Drawing.Point(122, 103)
+        Me.Taskname.Name = "Taskname"
+        Me.Taskname.Size = New System.Drawing.Size(34, 19)
+        Me.Taskname.TabIndex = 28
+        Me.Taskname.Text = "task"
+        '
+        'title
+        '
+        Me.title.AutoSize = True
+        Me.title.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.title.Location = New System.Drawing.Point(122, 79)
+        Me.title.Name = "title"
+        Me.title.Size = New System.Drawing.Size(32, 19)
+        Me.title.TabIndex = 27
+        Me.title.Text = "title"
+        '
+        'Pid
+        '
+        Me.Pid.AllowDrop = True
+        Me.Pid.AutoSize = True
+        Me.Pid.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Pid.Location = New System.Drawing.Point(122, 55)
+        Me.Pid.Name = "Pid"
+        Me.Pid.Size = New System.Drawing.Size(23, 19)
+        Me.Pid.TabIndex = 26
+        Me.Pid.Text = "ID"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(45, 128)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(54, 19)
+        Me.Label3.TabIndex = 25
+        Me.Label3.Text = "Status :"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(54, 103)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(45, 19)
+        Me.Label2.TabIndex = 24
+        Me.Label2.Text = "Task  :"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(12, 79)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(87, 19)
+        Me.Label4.TabIndex = 23
+        Me.Label4.Text = "Project Title :"
+        '
+        'Cancel
+        '
+        Me.Cancel.BackColor = System.Drawing.Color.Silver
+        Me.Cancel.FlatAppearance.BorderSize = 0
+        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Cancel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Cancel.Location = New System.Drawing.Point(89, 177)
+        Me.Cancel.Name = "Cancel"
+        Me.Cancel.Size = New System.Drawing.Size(101, 43)
+        Me.Cancel.TabIndex = 21
+        Me.Cancel.Text = "Cancel"
+        Me.Cancel.UseVisualStyleBackColor = False
+        '
+        'Update
+        '
+        Me.Update.BackColor = System.Drawing.Color.Silver
+        Me.Update.FlatAppearance.BorderSize = 0
+        Me.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Update.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Update.Location = New System.Drawing.Point(232, 177)
+        Me.Update.Name = "Update"
+        Me.Update.Size = New System.Drawing.Size(101, 43)
+        Me.Update.TabIndex = 22
+        Me.Update.Text = "Update"
+        Me.Update.UseVisualStyleBackColor = False
+        '
+        'Lable1
+        '
+        Me.Lable1.AutoSize = True
+        Me.Lable1.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Lable1.Location = New System.Drawing.Point(25, 55)
+        Me.Lable1.Name = "Lable1"
+        Me.Lable1.Size = New System.Drawing.Size(74, 19)
+        Me.Lable1.TabIndex = 20
+        Me.Lable1.Text = "Project Id :"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.comments)
+        Me.GroupBox1.Controls.Add(Me.Comment)
+        Me.GroupBox1.Location = New System.Drawing.Point(232, 23)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(156, 141)
+        Me.GroupBox1.TabIndex = 32
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Comment for task"
+        '
+        'comments
+        '
+        Me.comments.Location = New System.Drawing.Point(10, 24)
+        Me.comments.Name = "comments"
+        Me.comments.Size = New System.Drawing.Size(136, 105)
+        Me.comments.TabIndex = 1
+        Me.comments.Text = "someting"
+        Me.comments.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Comment
+        '
+        Me.Comment.AutoSize = True
+        Me.Comment.Location = New System.Drawing.Point(12, 24)
+        Me.Comment.Name = "Comment"
+        Me.Comment.Size = New System.Drawing.Size(0, 15)
+        Me.Comment.TabIndex = 0
+        '
+        'TaskUpdate
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(406, 236)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Completed)
+        Me.Controls.Add(Me.taskId)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Taskname)
+        Me.Controls.Add(Me.title)
+        Me.Controls.Add(Me.Pid)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Cancel)
+        Me.Controls.Add(Me.Update)
+        Me.Controls.Add(Me.Lable1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "TaskUpdate"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Task"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents Completed As CheckBox

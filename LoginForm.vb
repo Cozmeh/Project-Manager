@@ -4,12 +4,12 @@ Public Class LoginForm
     '----------GLOBAL VARIABLES----------------------
 
     'establishing sql database connection
-    'Public sql As New SqlConnection With {
-    '        .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=D:\Coding\Projects\Visual Studio\ProjectManager\Resources\employeeDB.mdf"
-    '}
     Public sql As New SqlConnection With {
-    .ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
+            .ConnectionString = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=D:\Coding\Projects\Visual Studio\ProjectManager\Resources\employeeDB.mdf"
     }
+    'Public sql As New SqlConnection With {
+    '.ConnectionString = "data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\rohan\Source\Repos\Cozmeh\Project-Manager\Resources\employeeDB.mdf"
+    '}
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles loginbtn.Click
 

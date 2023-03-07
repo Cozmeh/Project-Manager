@@ -24,7 +24,6 @@ Partial Class AdminHomePage
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminHomePage))
         Me.AdminName = New System.Windows.Forms.Label()
         Me.AdminId = New System.Windows.Forms.Label()
@@ -63,50 +62,56 @@ Partial Class AdminHomePage
         'AdminName
         '
         Me.AdminName.AutoSize = True
-        Me.AdminName.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.AdminName.Location = New System.Drawing.Point(84, 59)
+        Me.AdminName.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.AdminName.Location = New System.Drawing.Point(77, 51)
         Me.AdminName.Name = "AdminName"
-        Me.AdminName.Size = New System.Drawing.Size(122, 25)
+        Me.AdminName.Size = New System.Drawing.Size(126, 25)
         Me.AdminName.TabIndex = 18
         Me.AdminName.Text = "Admin Name"
         '
         'AdminId
         '
         Me.AdminId.AutoSize = True
-        Me.AdminId.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.AdminId.Location = New System.Drawing.Point(84, 18)
+        Me.AdminId.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.AdminId.Location = New System.Drawing.Point(77, 19)
         Me.AdminId.Name = "AdminId"
-        Me.AdminId.Size = New System.Drawing.Size(88, 25)
+        Me.AdminId.Size = New System.Drawing.Size(91, 25)
         Me.AdminId.TabIndex = 17
         Me.AdminId.Text = "Admin Id"
         '
         'LogoutAdmin
         '
+        Me.LogoutAdmin.BackColor = System.Drawing.Color.Silver
+        Me.LogoutAdmin.FlatAppearance.BorderSize = 0
+        Me.LogoutAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LogoutAdmin.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LogoutAdmin.Location = New System.Drawing.Point(703, 12)
+        Me.LogoutAdmin.Image = Global.ProjectManager.My.Resources.Resources.Log_out1
+        Me.LogoutAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.LogoutAdmin.Location = New System.Drawing.Point(688, 12)
         Me.LogoutAdmin.Name = "LogoutAdmin"
-        Me.LogoutAdmin.Size = New System.Drawing.Size(85, 44)
+        Me.LogoutAdmin.Size = New System.Drawing.Size(100, 44)
         Me.LogoutAdmin.TabIndex = 13
         Me.LogoutAdmin.Text = "Logout"
-        Me.LogoutAdmin.UseVisualStyleBackColor = True
+        Me.LogoutAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LogoutAdmin.UseVisualStyleBackColor = False
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(7, 59)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Location = New System.Drawing.Point(6, 55)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 25)
+        Me.Label4.Size = New System.Drawing.Size(63, 21)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Name  :"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(7, 19)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(7, 23)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 25)
+        Me.Label3.Size = New System.Drawing.Size(64, 21)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "UserID :"
         '
@@ -116,6 +121,7 @@ Partial Class AdminHomePage
         Me.AdmingprBox.Controls.Add(Me.Label4)
         Me.AdmingprBox.Controls.Add(Me.AdminName)
         Me.AdmingprBox.Controls.Add(Me.AdminId)
+        Me.AdmingprBox.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
         Me.AdmingprBox.Location = New System.Drawing.Point(12, 12)
         Me.AdmingprBox.Name = "AdmingprBox"
         Me.AdmingprBox.Size = New System.Drawing.Size(220, 89)
@@ -127,13 +133,13 @@ Partial Class AdminHomePage
         '
         Me.EmpBox.Controls.Add(Me.AdminDataGrid)
         Me.EmpBox.Controls.Add(Me.TabControl)
-        Me.EmpBox.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.EmpBox.Font = New System.Drawing.Font("Segoe UI Semibold", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.EmpBox.Location = New System.Drawing.Point(12, 107)
         Me.EmpBox.Name = "EmpBox"
-        Me.EmpBox.Size = New System.Drawing.Size(776, 362)
+        Me.EmpBox.Size = New System.Drawing.Size(776, 382)
         Me.EmpBox.TabIndex = 23
         Me.EmpBox.TabStop = False
-        Me.EmpBox.Text = "Employees:"
+        Me.EmpBox.Text = "Employees"
         '
         'AdminDataGrid
         '
@@ -161,21 +167,13 @@ Partial Class AdminHomePage
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.AdminDataGrid.DefaultCellStyle = DataGridViewCellStyle2
-        Me.AdminDataGrid.Location = New System.Drawing.Point(11, 164)
+        Me.AdminDataGrid.Location = New System.Drawing.Point(7, 174)
         Me.AdminDataGrid.Name = "AdminDataGrid"
         Me.AdminDataGrid.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.AdminDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.AdminDataGrid.RowHeadersWidth = 20
         Me.AdminDataGrid.RowTemplate.Height = 25
         Me.AdminDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.AdminDataGrid.Size = New System.Drawing.Size(755, 167)
+        Me.AdminDataGrid.Size = New System.Drawing.Size(755, 202)
         Me.AdminDataGrid.TabIndex = 0
         '
         'TabControl
@@ -183,11 +181,11 @@ Partial Class AdminHomePage
         Me.TabControl.Controls.Add(Me.TabPage1)
         Me.TabControl.Controls.Add(Me.TabPage2)
         Me.TabControl.Controls.Add(Me.TabPage3)
-        Me.TabControl.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.TabControl.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.TabControl.Location = New System.Drawing.Point(7, 33)
         Me.TabControl.Name = "TabControl"
         Me.TabControl.SelectedIndex = 0
-        Me.TabControl.Size = New System.Drawing.Size(763, 125)
+        Me.TabControl.Size = New System.Drawing.Size(763, 135)
         Me.TabControl.TabIndex = 1
         '
         'TabPage1
@@ -200,7 +198,7 @@ Partial Class AdminHomePage
         Me.TabPage1.Location = New System.Drawing.Point(4, 26)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(755, 95)
+        Me.TabPage1.Size = New System.Drawing.Size(755, 105)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Add"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -210,44 +208,49 @@ Partial Class AdminHomePage
         Me.AddRow.BackColor = System.Drawing.Color.LightSeaGreen
         Me.AddRow.FlatAppearance.BorderSize = 0
         Me.AddRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddRow.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.AddRow.Location = New System.Drawing.Point(630, 35)
         Me.AddRow.Name = "AddRow"
-        Me.AddRow.Size = New System.Drawing.Size(100, 25)
+        Me.AddRow.Size = New System.Drawing.Size(100, 29)
         Me.AddRow.TabIndex = 26
         Me.AddRow.Text = "Add User"
         Me.AddRow.UseVisualStyleBackColor = False
         '
         'Add_Password
         '
-        Me.Add_Password.Location = New System.Drawing.Point(423, 35)
+        Me.Add_Password.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Add_Password.Location = New System.Drawing.Point(461, 35)
         Me.Add_Password.Name = "Add_Password"
         Me.Add_Password.PlaceholderText = "Password"
-        Me.Add_Password.Size = New System.Drawing.Size(100, 25)
+        Me.Add_Password.Size = New System.Drawing.Size(100, 29)
         Me.Add_Password.TabIndex = 25
         '
         'Add_Designtion
         '
+        Me.Add_Designtion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Add_Designtion.FormattingEnabled = True
         Me.Add_Designtion.Items.AddRange(New Object() {"E", "M"})
-        Me.Add_Designtion.Location = New System.Drawing.Point(283, 35)
+        Me.Add_Designtion.Location = New System.Drawing.Point(316, 35)
         Me.Add_Designtion.Name = "Add_Designtion"
-        Me.Add_Designtion.Size = New System.Drawing.Size(100, 25)
+        Me.Add_Designtion.Size = New System.Drawing.Size(100, 29)
         Me.Add_Designtion.TabIndex = 24
         '
         'Add_EmpName
         '
-        Me.Add_EmpName.Location = New System.Drawing.Point(155, 35)
+        Me.Add_EmpName.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Add_EmpName.Location = New System.Drawing.Point(168, 35)
         Me.Add_EmpName.Name = "Add_EmpName"
         Me.Add_EmpName.PlaceholderText = "Name"
-        Me.Add_EmpName.Size = New System.Drawing.Size(100, 25)
+        Me.Add_EmpName.Size = New System.Drawing.Size(100, 29)
         Me.Add_EmpName.TabIndex = 1
         '
         'Add_ID
         '
-        Me.Add_ID.Location = New System.Drawing.Point(28, 35)
+        Me.Add_ID.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Add_ID.Location = New System.Drawing.Point(26, 35)
         Me.Add_ID.Name = "Add_ID"
         Me.Add_ID.PlaceholderText = "UserID"
-        Me.Add_ID.Size = New System.Drawing.Size(100, 25)
+        Me.Add_ID.Size = New System.Drawing.Size(100, 29)
         Me.Add_ID.TabIndex = 0
         '
         'TabPage2
@@ -261,7 +264,7 @@ Partial Class AdminHomePage
         Me.TabPage2.Location = New System.Drawing.Point(4, 26)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(755, 95)
+        Me.TabPage2.Size = New System.Drawing.Size(755, 105)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Update"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -273,7 +276,7 @@ Partial Class AdminHomePage
         Me.GetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GetBtn.Location = New System.Drawing.Point(132, 34)
         Me.GetBtn.Name = "GetBtn"
-        Me.GetBtn.Size = New System.Drawing.Size(63, 26)
+        Me.GetBtn.Size = New System.Drawing.Size(63, 30)
         Me.GetBtn.TabIndex = 38
         Me.GetBtn.Text = "Get"
         Me.GetBtn.UseVisualStyleBackColor = False
@@ -283,44 +286,50 @@ Partial Class AdminHomePage
         Me.UpdateRow.BackColor = System.Drawing.Color.Goldenrod
         Me.UpdateRow.FlatAppearance.BorderSize = 0
         Me.UpdateRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.UpdateRow.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.UpdateRow.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.UpdateRow.Location = New System.Drawing.Point(630, 35)
         Me.UpdateRow.Name = "UpdateRow"
-        Me.UpdateRow.Size = New System.Drawing.Size(100, 25)
+        Me.UpdateRow.Size = New System.Drawing.Size(100, 29)
         Me.UpdateRow.TabIndex = 37
-        Me.UpdateRow.Text = "Update User"
+        Me.UpdateRow.Text = "Update "
         Me.UpdateRow.UseVisualStyleBackColor = False
         '
         'Upd_Password
         '
+        Me.Upd_Password.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Upd_Password.Location = New System.Drawing.Point(497, 35)
         Me.Upd_Password.Name = "Upd_Password"
         Me.Upd_Password.PlaceholderText = "Password"
-        Me.Upd_Password.Size = New System.Drawing.Size(100, 25)
+        Me.Upd_Password.Size = New System.Drawing.Size(100, 29)
         Me.Upd_Password.TabIndex = 36
         '
         'Upd_Designation
         '
+        Me.Upd_Designation.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Upd_Designation.FormattingEnabled = True
         Me.Upd_Designation.Items.AddRange(New Object() {"E", "M"})
         Me.Upd_Designation.Location = New System.Drawing.Point(368, 35)
         Me.Upd_Designation.Name = "Upd_Designation"
-        Me.Upd_Designation.Size = New System.Drawing.Size(100, 25)
+        Me.Upd_Designation.Size = New System.Drawing.Size(100, 29)
         Me.Upd_Designation.TabIndex = 35
         '
         'Upd_Name
         '
+        Me.Upd_Name.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Upd_Name.Location = New System.Drawing.Point(237, 35)
         Me.Upd_Name.Name = "Upd_Name"
         Me.Upd_Name.PlaceholderText = "Name"
-        Me.Upd_Name.Size = New System.Drawing.Size(100, 25)
+        Me.Upd_Name.Size = New System.Drawing.Size(100, 29)
         Me.Upd_Name.TabIndex = 34
         '
         'Upd_ID
         '
+        Me.Upd_ID.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Upd_ID.Location = New System.Drawing.Point(26, 35)
         Me.Upd_ID.Name = "Upd_ID"
         Me.Upd_ID.PlaceholderText = "UserID"
-        Me.Upd_ID.Size = New System.Drawing.Size(100, 25)
+        Me.Upd_ID.Size = New System.Drawing.Size(100, 29)
         Me.Upd_ID.TabIndex = 33
         '
         'TabPage3
@@ -330,7 +339,7 @@ Partial Class AdminHomePage
         Me.TabPage3.Location = New System.Drawing.Point(4, 26)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(755, 95)
+        Me.TabPage3.Size = New System.Drawing.Size(755, 105)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Remove"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -340,26 +349,28 @@ Partial Class AdminHomePage
         Me.DeleteRow.BackColor = System.Drawing.Color.Tomato
         Me.DeleteRow.FlatAppearance.BorderSize = 0
         Me.DeleteRow.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteRow.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.DeleteRow.Location = New System.Drawing.Point(630, 35)
         Me.DeleteRow.Name = "DeleteRow"
-        Me.DeleteRow.Size = New System.Drawing.Size(100, 25)
+        Me.DeleteRow.Size = New System.Drawing.Size(100, 29)
         Me.DeleteRow.TabIndex = 34
         Me.DeleteRow.Text = "Remove"
         Me.DeleteRow.UseVisualStyleBackColor = False
         '
         'Del_ID
         '
+        Me.Del_ID.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Del_ID.Location = New System.Drawing.Point(26, 35)
         Me.Del_ID.Name = "Del_ID"
         Me.Del_ID.PlaceholderText = "UserID"
-        Me.Del_ID.Size = New System.Drawing.Size(227, 25)
+        Me.Del_ID.Size = New System.Drawing.Size(227, 29)
         Me.Del_ID.TabIndex = 33
         '
         'AdminHomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(800, 495)
         Me.Controls.Add(Me.EmpBox)
         Me.Controls.Add(Me.AdmingprBox)
         Me.Controls.Add(Me.LogoutAdmin)
