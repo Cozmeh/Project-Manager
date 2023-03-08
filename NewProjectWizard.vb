@@ -29,7 +29,7 @@ Public Class NewProjectWizard
         End If
 
         'adds data to the table
-        Dim AddCommand As String = "INSERT INTO Projects (PId, Title, Startdate, Deadline, People, ManagerId , Days) VALUES ('" + id.ToString + "', '" + ProjectName.Text + "', '" + Today.ToString("yyyy-MM-dd") + "', '" + DeadlineDuration.Value.ToString("yyyy-MM-dd") + "', '" + PeopleCount.Value.ToString + "', '" + ManagerHomePage.ManagerId.Text + "', '" + NoOfDays.ToString + "')"
+        Dim AddCommand As String = "INSERT INTO Projects (PId, Title, Startdate, Deadline, People, ManagerId , Days) VALUES ('" + id.ToString + "', '" + ProjectName.Text + "', '" + Today.ToString("MM-dd-yyyy") + "', '" + DeadlineDuration.Value.ToString("MM-dd-yyyy") + "', '" + PeopleCount.Value.ToString + "', '" + ManagerHomePage.ManagerId.Text + "', '" + NoOfDays.ToString + "')"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()

@@ -64,7 +64,7 @@ Partial Class LoginForm
         Me.UserIDBox.AutoCompleteCustomSource.AddRange(New String() {"admin"})
         Me.UserIDBox.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.UserIDBox.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.UserIDBox.Location = New System.Drawing.Point(137, 142)
+        Me.UserIDBox.Location = New System.Drawing.Point(157, 143)
         Me.UserIDBox.Name = "UserIDBox"
         Me.UserIDBox.PlaceholderText = "User Id"
         Me.UserIDBox.Size = New System.Drawing.Size(223, 34)
@@ -74,7 +74,7 @@ Partial Class LoginForm
         '
         Me.PassBox.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.PassBox.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.PassBox.Location = New System.Drawing.Point(137, 193)
+        Me.PassBox.Location = New System.Drawing.Point(157, 194)
         Me.PassBox.Name = "PassBox"
         Me.PassBox.PlaceholderText = "Password"
         Me.PassBox.Size = New System.Drawing.Size(223, 34)
@@ -85,7 +85,7 @@ Partial Class LoginForm
         '
         Me.PictureBox1.ErrorImage = Nothing
         Me.PictureBox1.Image = Global.ProjectManager.My.Resources.Resources.userID
-        Me.PictureBox1.Location = New System.Drawing.Point(366, 144)
+        Me.PictureBox1.Location = New System.Drawing.Point(119, 143)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(32, 32)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -96,7 +96,7 @@ Partial Class LoginForm
         '
         Me.PictureBox2.ErrorImage = Nothing
         Me.PictureBox2.Image = Global.ProjectManager.My.Resources.Resources.Password1
-        Me.PictureBox2.Location = New System.Drawing.Point(366, 195)
+        Me.PictureBox2.Location = New System.Drawing.Point(119, 194)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(32, 32)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize

@@ -8,59 +8,15 @@ Public Class ProjectLayout
 
     Private Sub ProjectLayout_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        If ManagerHomePage.pid <> "new" Then
+            ProjectId.Text = ManagerHomePage.pid
+        Else
+            ProjectId.Text = NewProjectWizard.id
+        End If
 
         'this will be inside the if block when the project is opened again from the manager home page
         'below code will change according to the date stored in layout database
 
-        'starting stage sizes based on percentages 
-        ReqPanel.Size = New Size(0.15 * DeploymentPanel.Size.Width, 50)
-        DesPanel.Size = New Size(0.2 * DeploymentPanel.Size.Width, 50)
-        DevelopmentPanel.Size = New Size(0.3 * DeploymentPanel.Size.Width, 50)
-        TestingPanel.Size = New Size(0.25 * DeploymentPanel.Size.Width, 50)
-
-        'starting stage positions based on sizes 
-        LeftDesPanel.Size = ReqPanel.Size
-        LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
-        TestingPanel.Size = RightDevPanel.Size
-
-        'store dates as the project loads and will be change when the SIZECHANGE function is called
-        'startdate, reqana, Design, Development, Testing, Deadline
-
-        ManagerHomePage.Hide()
-        'Filling all the fields when opened from clicking on Datagrid in ManagerHomePage
-        If ManagerHomePage.pid <> "new" Then
-            ProjectId.Text = ManagerHomePage.pid
-            ProjectName.Text = ManagerHomePage.title
-            Start.Text = ManagerHomePage.startdate.ToString().Substring(0, 10)
-            dead.Text = ManagerHomePage.deadline.ToString().Substring(0, 10)
-            Count.Text = ManagerHomePage.people
-            'reset width according to date
-        Else
-            'Filling all the fields when opened from NewProjectWizard
-            ProjectId.Text = NewProjectWizard.id
-            ProjectName.Text = NewProjectWizard.ProjectName.Text
-            Start.Text = Today.ToString("dd-MM-yyyy")
-            dead.Text = NewProjectWizard.DeadlineDuration.Value.ToString("dd-MM-yyyy")
-            Count.Text = NewProjectWizard.PeopleCount.Value
-            'reset according to idea value ratio
-            'adds data to the layout table
-            Dim que As String = "INSERT INTO Layout(PID, StartDate, Deadline) VALUES('" + NewProjectWizard.id + "','" + Today.ToString("dd-MM-yyyy") + "','" + NewProjectWizard.DeadlineDuration.Value.ToString("dd-MM-yyyy") + "')"
-
-            'creating a sql command statement 
-            Dim coma As SqlCommand = LoginForm.sql.CreateCommand()
-            coma.CommandText = que
-
-            'sqladapter to handle the sql commands 
-            Dim Adapter As New SqlDataAdapter With {
-             .SelectCommand = coma
-            }
-
-            'creates a table with the required data
-            Dim da As New DataSet()
-            Adapter.Fill(da)
-        End If
-
-        '-------------------------------------------------------------------
         'adds data to the layout table
         Dim Com As String = "Select Days from Projects where PId ='" + ProjectId.Text + "'"
 
@@ -77,17 +33,51 @@ Public Class ProjectLayout
         Dim data As New DataSet()
         sqlAdapter.Fill(data)
         NoOfDays = Convert.ToInt32(data.Tables(0).Rows(0)(0).ToString)
-        GetDays()
-        GetEndDates()
         ProjectSpan.Text = "Project Span : " + NoOfDays.ToString + "Days"
 
-        '----------------------------------------------------------------------
-        'tooltips
+        'store dates as the project loads and will be change when the SIZECHANGE function is called
+        'startdate, reqana, Design, Development, Testing, Deadline
+
+        ManagerHomePage.Hide()
+        'Filling all the fields when opened from clicking on Datagrid in ManagerHomePage
+        If ManagerHomePage.pid <> "new" Then
+            'ProjectId.Text = ManagerHomePage.pid
+            ProjectName.Text = ManagerHomePage.title
+            Start.Text = ManagerHomePage.startdate.ToString().Substring(0, 10)
+            dead.Text = ManagerHomePage.deadline.ToString().Substring(0, 10)
+            Count.Text = ManagerHomePage.people
+            'reset width according to date
+            SavedRatio()
+        Else
+            'Filling all the fields when opened from NewProjectWizard
+            ' ProjectId.Text = NewProjectWizard.id
+            ProjectName.Text = NewProjectWizard.ProjectName.Text
+            Start.Text = Today.ToString("dd-MM-yyyy")
+            dead.Text = NewProjectWizard.DeadlineDuration.Value.ToString("dd-MM-yyyy")
+            Count.Text = NewProjectWizard.PeopleCount.Value
+            'reset according to idea value ratio
+            Ratio()
+
+            'adds data to the layout table
+            Dim que As String = "INSERT INTO Layout(PID, StartDate, Deadline) VALUES('" + NewProjectWizard.id + "','" + Today.ToString("MM-dd-yyyy") + "','" + NewProjectWizard.DeadlineDuration.Value.ToString("MM-dd-yyyy") + "')"
+            'creating a sql command statement 
+            Dim coma As SqlCommand = LoginForm.sql.CreateCommand()
+            coma.CommandText = que
+            'sqladapter to handle the sql commands 
+            Dim Adapter As New SqlDataAdapter With {
+             .SelectCommand = coma
+            }
+            'creates a table with the required data
+            Dim da As New DataSet()
+            Adapter.Fill(da)
+
+        End If
+
+        GetDays()
+        GetEndDates()
         ToolTip()
-        '----------------------------------------------
 
         'qurry for adding row in layout with only pid and deadline
-
     End Sub
 
     'Project layout will be saved when Save button is clicked
@@ -176,7 +166,7 @@ Public Class ProjectLayout
 
     Private Sub LayoutTable()
         'adds data to the layout table
-        Dim UpdateCommand As String = "UPDATE Layout SET Requirement='" + reqana.ToString("yyyy-MM-dd") + "',Design='" + Design.ToString("yyyy-MM-dd") + "',Development='" + Development.ToString("yyyy-MM-dd") + "',Testing='" + Testing.ToString("yyyy-MM-dd") + "' Where PId ='" + ProjectId.Text + "'"
+        Dim UpdateCommand As String = "UPDATE Layout SET Requirement='" + reqana.ToString("MM-dd-yyyy") + "',Design='" + Design.ToString("MM-dd-yyyy") + "',Development='" + Development.ToString("MM-dd-yyyy") + "',Testing='" + Testing.ToString("MM-dd-yyyy") + "' Where PId ='" + ProjectId.Text + "'"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
@@ -219,6 +209,52 @@ Public Class ProjectLayout
         DepTip.SetToolTip(Me.DepBtn, dead.Text + " (" + DepNo.ToString + " Days)")
     End Sub
 
+    Private Sub Ratio()
+        'starting stage sizes based on percentages 
+        ReqPanel.Size = New Size(0.15 * DeploymentPanel.Size.Width, 50)
+        DesPanel.Size = New Size(0.2 * DeploymentPanel.Size.Width, 50)
+        DevelopmentPanel.Size = New Size(0.3 * DeploymentPanel.Size.Width, 50)
+        TestingPanel.Size = New Size(0.25 * DeploymentPanel.Size.Width, 50)
+
+        'starting stage positions based on sizes 
+        LeftDesPanel.Size = ReqPanel.Size
+        LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
+        TestingPanel.Size = RightDevPanel.Size
+    End Sub
+
+    Private Sub SavedRatio()
+        Dim Com As String = "Select StartDate,Requirement,Design,Development,Testing,Deadline from Layout where PId ='" + ProjectId.Text + "'"
+
+        'creating a sql command statement 
+        Dim command As SqlCommand = LoginForm.sql.CreateCommand()
+        command.CommandText = Com
+
+        'sqladapter to handle the sql commands 
+        Dim sqlAdapter As New SqlDataAdapter With {
+             .SelectCommand = command
+        }
+
+        'creates a table with the required data
+        Dim data As New DataSet()
+        sqlAdapter.Fill(data)
+
+
+
+        Dim reqDays As Integer = DateDiff("d", Convert.ToDateTime(data.Tables(0).Rows(0)(0).ToString), Convert.ToDateTime(data.Tables(0).Rows(0)(1).ToString))
+        Dim desDays As Integer = DateDiff("d", Convert.ToDateTime(data.Tables(0).Rows(0)(1).ToString), Convert.ToDateTime(data.Tables(0).Rows(0)(2).ToString))
+        Dim devDays As Integer = DateDiff("d", Convert.ToDateTime(data.Tables(0).Rows(0)(2).ToString), Convert.ToDateTime(data.Tables(0).Rows(0)(3).ToString))
+        Dim testDays As Integer = DateDiff("d", Convert.ToDateTime(data.Tables(0).Rows(0)(3).ToString), Convert.ToDateTime(data.Tables(0).Rows(0)(4).ToString))
+        Dim depDays As Integer = DateDiff("d", Convert.ToDateTime(data.Tables(0).Rows(0)(4).ToString), Convert.ToDateTime(data.Tables(0).Rows(0)(5).ToString))
+
+        ReqPanel.Size = New Size((reqDays / NoOfDays) * DeploymentPanel.Size.Width, 50)
+        DesPanel.Size = New Size((desDays / NoOfDays) * DeploymentPanel.Size.Width, 50)
+        DevelopmentPanel.Size = New Size((devDays / NoOfDays) * DeploymentPanel.Size.Width, 50)
+        TestingPanel.Size = New Size((testDays / NoOfDays) * DeploymentPanel.Size.Width, 50)
+
+        LeftDesPanel.Size = ReqPanel.Size
+        LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
+        TestingPanel.Size = RightDevPanel.Size
+    End Sub
     Private Sub ReqBtn_Click(sender As Object, e As EventArgs) Handles ReqBtn.Click
         task = "Requirement Analysis"
         TaskContributor.Show()

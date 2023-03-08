@@ -282,6 +282,7 @@ Partial Class ProjectLayout
         Me.LeftDevPanel.BackColor = System.Drawing.SystemColors.Control
         Me.LeftDevPanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.LeftDevPanel.Location = New System.Drawing.Point(0, 0)
+        Me.LeftDevPanel.MaximumSize = New System.Drawing.Size(650, 50)
         Me.LeftDevPanel.Name = "LeftDevPanel"
         Me.LeftDevPanel.Size = New System.Drawing.Size(206, 50)
         Me.LeftDevPanel.TabIndex = 0
