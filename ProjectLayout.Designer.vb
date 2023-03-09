@@ -69,6 +69,8 @@ Partial Class ProjectLayout
         Me.DevTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.TestTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.DepTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.StartDateTIp = New System.Windows.Forms.ToolTip(Me.components)
+        Me.EndDateTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.Layout.SuspendLayout()
         Me.DeploymentPanel.SuspendLayout()
         Me.DeployPanel.SuspendLayout()
@@ -105,7 +107,7 @@ Partial Class ProjectLayout
         '
         Me.ProjectSpan.AutoSize = True
         Me.ProjectSpan.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ProjectSpan.Location = New System.Drawing.Point(325, 50)
+        Me.ProjectSpan.Location = New System.Drawing.Point(325, 35)
         Me.ProjectSpan.Name = "ProjectSpan"
         Me.ProjectSpan.Size = New System.Drawing.Size(85, 19)
         Me.ProjectSpan.TabIndex = 7
@@ -145,22 +147,26 @@ Partial Class ProjectLayout
         'dead
         '
         Me.dead.AutoSize = True
-        Me.dead.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
-        Me.dead.Location = New System.Drawing.Point(664, 44)
+        Me.dead.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
+                Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
+        Me.dead.Location = New System.Drawing.Point(679, 35)
         Me.dead.Name = "dead"
-        Me.dead.Size = New System.Drawing.Size(89, 25)
+        Me.dead.Size = New System.Drawing.Size(75, 21)
         Me.dead.TabIndex = 5
         Me.dead.Text = "Deadline"
+        Me.EndDateTip.SetToolTip(Me.dead, "Project End date")
         '
         'Start
         '
         Me.Start.AutoSize = True
-        Me.Start.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
-        Me.Start.Location = New System.Drawing.Point(6, 44)
+        Me.Start.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
+                Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point)
+        Me.Start.Location = New System.Drawing.Point(6, 35)
         Me.Start.Name = "Start"
-        Me.Start.Size = New System.Drawing.Size(101, 25)
+        Me.Start.Size = New System.Drawing.Size(84, 21)
         Me.Start.TabIndex = 4
         Me.Start.Text = "Start Date"
+        Me.StartDateTIp.SetToolTip(Me.Start, "Project Start date")
         '
         'TestPanel
         '
@@ -532,23 +538,23 @@ Partial Class ProjectLayout
         '
         'ReqTip
         '
-        Me.ReqTip.ToolTipTitle = "Stage Deadline"
+        Me.ReqTip.ToolTipTitle = "Requirment EndDate"
         '
         'DesTip
         '
-        Me.DesTip.ToolTipTitle = "Stage Deadline"
+        Me.DesTip.ToolTipTitle = "Design EndDate"
         '
         'DevTip
         '
-        Me.DevTip.ToolTipTitle = "Stage Deadline"
+        Me.DevTip.ToolTipTitle = "Development EndDate"
         '
         'TestTip
         '
-        Me.TestTip.ToolTipTitle = "Stage Deadline"
+        Me.TestTip.ToolTipTitle = "Testing EndDate"
         '
         'DepTip
         '
-        Me.DepTip.ToolTipTitle = "Stage Deadline"
+        Me.DepTip.ToolTipTitle = "Deployment EndDate"
         '
         'ProjectLayout
         '
@@ -633,4 +639,6 @@ Partial Class ProjectLayout
     Friend WithEvents TestTip As ToolTip
     Friend WithEvents DepTip As ToolTip
     Friend WithEvents ProjectSpan As Label
+    Friend WithEvents StartDateTIp As ToolTip
+    Friend WithEvents EndDateTip As ToolTip
 End Class
