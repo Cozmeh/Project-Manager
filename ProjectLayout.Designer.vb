@@ -71,6 +71,12 @@ Partial Class ProjectLayout
         Me.DepTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.StartDateTIp = New System.Windows.Forms.ToolTip(Me.components)
         Me.EndDateTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.reqNum = New System.Windows.Forms.NumericUpDown()
+        Me.devNum = New System.Windows.Forms.NumericUpDown()
+        Me.desNum = New System.Windows.Forms.NumericUpDown()
+        Me.SetDays = New System.Windows.Forms.Button()
+        Me.UndoBtn = New System.Windows.Forms.Button()
+        Me.OptionsBox = New System.Windows.Forms.GroupBox()
         Me.Layout.SuspendLayout()
         Me.DeploymentPanel.SuspendLayout()
         Me.DeployPanel.SuspendLayout()
@@ -83,6 +89,10 @@ Partial Class ProjectLayout
         Me.RaPanel.SuspendLayout()
         Me.ReqPanel.SuspendLayout()
         Me.ProjectDetails.SuspendLayout()
+        CType(Me.reqNum, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.devNum, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.desNum, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.OptionsBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'Layout
@@ -416,10 +426,10 @@ Partial Class ProjectLayout
         Me.ProjectDetails.Controls.Add(Me.Label3)
         Me.ProjectDetails.Controls.Add(Me.ProjectId)
         Me.ProjectDetails.Controls.Add(Me.ProjectName)
-        Me.ProjectDetails.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ProjectDetails.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
         Me.ProjectDetails.Location = New System.Drawing.Point(12, 12)
         Me.ProjectDetails.Name = "ProjectDetails"
-        Me.ProjectDetails.Size = New System.Drawing.Size(250, 119)
+        Me.ProjectDetails.Size = New System.Drawing.Size(297, 119)
         Me.ProjectDetails.TabIndex = 13
         Me.ProjectDetails.TabStop = False
         Me.ProjectDetails.Text = "Project Details"
@@ -490,11 +500,14 @@ Partial Class ProjectLayout
         Me.Edit.FlatAppearance.BorderSize = 0
         Me.Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Edit.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Edit.Location = New System.Drawing.Point(607, 12)
+        Me.Edit.Image = Global.ProjectManager.My.Resources.Resources.Edit
+        Me.Edit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Edit.Location = New System.Drawing.Point(134, 26)
         Me.Edit.Name = "Edit"
         Me.Edit.Size = New System.Drawing.Size(88, 36)
         Me.Edit.TabIndex = 16
-        Me.Edit.Text = "Edit"
+        Me.Edit.Text = " Edit"
+        Me.Edit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Edit.UseVisualStyleBackColor = False
         '
         'Save
@@ -503,11 +516,14 @@ Partial Class ProjectLayout
         Me.Save.FlatAppearance.BorderSize = 0
         Me.Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Save.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Save.Location = New System.Drawing.Point(700, 12)
+        Me.Save.Image = Global.ProjectManager.My.Resources.Resources.save2
+        Me.Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Save.Location = New System.Drawing.Point(16, 26)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(88, 36)
         Me.Save.TabIndex = 15
-        Me.Save.Text = "Save"
+        Me.Save.Text = " Save"
+        Me.Save.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Save.UseVisualStyleBackColor = False
         '
         'addEmp
@@ -516,9 +532,9 @@ Partial Class ProjectLayout
         Me.addEmp.FlatAppearance.BorderSize = 0
         Me.addEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.addEmp.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.addEmp.Location = New System.Drawing.Point(607, 52)
+        Me.addEmp.Location = New System.Drawing.Point(291, 70)
         Me.addEmp.Name = "addEmp"
-        Me.addEmp.Size = New System.Drawing.Size(181, 36)
+        Me.addEmp.Size = New System.Drawing.Size(169, 36)
         Me.addEmp.TabIndex = 17
         Me.addEmp.Text = "Add Contributors"
         Me.addEmp.UseVisualStyleBackColor = False
@@ -529,11 +545,14 @@ Partial Class ProjectLayout
         Me.ResetBtn.FlatAppearance.BorderSize = 0
         Me.ResetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ResetBtn.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ResetBtn.Location = New System.Drawing.Point(607, 93)
+        Me.ResetBtn.Image = Global.ProjectManager.My.Resources.Resources.reset1
+        Me.ResetBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.ResetBtn.Location = New System.Drawing.Point(373, 26)
         Me.ResetBtn.Name = "ResetBtn"
-        Me.ResetBtn.Size = New System.Drawing.Size(181, 35)
+        Me.ResetBtn.Size = New System.Drawing.Size(87, 36)
         Me.ResetBtn.TabIndex = 18
-        Me.ResetBtn.Text = "Reset Layout"
+        Me.ResetBtn.Text = " Reset"
+        Me.ResetBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ResetBtn.UseVisualStyleBackColor = False
         '
         'ReqTip
@@ -556,15 +575,96 @@ Partial Class ProjectLayout
         '
         Me.DepTip.ToolTipTitle = "Deployment EndDate"
         '
+        'reqNum
+        '
+        Me.reqNum.BackColor = System.Drawing.Color.Tomato
+        Me.reqNum.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.reqNum.Font = New System.Drawing.Font("Segoe UI Semibold", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.reqNum.Location = New System.Drawing.Point(16, 70)
+        Me.reqNum.Minimum = New Decimal(New Integer() {4, 0, 0, 0})
+        Me.reqNum.Name = "reqNum"
+        Me.reqNum.Size = New System.Drawing.Size(53, 34)
+        Me.reqNum.TabIndex = 19
+        Me.reqNum.Value = New Decimal(New Integer() {5, 0, 0, 0})
+        '
+        'devNum
+        '
+        Me.devNum.BackColor = System.Drawing.Color.LightSeaGreen
+        Me.devNum.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.devNum.Font = New System.Drawing.Font("Segoe UI Semibold", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.devNum.Location = New System.Drawing.Point(134, 70)
+        Me.devNum.Minimum = New Decimal(New Integer() {8, 0, 0, 0})
+        Me.devNum.Name = "devNum"
+        Me.devNum.Size = New System.Drawing.Size(53, 34)
+        Me.devNum.TabIndex = 21
+        Me.devNum.Value = New Decimal(New Integer() {9, 0, 0, 0})
+        '
+        'desNum
+        '
+        Me.desNum.BackColor = System.Drawing.Color.YellowGreen
+        Me.desNum.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.desNum.Font = New System.Drawing.Font("Segoe UI Semibold", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.desNum.Location = New System.Drawing.Point(75, 70)
+        Me.desNum.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.desNum.Name = "desNum"
+        Me.desNum.Size = New System.Drawing.Size(53, 34)
+        Me.desNum.TabIndex = 22
+        Me.desNum.Value = New Decimal(New Integer() {6, 0, 0, 0})
+        '
+        'SetDays
+        '
+        Me.SetDays.BackColor = System.Drawing.Color.Silver
+        Me.SetDays.FlatAppearance.BorderSize = 0
+        Me.SetDays.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SetDays.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.SetDays.Location = New System.Drawing.Point(193, 70)
+        Me.SetDays.Name = "SetDays"
+        Me.SetDays.Size = New System.Drawing.Size(92, 35)
+        Me.SetDays.TabIndex = 23
+        Me.SetDays.Text = "Set Days"
+        Me.SetDays.UseVisualStyleBackColor = False
+        '
+        'UndoBtn
+        '
+        Me.UndoBtn.BackColor = System.Drawing.Color.Silver
+        Me.UndoBtn.FlatAppearance.BorderSize = 0
+        Me.UndoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.UndoBtn.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.UndoBtn.Image = Global.ProjectManager.My.Resources.Resources.undo
+        Me.UndoBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.UndoBtn.Location = New System.Drawing.Point(254, 27)
+        Me.UndoBtn.Name = "UndoBtn"
+        Me.UndoBtn.Size = New System.Drawing.Size(88, 35)
+        Me.UndoBtn.TabIndex = 24
+        Me.UndoBtn.Text = " Undo"
+        Me.UndoBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.UndoBtn.UseVisualStyleBackColor = False
+        '
+        'OptionsBox
+        '
+        Me.OptionsBox.Controls.Add(Me.UndoBtn)
+        Me.OptionsBox.Controls.Add(Me.Edit)
+        Me.OptionsBox.Controls.Add(Me.SetDays)
+        Me.OptionsBox.Controls.Add(Me.Save)
+        Me.OptionsBox.Controls.Add(Me.desNum)
+        Me.OptionsBox.Controls.Add(Me.addEmp)
+        Me.OptionsBox.Controls.Add(Me.devNum)
+        Me.OptionsBox.Controls.Add(Me.ResetBtn)
+        Me.OptionsBox.Controls.Add(Me.reqNum)
+        Me.OptionsBox.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.OptionsBox.Location = New System.Drawing.Point(315, 12)
+        Me.OptionsBox.Name = "OptionsBox"
+        Me.OptionsBox.Size = New System.Drawing.Size(474, 119)
+        Me.OptionsBox.TabIndex = 25
+        Me.OptionsBox.TabStop = False
+        Me.OptionsBox.Text = "Options"
+        '
         'ProjectLayout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 505)
-        Me.Controls.Add(Me.ResetBtn)
-        Me.Controls.Add(Me.addEmp)
-        Me.Controls.Add(Me.Edit)
-        Me.Controls.Add(Me.Save)
+        Me.Controls.Add(Me.OptionsBox)
         Me.Controls.Add(Me.Layout)
         Me.Controls.Add(Me.ProjectDetails)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -589,6 +689,10 @@ Partial Class ProjectLayout
         Me.ReqPanel.PerformLayout()
         Me.ProjectDetails.ResumeLayout(False)
         Me.ProjectDetails.PerformLayout()
+        CType(Me.reqNum, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.devNum, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.desNum, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.OptionsBox.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -641,4 +745,10 @@ Partial Class ProjectLayout
     Friend WithEvents ProjectSpan As Label
     Friend WithEvents StartDateTIp As ToolTip
     Friend WithEvents EndDateTip As ToolTip
+    Friend WithEvents reqNum As NumericUpDown
+    Friend WithEvents devNum As NumericUpDown
+    Friend WithEvents desNum As NumericUpDown
+    Friend WithEvents SetDays As Button
+    Friend WithEvents UndoBtn As Button
+    Friend WithEvents OptionsBox As GroupBox
 End Class

@@ -77,6 +77,9 @@ Public Class ProjectLayout
         GetEndDates()
         ToolTip()
 
+
+
+
         'qurry for adding row in layout with only pid and deadline
     End Sub
 
@@ -119,24 +122,28 @@ Public Class ProjectLayout
         GetDays()
         GetEndDates()
         ToolTip()
+        SetDaysCount()
     End Sub
 
     Private Sub DesPanel_SizeChanged(sender As Object, e As EventArgs) Handles DesPanel.SizeChanged
         GetDays()
         GetEndDates()
         ToolTip()
+        SetDaysCount()
     End Sub
 
     Private Sub DevelopmentPanel_SizeChanged(sender As Object, e As EventArgs) Handles DevelopmentPanel.SizeChanged
         GetDays()
         GetEndDates()
         ToolTip()
+        SetDaysCount()
     End Sub
 
     Private Sub TestingPanel_SizeChanged(sender As Object, e As EventArgs) Handles TestingPanel.SizeChanged
         GetDays()
         GetEndDates()
         ToolTip()
+        SetDaysCount()
     End Sub
 
     Private Sub ProjectLayout_FormClosing_1(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -201,12 +208,33 @@ Public Class ProjectLayout
         Testing = Development.AddDays(TesNo)
     End Sub
 
+    Private Sub SetDays_Click(sender As Object, e As EventArgs) Handles SetDays.Click
+
+        If reqNum.Value < 5 Or desNum.Value < 6 Or devNum.Value < 9 Then
+            MsgBox("Days cannot be too low !")
+            SetDaysCount()
+        Else
+            ReqPanel.Size = New Size((reqNum.Value / NoOfDays) * DeploymentPanel.Size.Width, 50)
+            DesPanel.Size = New Size((desNum.Value / NoOfDays) * DeploymentPanel.Size.Width, 50)
+            DevelopmentPanel.Size = New Size((devNum.Value / NoOfDays) * DeploymentPanel.Size.Width, 50)
+
+            LeftDesPanel.Size = ReqPanel.Size
+            LeftDevPanel.Size = LeftDesPanel.Size + DesPanel.Size
+            TestingPanel.Size = RightDevPanel.Size
+        End If
+
+    End Sub
+
     Private Sub ToolTip()
         ReqTip.SetToolTip(Me.ReqBtn, reqana.ToString.Substring(0, 10) + " (" + ReqNo.ToString + " Days)")
         DesTip.SetToolTip(Me.DesignBtn, Design.ToString.Substring(0, 10) + " (" + DesNo.ToString + " Days)")
         DevTip.SetToolTip(Me.DevBtn, Development.ToString.Substring(0, 10) + " (" + DevNo.ToString + " Days)")
         TestTip.SetToolTip(Me.TestBtn, Testing.ToString.Substring(0, 10) + " (" + TesNo.ToString + " Days)")
         DepTip.SetToolTip(Me.DepBtn, dead.Text + " (" + DepNo.ToString + " Days)")
+    End Sub
+
+    Private Sub UndoBtn_Click(sender As Object, e As EventArgs) Handles UndoBtn.Click
+        SavedRatio()
     End Sub
 
     Private Sub Ratio()
@@ -277,5 +305,11 @@ Public Class ProjectLayout
         task = "Testing"
         TaskContributor.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub SetDaysCount()
+        reqNum.Value = ReqNo
+        desNum.Value = DesNo
+        devNum.Value = DevNo
     End Sub
 End Class
