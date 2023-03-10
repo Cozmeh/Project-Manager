@@ -13,6 +13,11 @@ Public Class TaskUpdate
         If EmployeeHomePage.status <> "Pending" Then
             Completed.Checked = True
         End If
+
+        If Taskname.Text = "Un-Assigned" Then
+            Completed.Enabled = False
+        End If
+
         state = Completed.CheckState
     End Sub
 

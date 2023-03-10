@@ -12,10 +12,8 @@ Public Class ProjectLayout
             ProjectId.Text = ManagerHomePage.pid
         Else
             ProjectId.Text = NewProjectWizard.id
+            UndoBtn.Enabled = False
         End If
-
-        'this will be inside the if block when the project is opened again from the manager home page
-        'below code will change according to the date stored in layout database
 
         'adds data to the layout table
         Dim Com As String = "Select Days from Projects where PId ='" + ProjectId.Text + "'"
@@ -34,9 +32,6 @@ Public Class ProjectLayout
         sqlAdapter.Fill(data)
         NoOfDays = Convert.ToInt32(data.Tables(0).Rows(0)(0).ToString)
         ProjectSpan.Text = "Project Span : " + NoOfDays.ToString + "Days"
-
-        'store dates as the project loads and will be change when the SIZECHANGE function is called
-        'startdate, reqana, Design, Development, Testing, Deadline
 
         ManagerHomePage.Hide()
         'Filling all the fields when opened from clicking on Datagrid in ManagerHomePage
@@ -76,7 +71,6 @@ Public Class ProjectLayout
         GetDays()
         GetEndDates()
         ToolTip()
-
 
 
 
