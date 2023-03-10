@@ -11,7 +11,7 @@ Public Class TaskContributor
     Private Sub Dataload()
 
         'adds data to the task contributors
-        Dim UpdateCommand As String = "SELECT Id, EmpID, Status, Complete, Comment FROM Contributors WHERE PID='" + ProjectLayout.ProjectId.Text + "' AND (Task='" + Task.Text + "' OR TASK='UnAssigned')"
+        Dim UpdateCommand As String = "SELECT Id, EmpID, Status, Complete, Comment FROM Contributors WHERE PID='" + ProjectLayout.ProjectId.Text + "' AND (Task='" + Task.Text + "' OR TASK='Un-Assigned')"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
@@ -80,7 +80,8 @@ Public Class TaskContributor
 
         If (Consoledata.Tables(0).Rows.Count) > 0 Then
             If Consoledata.Tables(0).Rows(0)(1) = "E" Then
-                MsgBox("Employee with Id '" + ContId.Text + "' exists")
+                AddComment.Enabled = True
+                'MsgBox("Employee with Id '" + ContId.Text + "' exists")
             ElseIf Consoledata.Tables(0).Rows(0)(1) = "M" Then
                 MsgBox("Can not add Manager to the Project '" + projectName.Text)
             End If
@@ -89,7 +90,7 @@ Public Class TaskContributor
         End If
     End Sub
 
-    Private Sub getId_Click(sender As Object, e As EventArgs) Handles getId.Click
+    Private Sub GetId_Click(sender As Object, e As EventArgs) Handles getId.Click
         If UContId.Text = Nothing Then
             MsgBox("Please mention correct Task ID!")
             Return
@@ -231,7 +232,7 @@ Public Class TaskContributor
     Private Sub Unassigned_Click(sender As Object, e As EventArgs) Handles Unassigned.Click
 
         'adds data to the task contributors
-        Dim UpdateCommand As String = "SELECT ID FROM Contributors WHERE PID='" + ProjectLayout.ProjectId.Text + "' AND TASK='UnAssigned'"
+        Dim UpdateCommand As String = "SELECT ID FROM Contributors WHERE PID='" + ProjectLayout.ProjectId.Text + "' AND TASK='Un-Assigned'"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
@@ -265,4 +266,11 @@ Public Class TaskContributor
             UContId.Text = .Rows(.CurrentCell.RowIndex).Cells(0).Value.ToString
         End With
     End Sub
+
+    Private Sub ContId_MouseLeave(sender As Object, e As EventArgs) Handles ContId.MouseLeave
+        If ContId.Text.Length = 0 Then
+            AddComment.Enabled = False
+        End If
+    End Sub
+
 End Class

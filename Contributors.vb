@@ -54,7 +54,9 @@ Public Class Contributors
 
         If (Consoledata.Tables(0).Rows.Count) > 0 Then
             If Consoledata.Tables(0).Rows(0)(1) = "E" Then
-                MsgBox("Employee with Id '" + ContId.Text + "' exists")
+                Task.Enabled = True
+                AddComment.Enabled = True
+                'MsgBox("Employee with Id '" + ContId.Text + "' exists")
             ElseIf Consoledata.Tables(0).Rows(0)(1) = "M" Then
                 MsgBox("Can not add Manager to the Project '" + ProjectLayout.ProjectName.Text)
             End If
@@ -283,4 +285,10 @@ Public Class Contributors
         End If
     End Sub
 
+    Private Sub ContId_MouseLeave(sender As Object, e As EventArgs) Handles ContId.MouseLeave
+        If ContId.Text.Length = 0 Then
+            Task.Enabled = False
+            AddComment.Enabled = False
+        End If
+    End Sub
 End Class
