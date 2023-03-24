@@ -277,7 +277,7 @@ Public Class Contributors
         Dim len As String
         len = UpdateComment.Text.Length
 
-        charactercount.Text = len + "/50"
+        UpdateCommentCount.Text = len + "/50"
 
         If len > 50 Then
             MsgBox("Number of Characters: " & len & vbCrLf & "Maximum number of Character: 50")

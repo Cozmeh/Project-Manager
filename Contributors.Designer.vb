@@ -22,9 +22,9 @@ Partial Class Contributors
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Label1 = New Label()
         Label2 = New Label()
         projectName = New Label()
@@ -43,7 +43,7 @@ Partial Class Contributors
         ContId = New TextBox()
         TabPage2 = New TabPage()
         UpdateRow = New Button()
-        Label7 = New Label()
+        UpdateCommentCount = New Label()
         Label6 = New Label()
         UpdateComment = New RichTextBox()
         getId = New Button()
@@ -119,35 +119,35 @@ Partial Class Contributors
         ContributorDataGrid.AllowUserToResizeRows = False
         ContributorDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         ContributorDataGrid.CellBorderStyle = DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        ContributorDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Control
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
+        ContributorDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         ContributorDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         ContributorDataGrid.Cursor = Cursors.Hand
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        ContributorDataGrid.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = SystemColors.Window
+        DataGridViewCellStyle5.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle5.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
+        ContributorDataGrid.DefaultCellStyle = DataGridViewCellStyle5
         ContributorDataGrid.Location = New Point(12, 246)
         ContributorDataGrid.Name = "ContributorDataGrid"
         ContributorDataGrid.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        ContributorDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = SystemColors.Control
+        DataGridViewCellStyle6.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle6.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
+        ContributorDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         ContributorDataGrid.RowHeadersWidth = 20
         ContributorDataGrid.RowTemplate.Height = 25
         ContributorDataGrid.ScrollBars = ScrollBars.Vertical
@@ -267,7 +267,7 @@ Partial Class Contributors
         ' TabPage2
         ' 
         TabPage2.Controls.Add(UpdateRow)
-        TabPage2.Controls.Add(Label7)
+        TabPage2.Controls.Add(UpdateCommentCount)
         TabPage2.Controls.Add(Label6)
         TabPage2.Controls.Add(UpdateComment)
         TabPage2.Controls.Add(getId)
@@ -295,14 +295,14 @@ Partial Class Contributors
         UpdateRow.Text = "Update"
         UpdateRow.UseVisualStyleBackColor = False
         ' 
-        ' Label7
+        ' UpdateCommentCount
         ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(527, 9)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(38, 19)
-        Label7.TabIndex = 45
-        Label7.Text = "0/50"' 
+        UpdateCommentCount.AutoSize = True
+        UpdateCommentCount.Location = New Point(527, 9)
+        UpdateCommentCount.Name = "UpdateCommentCount"
+        UpdateCommentCount.Size = New Size(38, 19)
+        UpdateCommentCount.TabIndex = 45
+        UpdateCommentCount.Text = "0/50"' 
         ' Label6
         ' 
         Label6.AutoSize = True
@@ -463,6 +463,6 @@ Partial Class Contributors
     Friend WithEvents Label6 As Label
     Friend WithEvents UpdateComment As RichTextBox
     Friend WithEvents charactercount As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents UpdateCommentCount As Label
     Friend WithEvents UpdateRow As Button
 End Class
