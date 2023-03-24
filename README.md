@@ -41,6 +41,7 @@ Once assigned the employees can check their deadline and update weather they hav
    		![Sql-NuGet](https://user-images.githubusercontent.com/117145297/227549661-92b0ebe6-65f6-4fde-8f24-21af60478d98.jpg)
 		
 3. ***DataBase Setup***
+   - ![Download the database for the project and follow the below steps](https://github.com/mr0weird0guy/db-for-ProjectManager)
    - Open the Project in Visual Studio `.sln` file 
    - Goto View >> Click on `SQL Server Object Explorer`
    - Copy the Data Source name , For example : `(localdb)\MSSQLLocalDB` , (right click and click rename to copy the name)
