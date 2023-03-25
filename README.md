@@ -72,7 +72,7 @@ Note - Open the DataBase file from the Solutions Explorer inside Visual Studio b
 ![Admin](https://user-images.githubusercontent.com/117145297/227587764-efc64b99-2aed-48a9-a691-6a6e64e4652f.jpeg)
 ![Manager](https://user-images.githubusercontent.com/117145297/227587794-b601e11c-91b8-43e7-bd56-816106e4945a.jpeg)
 ![NewProject](https://user-images.githubusercontent.com/117145297/227587799-41b0eed4-991a-4183-b4a9-8d94940d7da5.jpeg)
-![ProjectLayout](https://user-images.githubusercontent.com/117145297/227587803-33ffc461-d57c-4610-92b8-bb205f9c5dfd.jpeg)
+![ProjectLayout](https://user-images.githubusercontent.com/117145297/227717026-829edcd8-673d-48e3-b999-323c8e265a63.jpeg)
 ![EditProject](https://user-images.githubusercontent.com/117145297/227587779-c3475a4a-5d03-4606-83fb-4cab5c5dce51.jpeg)
 ![Contributors](https://user-images.githubusercontent.com/117145297/227587774-681b6a26-a256-4963-aa6c-8bb76c68ba14.jpeg)
 ![TaskContributor](https://user-images.githubusercontent.com/117145297/227587815-8162ff9e-ffa4-44ec-9528-1012bc4fe743.jpeg)
