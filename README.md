@@ -22,7 +22,7 @@ Once assigned the employees can check their deadline and update weather they hav
 	- Task Update
 
 # Usage
-> ### Prerequisites
+> ### Pre-requisites
 
 1. ***SQL Environment***
    - Open Visual Studio
