@@ -23,6 +23,7 @@ Partial Class ProjectLayout
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(ProjectLayout))
         Layout = New GroupBox()
         ProjectSpan = New Label()
         DeploymentPanel = New Panel()
@@ -111,7 +112,8 @@ Partial Class ProjectLayout
         Layout.Size = New Size(776, 367)
         Layout.TabIndex = 14
         Layout.TabStop = False
-        Layout.Text = "Plan Layout"' 
+        Layout.Text = "Plan Layout"
+        ' 
         ' ProjectSpan
         ' 
         ProjectSpan.AutoSize = True
@@ -120,7 +122,8 @@ Partial Class ProjectLayout
         ProjectSpan.Name = "ProjectSpan"
         ProjectSpan.Size = New Size(85, 19)
         ProjectSpan.TabIndex = 7
-        ProjectSpan.Text = "Project Span"' 
+        ProjectSpan.Text = "Project Span"
+        ' 
         ' DeploymentPanel
         ' 
         DeploymentPanel.Controls.Add(DeployPanel)
@@ -428,7 +431,8 @@ Partial Class ProjectLayout
         ProjectDetails.Size = New Size(297, 119)
         ProjectDetails.TabIndex = 13
         ProjectDetails.TabStop = False
-        ProjectDetails.Text = "Project Details"' 
+        ProjectDetails.Text = "Project Details"
+        ' 
         ' Count
         ' 
         Count.AutoSize = True
@@ -437,7 +441,8 @@ Partial Class ProjectLayout
         Count.Name = "Count"
         Count.Size = New Size(23, 25)
         Count.TabIndex = 6
-        Count.Text = "2"' 
+        Count.Text = "2"
+        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -446,7 +451,8 @@ Partial Class ProjectLayout
         Label1.Name = "Label1"
         Label1.Size = New Size(82, 21)
         Label1.TabIndex = 0
-        Label1.Text = "Project Id :"' 
+        Label1.Text = "Project Id :"
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -455,7 +461,8 @@ Partial Class ProjectLayout
         Label2.Name = "Label2"
         Label2.Size = New Size(59, 21)
         Label2.TabIndex = 1
-        Label2.Text = "Name :"' 
+        Label2.Text = "Name :"
+        ' 
         ' Label3
         ' 
         Label3.AutoSize = True
@@ -464,7 +471,8 @@ Partial Class ProjectLayout
         Label3.Name = "Label3"
         Label3.Size = New Size(63, 21)
         Label3.TabIndex = 2
-        Label3.Text = "People :"' 
+        Label3.Text = "People :"
+        ' 
         ' ProjectId
         ' 
         ProjectId.AutoSize = True
@@ -473,7 +481,8 @@ Partial Class ProjectLayout
         ProjectId.Name = "ProjectId"
         ProjectId.Size = New Size(94, 25)
         ProjectId.TabIndex = 4
-        ProjectId.Text = "Project Id"' 
+        ProjectId.Text = "Project Id"
+        ' 
         ' ProjectName
         ' 
         ProjectName.AutoSize = True
@@ -482,7 +491,8 @@ Partial Class ProjectLayout
         ProjectName.Name = "ProjectName"
         ProjectName.Size = New Size(129, 25)
         ProjectName.TabIndex = 5
-        ProjectName.Text = "Project Name"' 
+        ProjectName.Text = "Project Name"
+        ' 
         ' Edit
         ' 
         Edit.BackColor = Color.Silver
@@ -546,19 +556,24 @@ Partial Class ProjectLayout
         ' 
         ' ReqTip
         ' 
-        ReqTip.ToolTipTitle = "Requirment EndDate"' 
+        ReqTip.ToolTipTitle = "Requirment EndDate"
+        ' 
         ' DesTip
         ' 
-        DesTip.ToolTipTitle = "Design EndDate"' 
+        DesTip.ToolTipTitle = "Design EndDate"
+        ' 
         ' DevTip
         ' 
-        DevTip.ToolTipTitle = "Development EndDate"' 
+        DevTip.ToolTipTitle = "Development EndDate"
+        ' 
         ' TestTip
         ' 
-        TestTip.ToolTipTitle = "Testing EndDate"' 
+        TestTip.ToolTipTitle = "Testing EndDate"
+        ' 
         ' DepTip
         ' 
-        DepTip.ToolTipTitle = "Deployment EndDate"' 
+        DepTip.ToolTipTitle = "Deployment EndDate"
+        ' 
         ' reqNum
         ' 
         reqNum.BackColor = Color.Tomato
@@ -641,7 +656,8 @@ Partial Class ProjectLayout
         OptionsBox.Size = New Size(474, 119)
         OptionsBox.TabIndex = 25
         OptionsBox.TabStop = False
-        OptionsBox.Text = "Options"' 
+        OptionsBox.Text = "Options"
+        ' 
         ' ProjectLayout
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -651,6 +667,7 @@ Partial Class ProjectLayout
         Controls.Add(Layout)
         Controls.Add(ProjectDetails)
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "ProjectLayout"
         StartPosition = FormStartPosition.CenterScreen

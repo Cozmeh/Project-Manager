@@ -22,156 +22,157 @@ Partial Class EditProjectDetails
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ProjectId = New System.Windows.Forms.GroupBox()
-        Me.PeopleCount = New System.Windows.Forms.NumericUpDown()
-        Me.DeadlineDuration = New System.Windows.Forms.DateTimePicker()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Lable1 = New System.Windows.Forms.Label()
-        Me.ProjectName = New System.Windows.Forms.TextBox()
-        Me.Apply = New System.Windows.Forms.Button()
-        Me.Delete = New System.Windows.Forms.Button()
-        Me.Cancel = New System.Windows.Forms.Button()
-        Me.ProjectId.SuspendLayout()
-        CType(Me.PeopleCount, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'ProjectId
-        '
-        Me.ProjectId.Controls.Add(Me.PeopleCount)
-        Me.ProjectId.Controls.Add(Me.DeadlineDuration)
-        Me.ProjectId.Controls.Add(Me.Label2)
-        Me.ProjectId.Controls.Add(Me.Label1)
-        Me.ProjectId.Location = New System.Drawing.Point(68, 119)
-        Me.ProjectId.Name = "ProjectId"
-        Me.ProjectId.Size = New System.Drawing.Size(244, 187)
-        Me.ProjectId.TabIndex = 15
-        Me.ProjectId.TabStop = False
-        Me.ProjectId.Text = "Project Id:"
-        '
-        'PeopleCount
-        '
-        Me.PeopleCount.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.PeopleCount.Location = New System.Drawing.Point(25, 136)
-        Me.PeopleCount.Minimum = New Decimal(New Integer() {2, 0, 0, 0})
-        Me.PeopleCount.Name = "PeopleCount"
-        Me.PeopleCount.Size = New System.Drawing.Size(195, 25)
-        Me.PeopleCount.TabIndex = 4
-        Me.PeopleCount.Value = New Decimal(New Integer() {2, 0, 0, 0})
-        '
-        'DeadlineDuration
-        '
-        Me.DeadlineDuration.CalendarFont = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DeadlineDuration.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DeadlineDuration.Location = New System.Drawing.Point(25, 60)
-        Me.DeadlineDuration.MinDate = New Date(2023, 1, 23, 0, 0, 0, 0)
-        Me.DeadlineDuration.Name = "DeadlineDuration"
-        Me.DeadlineDuration.Size = New System.Drawing.Size(195, 25)
-        Me.DeadlineDuration.TabIndex = 2
-        Me.DeadlineDuration.Value = New Date(2023, 1, 23, 0, 0, 0, 0)
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(25, 116)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 17)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "No of People"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(25, 38)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(106, 17)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Project Deadline"
-        '
-        'Lable1
-        '
-        Me.Lable1.AutoSize = True
-        Me.Lable1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Lable1.Location = New System.Drawing.Point(68, 33)
-        Me.Lable1.Name = "Lable1"
-        Me.Lable1.Size = New System.Drawing.Size(79, 17)
-        Me.Lable1.TabIndex = 14
-        Me.Lable1.Text = "Project Title"
-        '
-        'ProjectName
-        '
-        Me.ProjectName.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ProjectName.Location = New System.Drawing.Point(68, 53)
-        Me.ProjectName.Name = "ProjectName"
-        Me.ProjectName.PlaceholderText = "Enter Project Title"
-        Me.ProjectName.Size = New System.Drawing.Size(244, 34)
-        Me.ProjectName.TabIndex = 13
-        '
-        'Apply
-        '
-        Me.Apply.BackColor = System.Drawing.Color.Silver
-        Me.Apply.FlatAppearance.BorderSize = 0
-        Me.Apply.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Apply.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Apply.Location = New System.Drawing.Point(50, 346)
-        Me.Apply.Name = "Apply"
-        Me.Apply.Size = New System.Drawing.Size(88, 36)
-        Me.Apply.TabIndex = 16
-        Me.Apply.Text = "Apply"
-        Me.Apply.UseVisualStyleBackColor = False
-        '
-        'Delete
-        '
-        Me.Delete.BackColor = System.Drawing.Color.Silver
-        Me.Delete.Enabled = False
-        Me.Delete.FlatAppearance.BorderSize = 0
-        Me.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Delete.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Delete.Location = New System.Drawing.Point(148, 346)
-        Me.Delete.Name = "Delete"
-        Me.Delete.Size = New System.Drawing.Size(88, 36)
-        Me.Delete.TabIndex = 17
-        Me.Delete.Text = "Delete"
-        Me.Delete.UseVisualStyleBackColor = False
-        '
-        'Cancel
-        '
-        Me.Cancel.BackColor = System.Drawing.Color.Silver
-        Me.Cancel.FlatAppearance.BorderSize = 0
-        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Cancel.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Cancel.Location = New System.Drawing.Point(242, 346)
-        Me.Cancel.Name = "Cancel"
-        Me.Cancel.Size = New System.Drawing.Size(88, 36)
-        Me.Cancel.TabIndex = 18
-        Me.Cancel.Text = "Cancel"
-        Me.Cancel.UseVisualStyleBackColor = False
-        '
-        'EditProjectDetails
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(375, 415)
-        Me.Controls.Add(Me.Apply)
-        Me.Controls.Add(Me.Delete)
-        Me.Controls.Add(Me.Cancel)
-        Me.Controls.Add(Me.ProjectId)
-        Me.Controls.Add(Me.Lable1)
-        Me.Controls.Add(Me.ProjectName)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Name = "EditProjectDetails"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "EditProjectDetails"
-        Me.ProjectId.ResumeLayout(False)
-        Me.ProjectId.PerformLayout()
-        CType(Me.PeopleCount, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(EditProjectDetails))
+        ProjectId = New GroupBox()
+        PeopleCount = New NumericUpDown()
+        DeadlineDuration = New DateTimePicker()
+        Label2 = New Label()
+        Label1 = New Label()
+        Lable1 = New Label()
+        ProjectName = New TextBox()
+        Apply = New Button()
+        Delete = New Button()
+        Cancel = New Button()
+        ProjectId.SuspendLayout()
+        CType(PeopleCount, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' ProjectId
+        ' 
+        ProjectId.Controls.Add(PeopleCount)
+        ProjectId.Controls.Add(DeadlineDuration)
+        ProjectId.Controls.Add(Label2)
+        ProjectId.Controls.Add(Label1)
+        ProjectId.Location = New Point(68, 119)
+        ProjectId.Name = "ProjectId"
+        ProjectId.Size = New Size(244, 187)
+        ProjectId.TabIndex = 15
+        ProjectId.TabStop = False
+        ProjectId.Text = "Project Id:"
+        ' 
+        ' PeopleCount
+        ' 
+        PeopleCount.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        PeopleCount.Location = New Point(25, 136)
+        PeopleCount.Minimum = New [Decimal](New Integer() {2, 0, 0, 0})
+        PeopleCount.Name = "PeopleCount"
+        PeopleCount.Size = New Size(195, 25)
+        PeopleCount.TabIndex = 4
+        PeopleCount.Value = New [Decimal](New Integer() {2, 0, 0, 0})
+        ' 
+        ' DeadlineDuration
+        ' 
+        DeadlineDuration.CalendarFont = New Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point)
+        DeadlineDuration.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DeadlineDuration.Location = New Point(25, 60)
+        DeadlineDuration.MinDate = New DateTime(2023, 1, 23, 0, 0, 0, 0)
+        DeadlineDuration.Name = "DeadlineDuration"
+        DeadlineDuration.Size = New Size(195, 25)
+        DeadlineDuration.TabIndex = 2
+        DeadlineDuration.Value = New DateTime(2023, 1, 23, 0, 0, 0, 0)
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.Location = New Point(25, 116)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(87, 17)
+        Label2.TabIndex = 3
+        Label2.Text = "No of People"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Location = New Point(25, 38)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(106, 17)
+        Label1.TabIndex = 3
+        Label1.Text = "Project Deadline"
+        ' 
+        ' Lable1
+        ' 
+        Lable1.AutoSize = True
+        Lable1.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Lable1.Location = New Point(68, 33)
+        Lable1.Name = "Lable1"
+        Lable1.Size = New Size(79, 17)
+        Lable1.TabIndex = 14
+        Lable1.Text = "Project Title"
+        ' 
+        ' ProjectName
+        ' 
+        ProjectName.Font = New Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point)
+        ProjectName.Location = New Point(68, 53)
+        ProjectName.Name = "ProjectName"
+        ProjectName.PlaceholderText = "Enter Project Title"
+        ProjectName.Size = New Size(244, 34)
+        ProjectName.TabIndex = 13
+        ' 
+        ' Apply
+        ' 
+        Apply.BackColor = Color.Silver
+        Apply.FlatAppearance.BorderSize = 0
+        Apply.FlatStyle = FlatStyle.Flat
+        Apply.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Apply.Location = New Point(50, 346)
+        Apply.Name = "Apply"
+        Apply.Size = New Size(88, 36)
+        Apply.TabIndex = 16
+        Apply.Text = "Apply"
+        Apply.UseVisualStyleBackColor = False
+        ' 
+        ' Delete
+        ' 
+        Delete.BackColor = Color.Silver
+        Delete.Enabled = False
+        Delete.FlatAppearance.BorderSize = 0
+        Delete.FlatStyle = FlatStyle.Flat
+        Delete.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Delete.Location = New Point(148, 346)
+        Delete.Name = "Delete"
+        Delete.Size = New Size(88, 36)
+        Delete.TabIndex = 17
+        Delete.Text = "Delete"
+        Delete.UseVisualStyleBackColor = False
+        ' 
+        ' Cancel
+        ' 
+        Cancel.BackColor = Color.Silver
+        Cancel.FlatAppearance.BorderSize = 0
+        Cancel.FlatStyle = FlatStyle.Flat
+        Cancel.Font = New Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point)
+        Cancel.Location = New Point(242, 346)
+        Cancel.Name = "Cancel"
+        Cancel.Size = New Size(88, 36)
+        Cancel.TabIndex = 18
+        Cancel.Text = "Cancel"
+        Cancel.UseVisualStyleBackColor = False
+        ' 
+        ' EditProjectDetails
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(375, 415)
+        Controls.Add(Apply)
+        Controls.Add(Delete)
+        Controls.Add(Cancel)
+        Controls.Add(ProjectId)
+        Controls.Add(Lable1)
+        Controls.Add(ProjectName)
+        FormBorderStyle = FormBorderStyle.FixedDialog
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "EditProjectDetails"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "EditProjectDetails"
+        ProjectId.ResumeLayout(False)
+        ProjectId.PerformLayout()
+        CType(PeopleCount, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
     Friend WithEvents ProjectId As GroupBox
     Friend WithEvents PeopleCount As NumericUpDown

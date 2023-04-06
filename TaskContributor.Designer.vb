@@ -25,6 +25,7 @@ Partial Class TaskContributor
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(TaskContributor))
         projectId = New GroupBox()
         Label2 = New Label()
         Task = New Label()
@@ -67,7 +68,8 @@ Partial Class TaskContributor
         projectId.Size = New Size(348, 91)
         projectId.TabIndex = 6
         projectId.TabStop = False
-        projectId.Text = "Project Id:"' 
+        projectId.Text = "Project Id:"
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -76,7 +78,8 @@ Partial Class TaskContributor
         Label2.Name = "Label2"
         Label2.Size = New Size(87, 21)
         Label2.TabIndex = 2
-        Label2.Text = "Stage task :"' 
+        Label2.Text = "Stage task :"
+        ' 
         ' Task
         ' 
         Task.AutoSize = True
@@ -85,7 +88,8 @@ Partial Class TaskContributor
         Task.Name = "Task"
         Task.Size = New Size(48, 25)
         Task.TabIndex = 4
-        Task.Text = "Task"' 
+        Task.Text = "Task"
+        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
@@ -94,7 +98,8 @@ Partial Class TaskContributor
         Label1.Name = "Label1"
         Label1.Size = New Size(111, 21)
         Label1.TabIndex = 1
-        Label1.Text = "Project Name :"' 
+        Label1.Text = "Project Name :"
+        ' 
         ' projectName
         ' 
         projectName.AutoSize = True
@@ -103,7 +108,8 @@ Partial Class TaskContributor
         projectName.Name = "projectName"
         projectName.Size = New Size(64, 25)
         projectName.TabIndex = 3
-        projectName.Text = "Name"' 
+        projectName.Text = "Name"
+        ' 
         ' TabControl
         ' 
         TabControl.Controls.Add(TabPage1)
@@ -138,7 +144,8 @@ Partial Class TaskContributor
         asize.Name = "asize"
         asize.Size = New Size(34, 17)
         asize.TabIndex = 42
-        asize.Text = "0/50"' 
+        asize.Text = "0/50"
+        ' 
         ' Label5
         ' 
         Label5.AutoSize = True
@@ -147,7 +154,8 @@ Partial Class TaskContributor
         Label5.Name = "Label5"
         Label5.Size = New Size(79, 21)
         Label5.TabIndex = 41
-        Label5.Text = "Comment"' 
+        Label5.Text = "Comment"
+        ' 
         ' AddComment
         ' 
         AddComment.Enabled = False
@@ -155,7 +163,8 @@ Partial Class TaskContributor
         AddComment.Name = "AddComment"
         AddComment.Size = New Size(184, 51)
         AddComment.TabIndex = 40
-        AddComment.Text = ""' 
+        AddComment.Text = ""
+        ' 
         ' Validate
         ' 
         Validate.BackColor = Color.Silver
@@ -227,7 +236,8 @@ Partial Class TaskContributor
         usize.Name = "usize"
         usize.Size = New Size(34, 17)
         usize.TabIndex = 45
-        usize.Text = "0/50"' 
+        usize.Text = "0/50"
+        ' 
         ' Label6
         ' 
         Label6.AutoSize = True
@@ -236,7 +246,8 @@ Partial Class TaskContributor
         Label6.Name = "Label6"
         Label6.Size = New Size(79, 21)
         Label6.TabIndex = 44
-        Label6.Text = "Comment"' 
+        Label6.Text = "Comment"
+        ' 
         ' UpdateComment
         ' 
         UpdateComment.Enabled = False
@@ -244,7 +255,8 @@ Partial Class TaskContributor
         UpdateComment.Name = "UpdateComment"
         UpdateComment.Size = New Size(184, 51)
         UpdateComment.TabIndex = 43
-        UpdateComment.Text = ""' 
+        UpdateComment.Text = ""
+        ' 
         ' getId
         ' 
         getId.BackColor = Color.Silver
@@ -347,6 +359,7 @@ Partial Class TaskContributor
         Controls.Add(TabControl)
         Controls.Add(projectId)
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "TaskContributor"
         StartPosition = FormStartPosition.CenterScreen
         Text = "TaskContributor"

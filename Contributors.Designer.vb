@@ -22,9 +22,10 @@ Partial Class Contributors
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Contributors))
         Label1 = New Label()
         Label2 = New Label()
         projectName = New Label()
@@ -70,7 +71,8 @@ Partial Class Contributors
         Label1.Name = "Label1"
         Label1.Size = New Size(111, 21)
         Label1.TabIndex = 1
-        Label1.Text = "Project Name :"' 
+        Label1.Text = "Project Name :"
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -79,7 +81,8 @@ Partial Class Contributors
         Label2.Name = "Label2"
         Label2.Size = New Size(138, 21)
         Label2.TabIndex = 2
-        Label2.Text = "Max Contributors :"' 
+        Label2.Text = "Max Contributors :"
+        ' 
         ' projectName
         ' 
         projectName.AutoSize = True
@@ -88,7 +91,8 @@ Partial Class Contributors
         projectName.Name = "projectName"
         projectName.Size = New Size(64, 25)
         projectName.TabIndex = 3
-        projectName.Text = "Name"' 
+        projectName.Text = "Name"
+        ' 
         ' Count
         ' 
         Count.AutoSize = True
@@ -97,7 +101,8 @@ Partial Class Contributors
         Count.Name = "Count"
         Count.Size = New Size(64, 25)
         Count.TabIndex = 4
-        Count.Text = "Count"' 
+        Count.Text = "Count"
+        ' 
         ' projectId
         ' 
         projectId.Controls.Add(Label2)
@@ -110,7 +115,8 @@ Partial Class Contributors
         projectId.Size = New Size(354, 100)
         projectId.TabIndex = 5
         projectId.TabStop = False
-        projectId.Text = "Project Id:"' 
+        projectId.Text = "Project Id:"
+        ' 
         ' ContributorDataGrid
         ' 
         ContributorDataGrid.AllowUserToAddRows = False
@@ -119,35 +125,35 @@ Partial Class Contributors
         ContributorDataGrid.AllowUserToResizeRows = False
         ContributorDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         ContributorDataGrid.CellBorderStyle = DataGridViewCellBorderStyle.None
-        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = SystemColors.Control
-        DataGridViewCellStyle4.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.True
-        ContributorDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        ContributorDataGrid.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         ContributorDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         ContributorDataGrid.Cursor = Cursors.Hand
-        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = SystemColors.Window
-        DataGridViewCellStyle5.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle5.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.False
-        ContributorDataGrid.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        ContributorDataGrid.DefaultCellStyle = DataGridViewCellStyle2
         ContributorDataGrid.Location = New Point(12, 246)
         ContributorDataGrid.Name = "ContributorDataGrid"
         ContributorDataGrid.ReadOnly = True
-        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = SystemColors.Control
-        DataGridViewCellStyle6.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle6.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.True
-        ContributorDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Control
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        ContributorDataGrid.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         ContributorDataGrid.RowHeadersWidth = 20
         ContributorDataGrid.RowTemplate.Height = 25
         ContributorDataGrid.ScrollBars = ScrollBars.Vertical
@@ -191,7 +197,8 @@ Partial Class Contributors
         charactercount.Name = "charactercount"
         charactercount.Size = New Size(38, 19)
         charactercount.TabIndex = 42
-        charactercount.Text = "0/50"' 
+        charactercount.Text = "0/50"
+        ' 
         ' Label5
         ' 
         Label5.AutoSize = True
@@ -200,7 +207,8 @@ Partial Class Contributors
         Label5.Name = "Label5"
         Label5.Size = New Size(83, 21)
         Label5.TabIndex = 41
-        Label5.Text = "Comment "' 
+        Label5.Text = "Comment "
+        ' 
         ' AddComment
         ' 
         AddComment.Enabled = False
@@ -208,7 +216,8 @@ Partial Class Contributors
         AddComment.Name = "AddComment"
         AddComment.Size = New Size(184, 49)
         AddComment.TabIndex = 40
-        AddComment.Text = ""' 
+        AddComment.Text = ""
+        ' 
         ' Validate
         ' 
         Validate.BackColor = Color.Silver
@@ -230,7 +239,8 @@ Partial Class Contributors
         Label3.Name = "Label3"
         Label3.Size = New Size(43, 21)
         Label3.TabIndex = 27
-        Label3.Text = "Task "' 
+        Label3.Text = "Task "
+        ' 
         ' AddRow
         ' 
         AddRow.BackColor = Color.LightSeaGreen
@@ -254,7 +264,8 @@ Partial Class Contributors
         Task.Name = "Task"
         Task.Size = New Size(154, 25)
         Task.TabIndex = 24
-        Task.Text = "Un-Assigned"' 
+        Task.Text = "Un-Assigned"
+        ' 
         ' ContId
         ' 
         ContId.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
@@ -302,7 +313,8 @@ Partial Class Contributors
         UpdateCommentCount.Name = "UpdateCommentCount"
         UpdateCommentCount.Size = New Size(38, 19)
         UpdateCommentCount.TabIndex = 45
-        UpdateCommentCount.Text = "0/50"' 
+        UpdateCommentCount.Text = "0/50"
+        ' 
         ' Label6
         ' 
         Label6.AutoSize = True
@@ -311,7 +323,8 @@ Partial Class Contributors
         Label6.Name = "Label6"
         Label6.Size = New Size(83, 21)
         Label6.TabIndex = 44
-        Label6.Text = "Comment "' 
+        Label6.Text = "Comment "
+        ' 
         ' UpdateComment
         ' 
         UpdateComment.Enabled = False
@@ -319,7 +332,8 @@ Partial Class Contributors
         UpdateComment.Name = "UpdateComment"
         UpdateComment.Size = New Size(184, 49)
         UpdateComment.TabIndex = 43
-        UpdateComment.Text = ""' 
+        UpdateComment.Text = ""
+        ' 
         ' getId
         ' 
         getId.BackColor = Color.Silver
@@ -350,7 +364,8 @@ Partial Class Contributors
         Label4.Name = "Label4"
         Label4.Size = New Size(43, 21)
         Label4.TabIndex = 40
-        Label4.Text = "Task "' 
+        Label4.Text = "Task "
+        ' 
         ' UTask
         ' 
         UTask.Enabled = False
@@ -361,7 +376,8 @@ Partial Class Contributors
         UTask.Name = "UTask"
         UTask.Size = New Size(154, 25)
         UTask.TabIndex = 39
-        UTask.Text = "Requirement Analysis"' 
+        UTask.Text = "Requirement Analysis"
+        ' 
         ' TabPage3
         ' 
         TabPage3.Controls.Add(DeleteRow)
@@ -419,6 +435,7 @@ Partial Class Contributors
         Controls.Add(TabControl)
         Controls.Add(projectId)
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "Contributors"
         StartPosition = FormStartPosition.CenterScreen
