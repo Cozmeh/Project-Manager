@@ -24,6 +24,8 @@ Once assigned the employees can check their deadline and update weather they hav
 # Usage
 > ### Prerequisites
 
+Download the project from https://github.com/Cozmeh/Project-Manager/releases/tag/v1.0.0
+
 1. ***SQL Environment***
    - Open Visual Studio
    - Goto Tools >> Get Tools and Features.. >> Individual Components 
