@@ -48,7 +48,7 @@ Once assigned the employees can check their deadline and update weather they hav
 		![DataS](https://user-images.githubusercontent.com/117145297/227561430-3c6f926e-5306-4549-9b0f-1015eee647ab.gif)
 
    - Open the project folder `ProjectManager` in file explorer 
-   - Goto `Resources` folder 
+   - Goto `Resources` folder or get DB files from here --> https://github.com/mr0weird0guy/db-for-ProjectManager
    - Copy the file path of the file `employeeDB.mdf`, For example : `D:\Coding\Projects\Visual Studio\ProjectManager\Resources\employeeDB.mdf`
    - Create your Sql Connection String from the `Data Source` and `DataBase file path` that you have copied
    Example:
