@@ -147,7 +147,8 @@ Public Class ProjectLayout
         ManagerHomePage.Enabled = True
         ManagerHomePage.Show()
         ManagerHomePage.Refresh()
-        ManagerHomePage.ManagerDataGrid.Refresh()
+        ManagerHomePage.DataLoader()
+
     End Sub
 
     Private Sub ReqSplitter_SplitterMoved(sender As Object, e As SplitterEventArgs) Handles ReqSplitter.SplitterMoved
