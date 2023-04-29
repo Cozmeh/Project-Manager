@@ -309,15 +309,8 @@ Public Class ProjectLayout
     End Sub
 
     Public Sub Dataloader()
-        If ManagerHomePage.pid <> "new" Then
-            ProjectId.Text = ManagerHomePage.pid
-        Else
-            ProjectId.Text = NewProjectWizard.id
-            UndoBtn.Enabled = False
-        End If
-
         'adds data to the layout table
-        Dim Com As String = "Select Days from Projects where PId ='" + ProjectId.Text + "'"
+        Dim Com As String = "Select Days,Title,Startdate,Deadline,People from Projects where PId ='" + ProjectId.Text + "'"
 
         'creating a sql command statement 
         Dim command As SqlCommand = LoginForm.sql.CreateCommand()
@@ -333,44 +326,10 @@ Public Class ProjectLayout
         sqlAdapter.Fill(data)
         NoOfDays = Convert.ToInt32(data.Tables(0).Rows(0)(0).ToString)
         ProjectSpan.Text = "Project Span : " + NoOfDays.ToString + "Days"
+        ProjectName.Text = data.Tables(0).Rows(0)(1).ToString
+        Start.Text = data.Tables(0).Rows(0)(2).ToString.Substring(0, 10)
+        dead.Text = data.Tables(0).Rows(0)(3).ToString.Substring(0, 10)
+        Count.Text = data.Tables(0).Rows(0)(4).ToString
 
-        ManagerHomePage.Hide()
-        'Filling all the fields when opened from clicking on Datagrid in ManagerHomePage
-        If ManagerHomePage.pid <> "new" Then
-            'ProjectId.Text = ManagerHomePage.pid
-            ProjectName.Text = ManagerHomePage.title
-            Start.Text = ManagerHomePage.startdate.ToString().Substring(0, 10)
-            dead.Text = ManagerHomePage.deadline.ToString().Substring(0, 10)
-            Count.Text = ManagerHomePage.people
-            'reset width according to date
-            SavedRatio()
-        Else
-            'Filling all the fields when opened from NewProjectWizard
-            ' ProjectId.Text = NewProjectWizard.id
-            ProjectName.Text = NewProjectWizard.ProjectName.Text
-            Start.Text = Today.ToString("dd-MM-yyyy")
-            dead.Text = NewProjectWizard.DeadlineDuration.Value.ToString("dd-MM-yyyy")
-            Count.Text = NewProjectWizard.PeopleCount.Value
-            'reset according to idea value ratio
-            Ratio()
-
-            'adds data to the layout table
-            Dim que As String = "INSERT INTO Layout(PID, StartDate, Deadline) VALUES('" + NewProjectWizard.id + "','" + Today.ToString("MM-dd-yyyy") + "','" + NewProjectWizard.DeadlineDuration.Value.ToString("MM-dd-yyyy") + "')"
-            'creating a sql command statement 
-            Dim coma As SqlCommand = LoginForm.sql.CreateCommand()
-            coma.CommandText = que
-            'sqladapter to handle the sql commands 
-            Dim Adapter As New SqlDataAdapter With {
-             .SelectCommand = coma
-            }
-            'creates a table with the required data
-            Dim da As New DataSet()
-            Adapter.Fill(da)
-
-        End If
-
-        GetDays()
-        GetEndDates()
-        ToolTip()
     End Sub
 End Class
