@@ -33,13 +33,34 @@ Public Class EditProjectDetails
 
     Private Sub Apply_Click(sender As Object, e As EventArgs) Handles Apply.Click
 
+        'adds data to the layout table
+        Dim Com As String = "Select Startdate from Projects where PId ='" + ProjectLayout.ProjectId.Text + "'"
+
+        'creating a sql command statement 
+        Dim command As SqlCommand = LoginForm.sql.CreateCommand()
+        command.CommandText = Com
+
+        'sqladapter to handle the sql commands 
+        Dim sqlAdapter As New SqlDataAdapter With {
+             .SelectCommand = command
+        }
+
+        'creates a table with the required data
+        Dim data As New DataSet()
+        sqlAdapter.Fill(data)
+
+        Dim NoOfDays As Integer
+        NoOfDays = DateDiff("d", data.Tables(0).Rows(0)(0), DeadlineDuration.Value)
+
+        'MsgBox(NoOfDays.ToString)
+
         'reconfirms
         Dim responce As String = MsgBox("Do you want to save changes done in Project Id: " & ProjectLayout.ProjectId.Text + "?", vbYesNo, "Are You Sure?")
         'update to database then close form
         If responce = vbYes Then
             'creating a sql command statement 
             Dim form2command As SqlCommand = LoginForm.sql.CreateCommand()
-            form2command.CommandText = "Update Projects SET Title = '" + ProjectName.Text + "', Deadline = '" + DeadlineDuration.Text + "', People ='" + PeopleCount.Text + "' Where PId ='" + ProjectLayout.ProjectId.Text + "'"
+            form2command.CommandText = "Update Projects SET Title = '" + ProjectName.Text + "', Deadline = '" + DeadlineDuration.Text + "', People ='" + PeopleCount.Text + "', Days='" + NoOfDays.ToString + "' Where PId ='" + ProjectLayout.ProjectId.Text + "'"
 
             'sqladapter to handle the sql commands
             Dim form2sqlAdapter As New SqlDataAdapter With {
@@ -50,7 +71,7 @@ Public Class EditProjectDetails
             Dim form2data As New DataSet()
             form2sqlAdapter.Fill(form2data)
 
-            ProjectLayout.Refresh()
+            ProjectLayout.Dataloader()
             Me.Close()
         End If
     End Sub

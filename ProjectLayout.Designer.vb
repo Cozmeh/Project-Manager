@@ -580,7 +580,7 @@ Partial Class ProjectLayout
         reqNum.Cursor = Cursors.Hand
         reqNum.Font = New Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point)
         reqNum.Location = New Point(15, 74)
-        reqNum.Minimum = New [Decimal](New Integer() {4, 0, 0, 0})
+        reqNum.Minimum = New [Decimal](New Integer() {1, 0, 0, 0})
         reqNum.Name = "reqNum"
         reqNum.Size = New Size(53, 34)
         reqNum.TabIndex = 19
@@ -592,7 +592,7 @@ Partial Class ProjectLayout
         devNum.Cursor = Cursors.Hand
         devNum.Font = New Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point)
         devNum.Location = New Point(133, 74)
-        devNum.Minimum = New [Decimal](New Integer() {8, 0, 0, 0})
+        devNum.Minimum = New [Decimal](New Integer() {1, 0, 0, 0})
         devNum.Name = "devNum"
         devNum.Size = New Size(53, 34)
         devNum.TabIndex = 21
@@ -604,7 +604,7 @@ Partial Class ProjectLayout
         desNum.Cursor = Cursors.Hand
         desNum.Font = New Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point)
         desNum.Location = New Point(74, 74)
-        desNum.Minimum = New [Decimal](New Integer() {5, 0, 0, 0})
+        desNum.Minimum = New [Decimal](New Integer() {1, 0, 0, 0})
         desNum.Name = "desNum"
         desNum.Size = New Size(53, 34)
         desNum.TabIndex = 22
