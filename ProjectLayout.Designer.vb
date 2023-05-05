@@ -78,6 +78,7 @@ Partial Class ProjectLayout
         SetDays = New Button()
         UndoBtn = New Button()
         OptionsBox = New GroupBox()
+        ResetTip = New ToolTip(components)
         Layout.SuspendLayout()
         DeploymentPanel.SuspendLayout()
         DeployPanel.SuspendLayout()
@@ -552,6 +553,7 @@ Partial Class ProjectLayout
         ResetBtn.TabIndex = 18
         ResetBtn.Text = " Reset"
         ResetBtn.TextAlign = ContentAlignment.MiddleLeft
+        ResetTip.SetToolTip(ResetBtn, "Resets to Default values = 15% - 20% - 30% - 25% - 10% ")
         ResetBtn.UseVisualStyleBackColor = False
         ' 
         ' ReqTip
@@ -750,4 +752,5 @@ Partial Class ProjectLayout
     Friend WithEvents SetDays As Button
     Friend WithEvents UndoBtn As Button
     Friend WithEvents OptionsBox As GroupBox
+    Friend WithEvents ResetTip As ToolTip
 End Class
