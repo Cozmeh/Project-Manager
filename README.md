@@ -6,10 +6,10 @@
 A Desktop Application which help layout the time division and help organize the Life Cycle of the Projects Using Basic `WaterFall Model`.
 
 # Description
-A VB.NET based project management software which makes a schedules layout of any project that is planed to be developed.\
-It uses informations like the time duration and number of people involved in the process of any project development.\
-It will only allow the edit access to the schedule and the ability to assign employees only to the Project Manager/Head.\
-Once assigned the employees can check their deadline and update weather they have completed their task (on time or delayed) in the software.
+A VB.NET-based project management software that makes a scheduled layout of any project that is planned to be developed.\
+It uses pieces of information like the time duration and number of people involved in the process of any project development.\
+It will only allow the Project Manager/Head access to edit the schedule and the ability to assign employees.\
+Once assigned the employees can check their deadline and update whether they have completed their task (on time or delayed) in the software.
 
 # Modules
 	- Login Page
